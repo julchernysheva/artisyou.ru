@@ -1,0 +1,49 @@
+/* ART.IS.YOU shared desktop composition modules */
+@media screen and (min-width: 961px) {
+  .ay-module-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--ay-grid-gap, 20px);
+    align-items: start;
+  }
+
+  .ay-module-intro > :first-child { grid-column: 1 / span 8; }
+  .ay-module-intro > :last-child { grid-column: 9 / -1; }
+  .ay-module-intro--wide-title > :first-child { grid-column: 1 / span 9; }
+  .ay-module-intro--wide-title > :last-child { grid-column: 10 / -1; }
+
+  .ay-module-media-text > :first-child { grid-column: 1 / span 8; }
+  .ay-module-media-text > :last-child { grid-column: 9 / -1; }
+  .ay-module-text-media > :first-child { grid-column: 1 / span 4; }
+  .ay-module-text-media > :last-child { grid-column: 5 / -1; }
+  .ay-module-equal > :first-child { grid-column: 1 / span 6; }
+  .ay-module-equal > :last-child { grid-column: 7 / -1; }
+
+  .ay-module-wide-media { grid-column: 2 / span 10; }
+  .ay-module-wide-media--full { grid-column: 1 / -1; }
+  .ay-module-article { grid-column: 2 / span 7; }
+  .ay-module-margin { grid-column: 10 / span 3; }
+
+  .ay-module-two-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--ay-compose-gap-lg, 32px) var(--ay-grid-gap, 20px);
+  }
+
+  .ay-module-three-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--ay-compose-gap-lg, 32px) var(--ay-grid-gap, 20px);
+  }
+
+  .ay-module-gallery {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--ay-grid-gap, 20px);
+  }
+
+  .ay-module-experience {
+    inline-size: 100%;
+    max-inline-size: none;
+  }
+}

@@ -1,0 +1,598 @@
+@import url("/assets/art-is-you/design-tokens.css?v=v3");
+@import url("/assets/art-is-you/typography.css?v=v3");
+
+/* ART.IS.YOU V3 — one desktop shell, one grid, one vertical rhythm. */
+@media screen and (min-width: 961px) {
+  :root {
+    --ay-compose-gutter: var(--ay-grid-gutter);
+    --ay-compose-gap: var(--ay-grid-gap);
+    --ay-compose-reading: var(--ay-text-measure-wide);
+    --ay-nav-height: 41px;
+  }
+
+  html, body.ay-system-page {
+    background: var(--color-paper) !important;
+    overflow-x: clip;
+  }
+
+  body.ay-system-page #allrecords,
+  body.ay-system-page #allrecords > .t-records,
+  body.ay-system-page .ay-composition-root,
+  body.ay-system-page .ay-injected-hero {
+    background: var(--color-paper) !important;
+  }
+
+  /* ONE OUTER SHELL */
+  body.ay-composition-page .ay-composition-root,
+  body.ay-composition-page .prearchive-linear.ay-page-shell,
+  body.ay-composition-page .ay-injected-hero {
+    box-sizing: border-box !important;
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+    margin-inline: auto !important;
+    padding-inline: var(--ay-compose-gutter) !important;
+  }
+
+  body.ay-composition-legacy #allrecords > .ay-composition-record:not(.ay-module-experience) {
+    box-sizing: border-box !important;
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+    margin-inline: 0 !important;
+    padding-inline: var(--ay-compose-gutter) !important;
+  }
+
+  body.ay-composition-legacy .ay-composition-record :is(.t-container,.t-container_100,.t-width_12) {
+    box-sizing: border-box !important;
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+  }
+
+  /* CANONICAL OPENING: header ends at 66px; page title starts at 162px. */
+  body.ay-composition-page .ay-composition-intro,
+  body.ay-composition-page .ay-injected-hero {
+    position: relative !important;
+    box-sizing: border-box !important;
+    min-block-size: 0 !important;
+    block-size: auto !important;
+    margin: 0 !important;
+    padding-block: 96px 0 !important;
+  }
+
+  body.ay-composition-page .ay-context-bar {
+    position: absolute !important;
+    inset-block-start: 32px !important;
+    inset-inline: 0 !important;
+    display: flex !important;
+    block-size: 32px !important;
+    min-block-size: 32px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: var(--ay-compose-gap) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: var(--color-text) !important;
+    background: transparent !important;
+  }
+
+  body.ay-composition-page .ay-composition-intro-grid,
+  body.ay-composition-page .ay-injected-hero__grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    align-items: start !important;
+    min-block-size: 0 !important;
+    block-size: auto !important;
+    margin: 0 !important;
+    padding: 0 0 32px !important;
+    border: 0 !important;
+  }
+
+  body.ay-composition-page .ay-composition-intro-grid > :first-child,
+  body.ay-composition-page .ay-injected-hero__grid > h1 {
+    grid-column: 1 / span 8 !important;
+    min-inline-size: 0 !important;
+    align-self: start !important;
+  }
+
+  body.ay-composition-page .ay-composition-intro-grid > :last-child,
+  body.ay-composition-page .ay-injected-hero__lead {
+    grid-column: 9 / -1 !important;
+    min-inline-size: 0 !important;
+    max-inline-size: var(--ay-compose-reading) !important;
+    align-self: start !important;
+    margin: 0 !important;
+  }
+
+  body.ay-composition-page .ay-injected-hero__lead p { margin: 0 !important; }
+
+  /* Existing modern intros whose context label sits outside the grid. */
+  body.ay-composition-page .ay-composition-intro > :is([class*="__eyebrow"],.ay-type-label).ay-context-bar {
+    inset-inline: 0 !important;
+  }
+
+  /* The three-element Post Human opening is normalized to the same 8/4 split. */
+  body.ay-composition-page .ph-hero { position: relative !important; }
+  body.ay-composition-page .ph-hero__top {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    align-items: start !important;
+    padding: 0 0 32px !important;
+    min-block-size: 0 !important;
+  }
+  body.ay-composition-page .ph-hero__top > .ph-kicker {
+    position: absolute !important;
+    inset-block-start: 32px !important;
+    inset-inline: 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    min-block-size: 32px !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+  body.ay-composition-page .ph-hero__top > h1 { grid-column: 1 / span 8 !important; align-self: start !important; }
+  body.ay-composition-page .ph-hero__top > .ph-hero__lead { grid-column: 9 / -1 !important; align-self: start !important; max-inline-size: var(--ay-compose-reading) !important; }
+
+  /* Oracle: same shell, no outer frame rails. */
+  body.ay-composition-page .or-page { --or-bg: var(--color-paper); background: var(--color-paper) !important; }
+  body.ay-composition-page .or-page > :is(.or-hero,.or-concept,.or-interaction,.or-object,.or-answers,.or-aura,.or-comparison,.or-method,.or-data) {
+    border-inline: 0 !important;
+    background: transparent !important;
+  }
+  body.ay-composition-page .or-hero__title { min-block-size: 0 !important; block-size: auto !important; }
+  body.ay-composition-page .or-hero__lead { align-self: start !important; max-inline-size: var(--ay-compose-reading) !important; overflow: visible !important; }
+  body.ay-composition-page .or-hero__lead p { margin: 0 !important; }
+  body.ay-composition-page .or-hero__technical {
+    display: flex !important;
+    block-size: var(--ay-nav-height) !important;
+    min-block-size: var(--ay-nav-height) !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    border-block-end: 1px solid var(--color-line) !important;
+    border-inline: 0 !important;
+  }
+  body.ay-composition-page .or-hero__technical .or-hero__meta {
+    display: flex !important;
+    inline-size: 100% !important;
+    block-size: 40px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: var(--ay-compose-gap) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  body.ay-composition-page .or-hero__media {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    gap: var(--ay-compose-gap) !important;
+    margin-block-start: 32px !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  body.ay-composition-page .or-hero__media > figure { margin: 0 !important; border-inline: 0 !important; }
+  body.ay-composition-page .or-hero__media > figure:first-child { grid-column: 1 / span 8 !important; }
+  body.ay-composition-page .or-hero__media > figure:nth-child(n+2) { grid-column: 9 / -1 !important; }
+
+  /* Programmer cannot be pushed down by the taller lead column. */
+  body.ay-composition-page .programmer-header__grid { align-items: start !important; padding-block: 0 32px !important; }
+  body.ay-composition-page .programmer-header__grid > h1,
+  body.ay-composition-page .programmer-header__grid > .programmer-header__lead { align-self: start !important; }
+
+  /* Protoarchive keeps its authored timeline but uses the common outer axes/top rhythm. */
+  body.ay-composition-page .prearchive-linear { padding-block-start: 0 !important; background: var(--color-paper) !important; }
+  body.ay-composition-page .prearchive-linear .pl-hero {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    min-block-size: 0 !important;
+    margin: 0 !important;
+    padding: 96px 0 32px !important;
+    border-inline: 0 !important;
+  }
+  body.ay-composition-page .prearchive-linear .pl-hero > :first-child { grid-column: 1 / span 8 !important; }
+  body.ay-composition-page .prearchive-linear .pl-hero > .pl-definition { grid-column: 9 / -1 !important; align-self: start !important; }
+  body.ay-composition-page .prearchive-linear .pl-kicker {
+    position: absolute !important;
+    inset-block-start: 32px !important;
+    inset-inline-start: 0 !important;
+    margin: 0 !important;
+  }
+  body.ay-composition-page .prearchive-linear .pl-title { margin: 0 !important; font-weight: 400 !important; }
+  body.ay-composition-page .prearchive-linear .pl-lead { max-inline-size: var(--ay-compose-reading) !important; }
+
+  /* LOCAL NAVIGATION: one height and one line system. */
+  body.ay-composition-page :is(
+    .statement-nav,.about-nav,.press-index__nav,.essays-index__nav,
+    .projects-index__filters,.research-index__filters,.or-nav,.programmer-nav,
+    .lab-nav,.interview-index__nav,.ph-nav,.archive-nav,.bio-timeline__controls,.pl-controls
+  ) {
+    display: flex !important;
+    block-size: var(--ay-nav-height) !important;
+    min-block-size: var(--ay-nav-height) !important;
+    box-sizing: border-box !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-block: 1px solid var(--color-line) !important;
+    border-inline: 0 !important;
+    background: transparent !important;
+  }
+  body.ay-composition-page :is(
+    .statement-nav,.about-nav,.press-index__nav,.essays-index__nav,
+    .projects-index__filters,.research-index__filters,.or-nav,.programmer-nav,
+    .lab-nav,.interview-index__nav,.ph-nav,.archive-nav,.bio-timeline__controls,.pl-controls
+  ) :is(a,button) {
+    display: inline-flex !important;
+    block-size: 40px !important;
+    min-block-size: 40px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+    border-block: 0 !important;
+    border-inline-start: 0 !important;
+    border-inline-end: 1px solid var(--color-line) !important;
+    background: transparent !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    white-space: nowrap;
+  }
+
+  body.ay-composition-page .ay-composition-root > .ay-composition-intro + nav { margin-block-start: 0 !important; }
+  body.ay-composition-page .ay-composition-root > nav + *,
+  body.ay-composition-page .programmer-nav + *,
+  body.ay-composition-page .archive-nav + *,
+  body.ay-composition-page .lab-nav + *,
+  body.ay-composition-page .interview-index__nav + * { margin-block-start: 32px !important; }
+
+  /* SECTION GRAMMAR */
+  body.ay-composition-page .ay-composition-sectionbar {
+    display: flex !important;
+    block-size: 41px !important;
+    min-block-size: 41px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: var(--ay-compose-gap) !important;
+    margin: 64px 0 32px !important;
+    padding: 0 !important;
+    border-block: 1px solid var(--color-line) !important;
+    border-inline: 0 !important;
+    background: transparent !important;
+  }
+
+  body.ay-composition-page .ay-composition-root > :is(section,figure,article,footer):not(.ay-module-experience),
+  body.ay-composition-page .ay-composition-root > div:not(.ay-composition-sectionbar):not([class*="nav"]):not([class*="filters"]),
+  body.ay-composition-page .prearchive-linear > :is(section,footer,.pl-shell) {
+    min-block-size: 0 !important;
+    block-size: auto !important;
+  }
+
+  body.ay-composition-page .ay-composition-root > :is(section,figure,article):not(.ay-module-experience) {
+    margin-block: 0 !important;
+  }
+
+  body.ay-composition-page .ay-composition-root > :is(section,figure,article,header,footer) {
+    border-inline: 0 !important;
+  }
+
+  /* Remove legacy table-like outer rails while retaining internal component dividers. */
+  body.ay-composition-page :is(
+    .statement-position,.statement-questions,.statement-method,.statement-reactor,.statement-fields,
+    .statement-theses,.statement-practice-map,.statement-record,.statement-awards,.statement-closing,
+    .programmer-concept,.programmer-material,.programmer-system,.programmer-spatial,.programmer-protocol,.programmer-tao,.programmer-credits,
+    .lab-position,.lab-index,.lab-case,.lab-method,.lab-output,.lab-archive,
+    .about-profile,.about-practice,.about-method,.about-system-map,.about-position,.about-trajectory,.about-explore,.about-awards,
+    .press-position,.press-media-cards,.press-platforms,.press-international-list,.press-directory,.press-secondary,
+    .essays-position,.essay-feature-grid,.essay-grid,.research-fields,.current-research
+  ) {
+    border-inline: 0 !important;
+    background-color: transparent !important;
+  }
+
+  body.ay-composition-page .ay-composition-reading,
+  body.ay-composition-page .ay-composition-reading p { max-inline-size: var(--ay-compose-reading) !important; }
+
+  /* Reusable 8/4 media/text module. */
+  body.ay-composition-page .ay-module-media-text-standard,
+  body.ay-composition-page .ay-module-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    align-items: start !important;
+    min-block-size: 0 !important;
+  }
+  body.ay-composition-page .ay-module-media-text-standard > .ay-module-media-column { grid-column: 1 / span 8 !important; min-inline-size: 0 !important; }
+  body.ay-composition-page .ay-module-media-text-standard > .ay-module-text-column { grid-column: 9 / -1 !important; min-inline-size: 0 !important; max-inline-size: var(--ay-compose-reading) !important; }
+
+  /* LEGACY TILDA RECORDS: content remains, arbitrary record spacing does not. */
+  body.ay-composition-legacy #allrecords > .ay-composition-record:not(.ay-module-experience):not(.ay-composition-intro) {
+    min-block-size: 0 !important;
+    block-size: auto !important;
+    margin-block: 0 !important;
+    padding-block: 32px !important;
+    background-color: transparent !important;
+    border-inline: 0 !important;
+  }
+
+  body.ay-composition-legacy .ay-composition-boundary::before {
+    content: attr(data-ay-section-index) " / " attr(data-ay-section-label);
+    display: flex;
+    block-size: 41px;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 32px 0;
+    border-block: 1px solid var(--color-line);
+    color: var(--color-text);
+    font: 500 var(--type-meta)/var(--leading-meta) var(--ay-font-mono);
+    letter-spacing: var(--ay-tracking-system);
+    text-transform: uppercase;
+  }
+
+  body.ay-composition-legacy .ay-composition-boundary.ay-module-experience::before { margin-inline: var(--ay-compose-gutter); }
+
+  body.ay-composition-legacy .ay-module-media-text .t195 > .t-container,
+  body.ay-composition-legacy .ay-module-media-text .t223 > .t-container {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    align-items: start !important;
+  }
+  body.ay-composition-legacy .ay-module-media-text .t195 .t195__imgsection { grid-column: 1 / span 8 !important; grid-row: 1 !important; }
+  body.ay-composition-legacy .ay-module-media-text .t195 .t-col:first-child { grid-column: 9 / -1 !important; grid-row: 1 !important; }
+  body.ay-composition-legacy .ay-module-equal .t223-col:first-child { grid-column: 1 / span 6 !important; }
+  body.ay-composition-legacy .ay-module-equal .t223-col:last-child { grid-column: 7 / -1 !important; }
+
+  body.ay-composition-legacy .ay-module-text-article :is(.t119,.t220,.t257) .t-col {
+    float: none !important;
+    inline-size: calc((100% - 264px) * .666667 + 168px) !important;
+    max-inline-size: none !important;
+    margin-inline: 0 auto !important;
+  }
+
+  body.ay-composition-legacy .ay-module-gallery .t1148__slider {
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 32px 24px !important;
+  }
+  body.ay-composition-legacy .ay-module-gallery .t1148__item { inline-size: 100% !important; block-size: auto !important; }
+  body.ay-composition-legacy .ay-module-wide-media :is(.t121,.t-video-lazyload,iframe) { inline-size: 100% !important; max-inline-size: 100% !important; }
+
+  /* Canonical injected hero replaces the old title record on legacy routes. */
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="research/essays/error-as-territory-of-freedom"] > #rec2399117411,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"] > #rec2399058011,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/godbot"] > #rec2063879251,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/likes-pond"] > #rec2063899701,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/special-projects"] > #rec2063949591,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="pavlov-dogs"] > #rec2665633501,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/musicvideo"] > #rec2172318291,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/fashion"] > #rec2172303861 {
+    display: none !important;
+  }
+
+  /* No Words keeps its authored long intro as body copy below the canonical hero. */
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 {
+    display: block !important;
+    min-block-size: 0 !important;
+    margin: 0 !important;
+    padding: 32px var(--ay-compose-gutter) 48px !important;
+    background: transparent !important;
+  }
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 .t015__title { display: none !important; }
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 .t015__descr {
+    max-inline-size: 52ch !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  /* The immersive record itself can stay authored, but its outer page now has the canonical hero. */
+  body.ay-composition-legacy:has(.ay-injected-hero) #allrecords > .ay-module-experience {
+    margin-block: 32px 64px !important;
+  }
+
+  /* One background token; remove visible legacy substrate records. */
+  body.ay-system-page #allrecords :is(.t220__textwrapper,.t-container_100,.t-width_100) { border-color: var(--color-line); }
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/godbot"] .t220__textwrapper,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/likes-pond"] > #rec2175276721,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/musicvideo"] > #rec2175279151,
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/special-projects"] .t220__textwrapper {
+    background-color: transparent !important;
+  }
+
+  /* ARCHIVE CAROUSEL */
+  body.ay-composition-page .ay-editorial-carousel {
+    display: block !important;
+    inline-size: 100% !important;
+    overflow: clip;
+    outline: none;
+  }
+  body.ay-composition-page .ay-editorial-carousel > figure { display: none !important; inline-size: 100% !important; min-block-size: 0 !important; margin: 0 !important; border: 0 !important; }
+  body.ay-composition-page .ay-editorial-carousel > figure.is-active { display: block !important; }
+  body.ay-composition-page .ay-editorial-carousel > figure > button { display: grid !important; inline-size: 100% !important; place-items: center; background: transparent; }
+  body.ay-composition-page .ay-editorial-carousel > figure img { display: block; inline-size: 100% !important; block-size: auto !important; max-block-size: 70vh; object-fit: contain !important; }
+  body.ay-composition-page .ay-editorial-carousel__controls {
+    display: grid; grid-template-columns: 48px 1fr 48px; align-items: center;
+    block-size: 41px; border-block-end: 1px solid var(--color-line);
+  }
+  body.ay-composition-page .ay-editorial-carousel__button { block-size: 40px; border: 0; background: transparent; color: var(--color-text); font-size: 18px; cursor: pointer; }
+  body.ay-composition-page .ay-editorial-carousel__status { justify-self: center; }
+
+  /* Cards retain their shared 28/32 + 16/22 hierarchy and never acquire page-H2 scale. */
+  body.ay-composition-page #allrecords .project-card__title { font-size: var(--type-card-title) !important; line-height: var(--leading-card-title) !important; font-weight: 400 !important; }
+  body.ay-composition-page #allrecords .project-card__description { font-size: var(--type-card-subtitle) !important; line-height: var(--leading-card-subtitle) !important; font-weight: 400 !important; }
+
+  /* Footer should not be forced to an arbitrary viewport-sized block. */
+  body.ay-composition-page .ph-end,
+  body.ay-composition-page .ay-site-footer :is(section,div) { min-block-size: 0; }
+}
+
+@media screen and (min-width: 961px) {
+  /* Final outer-shell correction: page roots themselves never add top offset. */
+  body.ay-composition-page .ay-composition-root {
+    padding-block-start: 0 !important;
+  }
+
+  /* Protoarchive top metadata becomes the canonical context row instead of consuming layout height. */
+  body.ay-composition-page .prearchive-linear {
+    position: relative !important;
+  }
+  body.ay-composition-page .prearchive-linear > .pl-top {
+    position: absolute !important;
+    inset-block-start: 32px !important;
+    inset-inline: 32px !important;
+    z-index: 2;
+    display: flex !important;
+    block-size: 32px !important;
+    min-block-size: 32px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  body.ay-composition-page .prearchive-linear .pl-kicker { display: none !important; }
+  body.ay-composition-page .prearchive-linear .pl-hero { align-items: start !important; }
+}
+
+@media screen and (min-width: 961px) {
+  /* Immersive records keep their internal composition, but not captured Tilda air. */
+  body.ay-composition-legacy:has(.ay-injected-hero) #allrecords > .ay-module-experience {
+    box-sizing: border-box !important;
+    min-block-size: 0 !important;
+    margin-block: 0 !important;
+    padding-block: 32px !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  /* Tilda 1148 galleries keep their intrinsic two-up flow; CSS grid breaks its internal slider math. */
+  body.ay-composition-legacy .ay-module-gallery .t1148__slider {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    column-gap: 24px !important;
+    row-gap: 32px !important;
+  }
+  body.ay-composition-legacy .ay-module-gallery .t1148__item {
+    flex: 0 0 calc(50% - 12px) !important;
+    inline-size: calc(50% - 12px) !important;
+    block-size: auto !important;
+  }
+  body.ay-composition-legacy .ay-module-gallery .t1148__img-wrapper {
+    inline-size: 100% !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  /* Module classes describe the inner Tilda block on legacy routes, not the record itself. */
+  body.ay-composition-legacy #allrecords > .ay-composition-record:is(.ay-module-gallery,.ay-module-media-text,.ay-module-equal) {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  /* Canonical legacy text articles: remove Tilda prefix/padding geometry and use an 8-column reading measure. */
+  body.ay-composition-legacy .ay-module-text-article :is(.t119,.t220,.t257) > .t-container {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    align-items: start !important;
+  }
+  body.ay-composition-legacy .ay-module-text-article :is(.t119,.t220,.t257) .t-col {
+    grid-column: 1 / span 8 !important;
+    float: none !important;
+    inline-size: auto !important;
+    max-inline-size: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body.ay-composition-legacy .ay-module-text-article .t220__textwrapper {
+    inline-size: 100% !important;
+    max-inline-size: 100% !important;
+    margin: 0 !important;
+    padding: 24px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Canonical T195 media/text module: reset Tilda column widths/prefixes before assigning the 8/4 grid. */
+  body.ay-composition-legacy .ay-module-media-text .t195 > .t-container > .t-col {
+    float: none !important;
+    inline-size: auto !important;
+    max-inline-size: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body.ay-composition-legacy .ay-module-media-text .t195 .t195__imgsection {
+    grid-column: 1 / span 8 !important;
+    grid-row: 1 !important;
+    inline-size: auto !important;
+  }
+  body.ay-composition-legacy .ay-module-media-text .t195 > .t-container > .t-col:first-child {
+    grid-column: 9 / -1 !important;
+    grid-row: 1 !important;
+  }
+
+  /* T1148 slider images must stay inside their canonical two-up cells even when media classification marks them exceptional. */
+  body.ay-composition-legacy .ay-module-gallery .t1148__img-wrapper > img.ay-media {
+    inline-size: 100% !important;
+    max-inline-size: 100% !important;
+    block-size: auto !important;
+    object-fit: contain !important;
+  }
+  body.ay-composition-legacy .ay-module-gallery .t1148__caption,
+  body.ay-composition-legacy .ay-module-gallery .t1148__title {
+    max-inline-size: 100% !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  /* T257 inserts an extra .t-row wrapper: place that wrapper on the canonical reading columns. */
+  body.ay-composition-legacy .ay-module-text-article .t257 > .t-container > .t-row {
+    grid-column: 1 / span 8 !important;
+    inline-size: auto !important;
+    max-inline-size: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body.ay-composition-legacy .ay-module-text-article .t257 > .t-container > .t-row > .t-col {
+    float: none !important;
+    inline-size: 100% !important;
+    max-inline-size: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  /* No Words authored intro becomes a true canonical reading module: no captured Tilda prefix or internal top spacer. */
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 .t015 > .t-container {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    column-gap: var(--ay-compose-gap) !important;
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 .t015 .t-col {
+    grid-column: 1 / span 8 !important;
+    float: none !important;
+    inline-size: auto !important;
+    max-inline-size: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body.ay-composition-legacy #allrecords[data-tilda-page-alias="projects/nowords"] > #rec2172602801 .t015__descr {
+    padding: 0 !important;
+  }
+}

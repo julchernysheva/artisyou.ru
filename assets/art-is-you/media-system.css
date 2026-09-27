@@ -1,0 +1,88 @@
+/* ART.IS.YOU desktop media system. Typography and grid are intentionally untouched. */
+@media screen and (min-width: 961px) {
+  :root {
+    --ay-media-wide: 100%;
+    --ay-media-horizontal: 100%;
+    --ay-media-vertical: min(100%, 720px);
+    --ay-media-square: min(100%, 720px);
+    --ay-media-compact: min(100%, 360px);
+    --ay-media-diagram: min(100%, 960px);
+    --ay-media-caption: 52ch;
+    --ay-media-gap-before: 20px;
+    --ay-media-gap-after: 32px;
+    --ay-media-caption-gap: 10px;
+    --ay-media-video-ratio: 16 / 9;
+  }
+
+  body.ay-system-page .ay-media {
+    display: block;
+    box-sizing: border-box;
+    max-inline-size: 100%;
+    vertical-align: middle;
+  }
+
+  body.ay-system-page img.ay-media {
+    block-size: auto;
+  }
+
+  body.ay-system-page .ay-media-wide,
+  body.ay-system-page .ay-media-horizontal {
+    inline-size: var(--ay-media-wide);
+    object-fit: contain;
+  }
+
+  body.ay-system-page .ay-media-vertical {
+    max-inline-size: var(--ay-media-vertical);
+    object-fit: contain;
+  }
+
+  body.ay-system-page .ay-media-square {
+    max-inline-size: var(--ay-media-square);
+    object-fit: contain;
+  }
+
+  body.ay-system-page .ay-media-compact {
+    max-inline-size: var(--ay-media-compact);
+    object-fit: contain;
+  }
+
+  body.ay-system-page .ay-media-diagram {
+    max-inline-size: var(--ay-media-diagram);
+    object-fit: contain;
+  }
+
+  body.ay-system-page iframe.ay-media-video,
+  body.ay-system-page video.ay-media-video {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    border: 0;
+  }
+
+  /* Opt-in responsive film frame. Existing legacy heights remain authoritative. */
+  body.ay-system-page .ay-media-video-frame > iframe,
+  body.ay-system-page .ay-media-video-frame > video,
+  body.ay-system-page iframe.ay-media-video--responsive,
+  body.ay-system-page video.ay-media-video--responsive {
+    aspect-ratio: var(--ay-media-video-ratio);
+    block-size: auto;
+  }
+
+  body.ay-system-page .ay-media-caption {
+    box-sizing: border-box;
+    max-inline-size: min(100%, var(--ay-media-caption));
+    margin-block-start: var(--ay-media-caption-gap);
+  }
+
+  body.ay-system-page .ay-media-align-start { margin-inline: 0 auto; }
+  body.ay-system-page .ay-media-align-center { margin-inline: auto; }
+  body.ay-system-page .ay-media-align-end { margin-inline: auto 0; }
+
+  body.ay-system-page .ay-media-flow {
+    margin-block: var(--ay-media-gap-before) var(--ay-media-gap-after);
+  }
+
+  /* Art-directed and interaction-owned geometry is never normalized by size. */
+  body.ay-system-page .ay-media-exception {
+    max-inline-size: none;
+  }
+}

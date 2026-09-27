@@ -1,0 +1,78 @@
+/* Cross-page editorial shell QA fixes: About / Research / Publications / Projects. */
+
+@media screen and (min-width: 961px) {
+  html body.ay-system-page #allrecords :is(
+    .about-header__grid > .page-intro__title,
+    .research-index__heading,
+    .publications-intro__heading,
+    .projects-index__heading
+  ) {
+    font-family: "Source Sans 3", sans-serif !important;
+    font-size: 64px !important;
+    font-weight: 400 !important;
+    line-height: 62.72px !important;
+    letter-spacing: -3.52px !important;
+  }
+
+  html body.ay-system-page #allrecords :is(
+    .about-header__lead,
+    .research-index__lead,
+    .publications-intro__lead,
+    .projects-index__intro-copy > p:nth-child(2)
+  ) {
+    font-family: "Source Sans 3", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0 !important;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  html body.ay-system-page.v17-canon.p6-1-canon #allrecords :is(
+    .research-index__heading,
+    .projects-index__heading
+  ) {
+    font-size: 44px !important;
+    line-height: 44px !important;
+  }
+
+  html body.ay-system-page.v18-1-about .ay-desktop-header {
+    padding-right: 20px !important;
+  }
+
+  html body.ay-system-page .about-index {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  html body.ay-system-page .about-index .about-header__grid {
+    display: block !important;
+    grid-template-columns: none !important;
+    padding-top: 32px !important;
+    padding-bottom: 44px !important;
+  }
+
+  html body.ay-system-page .about-index .about-header__grid > #about-page-title {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 32px !important;
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: -1.6px !important;
+  }
+
+  html body.ay-system-page .about-index .about-header__grid > .about-header__copy {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  html body.ay-system-page .about-index .about-header__lead {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0 !important;
+  }
+}

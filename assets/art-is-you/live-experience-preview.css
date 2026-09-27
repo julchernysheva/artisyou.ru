@@ -1,0 +1,86 @@
+/* ART.IS.YOU V17 P7.6.8 — reusable live experience preview
+   Contract: static at rest; live iframe only after explicit click; parent text/CTA keeps navigation.
+*/
+.ay-live-experience{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#EFEFEA;
+}
+.ay-live-experience__poster,
+.ay-live-experience__mount,
+.ay-live-experience__mount iframe{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+}
+.ay-live-experience__poster{
+  z-index:1;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#F5F2EC;
+  opacity:1;
+  transition:opacity 140ms linear !important;
+  transform:none !important;
+}
+.ay-live-experience__poster--cover{
+  object-fit:cover !important;
+}
+.ay-live-experience__mount{
+  z-index:2;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 140ms linear;
+}
+.ay-live-experience__mount iframe{
+  border:0;
+  background:#EFEFEA;
+  pointer-events:none;
+}
+.ay-live-experience.is-live .ay-live-experience__poster{
+  opacity:0;
+}
+.ay-live-experience.is-live .ay-live-experience__mount{
+  opacity:1;
+}
+.ay-live-experience__caption{
+  position:absolute;
+  z-index:3;
+  right:14px;
+  bottom:12px;
+  left:14px;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:7px 0 5px;
+  border-top:1px solid rgba(107,94,87,.45);
+  color:var(--muted);
+  background:rgba(239,239,234,.92);
+  pointer-events:none;
+}
+@media (hover:none), (pointer:coarse){
+  .ay-live-experience__caption span:last-child::after{
+    content:" / STATIC";
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .ay-live-experience__poster,
+  .ay-live-experience__mount{transition:none;}
+}
+
+/* P7.6.8A explicit activation cue */
+.ay-live-experience::after{
+  content:"CLICK TO ACTIVATE";
+  position:absolute;z-index:5;top:12px;right:12px;
+  padding:7px 10px 6px;border:1px solid rgba(105,94,88,.55);
+  background:var(--surface);color:#695E58;
+  font:500 10px/14px 'PT Mono', monospace;
+  letter-spacing:.055em;text-transform:uppercase;pointer-events:none;
+}
+.ay-live-experience.is-loading::after{content:"LOADING…"}
+.ay-live-experience.is-live::after{display:none}
+.ay-live-experience.is-live .ay-live-experience__mount{pointer-events:auto}
+.ay-live-experience.is-live .ay-live-experience__mount iframe{pointer-events:auto}
+.ay-live-experience:focus-visible{outline:1px solid #064CFF;outline-offset:2px}

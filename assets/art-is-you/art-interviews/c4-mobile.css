@@ -1,0 +1,262 @@
+/* C4 / Art Interviews mobile presentation.
+   Canonical C3 content and runtime are shared with desktop; only layout changes. */
+@media (max-width:960px) {
+  html,body { overflow-x:hidden; }
+  body.ay-system-page art-is-you-header .ay-menu-header .ay-menu-toggle {
+    min-width:72px!important;
+    min-height:44px!important;
+    justify-content:flex-end!important;
+  }
+  body.ay-system-page art-is-you-header .ay-menu-header .ay-desktop-header__identity > a {
+    display:inline-flex!important;
+    align-items:center!important;
+    min-height:44px!important;
+  }
+  body.ay-system-page art-is-you-header .ay-menu-header .ay-desktop-header__brand-mark {
+    min-width:44px!important;
+    width:44px!important;
+    justify-content:flex-start!important;
+  }
+  .c3b-documentary {
+    margin:0 20px;
+    color:var(--ink);
+  }
+  .c3b-documentary * { box-sizing:border-box; }
+  .c3b-documentary :is(h1,h2,p,figure) { margin:0; }
+  .c3b-documentary .title {
+    font-family:'Source Sans 3',sans-serif;
+    font-size:24px;
+    line-height:28px;
+    font-weight:400;
+    letter-spacing:-.24px;
+  }
+  .c3b-documentary .text {
+    font-family:'Source Sans 3',sans-serif;
+    font-size:16px;
+    line-height:24px;
+    font-weight:400;
+    letter-spacing:-.16px;
+  }
+  .c3b-documentary .system {
+    font-family:'PT Mono',monospace;
+    font-size:13px;
+    line-height:18px;
+    font-weight:400;
+    letter-spacing:normal;
+  }
+  .c3b-documentary .micro {
+    font-family:'PT Mono',monospace;
+    font-size:11px;
+    line-height:16px;
+    font-weight:400;
+    letter-spacing:normal;
+  }
+  .c3b-documentary a { color:var(--ink); text-decoration:none; }
+  .c3b-documentary a:hover { color:var(--ui-accent); text-decoration:underline; }
+  .c3b-documentary :is(a,button):focus-visible {
+    outline:2px solid var(--ui-accent);
+    outline-offset:3px;
+  }
+
+  .c3b-opening { padding:32px 0 24px; }
+  .c3b-register,
+  .c3b-special-register,
+  .c3b-film-register {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:4px 16px;
+    color:var(--muted);
+  }
+  .c3b-opening-grid {
+    display:block;
+    margin-top:28px;
+  }
+  .c3b-opening h1 {
+    font-family:'Source Sans 3',sans-serif;
+    font-size:44px;
+    line-height:44px;
+    font-weight:400;
+    letter-spacing:-2.2px;
+  }
+  .c3b-series-name { margin-top:12px!important; }
+  .c3b-lead { margin-top:24px!important; max-width:34ch; }
+  .c3b-local-nav {
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 16px;
+    margin-top:24px;
+    padding-top:16px;
+    border-top:1px solid var(--rule);
+  }
+  .c3b-local-nav a {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+  }
+
+  .c3b-film,
+  .c3b-sources {
+    padding:32px 0 40px;
+    border-top:1px solid var(--rule);
+    scroll-margin-top:80px;
+  }
+  .c3b-film-register { margin-bottom:20px; }
+  .c3b-film-grid { display:flex; flex-direction:column; gap:0; }
+  .c3b-film-media,
+  .c3b-film-copy,
+  .c3b-film--reverse .c3b-film-media,
+  .c3b-film--reverse .c3b-film-copy,
+  .c3b-special .c3b-film-media,
+  .c3b-special .c3b-film-copy {
+    width:100%;
+  }
+  .c3b-film-copy { margin-top:28px; }
+  .c3b-film-copy h2 { margin-bottom:20px; }
+  .c3b-film-copy p+p { margin-top:16px; }
+  .c3b-film-copy p:not(:first-of-type) { color:var(--muted); }
+  .c3b-player {
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:var(--surface);
+  }
+  .c3b-player img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .c3b-player iframe {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .c3b-play {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    padding:0;
+    border:0;
+    background:none;
+    color:var(--surface);
+    cursor:pointer;
+  }
+  .c3b-play span {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-height:44px;
+    padding:10px 14px;
+    background:var(--ink);
+    white-space:nowrap;
+  }
+  .c3b-play b { font-weight:400; }
+  .c3b-film-caption {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:4px 16px;
+    margin-top:10px;
+    color:var(--muted);
+  }
+  .c3b-film-caption a {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    color:var(--muted);
+  }
+
+  .c3b-frame-label { margin-bottom:12px!important; color:var(--muted); }
+  #research-frame h2+p.c3b-frame-label { margin-top:28px; }
+  #research-frame .text+.text { margin-top:16px; }
+  .c3b-frame-formula { margin-top:28px!important; color:var(--muted); }
+  .c3b-text-credit { margin-top:20px!important; color:var(--muted); }
+  .c3b-documentary-still {
+    width:56%;
+    max-width:200px;
+    margin-top:24px!important;
+  }
+  .c3b-documentary-still img { display:block; width:100%; height:auto; }
+  .c3b-documentary-still figcaption { margin-top:8px; color:var(--muted); }
+
+  .c3b-special {
+    padding-top:32px;
+    border-top:1px solid var(--ink);
+    scroll-margin-top:80px;
+  }
+  .c3b-special-heading {
+    display:block;
+    margin:24px 0;
+  }
+  .c3b-special-heading p { margin-top:8px; }
+  .c3b-special .c3b-film { padding-top:0; border-top:0; }
+  .c3b-source-grid {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+    margin-top:20px;
+    color:var(--muted);
+  }
+  #result h2 { margin-bottom:16px; color:var(--ink); }
+  #result .text+.text { margin-top:16px; }
+
+  .c3b-archive-caption {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:0 16px;
+    width:100%;
+  }
+  .c3b-archive-trigger,
+  .c3b-archive-close {
+    min-height:44px;
+    border:0;
+    padding:10px 0;
+    background:none;
+    color:var(--ink);
+    font:inherit;
+    letter-spacing:inherit;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:4px;
+  }
+  .c3b-episode-archive {
+    box-sizing:border-box;
+    width:calc(100vw - 24px);
+    max-width:none;
+    max-height:calc(100dvh - 48px);
+    inset-block-start:24px;
+    inset-block-end:auto;
+    inset-inline-start:0;
+    inset-inline-end:0;
+    margin:0 auto;
+    padding:20px;
+    border:1px solid var(--rule);
+    background:var(--surface);
+    color:var(--ink);
+    overflow:auto;
+  }
+  .c3b-episode-archive::backdrop { background:var(--surface); }
+  .c3b-archive-heading {
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:24px;
+  }
+  .c3b-archive-images {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .c3b-archive-images img { display:block; width:100%; height:auto; }
+  .c3b-archive-images figcaption { margin-top:8px; color:var(--muted); }
+}

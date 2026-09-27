@@ -1,0 +1,14 @@
+/* PASS 03A: selected-state geometry only; REST and evidence typography are unchanged. */
+.inspector-toggle{display:none}
+.stage.inspector-docked #map{width:calc(100% - var(--inspector-allocation));margin-left:0;transition:none}
+.stage.inspector-docked .map-zoom-controls{right:calc(var(--inspector-allocation) + 10px)!important}
+.stage.inspector-docked .drawer.open{min-height:0;height:var(--inspector-height);max-height:var(--inspector-height)!important}
+.drawer.open #drawerBody{flex:1;min-height:0;overflow:hidden}
+.drawer.open #drawerBody .card-shell{height:100%;max-height:100%}
+@media(max-width:600px){
+ .stage.inspector-bottom .drawer.open{width:calc(100% - 24px)!important;min-height:0;height:var(--inspector-height);max-height:var(--inspector-height)!important}
+ .inspector-bottom .inspector-toggle{display:block;flex:0 0 44px;width:calc(100% - 44px);min-height:44px;padding:0 14px;border:0;background:none;color:var(--blue);font:inherit;text-align:left;cursor:pointer}
+ .inspector-bottom .drawer .close{top:0;right:0;width:44px;height:44px}
+ .inspector-bottom .drawer.is-collapsed #drawerBody{display:none}
+ .inspector-bottom .drawer:not(.is-collapsed) .inspector-toggle{border-bottom:1px solid var(--line2)}
+}

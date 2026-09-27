@@ -1,0 +1,42 @@
+/* V14 — final four routes only. */
+@media screen and (min-width:961px) {
+  body.v14-final4 { color:var(--color-text); background:var(--color-paper); }
+  body.v14-final4 .ay-injected-hero { min-height:0 !important; }
+  body.v14-final4 .ay-injected-hero .ay-composition-intro__grid { align-items:start !important; min-height:0 !important; }
+  .v14-media-page { padding-inline:32px; box-sizing:border-box; }
+  .v14-sectionbar { min-height:41px; display:flex; align-items:center; border-top:1px solid var(--color-line); border-bottom:1px solid var(--color-line); font-family:'PT Mono', monospace; font-size:12px; text-transform:uppercase; margin-top:0; }
+  .v14-feature-module,.v14-carousel-module { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:start; padding:32px 0 64px; }
+  .v14-feature-module > .v14-video,.v14-carousel-media { grid-column:1 / span 8; }
+  .v14-feature-module > .v14-copy,.v14-carousel-module > .v14-copy { grid-column:9 / -1; }
+  .v14-video { min-width:0; }
+  .v14-video iframe,.v14-carousel-media iframe { display:block; width:100%; aspect-ratio:16/9; height:auto; border:0; background:#111; }
+  .v14-copy { min-width:0; }
+  .v14-meta { font-family:'PT Mono', monospace; font-size:11px; text-transform:uppercase; margin-bottom:28px; }
+  .v14-copy h2 { font-size:32px; line-height:36px; font-weight:400; margin:0 0 24px; letter-spacing:-.02em; }
+  .v14-copy p { font-size:18px; line-height:1.45; margin:0; max-width:34ch; }
+  .v14-two-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; padding:32px 0 64px; }
+  .v14-video-card { min-width:0; }
+  .v14-card-copy { padding:18px 0; border-bottom:1px solid var(--color-line); }
+  .v14-card-copy h3 { margin:0 0 10px; font-size:24px; line-height:30px; font-weight:400; }
+  .v14-card-copy p { margin:0; font-size:16px; line-height:22px; max-width:42ch; }
+  .v14-carousel-controls { display:flex; justify-content:space-between; align-items:center; min-height:41px; border-bottom:1px solid var(--color-line); }
+  .v14-carousel-controls button { appearance:none; background:transparent; border:0; font:inherit; font-size:22px; cursor:pointer; padding:8px 12px; }
+  .v14-count { font-family:'PT Mono', monospace; font-size:11px; }
+
+  /* Protoarchive: keep timeline identity, remove page-level forced height. */
+  body.v14-final4 .prearchive-linear { border-inline:0 !important; }
+  body.v14-final4 .pl-hero { display:grid !important; grid-template-columns:8fr 4fr !important; gap:24px !important; min-height:0 !important; padding-block:32px !important; }
+  body.v14-final4 .pl-controls { min-height:41px !important; }
+  body.v14-final4 .pl-event { min-height:0 !important; }
+  body.v14-final4 .pl-card { min-height:0 !important; }
+  body.v14-final4 .pl-method { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:24px !important; padding-block:32px !important; }
+
+  /* Bioart timeline: common intro geometry and content-driven cards; timeline stays a data-view exception. */
+  body.v14-final4 .bio-timeline { border-inline:0 !important; }
+  body.v14-final4 .bio-timeline__intro-grid { display:grid !important; grid-template-columns:repeat(12,minmax(0,1fr)) !important; gap:24px !important; align-items:start !important; padding-block:32px !important; min-height:0 !important; }
+  body.v14-final4 .bio-timeline__intro-grid > :first-child { grid-column:1 / span 8 !important; }
+  body.v14-final4 .bio-timeline__intro-grid > :last-child { grid-column:9 / -1 !important; }
+  body.v14-final4 .bio-timeline__controls { min-height:41px !important; }
+  body.v14-final4 .timeline-card { min-height:0 !important; }
+  body.v14-final4 .timeline-card__content { min-height:0 !important; }
+}

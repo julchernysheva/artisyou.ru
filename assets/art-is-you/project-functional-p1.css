@@ -1,0 +1,50 @@
+/* P1 functional/image integrity only. No type tokens or editorial spacing. */
+.ay-menu-header[data-project-navigation="current"] :is(a,button) {
+  min-height:44px;box-sizing:border-box;
+}
+.ay-menu-header[data-project-navigation="current"] :is(.ay-desktop-header__toplink,.ay-desktop-header__brand-name,.ay-desktop-header__submenu a) {
+  display:flex;align-items:center;
+}
+.ay-menu-header[data-project-navigation="current"] .ay-desktop-header__brand-mark { min-width:44px; }
+.ay-menu-header[data-project-navigation="current"] :is(a,button):focus-visible {
+  outline:2px solid var(--ay-accent,#064cff);outline-offset:2px;
+}
+@media(min-width:961px) {
+  .ay-menu-header[data-project-navigation="current"] .ay-menu-group:not(.is-open)>.ay-menu-panel {
+    opacity:0!important;visibility:hidden!important;pointer-events:none;
+  }
+}
+@media(max-width:960px) {
+  .ay-menu-header[data-project-navigation="current"] .ay-menu-toprow { grid-template-columns:1fr 44px; }
+}
+body[data-v12-project="programmer"] .v12-shell>art-is-you-header {
+  display:block;position:sticky;top:0;z-index:10000;margin-inline:calc(-1 * var(--pad));
+}
+@media(max-width:640px) {
+  body[data-v12-project="programmer"] .v12-shell>art-is-you-header { margin-inline:-14px; }
+}
+/* The square artworks were incorrectly forced into portrait/panoramic frames. */
+body[data-ay-type-system="v1"][data-v12-project="nowords"] :is(.nowords12-entry,.nowords12-dominant,.nowords12-closure) figure img {
+  width:100%;height:auto;aspect-ratio:auto!important;object-fit:contain!important;object-position:center;
+}
+/* Keep existing frame dimensions; stop cutting documentary content inside them. */
+body[data-ay-type-system="v1"] :is(
+  .likes12-process__wood,.likes12-process__test,.likes12-process__water,
+  .oracle12-documentation__scheme,.aura12-documentation__field,
+  .aura12-documentation__technical,.godbot-research__graph-preview
+) img { object-fit:contain!important;object-position:center; }
+body[data-ay-type-system="v1"] :is(
+  .ay-godbot-history-network__mobile-select,.ay-system-deferred__activate,
+  .ay-godbot-archive-reader__files button,.ay-godbot-archive-reader__sequence button,
+  .ay-godbot-archive-reader__node,.ay-document-source
+) { min-height:44px;min-width:44px; }
+body[data-ay-type-system="v1"] .ay-document-source {
+  display:flex;align-items:center;flex-basis:100%;width:fit-content;max-width:100%;
+}
+body[data-ay-type-system="v1"] .ay-document-source:focus-visible {
+  outline:2px solid var(--ay-accent,#064cff);outline-offset:2px;
+}
+body[data-v12-project="programmer"] .programmer12-score .ay-document-caption {
+  position:absolute;bottom:8px;right:var(--pad);z-index:4;
+  background:var(--ay-bg,#efefea);padding-inline:8px;
+}

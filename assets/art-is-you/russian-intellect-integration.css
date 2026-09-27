@@ -1,0 +1,44 @@
+:root{--ri-paper:var(--surface);--ri-ink:var(--ink);--ri-warm:var(--muted);--ri-line:var(--rule);--ri-blue:var(--ui-accent)}
+html,body{margin:0;background:var(--ri-paper);color:var(--ri-ink)}
+.ri-integration-shell{overflow-x:hidden}.ri-integration-shell main{display:block}
+.ri-identity{padding:18px 32px 20px;border-bottom:1px solid var(--ri-line);background:var(--ri-paper)}
+.ri-identity__meta{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.ri-identity__eyebrow,.ri-identity__fullscreen,.ri-identity__counts{margin:0;font:500 10px/1.35 "PT Mono",monospace;letter-spacing:.07em;text-transform:uppercase}
+.ri-identity__eyebrow{color:var(--ri-blue)}.ri-identity__fullscreen{color:var(--ri-warm);text-decoration:none}.ri-identity__fullscreen:hover,.ri-identity__fullscreen:focus-visible{color:var(--ri-blue)}
+.ri-identity__copy{display:grid;grid-template-columns:minmax(260px,4fr) minmax(440px,5fr) minmax(340px,3fr);align-items:end;gap:24px;margin-top:13px}
+.ri-identity h1{margin:0;font:500 clamp(28px,2.35vw,42px)/.98 "Source Sans 3",sans-serif;letter-spacing:-.035em}
+.ri-identity__copy>p:not(.ri-identity__counts){max-width:660px;margin:0;font:400 15px/1.35 "Source Sans 3",sans-serif}.ri-identity__counts{color:var(--ri-warm);text-align:right}
+.ri-application{width:100%;height:max(720px,calc(100vh - 154px));overflow:hidden;background:var(--ri-paper)}.ri-application__frame{display:block;width:100%;height:100%;border:0;overflow:hidden}.ri-mobile-entry{display:none}
+.ri-significance{box-sizing:border-box;width:100%;padding:56px 32px 72px;border-top:1px solid var(--ri-line);background:var(--ri-paper);color:var(--ri-ink);font-family:"Source Sans 3",sans-serif}.ri-significance .research-detail-protocol__text{max-width:760px}
+@media(max-width:979px){
+ .ri-identity{padding:17px 20px 18px}.ri-identity__fullscreen{display:none}.ri-identity__copy{display:block;margin-top:10px}.ri-identity h1{font-size:28px}.ri-identity__copy>p:not(.ri-identity__counts){margin-top:8px;font-size:14px}.ri-identity__counts{margin-top:11px;text-align:left}
+ .ri-application{display:none}.ri-mobile-entry{display:block;min-height:520px;padding:72px 20px 86px;border-bottom:1px solid var(--ri-line)}
+ .ri-significance{padding:40px 20px 56px}
+ .ri-mobile-entry__eyebrow,.ri-mobile-entry__counts{margin:0;color:var(--ri-blue);font:500 10px/1.45 "PT Mono",monospace;letter-spacing:.07em;text-transform:uppercase}.ri-mobile-entry h2{max-width:560px;margin:22px 0 0;font:500 30px/1.05 "Source Sans 3",sans-serif;letter-spacing:-.035em}.ri-mobile-entry__counts{margin-top:25px;color:var(--ri-warm)}.ri-mobile-entry>p:not([class]){max-width:620px;margin:32px 0 0;font:400 16px/1.5 "Source Sans 3",sans-serif}.ri-mobile-entry a{display:inline-block;margin-top:42px;color:var(--ri-ink);font:500 11px/1 "PT Mono",monospace;letter-spacing:.08em;text-decoration:none}
+}
+@media(max-width:560px){.ri-identity__copy>p:not(.ri-identity__counts),.ri-identity__counts{display:none}}
+@media(max-width:560px){.ri-integration-shell .research-detail-evidence-frame{min-height:569px}}
+
+/* Russian Intelligence owns a full analytical canvas at every viewport.
+   The fallback copy remains in source as a non-JS contingency, but does not
+   replace the navigable graph on mobile. */
+.ri-integration-shell .research-detail-protocol__screen--opening{border-bottom:1px solid var(--ri-line)}
+.ri-integration-shell .research-detail-protocol__header{display:grid;gap:8px}
+.ri-integration-shell .research-detail-protocol__title{margin-bottom:0}
+.ri-research-taxonomy{margin:0;color:var(--ri-warm);font:500 9px/1.2 "PT Mono",monospace;letter-spacing:.07em}
+.ri-object-toolbar{display:flex;justify-content:flex-end;padding:10px 32px 9px;border-bottom:1px solid var(--ri-line)}
+.ri-object-toolbar .ri-identity__fullscreen{font:500 9px/1.2 "PT Mono",monospace;letter-spacing:.07em;text-transform:uppercase}
+.ri-application{height:max(720px,calc(100vh - 154px));border-bottom:1px solid var(--ri-line)}
+.ri-mobile-entry{display:none!important}
+@media(max-width:979px){
+ .ri-object-toolbar{padding:9px 16px 8px}
+ .ri-object-toolbar .ri-identity__fullscreen{display:block}
+ .ri-application{display:block;height:min(78svh,760px);min-height:560px}
+}
+@media(max-width:560px){
+ .ri-integration-shell .research-detail-protocol__screen--opening{min-height:auto}
+ .ri-research-taxonomy{font-size:8px}
+ .ri-application{height:72svh;min-height:520px}
+}
+/* Mobile horizontal canvas keeps the complete vertical corpus at readable scale. */
+@media(max-width:600px){.ri-application{height:1182px;min-height:1182px}}

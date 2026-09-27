@@ -1,0 +1,120 @@
+/* Projects 01/02 live visual state: one stable media box, one visible layer. */
+.projects-live-visual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #EFEFEA;
+  cursor: pointer;
+}
+.projects-live-visual--russian { aspect-ratio: 1889 / 950; }
+.projects-live-visual__poster,
+.projects-live-visual__mount,
+.projects-live-visual__mount iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.projects-live-visual__poster {
+  z-index: 1;
+  object-fit: contain;
+  object-position: center;
+  transition: filter 180ms ease, opacity 160ms linear;
+}
+.projects-index--canonical .projects-live-visual__poster,
+.projects-index--canonical .projects-live-visual__mount,
+.projects-index--canonical .projects-live-visual__mount iframe {
+  width: 100%;
+  height: 100%;
+}
+.projects-live-visual--russian .projects-live-visual__poster {
+  object-fit: cover;
+}
+.projects-live-visual__mount {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms linear;
+}
+.projects-live-visual__mount iframe {
+  border: 0;
+  pointer-events: none;
+  background: #EFEFEA;
+}
+.projects-live-visual::after {
+  content: "CLICK TO ACTIVATE";
+  position: absolute;
+  z-index: 4;
+  top: 12px;
+  right: 12px;
+  padding: 7px 10px 6px;
+  border: 1px solid rgba(105,94,88,.45);
+  background: rgba(239,239,234,.92);
+  color: #695E58;
+  font: 500 10px/14px 'Source Sans 3',sans-serif;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.projects-live-visual--russian::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 18%;
+  top: 52%;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #064CFF;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1);
+  box-shadow: 0 0 0 5px rgba(6,76,255,.12);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.projects-live-visual--russian.is-hover::before {
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1.25);
+}
+.projects-live-visual--russian.is-live::before { opacity: 0; }
+.projects-live-visual--russian.is-hover .projects-live-visual__poster {
+  filter: saturate(1.12) contrast(1.04);
+}
+.projects-live-visual.is-loading::after { content: "LOADING…"; }
+.projects-live-visual.is-live::after { display: none; }
+.projects-live-visual.is-live .projects-live-visual__poster { opacity: 0; }
+.projects-live-visual.is-live .projects-live-visual__mount { opacity: 1; pointer-events: auto; }
+.projects-live-visual.is-live .projects-live-visual__mount iframe { pointer-events: auto; }
+.projects-live-visual:focus-visible { outline: 1px solid #064CFF; outline-offset: 2px; }
+.projects-static-poster { cursor: pointer; }
+.projects-static-poster::after { display: none; }
+.projects-static-poster__link { position: static; inset: auto; display: block; }
+.projects-live-visual--russian.projects-static-poster { aspect-ratio: auto; }
+.projects-static-poster .projects-live-visual__poster { position: static; inset: auto; width: 100%; height: auto; max-width: 100%; object-fit: initial; }
+.projects-static-poster__link:focus-visible { outline: 1px solid #064CFF; outline-offset: 2px; }
+.projects-live-visual--russian.projects-static-poster.projects-intellect-sequence { aspect-ratio: 1889 / 950; }
+.projects-intellect-sequence__link { position: absolute; inset: 0; }
+.projects-intellect-sequence__frames { position: relative; display: block; width: 100%; height: 100%; }
+.projects-intellect-sequence__frame { position: absolute; inset: 29% auto auto 29%; display: block; width: 42%; height: 42%; object-fit: contain; object-position: center; opacity: 0; pointer-events: none; }
+.projects-intellect-sequence__frame { filter: none !important; }
+.projects-intellect-sequence__frame--kolmogorov { opacity: 1; }
+@keyframes projects-intellect-markov { 0%,19%{opacity:0} 20%,39%{opacity:1} 40%,100%{opacity:0} }
+@keyframes projects-intellect-chervonenkis { 0%,39%{opacity:0} 40%,59%{opacity:1} 60%,100%{opacity:0} }
+@keyframes projects-intellect-nesterov { 0%,59%{opacity:0} 60%,79%{opacity:1} 80%,100%{opacity:0} }
+@keyframes projects-intellect-pospelov { 0%,79%{opacity:0} 80%,99%{opacity:1} 100%{opacity:0} }
+@keyframes projects-intellect-kolmogorov { 0%,19%{opacity:1} 20%,99%{opacity:0} 100%{opacity:1} }
+.projects-intellect-sequence:hover .projects-intellect-sequence__frame--kolmogorov { animation: projects-intellect-kolmogorov 1.4s steps(1,end) infinite; }
+.projects-intellect-sequence:hover .projects-intellect-sequence__frame--markov { animation: projects-intellect-markov 1.4s steps(1,end) infinite; }
+.projects-intellect-sequence:hover .projects-intellect-sequence__frame--chervonenkis { animation: projects-intellect-chervonenkis 1.4s steps(1,end) infinite; }
+.projects-intellect-sequence:hover .projects-intellect-sequence__frame--nesterov { animation: projects-intellect-nesterov 1.4s steps(1,end) infinite; }
+.projects-intellect-sequence:hover .projects-intellect-sequence__frame--pospelov { animation: projects-intellect-pospelov 1.4s steps(1,end) infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .projects-intellect-sequence:hover .projects-intellect-sequence__frame { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects-live-visual__poster,
+  .projects-live-visual__mount,
+  .projects-live-visual--russian::before { transition: none; }
+}

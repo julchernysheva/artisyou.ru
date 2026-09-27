@@ -1,0 +1,89 @@
+body.ay-system-page { --ay-page-gutter: var(--ay-grid-gutter); }
+
+.ay-page-shell {
+  width: 100% !important;
+  max-width: none;
+  margin-inline: auto !important;
+  padding-inline: var(--ay-page-gutter) !important;
+  box-sizing: border-box !important;
+}
+
+.ay-grid-12 {
+  display: grid;
+  grid-template-columns: repeat(var(--ay-grid-columns), minmax(0, 1fr));
+  column-gap: var(--ay-grid-gap);
+}
+
+.ay-span-3 { grid-column: span 3; }
+.ay-span-4 { grid-column: span 4; }
+.ay-span-5 { grid-column: span 5; }
+.ay-span-6 { grid-column: span 6; }
+.ay-span-7 { grid-column: span 7; }
+.ay-span-8 { grid-column: span 8; }
+.ay-span-9 { grid-column: span 9; }
+.ay-span-12 { grid-column: 1 / -1; }
+
+.ay-text-column { width: 100%; max-width: var(--ay-text-measure); }
+.ay-text-column--wide { max-width: var(--ay-text-measure-wide); }
+
+/* The existing two-column intros are the same 8/4 composition on the shared grid. */
+body.ay-system-page :is(
+  .ay-home__intro-grid,
+  .projects-index__intro-grid,
+  .research-index__intro-grid,
+  .statement-header__grid,
+  .about-header__grid,
+  .press-index__intro-grid,
+  .essays-index__intro-grid,
+  .programmer-header__grid,
+  .lab-header__grid,
+  .interview-index__intro-grid,
+  .archive-header__grid,
+  .bio-timeline__intro-grid
+) {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  column-gap: var(--ay-grid-gap) !important;
+}
+
+body.ay-system-page :is(
+  .ay-home__intro-grid,
+  .projects-index__intro-grid,
+  .research-index__intro-grid,
+  .statement-header__grid,
+  .about-header__grid,
+  .press-index__intro-grid,
+  .essays-index__intro-grid,
+  .programmer-header__grid,
+  .lab-header__grid,
+  .interview-index__intro-grid,
+  .archive-header__grid,
+  .bio-timeline__intro-grid
+) > :first-child { grid-column: 1 / span 8 !important; min-width: 0; }
+
+body.ay-system-page :is(
+  .ay-home__intro-grid,
+  .projects-index__intro-grid,
+  .research-index__intro-grid,
+  .statement-header__grid,
+  .about-header__grid,
+  .press-index__intro-grid,
+  .essays-index__intro-grid,
+  .programmer-header__grid,
+  .lab-header__grid,
+  .interview-index__intro-grid,
+  .archive-header__grid,
+  .bio-timeline__intro-grid
+) > :last-child { grid-column: 9 / -1 !important; min-width: 0; }
+
+.ay-desktop-header { padding-inline: var(--ay-grid-gutter) !important; }
+
+/* Protoarchive uses the same full-width editorial grid as every other page. */
+.prearchive-linear.ay-page-shell {
+  width: 100% !important;
+  max-width: none;
+  padding-inline: var(--ay-page-gutter) !important;
+}
+
+/* Border-seam layouts keep zero visual gaps; their columns still derive from 12ths. */
+.ay-grid-seam { gap: 0 !important; }

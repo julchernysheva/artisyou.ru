@@ -1,0 +1,300 @@
+/* Reverse Prompt's current content in the real Research/Russian Intellect shell.
+   The canonical DOM owns the new sequence; these are page-local instrument rules. */
+body.reverse-prompt-detail .rp-section-nav {
+  box-sizing:border-box;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 28px;
+  align-items:center;
+  min-height:56px;
+  padding:10px 32px;
+  border-bottom:1px solid var(--rule);
+  background:var(--surface);
+}
+body.reverse-prompt-detail .rp-section-nav a {
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  min-height:36px;
+  color:var(--ink);
+  font:400 13px/18px "PT Mono",monospace;
+  text-decoration:none;
+}
+body.reverse-prompt-detail .rp-section-nav a:hover,
+body.reverse-prompt-detail .rp-section-nav a:focus-visible { color:var(--ui-accent); }
+body.reverse-prompt-detail .rp-section-nav a:focus-visible {
+  outline:2px solid var(--ui-accent);
+  outline-offset:3px;
+}
+body.reverse-prompt-detail :is(#protocol,#corpus,#observations) { scroll-margin-top:66px; }
+@media (max-width:600px) {
+  body.reverse-prompt-detail .rp-section-nav { gap:4px 18px; min-height:0; padding:8px 20px; }
+  body.reverse-prompt-detail .rp-section-nav a { font-size:12px; }
+}
+@media (min-width:1025px) {
+  html body.reverse-prompt-detail .ay-desktop-header {
+    height:66px;
+    min-height:66px;
+    padding:0 32px;
+    border-bottom:1px solid var(--rule);
+    font-family:"Source Sans 3",sans-serif;
+  }
+  body.reverse-prompt-detail { background:#EFEFEA;color:#695E58; }
+  body.reverse-prompt-detail .research-detail-protocol__screen--opening { border-bottom:1px solid var(--rule); }
+  body.reverse-prompt-detail .research-detail-protocol__header { display:grid;gap:8px; }
+  body.reverse-prompt-detail .ri-research-taxonomy {
+    margin:0;
+    color:#695E58;
+    font:500 9px/1.2 "PT Mono",monospace;
+    letter-spacing:.07em;
+  }
+  body.reverse-prompt-detail .rp-method-evidence { color:#695E58; }
+  body.reverse-prompt-detail .rp-object-toolbar {
+    box-sizing:border-box;
+    min-height:40px;
+    height:40px;
+    align-items:center;
+    padding:10px 32px 9px;
+    border-bottom:1px solid var(--rule);
+  }
+  body.reverse-prompt-detail .rp-object-toolbar a {
+    color:#695E58;
+    font:500 9px/1.2 "PT Mono",monospace;
+    letter-spacing:.07em;
+    text-decoration:none;
+  }
+  body.reverse-prompt-detail .rp-object-toolbar a:hover { color:#2C2927; }
+  body.reverse-prompt-detail .rp-object-toolbar a:focus-visible { color:#064CFF;outline:2px solid #064CFF;outline-offset:3px; }
+
+  /* A protocol instrument takes the graph-shell role without becoming a graph. */
+  body.reverse-prompt-detail .ri-application.rp-protocol-application.rp-native-scheme {
+    --rp-scheme-paper:#EFEFEA;
+    --rp-scheme-ink:#2C2927;
+    --rp-scheme-muted:#695E58;
+    --rp-scheme-line:var(--rule);
+    --rp-scheme-blue:#2C2927;
+    --rp-scheme-green:var(--ui-accent);
+    box-sizing:border-box;
+    display:grid;
+    grid-template-rows:52px auto auto;
+    width:100%;
+    max-width:none;
+    height:auto;
+    min-height:0;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    border-bottom:1px solid var(--rule);
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    width:100%;
+    max-width:none;
+    min-height:52px;
+    padding:0 32px;
+    border-bottom:1px solid var(--rule);
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__register {
+    flex:0 0 auto;
+    color:#695E58;
+    font:500 10px/14px "PT Mono",monospace;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__title {
+    margin:0;
+    color:#2C2927;
+    font:400 18px/22px "Source Sans 3",sans-serif;
+    letter-spacing:-.01em;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__diagram {
+    min-height:0;
+    height:auto;
+    min-height:300px;
+    margin:0;
+    padding:32px;
+    border-top:0;
+    border-bottom:1px solid var(--rule);
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__module {
+    min-height:0;
+    padding:18px 14px;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__module:hover {
+    background:#E8E8E2;
+    box-shadow:inset 0 0 0 1px #2C2927;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__module:focus-visible {
+    background:#EFEFEA;
+    box-shadow:none;
+    outline:2px solid #064CFF;
+    outline-offset:-2px;
+  }
+  body.reverse-prompt-detail .rp-protocol-application :is(.rp-native-scheme__translation span,.rp-native-scheme__strip span) { color:#2C2927; }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__grid i:nth-child(4n),
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__grid i:nth-child(7n) {
+    border-color:#695E58;
+    background:#EFEFEA;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__footer {
+    gap:10px 24px;
+    padding:12px 32px 16px;
+  }
+  body.reverse-prompt-detail .rp-protocol-application .rp-native-scheme__clarifications { padding-top:10px; }
+
+  /* Corpus mechanics use RI neutral/context/selected hierarchy, not an old bright mode. */
+  body.reverse-prompt-detail .rp-research-corpus.reverse-prompt-analytics {
+    --rp-paper:#EFEFEA;
+    --rp-ink:#695E58;
+    --rp-line:var(--rule);
+    --rp-accent:#2C2927;
+    --rp-active:var(--ui-accent);
+  }
+  body.reverse-prompt-detail .rp-research-corpus .rp-threads { padding:56px 32px 64px; }
+  body.reverse-prompt-detail .rp-research-corpus .reverse-prompt-analytics__title {
+    color:#2C2927;
+    font:400 30px/34px "Source Sans 3",sans-serif;
+    letter-spacing:-.04em;
+  }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread-map { margin-top:28px; }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread.is-hot .rp-thread__line { stroke:#2C2927; }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread-node.is-hot :is(circle,text) { stroke:#2C2927;fill:#2C2927; }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread-node.is-hot circle { fill:#EFEFEA; }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread-node:focus-visible text { fill:#064CFF; }
+  body.reverse-prompt-detail .rp-research-corpus .rp-thread-node:focus-visible circle { stroke:#064CFF; }
+  body.reverse-prompt-detail .rp-selected-case details > .rp-case-authorship {
+    margin:4px 0 12px;
+    color:#2C2927;
+    font:400 14px/20px "Source Sans 3",sans-serif;
+  }
+  body.reverse-prompt-detail .rp-selected-case details > .rp-editorial-footnote {
+    max-width:62ch;
+    margin:0 0 12px;
+    color:#695E58;
+    font:400 11px/16px "Source Sans 3",sans-serif;
+  }
+  body.reverse-prompt-detail .rp-research-conclusion .research-detail-evidence-frame { margin:0; }
+  body.reverse-prompt-detail .rp-research-provenance .reverse-prompt-analytics__section { padding-top:56px;padding-bottom:64px; }
+}
+body.reverse-prompt-detail a{color:var(--ui-accent)}
+
+/* TASK 07: recover the existing attempt graph, not its layout or corpus. */
+body.reverse-prompt-detail .rp-thread-map {
+  --graph-edge-context:var(--rule);
+  --graph-label-context:var(--muted);
+  --graph-selected:var(--ui-accent);
+}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread__line {
+  stroke:var(--graph-edge-context);
+  opacity:.65;
+}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-map__svg[data-interaction-state] .rp-thread:not(.is-hot) .rp-thread__line {opacity:.65}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread[data-terminal="result"] .rp-thread__line {stroke-dasharray:4 3}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread.is-hot .rp-thread__line {
+  stroke:var(--graph-selected);
+  stroke-width:1.75;
+  opacity:1;
+}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-node text {fill:var(--muted);stroke:none}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-map__svg[data-interaction-state] .rp-thread-node:not(.is-hot) {opacity:.65}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-node.is-hot text {fill:var(--graph-selected);stroke:none}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-node.is-hot circle {stroke:var(--graph-selected);fill:var(--surface)}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-node[aria-pressed="true"] circle {fill:var(--graph-selected);stroke:var(--graph-selected)}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread-node:focus-visible circle {stroke:var(--graph-selected);stroke-width:2}
+body.reverse-prompt-detail .rp-research-corpus .rp-thread__hit:focus-visible {stroke:var(--graph-selected)}
+body.reverse-prompt-detail .rp-native-scheme :is(.rp-native-scheme__module,.rp-native-scheme__summary):is(:hover,:focus-visible) {
+  background:var(--surface);
+  box-shadow:inset 0 0 0 1px var(--ui-accent);
+}
+body.reverse-prompt-detail .rp-native-scheme .rp-native-scheme__grid i:nth-child(4n),
+body.reverse-prompt-detail .rp-native-scheme .rp-native-scheme__grid i:nth-child(7n) {background:var(--surface)}
+
+/* 05 / CASES: the Projects selector/preview grammar, at every desktop width. */
+body.reverse-prompt-detail .rp-research-cases .rp-research-selector-field {
+  box-sizing:border-box;
+  padding:48px 32px 64px;
+  border-top:1px solid var(--rule);
+  background:var(--surface);
+  color:var(--ink);
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-browser__intro {
+  display:grid;
+  grid-template-columns:minmax(0,calc((100% + 24px)*5/12 - 24px)) minmax(0,1fr);
+  gap:12px 24px;
+  align-items:end;
+  margin:0 0 24px;
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-browser__intro .reverse-prompt-analytics__register { grid-column:1/-1; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__title { grid-column:1; margin:0; font:400 30px/34px "Source Sans 3",sans-serif; letter-spacing:-.04em; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__status { grid-column:2; margin:0; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-browser__grid {
+  display:grid;
+  grid-template-columns:minmax(0,calc((100% + 24px)*5/12 - 24px)) minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector { min-width:0; padding:0; border:0; background:transparent; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items { display:block; margin:0; border-top:1px solid var(--rule); }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items > div { border-bottom:1px solid var(--rule); }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button {
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:32px minmax(0,1fr) 20px;
+  gap:16px;
+  align-items:center;
+  width:100%;
+  min-height:48px;
+  padding:10px 12px;
+  border:0;
+  background:transparent;
+  color:var(--ink);
+  text-align:left;
+  cursor:pointer;
+  font:400 16px/24px "Source Sans 3",sans-serif!important;
+  transition:none;
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button > span { flex:none; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__number { font:400 13px/18px "PT Mono",monospace; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__name { min-width:0; font:400 16px/24px "Source Sans 3",sans-serif; letter-spacing:-.01em; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__arrow { text-align:right; font:400 16px/20px "Source Sans 3",sans-serif; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button[aria-pressed="true"] {
+  background:var(--ui-accent,#064cff);
+  color:#fff;
+  box-shadow:none;
+  outline:0;
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button[aria-pressed="true"] > span { color:#fff; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button:not([aria-pressed="true"]):is(:hover,:focus-visible) {
+  background:transparent;
+  color:var(--ui-accent,#064cff);
+  box-shadow:inset 0 0 0 1px var(--ui-accent,#064cff);
+}
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button:not([aria-pressed="true"]):is(:hover,:focus-visible) > span { color:var(--ui-accent,#064cff); }
+body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button:focus-visible { outline:2px solid var(--ui-accent,#064cff); outline-offset:2px; }
+body.reverse-prompt-detail .rp-research-cases .rp-selected-case-host { min-width:0; border-top:1px solid var(--rule); }
+body.reverse-prompt-detail .rp-research-cases .rp-selected-case__header { border-bottom:1px solid var(--rule); }
+body.reverse-prompt-detail .rp-research-cases .rp-selected-case__top { display:block; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-source__media { display:block; min-height:0; max-height:none; }
+body.reverse-prompt-detail .rp-research-cases .rp-case-source__media img {
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:800px;
+  object-fit:contain;
+  object-position:left top;
+}
+body.reverse-prompt-detail .rp-research-cases .rp-selected-case__reading { margin-top:32px; padding-top:18px; border-top:1px solid var(--rule); }
+
+@media (max-width:1024px) {
+  body.reverse-prompt-detail .rp-research-cases .rp-research-selector-field { padding:48px 20px 56px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-browser__intro { display:block; margin-bottom:24px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-selector__title { margin-top:12px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-selector__status { margin-top:12px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-browser__grid { display:block; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-selector { margin-bottom:24px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-selector__items button { min-height:44px; padding:8px 12px; }
+  body.reverse-prompt-detail .rp-research-cases .rp-case-source__media img { width:100%; max-height:none; }
+  body.reverse-prompt-detail .rp-research-cases .rp-selected-case__reading { margin-top:24px; }
+}

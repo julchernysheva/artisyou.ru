@@ -1,0 +1,30 @@
+/* Loaded only for query-based deep access. No production-root or prototype rules. */
+html[data-godbot-deep="loading"] :is(main,.ay-project-top):not(#godbot-deep) { visibility:hidden; }
+#godbot-deep { min-height:70vh; padding-bottom:64px; }
+#godbot-deep [hidden] { display:none!important; }
+#godbot-deep .godbot-deep-back { display:inline-flex; align-items:center; min-height:44px; margin-bottom:24px; color:inherit; text-underline-offset:4px; }
+#godbot-deep .godbot-deep-heading { --ay-type-size:var(--ay-size-section); --ay-type-leading:var(--ay-leading-section); --ay-type-weight:400; --ay-type-tracking:-.035em; margin:0; }
+#godbot-deep .godbot-deep-select { display:block; box-sizing:border-box; width:100%; min-width:0; min-height:44px; margin:12px 0 32px; padding:12px; border:1px solid var(--gb-line); border-radius:0; background:var(--gb-paper); color:var(--gb-ink); }
+#godbot-deep .godbot-deep-record { min-width:0; overflow-wrap:anywhere; }
+#godbot-deep .godbot-deep-record>h2 { --ay-type-weight:400; margin:0 0 24px; }
+#godbot-deep .godbot-deep-source, #godbot-deep .godbot-deep-record>p, #godbot-deep .godbot-deep-note { max-width:72ch; }
+#godbot-deep .godbot-deep-source :is(p,ul,ol,blockquote,pre) { margin:0 0 24px; }
+#godbot-deep .godbot-deep-source :is(h2,h3,h4) { margin:32px 0 20px; }
+#godbot-deep .godbot-deep-source :is(h3,h4) { --ay-type-size:var(--ay-size-statement); --ay-type-leading:var(--ay-leading-statement); }
+#godbot-deep .godbot-deep-record .process-step,
+#godbot-deep .godbot-deep-record .process-name,
+#godbot-deep .godbot-deep-record .process-copy { display:block; }
+#godbot-deep .godbot-deep-record .process-name { margin-bottom:4px; }
+#godbot-deep .godbot-deep-source ul, #godbot-deep .godbot-deep-source ol { padding-left:24px; }
+#godbot-deep .godbot-deep-source pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+#godbot-deep .source-table { width:100%; overflow-x:auto; }
+#godbot-deep .source-table th, #godbot-deep .source-table td { padding:12px; border-bottom:1px solid var(--gb-line); text-align:left; }
+#godbot-deep :is(.godbot-deep-documents,.godbot-deep-related,.godbot-deep-sources) { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:24px; }
+#godbot-deep :is(.godbot-deep-documents,.godbot-deep-related,.godbot-deep-sources) a { display:inline-flex; align-items:center; min-height:44px; color:inherit; text-decoration:underline; text-underline-offset:4px; overflow-wrap:anywhere; }
+#godbot-deep :is(a,button,select):focus-visible { outline:2px solid #064cff; outline-offset:4px; }
+#godbot-deep :is(a,button):hover { color:#064cff; }
+#godbot-deep .godbot-deep-note { margin-top:24px; color:var(--gb-muted); }
+#godbot-deep :is(.godbot-deep-record-label,.godbot-deep-back,.godbot-deep-documents,.godbot-deep-sources,.godbot-deep-note) { --ay-type-size:var(--ay-size-micro); --ay-type-leading:var(--ay-leading-micro); }
+#godbot-deep .godbot-deep-source button { border:0; padding:8px 0; min-height:44px; background:none; text-align:left; color:inherit; text-decoration:underline; cursor:pointer; }
+#godbot-deep .godbot-deep-source [data-node-id] { cursor:pointer; }
+#godbot-deep .ay-godbot-quantum-threshold img { object-fit:contain; }

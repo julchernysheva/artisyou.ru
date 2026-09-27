@@ -1,0 +1,125 @@
+/* ART.IS.YOU V18.1 — STYLE PILOT
+   Scoped to Projects, Research and About. Header and Home are intentionally excluded. */
+
+body.v18-1-pilot{
+  --v181-paper:#EFEFEA;
+  --v181-ink:#695E58;
+  --v181-line:var(--rule);
+  --v181-signal:#064CFF;
+  --v181-veil:rgba(105,94,88,.07);
+}
+
+body.v18-1-pilot #allrecords{position:relative}
+body.v18-1-pilot #allrecords::before{
+  content:"V18.1 / CULTURAL R&D / SYSTEM ACTIVE";
+  position:absolute;z-index:3;top:10px;right:32px;
+  font:400 10px/14px var(--ay-font-sans);letter-spacing:.07em;color:var(--v181-ink);opacity:.58;
+  pointer-events:none;
+}
+body.v18-1-pilot #allrecords::after{
+  content:"";position:absolute;z-index:2;top:31px;right:32px;width:4px;height:4px;border-radius:50%;
+  background:var(--v181-signal);pointer-events:none;
+}
+
+/* Shared density: long quiet openings, then a precise event. */
+body.v18-1-pilot :is(.projects-index__intro,.research-index__intro,.about-header){
+  min-height:clamp(280px,35vh,430px)!important;
+  padding-top:56px!important;padding-bottom:64px!important;
+}
+body.v18-1-pilot :is(.projects-index__heading,.research-index__heading,.about-header h1){
+  max-width:9ch;letter-spacing:-.055em!important;
+}
+body.v18-1-pilot :is(.projects-index__eyebrow,.research-index__eyebrow,.about-header__eyebrow){
+  position:relative;padding-top:12px;border-top:1px solid var(--v181-line);
+}
+body.v18-1-pilot :is(.projects-index__eyebrow,.research-index__eyebrow,.about-header__eyebrow)::before{
+  content:"S/01";position:absolute;top:-8px;left:50%;padding:0 7px;background:var(--v181-paper);
+  font-size:10px;line-height:14px;letter-spacing:.06em;color:var(--v181-signal);
+}
+
+/* PROJECTS — fragment as image / controlled media boundary crossing. */
+body.v18-1-projects .projects-index__grid{position:relative;overflow:visible!important}
+body.v18-1-projects .project-card{overflow:visible!important}
+body.v18-1-projects .project-card__image{position:relative;overflow:hidden!important;background:#e5e2dc!important}
+body.v18-1-projects .project-card__image::after{
+  content:"FRAGMENT / NOT A COMPLETE MAP";position:absolute;left:12px;bottom:10px;z-index:3;
+  padding:3px 6px;background:rgba(239,239,234,.84);font-size:9px;line-height:12px;letter-spacing:.06em;
+  color:var(--v181-ink);pointer-events:none;
+}
+body.v18-1-projects .project-card__image img{
+  filter:grayscale(.86) sepia(.08) saturate(.45) contrast(.91)!important;
+  transform:scale(1.035);transform-origin:52% 48%;
+  transition:filter 1.8s ease,transform 14s cubic-bezier(.22,.61,.36,1)!important;
+}
+body.v18-1-projects .project-card:hover .project-card__image img,
+body.v18-1-projects .project-card:focus-visible .project-card__image img{
+  filter:grayscale(.28) sepia(.05) saturate(.72) contrast(.97)!important;transform:scale(1.055)!important;
+}
+body.v18-1-projects .project-card--hero .project-card__image{
+  width:calc(100% + 24px);margin-left:-24px;border-left:1px solid var(--v181-line);
+}
+body.v18-1-projects .project-card--hero .project-card__image::before{
+  content:"NODE FIELD 01 / MEMORY STATE: UNSTABLE";position:absolute;z-index:4;right:12px;top:12px;
+  max-width:170px;text-align:right;font-size:9px;line-height:13px;letter-spacing:.06em;color:var(--v181-ink);
+}
+body.v18-1-projects .project-card:nth-of-type(3n+2){margin-top:64px}
+body.v18-1-projects .project-card__meta span:last-child::before{content:"• ";color:var(--v181-signal)}
+
+/* RESEARCH — systematic field with one dense synthesis event. */
+body.v18-1-research .research-index__grid{position:relative}
+body.v18-1-research .research-card{position:relative}
+body.v18-1-research .research-card__image{overflow:hidden!important;background:#e6e3dc!important}
+body.v18-1-research .research-card__image img{
+  filter:grayscale(.78) sepia(.1) saturate(.52) contrast(.93);opacity:.94;
+  transition:filter 1.8s ease,opacity 1.8s ease,transform 16s ease;
+}
+body.v18-1-research .research-card:hover .research-card__image img{filter:grayscale(.32) sepia(.05) saturate(.72);opacity:1;transform:scale(1.018)}
+body.v18-1-research .research-card--hero{isolation:isolate}
+body.v18-1-research .research-card--hero::after{
+  content:"FEEDBACK / MEMORY / ERROR / CULTURAL MODEL";position:absolute;z-index:5;right:-24px;bottom:18px;
+  width:220px;padding:9px 12px;border-top:1px solid var(--v181-line);border-bottom:1px solid var(--v181-line);
+  background:rgba(239,239,234,.9);font-size:9px;line-height:13px;letter-spacing:.06em;color:var(--v181-ink);
+}
+body.v18-1-research .research-card--bioart .research-card__image::after{
+  content:"LIVING MATERIAL / STATE 05";position:absolute;left:10px;bottom:9px;padding:3px 6px;
+  background:rgba(239,239,234,.86);font-size:9px;line-height:12px;letter-spacing:.06em;color:var(--v181-ink);
+}
+body.v18-1-research .research-card__meta span:first-child::before{content:"[";color:var(--v181-signal)}
+body.v18-1-research .research-card__meta span:first-child::after{content:"]";color:var(--v181-signal)}
+
+/* ABOUT — preserve the REV4 ASCII system; recast it as a measured signal. */
+body.v18-1-about .about-opening{position:relative;isolation:isolate;margin-top:24px!important;margin-bottom:96px!important}
+body.v18-1-about .about-opening::before{
+  content:"HUMAN LAYER / SIGNAL ACQUISITION / 55.7558° N";position:absolute;z-index:4;left:32px;top:-22px;
+  font-size:9px;line-height:13px;letter-spacing:.07em;color:var(--v181-ink);opacity:.72;
+}
+body.v18-1-about .about-opening::after{
+  content:"STATE 01";position:absolute;z-index:4;right:32px;bottom:-22px;
+  font-size:9px;line-height:13px;letter-spacing:.07em;color:var(--v181-signal);
+}
+body.v18-1-about .about-opening__image{overflow:hidden!important;background:#e5e2dc!important}
+body.v18-1-about .about-opening__portrait-poster{filter:grayscale(1) sepia(.04) contrast(.92)!important;transform:scale(1.018);transition:transform 18s ease}
+body.v18-1-about .about-opening:hover .about-opening__portrait-poster{transform:scale(1.03)}
+body.v18-1-about .about-profile{position:relative;padding-top:48px!important;border-top:1px solid var(--v181-line)}
+body.v18-1-about .about-profile::before{
+  content:"METHOD / POSITION → LANGUAGE → PILOT → PROGRAM";position:absolute;top:13px;right:0;
+  max-width:290px;text-align:right;font-size:9px;line-height:13px;letter-spacing:.06em;color:var(--v181-ink);
+}
+body.v18-1-about .about-professional-proof__item:nth-child(even){transform:translateY(32px)}
+body.v18-1-about .about-meta span:first-child::before{content:"• ";color:var(--v181-signal)}
+
+@media(max-width:960px){
+  body.v18-1-pilot #allrecords::before{right:20px}
+  body.v18-1-pilot #allrecords::after{right:20px}
+  body.v18-1-pilot :is(.projects-index__intro,.research-index__intro,.about-header){min-height:auto!important;padding-top:36px!important;padding-bottom:48px!important}
+  body.v18-1-projects .project-card--hero .project-card__image{width:100%;margin-left:0}
+  body.v18-1-projects .project-card:nth-of-type(3n+2){margin-top:0}
+  body.v18-1-research .research-card--hero::after{right:0}
+  body.v18-1-about .about-opening::before{left:20px}
+  body.v18-1-about .about-opening::after{right:20px}
+  body.v18-1-about .about-professional-proof__item:nth-child(even){transform:none}
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.v18-1-pilot :is(.project-card__image img,.research-card__image img,.about-opening__portrait-poster){transition:none!important;transform:none!important}
+}

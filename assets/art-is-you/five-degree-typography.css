@@ -1,0 +1,1241 @@
+/* TASK09B: semantic typography pilot on Home / Publications / Lab only.
+   No layout, palette, interaction, shared-header/footer or SVG declarations.
+   Explicit terminal selectors keep the pilot outside spatial descendants. */
+
+/* TASK09B.1: Home TEXT / EMPHASIS; weight only, not a sixth degree. */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1).about-header__position {
+  font-weight: 500 !important;
+}
+
+/* Proven narrow source locator: preserve family only; keep MICRO scale.
+   PT Mono makes the existing single-line locator wrap at desktop width. */
+body.publications-index-page:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3) {
+  font-family: "Source Sans 3", sans-serif !important;
+}
+/* Graphic child can otherwise inherit its newly styled parent's PT Mono. */
+body:has(#about-page-title) .about-method-diagram__feedback span {
+  font-family: "PT Mono", monospace !important;
+  font-size: 10px !important;
+  line-height: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.7px !important;
+}
+
+/* MICRO */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(1)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(2)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(3)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>figure:nth-child(2)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(4),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>div:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>div:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(1)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(5),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(7),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>span:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>a:nth-child(5),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(4)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>a:nth-child(5),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>section:nth-child(1)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(1)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(2)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(3)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(5)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(5)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(1)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(8)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(8)>span:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(1)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(2)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(3)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(4)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(5)>span:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(6)>span:nth-child(1) {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* DISPLAY */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>header:nth-child(1)>h1:nth-child(2) {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+/* TEXT */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(1)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(1)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(2)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(3)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>p:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>em:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>em:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>em:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>em:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(4),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(5),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(4),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(5),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>p:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1)>b:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(3)>b:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(5)>b:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(7)>b:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(4)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>section:nth-child(1)>p:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(1)>p:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(2)>p:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(3)>p:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>header:nth-child(1)>p:nth-child(2) {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+/* TITLE */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>h2:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(1)>h2:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(1)>h2:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>div:nth-child(1)>h2:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(1)>h2:nth-child(2),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(3)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(3)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>header:nth-child(1)>h2:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(1)>h3:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(2)>h3:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(3)>h3:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(4)>h3:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(5)>h3:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(6)>h3:nth-child(2) {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+/* SYSTEM */
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>b:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>b:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>b:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>b:nth-child(2),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(5),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>a:nth-child(6),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>a:nth-child(6),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>a:nth-child(3),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>a:nth-child(1),
+body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>a:nth-child(3),
+body:has(.publications-index)>main:nth-child(2)>nav:nth-child(2)>a:nth-child(1),
+body:has(.publications-index)>main:nth-child(2)>nav:nth-child(2)>a:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(1),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(2),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(3),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(4),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(5),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(6),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(7),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(8),
+body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>details:nth-child(7)>summary:nth-child(1) {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* Reuse body:has(#about-page-title) existing responsive threshold; typography only. */
+@media (max-width: 760px) {
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(1)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(2)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(3)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>figure:nth-child(2)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(4)>span:nth-child(4),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>div:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>div:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(1)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(5),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(7),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>span:nth-child(2) {
+    font-size: 11px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+  }
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(1) {
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: -2.2px !important;
+  }
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(1)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(1)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(2)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(2)>div:nth-child(2)>article:nth-child(3)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>p:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>em:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>em:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>em:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>em:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(4),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>p:nth-child(5),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(4),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>p:nth-child(5),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>p:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(1)>b:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(3)>b:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(5)>b:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(2)>div:nth-child(2)>span:nth-child(7)>b:nth-child(1) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.16px !important;
+  }
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(3)>article:nth-child(1)>div:nth-child(3)>h2:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(1)>h2:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(1)>h2:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>div:nth-child(1)>h2:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>div:nth-child(1)>h2:nth-child(2) {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    letter-spacing: -0.24px !important;
+  }
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(1)>b:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(2)>b:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(3)>b:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(4)>b:nth-child(2),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(4)>div:nth-child(3)>div:nth-child(5),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(1)>a:nth-child(6),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(5)>div:nth-child(2)>article:nth-child(3)>a:nth-child(6),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(6)>article:nth-child(2)>a:nth-child(3),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>a:nth-child(1),
+  body:has(#about-page-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>main:nth-child(2)>section:nth-child(7)>p:nth-child(3)>a:nth-child(3) {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+  }
+}
+
+/* Reuse body:has(.publications-index) existing responsive threshold; typography only. */
+@media (max-width: 639px) {
+  body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>span:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(5)>a:nth-child(5),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(4)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>a:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>span:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>span:nth-child(3),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(4)>a:nth-child(5) {
+    font-size: 11px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+  }
+  body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(1) {
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: -2.2px !important;
+  }
+  body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>header:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(2),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(4)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(3)>p:nth-child(1) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.16px !important;
+  }
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(1)>div:nth-child(1)>div:nth-child(3)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(2)>div:nth-child(3)>div:nth-child(3)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(3)>div:nth-child(3)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>div:nth-child(3)>section:nth-child(4)>div:nth-child(2)>div:nth-child(2)>h2:nth-child(1) {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    letter-spacing: -0.24px !important;
+  }
+  body:has(.publications-index)>main:nth-child(2)>nav:nth-child(2)>a:nth-child(1),
+  body:has(.publications-index)>main:nth-child(2)>nav:nth-child(2)>a:nth-child(2) {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+  }
+}
+
+/* Reuse body:has(#research-detail-title) existing responsive threshold; typography only. */
+@media (max-width: 960px) {
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>section:nth-child(1)>h2:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(1)>h2:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(2)>h2:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(3)>h2:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(5)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(5)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(1)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>div:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(8)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(8)>span:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(1)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(2)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(3)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(4)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(5)>span:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(6)>span:nth-child(1) {
+    font-size: 11px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+  }
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>header:nth-child(1)>h1:nth-child(2) {
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: -2.2px !important;
+  }
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(1)>div:nth-child(1)>div:nth-child(2)>section:nth-child(1)>p:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(1)>p:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(2)>p:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(3)>section:nth-child(3)>p:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>p:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>header:nth-child(1)>p:nth-child(2) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: -0.16px !important;
+  }
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(1)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(2)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(3)>div:nth-child(2)>figure:nth-child(3)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(4)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(1)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>div:nth-child(6)>section:nth-child(5)>div:nth-child(2)>figure:nth-child(2)>figcaption:nth-child(2)>h2:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>header:nth-child(1)>h2:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(1)>h3:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(2)>h3:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(3)>h3:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(4)>h3:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(5)>h3:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>section:nth-child(9)>div:nth-child(2)>article:nth-child(6)>h3:nth-child(2) {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    letter-spacing: -0.24px !important;
+  }
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(1),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(2),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(3),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(4),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(5),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(6),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(7),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>nav:nth-child(4)>a:nth-child(8),
+  body:has(#research-detail-title)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>section:nth-child(2)>details:nth-child(7)>summary:nth-child(1) {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+  }
+}
+
+/* TASK09C.3 / RUSSIA AS DATASET. Semantic roles only; no geometry compensation.
+   Figure labels and retained legacy article-title repeats are TEXT / EMPHASIS,
+   not page-level DISPLAY. The first bold block repeats the source article title
+   and is TEXT / EMPHASIS; the four meaningful section headings are TITLE.
+   Source Sans 3 is the explicit glyph-only fallback for PT Mono (e.g. ↗). */
+
+/* DISPLAY */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-injected-hero h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+/* TEXT */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-injected-hero__lead,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-injected-hero__lead p,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .v16-text,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t015__descr,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t015__descr p,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface [data-customstyle],
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface span,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface em {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+/* TEXT / EMPHASIS */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface [data-customstyle] > strong:first-child,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .v16-title,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t015__title,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t015__title p,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t015__title strong {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.16px !important;
+}
+
+/* TITLE */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface [data-customstyle] > strong:not(:first-child) {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+/* SYSTEM */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface a {
+  font-family: "PT Mono", "Source Sans 3", sans-serif !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* MICRO */
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-context-bar,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-context-bar span,
+body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .v16-source {
+  font-family: "PT Mono", "Source Sans 3", sans-serif !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+@media (max-width: 639px) {
+  body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-injected-hero h1 {
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: -2.2px !important;
+  }
+  body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .t119__preface [data-customstyle] > strong:not(:first-child) {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    letter-spacing: -0.24px !important;
+  }
+  body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-context-bar,
+  body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .ay-context-bar span,
+  body:has(#allrecords[data-tilda-page-alias="research/essays/russia-as-dataset"]) #allrecords .v16-source {
+    font-size: 11px !important;
+    line-height: 16px !important;
+    letter-spacing: normal !important;
+  }
+}
+
+/* TASK09C-I1 / STILLS4. Shared semantic roles; terminal selectors only.
+   Frozen prior rules (including cancelled Russia residue) remain untouched. */
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-injected-hero h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-copy h2.v16-title,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-module-copy > h2 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-injected-hero__lead > p,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-copy p.v16-text,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-module-copy > p {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-full-details > summary,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-carousel__nav,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-carousel__controls > button,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-carousel__controls > span {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-injected-hero .ay-context-bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-copy .v16-kicker,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v10-sectionbar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-module-meta > span {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-injected-hero h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-copy h2.v16-title,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-module-copy > h2 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-injected-hero .ay-context-bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .v16-copy .v16-kicker,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v10-sectionbar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="dark"], #allrecords[data-tilda-page-alias="nikola-lenivets"], #allrecords[data-tilda-page-alias="pavlov-dogs"], #allrecords[data-tilda-page-alias="science-quarter"])) .ay-v11-module-meta > span {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+}
+
+/* TASK09C-I1 / MIXED-VIDEO3. Independent shared semantic component scope. Special Projects locally rolled back. */
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-injected-hero h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-copy h2.v16-title,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-copy > h2,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-card-copy > h3 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-injected-hero__lead > p,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-copy p.v16-text,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-copy > p,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-card-copy > p,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-v2-first-module,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .t119__preface:has(.ay-v2-first-module) [data-customstyle] > p > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .t776__descr,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .t776__descr > strong,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .t776__descr > span {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .t776__title > strong {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-full-details > summary,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-carousel-controls > button,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-carousel-controls > span.v14-count {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-injected-hero .ay-context-bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-copy .v16-kicker,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-v10-sectionbar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-sectionbar,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-copy .v14-meta {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-injected-hero h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-copy h2.v16-title,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-copy > h2,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-card-copy > h3 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-injected-hero .ay-context-bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v16-copy .v16-kicker,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .ay-v10-sectionbar > span,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-sectionbar,
+body.ay-system-page.v17-canon:has(:is(#allrecords[data-tilda-page-alias="projects/fashion"], #allrecords[data-tilda-page-alias="projects/musicvideo"])) .v14-copy .v14-meta {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+}
+
+
+/* TASK09C-I2 / research_essays */
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-index__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-sectionbar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.research-field__footer,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) span.current-research__number,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) span.current-research__status {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) h1.essays-index__heading {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) p.essays-index__lead,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) blockquote.essays-position__quote,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-method__content > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.research-field > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.current-research__header > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.current-research__item > div > p {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) nav.essays-index__nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-position__formula > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) a.essays-program-cta__link {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.research-field > h2,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.current-research__header > h2,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.current-research__item > div > h3 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-index__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-sectionbar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.research-field__footer,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) span.current-research__number,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) span.current-research__status {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) h1.essays-index__heading {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) p.essays-index__lead,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-method__content > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.research-field > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.current-research__header > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.current-research__item > div > p {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) nav.essays-index__nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.essays-position__formula > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) a.essays-program-cta__link {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) blockquote.essays-position__quote,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.research-field > h2,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) div.current-research__header > h2,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/essays"]) article.current-research__item > div > h3 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+}
+/* END TASK09C-I2 / research_essays */
+
+
+/* TASK09C-I2 / research_interview */
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.interview-index__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) h1.interview-index__heading {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) p.interview-index__lead {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) nav.interview-index__nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.interview-index__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) h1.interview-index__heading {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) p.interview-index__lead {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) nav.interview-index__nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="research/interview"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+}
+/* END TASK09C-I2 / research_interview */
+
+
+
+/* TASK09C-I2 / projects_post_human */
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) section.ph-page,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__lead > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) p.v16-text {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-kicker > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-caption > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__top > h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) nav.ph-nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) section.ph-page,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__lead > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) p.v16-text {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-kicker > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-caption > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) div.ph-hero__top > h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) nav.ph-nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/post_human"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+}
+/* END TASK09C-I2 / projects_post_human */
+
+
+/* TASK09C-I2 / projects_archive */
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__grid > h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 64px !important;
+  line-height: 62.72px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.88px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__lead > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) p.v16-text {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) nav.archive-nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 32px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.32px !important;
+}
+
+@media (max-width: 639px) {
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__eyebrow > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__meta > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.v16-stage__bar > span,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.v16-kicker {
+  font-family: "PT Mono", monospace !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__grid > h1 {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 44px !important;
+  line-height: 44px !important;
+  font-weight: 400 !important;
+  letter-spacing: -2.2px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) div.archive-header__lead > p,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) p.v16-text {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.16px !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) nav.archive-nav > a,
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) details.v16-full-details > summary {
+  font-family: "PT Mono", monospace !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+body.ay-system-page.v17-canon:has(#allrecords[data-tilda-page-alias="projects/archive"]) h2.v16-title {
+  font-family: "Source Sans 3", sans-serif !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.24px !important;
+}
+}
+/* END TASK09C-I2 / projects_archive */

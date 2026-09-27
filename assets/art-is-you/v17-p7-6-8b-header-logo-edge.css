@@ -1,0 +1,12 @@
+/* ART.IS.YOU V17 P7.6.8B — HEADER LOGO EDGE
+   Brand mark begins at the viewport edge zone; the surname remains on the canonical text axis. */
+body.v17-canon .ay-desktop-header{padding-left:8px!important;}
+body.v17-canon .ay-desktop-header--flat .ay-desktop-header__identity{gap:10px!important;}
+body.v17-canon .ay-desktop-header__brand-mark{width:22px;height:22px;flex:0 0 22px;}
+body.v17-canon .ay-desktop-header__brand-logo{width:22px!important;height:22px!important;display:block!important;object-fit:contain!important;}
+@media(max-width:960px){
+ body.v17-canon .ay-desktop-header{padding-left:6px!important;}
+ body.v17-canon .ay-desktop-header--flat .ay-desktop-header__identity{gap:8px!important;}
+ body.v17-canon .ay-desktop-header__brand-mark{width:20px;height:20px;flex-basis:20px;}
+ body.v17-canon .ay-desktop-header__brand-logo{width:20px!important;height:20px!important;}
+}

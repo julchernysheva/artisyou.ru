@@ -1,0 +1,65 @@
+/* Bogobot-only typography parity. Historical/source imagery is untouched. */
+@layer ay-typography-v1 {
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] {
+    --ay-font-mono:'PT Mono',monospace;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] :is(
+    figcaption,figcaption span,figcaption p,figcaption a,
+    .ay-document-source,.godbot-research__eyebrow,.godbot-research__label,
+    .ay-godbot-graph-meta,.godbot-research__cta,.godbot-research__graph-foot>a,.ay-project-lower__bar,
+    .ay-project-lower__bar span,.ay-godbot-documentation-group__label,
+    .ay-godbot-evidence__type,.ay-project-data,.ay-project-data dt,
+    .ay-project-data dd
+  ) {
+    --ay-type-weight:400!important;
+    --ay-type-tracking:0!important;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] :is(
+    figcaption,figcaption span,figcaption p,figcaption a,
+    .ay-document-source,.godbot-research__eyebrow,.godbot-research__label,
+    .ay-godbot-graph-meta,.godbot-research__cta,.godbot-research__graph-foot>a,.ay-project-lower__bar,
+    .ay-project-lower__bar span,.ay-godbot-documentation-group__label,
+    .ay-godbot-evidence__type,.ay-project-data dt
+  ) {
+    font-family:'PT Mono',monospace!important;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] .ay-project-data dd {
+    --ay-type-size:16px!important;
+    --ay-type-leading:24px!important;
+    --ay-type-tracking:-.16px!important;
+    font-family:'Source Sans 3',sans-serif!important;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] :is(
+    .ay-project-top__meta,.ay-project-top__meta *
+  ) {
+    --ay-type-weight:400!important;
+    --ay-type-tracking:0!important;
+    font-family:'PT Mono',monospace!important;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] .ay-godbot-evidence h3 {
+    --ay-type-size:16px!important;
+    --ay-type-leading:24px!important;
+    --ay-type-weight:500!important;
+    --ay-type-tracking:-.16px!important;
+    font-family:'Source Sans 3',sans-serif!important;
+  }
+
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] .ay-approved-hero__date {
+    --ay-type-size:11px!important;
+    --ay-type-leading:14px!important;
+    --ay-type-weight:400!important;
+    --ay-type-tracking:0!important;
+    font-family:'PT Mono',monospace!important;
+  }
+
+  @media(max-width:640px) {
+    body.ay-godbot-type-recovery[data-ay-type-system="v1"] .ay-approved-hero__date {
+      --ay-type-leading:16px!important;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+/* ART.IS.YOU V17 P6.2 — Projects index rhythm
+   Scope: /projects/ only.
+   Contract: 1 -> 2 -> 3 -> repeat on the 12-column grid.
+   Desktop: 12 / 6+6 / 4+4+4. Tablet: 6 / 3+3 / 2+2+2. Mobile: 1 column.
+*/
+
+@media screen and (min-width: 960px) {
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: auto !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+  }
+
+  /* Static nth-child fallback prevents the legacy 4-column flash before JS runs. */
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 1),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-12 {
+    grid-column: 1 / -1 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 2),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 3),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-6 {
+    grid-column: span 6 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 4),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 5),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 6),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-4 {
+    grid-column: span 4 !important;
+  }
+
+  /* Remove the legacy fixed 624px card contract. Rows are now content-driven. */
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    align-self: stretch !important;
+    block-size: auto !important;
+    min-block-size: 0 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__image,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__image--hero,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card--large .project-card__image,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card--quarter .project-card__image {
+    inline-size: 100% !important;
+    block-size: auto !important;
+    min-block-size: 0 !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 1) .project-card__image,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-12 .project-card__image {
+    aspect-ratio: 16 / 7 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__image img,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__image--hero img {
+    inline-size: 100% !important;
+    block-size: 100% !important;
+    min-block-size: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__content,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__content--hero,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__content--compact {
+    display: grid !important;
+    grid-template-rows: auto auto 1fr auto !important;
+    block-size: auto !important;
+    min-block-size: 300px !important;
+    padding: 0 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__meta,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__meta--compact {
+    block-size: auto !important;
+    min-block-size: 48px !important;
+    margin: 0 !important;
+    padding: 16px 24px !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__title,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__title--hero,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__title--large,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__title--compact {
+    block-size: auto !important;
+    min-block-size: 0 !important;
+    margin: 0 !important;
+    padding: 24px 24px 0 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__description,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__description--wide,
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__description--compact {
+    block-size: auto !important;
+    min-block-size: 0 !important;
+    margin: 0 !important;
+    padding: 12px 24px 24px !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .project-card__link {
+    block-size: auto !important;
+    min-block-size: 48px !important;
+    margin: 0 !important;
+    padding: 0 24px !important;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 959px) {
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 1),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-12 {
+    grid-column: 1 / -1 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 2),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 3),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-6 {
+    grid-column: span 3 !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 4),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 5),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card:nth-child(6n + 6),
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card.p6-2-span-4 {
+    grid-column: span 2 !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  body.v17-canon.p6-1-canon.p6-2-projects-index #allrecords
+  .projects-index--premium-air .projects-index__grid > .project-card {
+    grid-column: 1 !important;
+  }
+}

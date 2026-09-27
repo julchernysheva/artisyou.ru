@@ -1,0 +1,12 @@
+/* Prototype-only archive UI. Reuses frozen TITLE / SYSTEM / MICRO and palette.
+   No main-flow image, grid, spacing or typography overrides. */
+.c3b-archive-caption { display:inline-flex; align-items:baseline; gap:24px; }
+.c3b-archive-trigger,.c3b-archive-close { border:0; padding:0; background:none; color:var(--ink); font:inherit; letter-spacing:inherit; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+.c3b-archive-trigger:hover,.c3b-archive-close:hover { color:var(--ui-accent); }
+.c3b-episode-archive { box-sizing:border-box; width:min(1100px,calc(100vw - 64px)); max-height:calc(100vh - 64px); margin:auto; padding:32px; border:1px solid var(--rule); background:var(--surface); color:var(--ink); overflow:auto; }
+.c3b-episode-archive::backdrop { background:var(--surface); }
+.c3b-archive-heading { display:flex; align-items:baseline; justify-content:space-between; gap:32px; margin-bottom:32px; }
+.c3b-archive-images { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+.c3b-archive-images--single { grid-template-columns:1fr; }
+.c3b-archive-images img { display:block; width:100%; height:auto; }
+.c3b-archive-images figcaption { color:var(--muted); margin-top:12px; }

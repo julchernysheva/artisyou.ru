@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Topography network field preview">
+  <rect width="1600" height="1000" fill="#EFEFEA"/>
+  <g stroke="#D0CDC7" stroke-width="1" opacity="0.72">
+    <path d="M0 100H1600M0 200H1600M0 300H1600M0 400H1600M0 500H1600M0 600H1600M0 700H1600M0 800H1600M0 900H1600"/>
+    <path d="M100 0V1000M200 0V1000M300 0V1000M400 0V1000M500 0V1000M600 0V1000M700 0V1000M800 0V1000M900 0V1000M1000 0V1000M1100 0V1000M1200 0V1000M1300 0V1000M1400 0V1000M1500 0V1000"/>
+  </g>
+  <g stroke="#695E58" fill="none" opacity="0.65">
+    <path d="M235 620L410 420L620 540L790 330L1010 470L1255 275L1390 510"/>
+    <path d="M310 310L520 690L760 580L950 720L1200 590L1365 735"/>
+    <path d="M410 420L520 690M620 540L760 580M790 330L950 720M1010 470L1200 590M1255 275L1365 735"/>
+  </g>
+  <g fill="#EFEFEA" stroke="#695E58" stroke-width="3">
+    <circle cx="235" cy="620" r="11"/><circle cx="410" cy="420" r="11"/><circle cx="620" cy="540" r="11"/><circle cx="790" cy="330" r="11"/><circle cx="1010" cy="470" r="11"/><circle cx="1255" cy="275" r="11"/><circle cx="1390" cy="510" r="11"/>
+    <circle cx="310" cy="310" r="11"/><circle cx="520" cy="690" r="11"/><circle cx="760" cy="580" r="11"/><circle cx="950" cy="720" r="11"/><circle cx="1200" cy="590" r="11"/><circle cx="1365" cy="735" r="11"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#695E58">
+    <text x="72" y="86" font-size="26" letter-spacing="4">TOPOGRAPHY / NETWORK FIELD</text>
+    <text x="72" y="930" font-size="20" letter-spacing="3">LIVE SYSTEM / CLICK TO ACTIVATE</text>
+    <text x="1290" y="930" font-size="20" letter-spacing="3">ART.IS.YOU</text>
+  </g>
+</svg>

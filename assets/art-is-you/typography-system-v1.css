@@ -1,0 +1,249 @@
+/* ART.IS.YOU / typographic normalization 01.
+ * Opt-in only: four V1.2 pages establish the scale; Godbot consumes it.
+ * Five semantic sizes, two declared families. No editorial/layout reset.
+ * Layered important typography overrides the legacy unlayered important
+ * declarations without modifying styles used by other project routes.
+ */
+@layer ay-typography-v1 {
+  body[data-ay-type-system="v1"] {
+    --ay-font-primary: "Source Sans 3", sans-serif;
+    --ay-font-mono: "PT Mono", monospace;
+    --ay-size-display: clamp(48px, 7.777778vw, 112px);
+    --ay-leading-display: calc(var(--ay-size-display) * 1);
+    --ay-size-section: 40px;
+    --ay-leading-section: 44px;
+    --ay-size-statement: 24px;
+    --ay-leading-statement: 30px;
+    --ay-size-body: 16px;
+    --ay-leading-body: 24px;
+    --ay-size-micro: 13px;
+    --ay-leading-micro: 18px;
+    --ay-type-size: var(--ay-size-body);
+    --ay-type-leading: var(--ay-leading-body);
+    --ay-type-weight: 400;
+    --ay-type-tracking: 0em;
+    font-family: var(--ay-font-primary) !important;
+  }
+
+  /* Inheritance includes nested footer spans: no hidden sixth micro size. */
+  body[data-ay-type-system="v1"],
+  body[data-ay-type-system="v1"] * {
+    font-size: var(--ay-type-size) !important;
+    line-height: var(--ay-type-leading) !important;
+    font-weight: var(--ay-type-weight) !important;
+    letter-spacing: var(--ay-type-tracking) !important;
+    text-transform: none !important;
+    font-synthesis: none !important;
+  }
+  body[data-ay-type-system="v1"] * { font-family: inherit !important; }
+
+  /* Case-only allowlist: index/key/taxonomy/control, not a blanket MICRO rule.
+   * History node names, metadata values, semantic headings, links and the
+   * No Words statement-control retain their human/editorial case.
+   */
+  body[data-ay-type-system="v1"] :is(
+    .v12-index,
+    .v12-data>span,
+    .v12-data dt,
+    .programmer12-credits dt,
+    .ay-project-data dt,
+    .ay-project-data .godbot-research__label,
+    .ay-project-top__method-label,
+    .ay-project-top__register dt,
+    .ay-godbot-authorial-canon .ay-project-lower__bar>span:last-child,
+    .ay-godbot-history-network__selector-title,
+    .ay-godbot-history-network__layers dt,
+    .ay-godbot-archive-reader__selector-title,
+    .ay-godbot-archive-reader__group>h3,
+    .ay-godbot-archive-reader__category,
+    .ay-godbot-archive-reader__node,
+    .ay-godbot-archive-reader__files button,
+    .ay-godbot-archive-reader__sequence button,
+    .ay-system-deferred__activate
+  ) { text-transform: uppercase !important; }
+
+  /* 01 / DISPLAY: the existing H1 is the single display event. */
+  body[data-ay-type-system="v1"] h1 {
+    --ay-type-size: var(--ay-size-display);
+    --ay-type-leading: var(--ay-leading-display);
+    --ay-type-weight: 700;
+    --ay-type-tracking: -.055em;
+    max-width: 100% !important;
+  }
+  body[data-ay-type-system="v1"] :is(.likes12-opening h1,.ay-project-top__title) {
+    --ay-type-weight: 600;
+  }
+
+  /* 02 / SECTION: chapter headings and the active document's heading. */
+  body[data-ay-type-system="v1"] :is(h2,h3) {
+    --ay-type-size: var(--ay-size-section);
+    --ay-type-leading: var(--ay-leading-section);
+    --ay-type-weight: 400;
+    --ay-type-tracking: -.035em;
+  }
+
+  /* 03 / STATEMENT: arguments are not a second display-size family. */
+  body[data-ay-type-system="v1"] :is(
+    .likes12-opening__title>p,
+    .likes12-mechanism h2,
+    .likes12-public__copy>p:nth-child(2),
+    .programmer12-instruction>div>p:last-child,
+    .programmer12-protocol>p,
+    .programmer12-document>p,
+    .oracle12-opening>div>p,
+    .oracle12-dual>p,
+    .nowords12-entry__lead,
+    .nowords12-record>p,
+    .nowords12-language__control,
+    .nowords12-closure>p,
+    .ay-project-top__descriptor,
+    .ay-project-top__research .ay-project-top__register>div>p:first-child,
+    .ay-godbot-authorial-canon__statements>p,
+    .ay-godbot-authorial-canon__law>p:first-child,
+    .ay-godbot-reading-protocol__statement,
+    .ay-site-footer h2
+  ) {
+    --ay-type-size: var(--ay-size-statement);
+    --ay-type-leading: var(--ay-leading-statement);
+    --ay-type-weight: 400;
+    --ay-type-tracking: -.02em;
+  }
+  body[data-ay-type-system="v1"] :is(
+    .nowords12-language__control,
+    .ay-godbot-authorial-canon__statements>p,
+    .ay-godbot-authorial-canon__law>p:first-child
+  ) { --ay-type-weight: 600; }
+
+  /* 04 / BODY is inherited. Sustained prose, including footer prose, is 16/24. */
+
+  /* 05 / MICRO: one readable size for both human and technical subroles. */
+  body[data-ay-type-system="v1"] :is(
+    figcaption,figcaption *,
+    .v12-index,.v12-data,.v12-data *,
+    .likes12-opening__meta,.oracle12-opening__meta,.programmer12-score>p,
+    .likes12-concept__bar,.likes12-concept__label,
+    .likes12-concept__registers article>p:first-child,
+    .programmer12-concept__registers article>p:first-child,
+    .city12-framework__registers article>p:first-child,
+    .oracle12-object__registers article>p:first-child,
+    .aura12-object__registers article>p:first-child,
+    .nowords12-concept__registers article>p:first-child,
+    .likes12-public__copy>p:nth-child(3),
+    .programmer12-protocol>span,.programmer12-credits dl,.programmer12-credits dl *,
+    .nowords12-record>span,
+    .likes12-video a,.oracle12-video a,
+    .ay-desktop-header,.v12-nav,
+    .ay-site-footer__bar,.ay-site-footer__label,.ay-site-footer__logo,
+    .ay-site-footer__brand-meta,.ay-site-footer__socials,
+    .ay-site-footer__column>a,.ay-site-footer__inline-link,.ay-site-footer__bottom,
+    .ay-project-top__meta,.ay-project-top__concept-label,.ay-project-top__research-label,
+    .ay-project-top__method-label,.ay-project-top__register>h2,
+    .ay-project-top__method-path,.ay-project-top__register dt,
+    .ay-project-lower__bar,.godbot-research__eyebrow,.godbot-research__label,
+    .ay-godbot-graph-meta,.godbot-research__cta,.godbot-research__graph-foot>a,
+    .ay-godbot-history-network__selector-title,.ay-godbot-history-network__node,
+    .ay-godbot-history-network__mobile-select,.ay-godbot-history-network__meta,
+    .ay-godbot-history-network__layers dt,.ay-godbot-history-network__source,
+    .ay-godbot-history-network__cta,.ay-godbot-authorial-canon__note,
+    .ay-godbot-quantum-threshold__sequence,.ay-godbot-reading-protocol__label,
+    .ay-godbot-reading-protocol__entry,.ay-godbot-archive-reader__selector-title,
+    .ay-godbot-archive-reader__group>h3,.ay-godbot-archive-reader__category,
+    .ay-godbot-archive-reader__node,.ay-godbot-archive-reader__files,
+    .ay-godbot-archive-reader__sequence,.ay-godbot-documentation-group__label,
+    .ay-project-data,.ay-project-data *
+  ) {
+    --ay-type-size: var(--ay-size-micro);
+    --ay-type-leading: var(--ay-leading-micro);
+    --ay-type-weight: 500;
+    --ay-type-tracking: .025em;
+  }
+
+  /* Godbot's shared site menu is navigation, not archive microcopy. */
+  body.ay-godbot-type-recovery[data-ay-type-system="v1"] .ay-desktop-header :is(.ay-desktop-header__brand-name,.ay-desktop-header__toplink,.ay-menu-toggle) {
+    --ay-type-size: 14px;
+    --ay-type-leading: 18px;
+    --ay-type-weight: 500;
+    --ay-type-tracking: -.01em;
+  }
+
+  /* Mono is reserved for source/file/index/taxonomy labels, not human headings. */
+  body[data-ay-type-system="v1"] :is(
+    .v12-source,.v12-data dt,.likes12-concept__bar,.likes12-concept__label,
+    .programmer12-protocol>span,.nowords12-record>span,
+    .ay-project-top__meta,.ay-project-top__method-path,.ay-project-top__register dt,
+    .ay-project-top__concept-label,.ay-project-top__research-label,.ay-project-top__method-label,
+    .ay-project-lower__bar,.godbot-research__eyebrow,
+    .ay-godbot-history-network__selector-title,.ay-godbot-history-network__meta,
+    .ay-godbot-history-network__source,
+    .ay-godbot-archive-reader__selector-title,.ay-godbot-archive-reader__group>h3,
+    .ay-godbot-archive-reader__category,.ay-godbot-archive-reader__node,
+    .ay-godbot-archive-reader__files,.ay-godbot-archive-reader__sequence,
+    .ay-godbot-archive-reader figcaption
+  ) { font-family: var(--ay-font-mono) !important; }
+
+  /* Safe P1 metric fixes: captions wrap as units; no cropping/layout redesign. */
+  body[data-ay-type-system="v1"] :is(figcaption,.v12-source) {
+    height: auto !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+  body[data-ay-type-system="v1"] .v12-source {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 4px;
+  }
+  body[data-ay-type-system="v1"] .v12-source>span { max-width:100%; }
+  body[data-ay-type-system="v1"] :is(
+    .ay-project-lower__bar,.ay-project-top__meta,.ay-site-footer__bar,.ay-site-footer__bottom
+  ) { height:auto !important; min-width:0; overflow-wrap:anywhere; }
+  body[data-ay-type-system="v1"] .ay-project-lower__bar>span { min-width:0; }
+  body[data-ay-type-system="v1"] .ay-site-footer__socials { flex-wrap:wrap; }
+  body[data-ay-type-system="v1"] .ay-site-footer__logo {
+    height:auto !important;
+    min-height:70px;
+    min-width:56px;
+  }
+  body[data-ay-type-system="v1"] :is(.ay-site-footer a,.ay-site-footer p) { overflow-wrap:anywhere; }
+  body[data-ay-type-system="v1"] :is(
+    .ay-menu-toggle,.ay-menu-caret,.v12-nav a,
+    .ay-site-footer__socials a,.ay-site-footer__column>a,.ay-site-footer__inline-link,
+    .ay-godbot-history-network__node,.ay-godbot-archive-reader__node,
+    .ay-godbot-archive-reader__files button,.ay-godbot-archive-reader__sequence button
+  ) { min-height:44px !important; height:auto !important; }
+  body[data-ay-type-system="v1"] :is(.ay-menu-toggle,.ay-menu-caret,.ay-site-footer__socials a) {
+    min-width:44px !important;
+  }
+  body[data-ay-type-system="v1"] .v12-nav a { display:flex;align-items:center; }
+  body[data-ay-type-system="v1"] :is(
+    .ay-godbot-history-network__node,
+    .ay-godbot-archive-reader__group--secondary,
+    .ay-godbot-archive-reader__sequence button
+  ) { opacity:1 !important; }
+  body[data-ay-type-system="v1"] :is(.ay-godbot-archive-reader__node,.ay-godbot-archive-reader__files button,.ay-godbot-archive-reader__sequence button) {
+    overflow-wrap:anywhere;
+    white-space:normal;
+  }
+  body[data-ay-type-system="v1"] .ay-godbot-archive-reader__primary-media::after {
+    font-family:var(--ay-font-mono) !important;
+    font-size:var(--ay-size-micro) !important;
+    line-height:var(--ay-leading-micro) !important;
+  }
+
+  /* Long display word occupies the existing empty columns, not a smaller token. */
+  @media(min-width:1025px) {
+    body[data-ay-type-system="v1"] .programmer12-instruction h1 {
+      width:calc((100vw - 2 * var(--pad) - 11 * var(--gap)) / 12 * 7 + 7 * var(--gap));
+      max-width:none !important;
+    }
+  }
+  @media(max-width:1024px) {
+    body[data-ay-type-system="v1"] {
+      --ay-size-display:48px;
+      --ay-leading-display:48px;
+      --ay-size-section:32px;
+      --ay-leading-section:36px;
+      --ay-size-statement:22px;
+      --ay-leading-statement:28px;
+    }
+  }
+}

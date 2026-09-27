@@ -1,0 +1,51 @@
+/* ART.IS.YOU V17 P7.6.8 — Home / Projects live system */
+body.p7-6-8-live-system .ay-home__feature-image--live{
+  min-height:570px;
+}
+body.p7-6-8-live-system .ay-home__archive-transition-poster{
+  object-fit:cover !important;
+  object-position:center top !important;
+}
+body.p7-6-8-live-system .ay-home__system-strip{
+  display:block;
+  width:100%;
+  margin:24px 0 0;
+  color:inherit !important;
+  text-decoration:none !important;
+  border-top:1px solid #B8B1A8;
+  border-bottom:1px solid #B8B1A8;
+  background:#EFEFEA;
+}
+body.p7-6-8-live-system .ay-home__system-strip-media{
+  width:100%;
+  height:clamp(320px,29vw,420px);
+  border-bottom:1px solid #B8B1A8;
+  background:#F5F2EC;
+}
+body.p7-6-8-live-system .ay-home__system-strip-media .ay-live-experience__poster{
+  padding:20px 24px;
+  object-fit:contain !important;
+}
+body.p7-6-8-live-system .ay-home__system-strip-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  padding:13px 0 12px;
+  color:var(--muted);
+}
+body.p7-6-8-live-system .project-card__image.ay-live-experience{
+  background:#F5F2EC !important;
+}
+body.p7-6-8-live-system .project-card__image.ay-live-experience .ay-live-experience__poster{
+  padding:18px 22px 42px;
+}
+@media screen and (max-width:959px){
+  body.p7-6-8-live-system .ay-home__system-strip-media{height:clamp(280px,46vw,390px);}
+}
+@media screen and (max-width:639px){
+  body.p7-6-8-live-system .ay-home__feature-image--live{min-height:360px;}
+  body.p7-6-8-live-system .ay-home__system-strip{margin-top:18px;}
+  body.p7-6-8-live-system .ay-home__system-strip-media{height:270px;}
+  body.p7-6-8-live-system .ay-home__system-strip-media .ay-live-experience__poster{padding:12px;}
+  body.p7-6-8-live-system .ay-home__system-strip-meta{padding:10px 0 9px;}
+}

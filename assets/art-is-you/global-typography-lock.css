@@ -1,0 +1,137 @@
+/* ART.IS.YOU — semantic typography level lock */
+:where(html body.ay-system-page) {
+  --type-font: 'Source Sans 3', sans-serif;
+}
+
+/* L1 / DISPLAY */
+html body.ay-system-page :is(.research-index__heading,.publications-intro__heading,.about-header__grid > .page-intro__title) {
+  font-family:var(--type-font) !important;
+  font-size:64px !important;
+  font-weight:400 !important;
+  line-height:62.72px !important;
+  letter-spacing:-3.52px !important;
+}
+html body.ay-system-page .projects-index--canonical .projects-index__heading {
+  font-family:var(--type-font) !important;
+  font-size:64px !important;
+  font-weight:400 !important;
+  line-height:62.72px !important;
+  letter-spacing:-3.52px !important;
+}
+
+/* L2 / STRONG SUBTITLE */
+html body.ay-system-page :is(.research-canon-subtitle,.publications-intro__subtitle,.about-header__position) {
+  font-family:var(--type-font) !important;
+  font-size:17px !important;
+  font-weight:700 !important;
+  line-height:21.25px !important;
+  letter-spacing:0 !important;
+}
+html body.ay-system-page .projects-index--canonical .projects-index__intro-copy p:first-child {
+  font-family:var(--type-font) !important;
+  font-size:17px !important;
+  font-weight:700 !important;
+  line-height:21.25px !important;
+  letter-spacing:0 !important;
+}
+
+/* L3 / MAIN LEAD */
+html body.ay-system-page :is(.research-canon-lead,.publications-intro__lead,.about-header__lead) {
+  font-family:var(--type-font) !important;
+  font-size:16px !important;
+  font-weight:400 !important;
+  line-height:24px !important;
+  letter-spacing:0 !important;
+}
+html body.ay-system-page .projects-index--canonical .projects-index__intro-copy p:nth-child(2) {
+  font-family:var(--type-font) !important;
+  font-size:16px !important;
+  font-weight:400 !important;
+  line-height:24px !important;
+  letter-spacing:0 !important;
+}
+
+/* L4 / SECTION OR ITEM TITLE */
+html body.ay-system-page :is(.research-canon-card__body h2,.publications-row__title,.about-section-heading) {
+  font-family:var(--type-font) !important;
+  font-size:26px !important;
+  font-weight:400 !important;
+  line-height:28.6px !important;
+  letter-spacing:-0.91px !important;
+}
+html body.ay-system-page .projects-index--canonical .project-entry h2 {
+  font-family:var(--type-font) !important;
+  font-size:26px !important;
+  font-weight:400 !important;
+  line-height:28.6px !important;
+  letter-spacing:-0.91px !important;
+}
+
+/* L5 / QUESTION OR THESIS */
+html body.ay-system-page .research-canon-question {
+  font-family:var(--type-font) !important;
+  font-size:16px !important;
+  font-weight:500 !important;
+  line-height:20.8px !important;
+  letter-spacing:-0.16px !important;
+}
+
+/* L6 / BODY */
+html body.ay-system-page :is(.research-canon-card__body > p:not(.research-canon-question),.publications-row__description,.about-master-module__text > p,.about-stack-section > p,.about-canonical-copy p:not(.about-canonical-links),.about-awards-final__intro > p) {
+  font-family:var(--type-font) !important;
+  font-size:15px !important;
+  font-weight:400 !important;
+  line-height:22.5px !important;
+  letter-spacing:0 !important;
+}
+html body.ay-system-page .projects-index--canonical .project-entry__copy > p {
+  font-family:var(--type-font) !important;
+  font-size:15px !important;
+  font-weight:400 !important;
+  line-height:22.5px !important;
+  letter-spacing:0 !important;
+}
+
+/* L7 / META */
+html body.ay-system-page :is(.research-canon-card__meta,.publications-row__meta,.about-header__eyebrow) {
+  font-family:var(--type-font) !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  line-height:12px !important;
+  letter-spacing:0.6px !important;
+  text-transform:uppercase !important;
+}
+html body.ay-system-page .projects-index--canonical .project-entry__meta {
+  font-family:var(--type-font) !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  line-height:12px !important;
+  letter-spacing:0.6px !important;
+  text-transform:uppercase !important;
+}
+
+/* L8 / CTA OR MICRO */
+html body.ay-system-page :is(.research-canon-cta,.research-canon-status,.publications-row__source,.about-master-module__micro,.about-canonical-links) {
+  font-family:var(--type-font) !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  line-height:12px !important;
+  letter-spacing:0.6px !important;
+  text-transform:uppercase !important;
+}
+html body.ay-system-page .projects-index--canonical .project-entry__copy a {
+  font-family:var(--type-font) !important;
+  font-size:10px !important;
+  font-weight:500 !important;
+  line-height:12px !important;
+  letter-spacing:0.6px !important;
+  text-transform:uppercase !important;
+}
+
+@media (max-width:760px) {
+  html body.ay-system-page :is(.research-index__heading,.publications-intro__heading,.about-header__grid > .page-intro__title,.projects-index--canonical .projects-index__heading) {
+    font-size:44px !important;
+    line-height:44px !important;
+    letter-spacing:-1.6px !important;
+  }
+}

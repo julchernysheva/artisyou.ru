@@ -1,0 +1,18 @@
+/* TASK 08A: local-installed PT Mono system-role pilot for Russian Intellect only.
+   Family substitution only: no size, weight, spacing, layout or graph changes.
+   Portable/self-hosted delivery is deliberately outside this local pilot. */
+html:has(#app #map) {
+  --mono:"PT Mono",monospace;
+}
+/* Graph text keeps its original sans/mono declarations and measured bounds. */
+#app #map {
+  --mono:"PT Mono",monospace;
+}
+body.ri-integration-shell :is(
+  .research-detail-protocol__register,
+  .research-detail-protocol__label:not(.ri-method-formula),
+  .ri-research-taxonomy,
+  .ri-identity__fullscreen
+) {
+  font-family:"PT Mono",monospace!important;
+}

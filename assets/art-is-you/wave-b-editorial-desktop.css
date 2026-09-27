@@ -1,0 +1,157 @@
+/* Wave B owns only its new desktop components. Global tokens, header,
+   footer and the existing narrow-width implementation are not modified.
+   Explicit type ownership is needed because legacy global locks use
+   !important on generic headings, text and links. Values below repeat
+   the existing frozen semantic contract, never introduce a local scale. */
+.wb-desktop { display: none !important; }
+
+@media (min-width: 1024px) {
+  html body.ay-system-page :is(.publications-index, .press-index):has(> .wb-desktop) {
+    padding: 0 32px 64px !important;
+    border: 0 !important;
+    background: var(--surface) !important;
+  }
+  html body.ay-system-page main.publications-index:has(> .wb-desktop) > :not(.wb-desktop),
+  html body.ay-system-page #allrecords .press-index:has(> .wb-desktop) > :not(.wb-desktop) {
+    display: none !important;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop {
+    display: block !important;
+    padding-top: 52px;
+    color: var(--ink);
+    background: var(--surface);
+  }
+  .wb-desktop, .wb-desktop * { box-sizing: border-box; }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop :is(h1, h2, h3, p, figure) {
+    margin: 0;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-display {
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-size: 64px !important;
+    line-height: 62.72px !important;
+    font-weight: 400 !important;
+    letter-spacing: -2.88px !important;
+    color: var(--ink) !important;
+    text-transform: none !important;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-title {
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-size: 32px !important;
+    line-height: 36px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.32px !important;
+    color: var(--ink) !important;
+    text-transform: none !important;
+    overflow-wrap: normal;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-text {
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.16px !important;
+    color: var(--ink) !important;
+    text-transform: none !important;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-system,
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-date-rail > p,
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-system > :is(span, time) {
+    font-family: 'PT Mono', monospace !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+    color: var(--muted) !important;
+    text-transform: none !important;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-micro {
+    font-family: 'PT Mono', monospace !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+    color: var(--muted) !important;
+    text-transform: none !important;
+  }
+  .wb-register { display: flex; justify-content: space-between; gap: 24px; }
+  .wb-heading-grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .wb-intro-copy { max-width: 676px; }
+  .wb-intro-copy > p + p { margin-top: 16px !important; }
+  .wb-intro { padding-bottom: 48px; border-bottom: 1px solid var(--rule); }
+  .wb-blog .wb-intro::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; border-bottom: 1px solid var(--rule); pointer-events: none; }
+  .wb-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+  .wb-blog-record { min-width: 0; padding: 32px 0; border-bottom: 1px solid var(--rule); }
+  .wb-blog-record > .wb-record-meta { margin-top: 16px !important; }
+  .wb-blog-record > .wb-text { margin-top: 16px !important; }
+  .wb-actions { display: flex; align-items: flex-start; flex-direction: column; gap: 16px; margin-top: 24px; }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop a:is(.wb-system, .wb-micro) {
+    color: var(--ui-accent) !important;
+    text-decoration: none;
+    width: fit-content;
+  }
+  .wb-desktop a:hover { text-decoration: underline !important; }
+  .wb-desktop a:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 4px; text-decoration: underline !important; }
+  .wb-blog-record > .wb-evidence { margin-top: 24px !important; width: 208px; }
+  /* Approved Blog anchor: layout/scale only, within its original record. */
+  .wb-blog-record[data-wb-id="PUB-10"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 312px;
+    column-gap: 24px;
+    align-items: start;
+  }
+  .wb-blog-record[data-wb-id="PUB-10"] > :is(.wb-title, .wb-record-meta, .wb-text) {
+    grid-column: 1 / -1;
+  }
+  .wb-blog-record[data-wb-id="PUB-10"] > .wb-actions {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .wb-blog-record[data-wb-id="PUB-10"] > .wb-evidence {
+    grid-column: 2;
+    grid-row: 4;
+    width: 312px;
+  }
+  html body.ay-system-page :is(#allrecords, main.publications-index) .wb-desktop .wb-evidence img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    transform: none;
+    filter: none;
+    object-fit: contain;
+  }
+  .wb-evidence > figcaption { margin-top: 8px; }
+  .wb-resources { display: flex; gap: 32px; padding-top: 32px; }
+  .wb-year-label { padding: 24px 0 16px; border-bottom: 1px solid var(--rule); }
+  .wb-press-record {
+    display: grid;
+    grid-template-columns: 208px minmax(0, 1fr) 200px;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .wb-date-rail > p + p { margin-top: 16px !important; }
+  .wb-narrative { min-width: 0; }
+  .wb-narrative > .wb-text { max-width: 676px; margin-top: 16px !important; }
+  .wb-narrative > .wb-micro { margin-top: 16px !important; }
+  .wb-press-record > .wb-evidence { width: 200px; }
+  /* The legacy composition scanner marks divs containing p as reading
+     columns. Its 499.2px clamp must not own the approved 920px TITLE field. */
+  html body.ay-system-page #allrecords .wb-desktop .wb-narrative {
+    max-inline-size: none !important;
+  }
+  html body.ay-system-page #allrecords .wb-desktop .wb-narrative > :is(.wb-text, .wb-micro) {
+    max-inline-size: 676px !important;
+  }
+  .wb-year-group { scroll-margin-top: 96px; }
+}

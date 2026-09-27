@@ -1,0 +1,106 @@
+
+
+/* ART.IS.YOU — P7.6.5 / PLEXUS + SCIENTIFIC TYPE SYSTEM
+   One family across editorial and technical layers.
+   No palette or geometry changes. Technical notes use spacing,
+   tabular numerals and restrained typewritten conventions only. */
+
+:root{
+  --ay-font-sans:'Source Sans 3',sans-serif;
+  --ay-font-mono:var(--font-mono);
+  --p61-sans:'Source Sans 3',sans-serif;
+  --p61-mono:var(--font-mono);
+}
+
+body.v17-canon.p7-6-5-plexus,
+body.v17-canon.p7-6-5-plexus #allrecords{
+  font-family:var(--ay-font-sans)!important;
+}
+
+body.v17-canon.p7-6-5-plexus #allrecords :is(
+  h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,figcaption,small,
+  a,button,input,select,textarea,label,
+  .t-text,.t-descr,.t-title,.t-heading,.t-name,
+  .ay-type-display,.ay-type-h2,.ay-type-h3,.ay-type-body,.ay-type-lead,
+  [class*="__title"],[class*="__lead"],[class*="__copy"],[class*="__description"]
+),
+body.v17-canon.p7-6-5-plexus :is(
+  .v2-page,.v2-clean-page,.v3-clean-page,.programmer-page,.prearchive-linear
+) :is(h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,figcaption,small,a,button){
+  font-family:var(--ay-font-sans)!important;
+}
+
+body.v17-canon.p7-6-5-plexus :is(.ay-desktop-header,.ay-site-footer),
+body.v17-canon.p7-6-5-plexus :is(.ay-desktop-header,.ay-site-footer) :is(a,span,button,p,div){
+  font-family:var(--ay-font-sans)!important;
+}
+
+/* Existing metadata becomes the scientific/typewritten apparatus. */
+body.v17-canon.p7-6-5-plexus :is(
+  .ay-context-bar,.v2-context,.v4-context,
+  .ay-type-meta,.ay-type-label,
+  [class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],
+  [class*="__index"],[class*="__status"],[class*="__code"],[class*="__formula"],
+  .v16-stage__bar,.v16-kicker,.v16-rule,.v16-source,
+  .ph-status,.ph-film-index,.ph-nav,.ph-sectionbar,.ph-eyebrow,.ph-formulas,
+  .ph-method__formula,.ph-data dt,.ph-end div,
+  .pl-kicker,.pl-meta,.v2-meta,.v2-aside-code,
+  figcaption,[class*="caption"],.t-descr_xxs,small
+),
+body.v17-canon.p7-6-5-plexus :is(
+  .ay-context-bar,.v2-context,.v4-context,
+  .ay-type-meta,.ay-type-label,
+  [class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],
+  [class*="__index"],[class*="__status"],[class*="__code"],[class*="__formula"],
+  .v16-stage__bar,.v16-kicker,.v16-rule,.v16-source,
+  .ph-status,.ph-film-index,.ph-nav,.ph-sectionbar,.ph-eyebrow,.ph-formulas,
+  .ph-method__formula,.ph-data dt,.ph-end div,
+  .pl-kicker,.pl-meta,.v2-meta,.v2-aside-code,
+  figcaption,[class*="caption"],.t-descr_xxs,small
+) *{
+  font-family:var(--ay-font-sans)!important;
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  font-kerning:none;
+}
+
+body.v17-canon.p7-6-5-plexus :is(
+  .ay-context-bar,.v2-context,.v4-context,
+  .ay-type-meta,.ay-type-label,
+  [class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],
+  [class*="__index"],[class*="__status"],[class*="__code"],[class*="__formula"],
+  .v16-stage__bar,.v16-kicker,.v16-rule,.v16-source,
+  .ph-status,.ph-film-index,.ph-nav,.ph-sectionbar,.ph-eyebrow,.ph-formulas,
+  .ph-method__formula,.ph-data dt,.ph-end div,
+  .pl-kicker,.pl-meta,.v2-meta,.v2-aside-code
+){
+  letter-spacing:.055em!important;
+}
+
+body.v17-canon.p7-6-5-plexus :is(figcaption,[class*="caption"],.t-descr_xxs,small){
+  letter-spacing:.025em!important;
+}
+
+/* Optional primitives for future manuscript-like notes. Unused by default. */
+.ay-scientific-note{
+  font-family:var(--ay-font-sans)!important;
+  font-size:11px;
+  line-height:1.45;
+  letter-spacing:.055em;
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  font-kerning:none;
+  text-transform:uppercase;
+}
+.ay-footnote-mark{
+  font-family:var(--ay-font-sans)!important;
+  font-size:.7em;
+  line-height:1;
+  vertical-align:super;
+  font-variant-numeric:tabular-nums lining-nums;
+}
+
+/* Cross-origin live works remain autonomous exhibits; their Art.Is.You frame is Plexus. */

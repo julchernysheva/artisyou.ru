@@ -1,0 +1,234 @@
+/* ART.IS.YOU — P7.6.5B VISUAL CANON / LESS UI
+   Scope: 27 canonical routes.
+   Intent: MoMA × Soviet cybernetics × science/art museum.
+   Palette, typography, copy, media sources, live-experience geometry and project rhythm remain unchanged.
+   The interface recedes: fewer boxes, fewer tab-like controls, fewer filled hover states. */
+
+body.p7-6-5b-less-ui{
+  --p765b-rule:var(--v17-line,var(--color-line));
+}
+
+/* 01. Local navigation reads as an index line, not a toolbar. */
+body.p7-6-5b-less-ui :is(
+  .projects-index__filters,.research-index__filters,.essays-index__nav,
+  .about-nav,.press-index__nav,.statement-nav,.archive-nav,.bio-timeline__controls,
+  .interview-index__nav,.lab-nav,.or-nav,.ph-nav,.programmer-nav,.v2-nav
+){
+  gap:18px!important;
+  align-items:center!important;
+  padding:12px 0!important;
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  background:transparent!important;
+}
+body.p7-6-5b-less-ui :is(
+  .projects-index__filters,.research-index__filters,.essays-index__nav,
+  .about-nav,.press-index__nav,.statement-nav,.archive-nav,.bio-timeline__controls,
+  .interview-index__nav,.lab-nav,.or-nav,.ph-nav,.programmer-nav,.v2-nav
+) a{
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  box-shadow:none!important;
+  text-decoration:none!important;
+}
+body.p7-6-5b-less-ui :is(
+  .projects-index__filters,.research-index__filters,.essays-index__nav,
+  .about-nav,.press-index__nav,.statement-nav,.archive-nav,.bio-timeline__controls,
+  .interview-index__nav,.lab-nav,.or-nav,.ph-nav,.programmer-nav,.v2-nav
+) a:hover{
+  background:transparent!important;
+  color:inherit!important;
+  opacity:.58;
+}
+
+/* 02. Section labels become scientific rules rather than framed UI strips. */
+body.p7-6-5b-less-ui :is(
+  .ay-home__sectionbar,.essays-sectionbar,.v2-sectionbar,.v16-stage__bar,
+  [class*="sectionbar"],[class*="section-bar"]
+){
+  padding:12px 0 0!important;
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* 03. Index grids are spatial compositions, not bordered matrices. */
+body.p7-6-5b-less-ui :is(
+  .projects-index__grid,.research-index__grid,.essay-feature-grid,.essay-grid,
+  .press-media-cards__inner
+){
+  border:0!important;
+  background:transparent!important;
+}
+body.p7-6-5b-less-ui .essay-feature-grid,
+body.p7-6-5b-less-ui .essay-grid{
+  gap:48px 24px!important;
+}
+
+/* 04. Editorial/project cards lose the container chrome. A single rule identifies an entry. */
+body.p7-6-5b-less-ui :is(
+  .ay-home__feature,.ay-home__project-card,.ay-home__research-card,
+  .project-card,.research-card,.essay-feature,.essay-card,.press-media-card,
+  .about-explore__card,.about-practice__item,.about-professional-proof__item,
+  .current-research__item,.timeline-card,.press-international-item,.press-directory__item
+){
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui :is(
+  .ay-home__feature,.ay-home__project-card,.ay-home__research-card,
+  .project-card,.research-card,.essay-feature,.essay-card,.press-media-card,
+  .about-explore__card,.about-practice__item,.about-professional-proof__item,
+  .current-research__item,.timeline-card,.press-international-item,.press-directory__item
+):hover{
+  background:transparent!important;
+}
+
+/* Media is an exhibit/object, not a UI panel. */
+body.p7-6-5b-less-ui :is(
+  .project-card__image,.research-card__image,.essay-feature__image,.essay-card__image,
+  .press-media-card__image,.ay-home__feature-image
+){
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui :is(
+  .project-card__image img,.research-card__image img,.essay-feature__image img,.essay-card__image img,
+  .press-media-card__image img
+){
+  transform:none!important;
+}
+body.p7-6-5b-less-ui :is(.project-card,.research-card,.essay-feature,.essay-card):hover img{
+  transform:none!important;
+}
+
+
+body.p7-6-5b-less-ui :is(.ay-home__project-grid,.ay-home__research-grid){
+  gap:24px!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.p7-6-5b-less-ui :is(.ay-home__project-image,.ay-home__research-image){
+  border:0!important;
+}
+body.p7-6-5b-less-ui :is(.ay-home__project-card,.ay-home__research-card):hover img{
+  transform:none!important;
+}
+body.p7-6-5b-less-ui .ay-home__feature{
+  border-left:0!important;
+  border-right:0!important;
+  border-bottom:0!important;
+}
+
+/* 05. Metadata remains technical; CTAs become footnote-like rules instead of buttons. */
+body.p7-6-5b-less-ui :is(
+  .project-card__meta,.research-card__meta,.essays-meta,.press-media-card__image-meta,
+  .timeline-card__meta,.timeline-card__footer
+){
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui :is(
+  .project-card__link,.research-card__link,.essay-link
+){
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui :is(.project-card__link,.research-card__link,.essay-link) span:last-child{
+  transform:none!important;
+}
+
+/* 06. Remove panel framing from editorial explanatory blocks while preserving their grid. */
+body.p7-6-5b-less-ui :is(
+  .essays-position,.biotech-feature,.research-fields,.current-research,
+  .press-secondary__archive-panel
+){
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui :is(
+  .essays-position__quote,.biotech-feature__content
+){
+  border-left:0!important;
+  border-right:0!important;
+  background:transparent!important;
+}
+
+
+body.p7-6-5b-less-ui .research-fields{
+  gap:24px!important;
+  border-top:0!important;
+}
+body.p7-6-5b-less-ui .research-field{
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui .current-research__header{
+  border-left:0!important;
+  border-right:0!important;
+}
+
+/* 07. Tags are annotations, not pills. Project-specific legends/controls are excluded. */
+body.p7-6-5b-less-ui :is(
+  .research-3d__tag,.v3-tags,.card-tag,.card-tags
+){
+  padding-left:0!important;
+  padding-right:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* 08. Keep actual live systems autonomous. Only their Art.Is.You frame is simplified. */
+body.p7-6-5b-less-ui :is(
+  .ay-live-experience,.v16-stage--graph-fullscreen,.v16-stage--topography,
+  .v16-stage--population-slideshow
+){
+  box-shadow:none!important;
+}
+
+/* 09. Details/read-more remains a publication convention, not a control panel. */
+body.p7-6-5b-less-ui .v16-full-details{
+  border:0!important;
+  border-top:1px solid var(--p765b-rule)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.p7-6-5b-less-ui .v16-full-details>summary{
+  border:0!important;
+  background:transparent!important;
+}
+
+/* Mobile: retain the same sparse grammar without forcing desktop gaps. */
+@media screen and (max-width:639px){
+  body.p7-6-5b-less-ui :is(
+    .projects-index__filters,.research-index__filters,.essays-index__nav,
+    .about-nav,.press-index__nav,.statement-nav,.archive-nav,.interview-index__nav,
+    .lab-nav,.or-nav,.ph-nav,.programmer-nav,.v2-nav
+  ){
+    gap:12px 16px!important;
+  }
+  body.p7-6-5b-less-ui .essay-feature-grid,
+  body.p7-6-5b-less-ui .essay-grid{
+    gap:32px!important;
+  }
+}

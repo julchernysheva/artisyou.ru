@@ -1,0 +1,152 @@
+
+500&display=swap");
+
+body.ay-system-page {
+  font-family: var(--ay-font-sans);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+body.ay-system-page :is(h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd) {
+  font-family: var(--ay-font-sans);
+  color: var(--color-ink);
+}
+body.ay-system-page figcaption { color: var(--muted); }
+
+@media screen and (min-width: 961px) {
+  body.ay-system-page #allrecords :is(h1,.ay-type-display,.t-title_lg),
+  body.ay-system-page #allrecords :is(h1,.ay-type-display,.t-title_lg) * {
+    margin-block: 0;
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-display) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: var(--leading-display) !important;
+    letter-spacing: var(--ay-tracking-display) !important;
+    color: var(--color-ink) !important;
+  }
+
+  body.ay-system-page #allrecords :is(h2,.ay-type-h2,.t-title_xl,.t-title_l,.t-title_md),
+  body.ay-system-page #allrecords :is(h2,.ay-type-h2,.t-title_xl,.t-title_l,.t-title_md) * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-h2) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-h2) !important;
+    letter-spacing: var(--ay-tracking-heading) !important;
+  }
+
+  body.ay-system-page #allrecords :is(
+    h3,h4,h5,h6,.ay-type-h3,.t-heading,.t-name,.t-section__title,.t220__title,
+    .research-card__title,.essay-feature__title,.timeline-card__title,.timeline-card__date,
+    .pl-name,.pl-method-title
+  ),
+  body.ay-system-page #allrecords :is(
+    h3,h4,h5,h6,.ay-type-h3,.t-heading,.t-name,.t-section__title,.t220__title,
+    .research-card__title,.essay-feature__title,.timeline-card__title,.timeline-card__date,
+    .pl-name,.pl-method-title
+  ) * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-h3) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-h3) !important;
+    letter-spacing: var(--ay-tracking-card) !important;
+  }
+
+  body.ay-system-page #allrecords :is(
+    p,li,blockquote,dd,.t-text,.t-descr,.ay-type-body,[class*="__copy"]
+  ) {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-body) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-body) !important;
+    letter-spacing: var(--ay-tracking-body) !important;
+  }
+
+  body.ay-system-page #allrecords :is(
+    .ay-type-lead,[class*="__lead"],.ay-composition-intro .t015__descr,.ay-composition-intro .t030__descr
+  ),
+  body.ay-system-page #allrecords :is(
+    .ay-type-lead,[class*="__lead"],.ay-composition-intro .t015__descr,.ay-composition-intro .t030__descr
+  ) * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-lead) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-lead) !important;
+    letter-spacing: var(--ay-tracking-lead) !important;
+  }
+
+  body.ay-system-page #allrecords :is(
+    .ay-type-meta,.ay-type-label,[class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+    [class*="sectionbar"],[class*="section-bar"],.ph-status dt,.ph-film-index,.prearchive-linear .pl-meta
+  ),
+  body.ay-system-page #allrecords :is(
+    .ay-type-meta,.ay-type-label,[class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+    [class*="sectionbar"],[class*="section-bar"],.ph-status dt,.ph-film-index,.prearchive-linear .pl-meta
+  ) * {
+    font-family: var(--ay-font-mono) !important;
+    font-size: var(--type-meta) !important;
+    font-weight: 500 !important;
+    line-height: var(--leading-meta) !important;
+    letter-spacing: var(--ay-tracking-system) !important;
+    text-transform: uppercase;
+  }
+
+  body.ay-system-page #allrecords :is(figcaption,[class*="caption"],.t1148__title,.t1148__descr,.t-descr_xxs,small),
+  body.ay-system-page #allrecords :is(figcaption,[class*="caption"]) * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-caption) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-caption) !important;
+    letter-spacing: 0 !important;
+  }
+
+  body.ay-system-page #allrecords .project-card__title,
+  body.ay-system-page #allrecords .project-card__title * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-card-title) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-card-title) !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  body.ay-system-page #allrecords .project-card__description,
+  body.ay-system-page #allrecords .project-card__description * {
+    font-family: var(--ay-font-sans) !important;
+    font-size: var(--type-card-subtitle) !important;
+    font-weight: 400 !important;
+    line-height: var(--leading-card-subtitle) !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  body.ay-system-page #allrecords :is(a,button,label,input,select,textarea) {
+    font-family: var(--ay-font-sans);
+  }
+
+  body.ay-system-page #allrecords :is(a,button) { color: var(--color-ink); }
+  body.ay-system-page #allrecords :is(a,button):is(:hover,:focus-visible),
+  body.ay-system-page #allrecords :is(a,button)[aria-current="page"],
+  body.ay-system-page #allrecords :is(a,button)[aria-selected="true"] { color: var(--color-accent); }
+
+  body.ay-system-page .ay-desktop-header,
+  body.ay-system-page .ay-desktop-header :is(a,span,button) {
+    font-family: var(--ay-font-sans) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: var(--color-ink) !important;
+  }
+
+  body.ay-system-page .ay-desktop-header__submenu :is(a,span) { font-size: 13px !important; color: var(--muted) !important; }
+  body.ay-system-page .ay-desktop-header__search svg { stroke: var(--color-ink) !important; }
+
+  /* Artwork-owned typography is preserved inside true immersive media surfaces. */
+  body.ay-system-page .ay-module-experience .tn-atom,
+  body.ay-system-page #allrecords[data-tilda-page-alias="dark"] .tn-atom {
+    font-family: inherit;
+  }
+}

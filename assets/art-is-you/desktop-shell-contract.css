@@ -1,0 +1,164 @@
+/* Desktop shell normalization. Existing frozen semantic metrics only.
+   Header/navigation, footer, graph descendants and mobile are not owners here. */
+@layer desktop-shell-contract {
+@media (min-width:769px) {
+  :root {
+    --shell-left:32px;
+    --shell-header-bottom:66px;
+    --shell-level-one:119px;
+    --shell-level-two:94px;
+    --shell-system-inline-offset:1px;
+    --shell-start:calc(var(--shell-level-one) - var(--shell-header-bottom) - var(--shell-system-inline-offset));
+    --shell-instrument-start:calc(var(--shell-level-two) - var(--shell-header-bottom) - var(--shell-system-inline-offset));
+  }
+
+  /* PAGE H1, not SVG/canvas entities or inspector titles. */
+  body h1:not(#bridge-title) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:64px !important;
+    line-height:64px !important;
+    font-weight:400 !important;
+    letter-spacing:-2.88px !important;
+  }
+
+  /* Confirmed editorial/selected-field TITLE roles. Failed title-fit components
+     are excluded: restore baseline; defer adaptation rather than compensate. */
+  :is(.ay-type-h2,.v16-title,.rp-active h2,.rp-atlas h2,.projects-evolve__title,
+      #about-page .about-section-content>h2,.v12-shell h2,
+      body:has(.lab-page) .research-detail-protocol__field--question>.research-detail-protocol__text,
+      body.quantum-research-page .research-detail-protocol__field--question>.research-detail-protocol__text):not(.press-index h2,.statement-page h2,.lab-page h2,.v16-essay-media .v16-title) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:32px !important;
+    line-height:36px !important;
+    font-weight:400 !important;
+    letter-spacing:-.32px !important;
+  }
+
+  /* Same-role introductory and narrative TEXT. No graph/inspector descendants. */
+  :is(.ay-type-lead,.v16-text,.rp-hero-grid>p,.rp-body>p,.projects-evolve__description,
+      .index-baseline__section-intro>p,.publications-intro__copy p,
+      #about-page .about-roles p,#about-page .about-lead,#about-page .about-text,
+      .profile-hero__copy p,.profile-register p,.ay-project-top__descriptor,
+      .ay-project-top__concept p,.nowords12-entry__lead,.v12-shell article>p:not(.v12-index),
+      .research-detail-protocol__field:not(.research-detail-protocol__field--question)>.research-detail-protocol__text) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:16px !important;
+    line-height:24px !important;
+    font-weight:400 !important;
+    letter-spacing:-.16px !important;
+  }
+
+  /* Opening identity/register labels share SYSTEM; dates in project inner grids
+     are not page-origin markers and are intentionally not positioned here. */
+  :is(.hero-label,.index-baseline__eyebrow,.rp-hero>.rp-eyebrow,
+      .ay-context-bar,.ay-context-bar>span,.publications-intro__eyebrow,
+      .publications-intro__eyebrow>span,.about-header__eyebrow,.about-header__eyebrow>span,
+      .profile-kicker,#about-page .about-system-label,
+      .research-detail-protocol__register) {
+    font-family:'PT Mono',monospace !important;
+    font-size:13px !important;
+    line-height:18px !important;
+    font-weight:400 !important;
+    letter-spacing:normal !important;
+  }
+
+  /* LEVEL 1: shared shell boundary, not page-family type scales. */
+  .h3b-home>.hero,.projects-index .index-baseline__eyebrow,.profile-hero {
+    padding-top:var(--shell-start) !important;
+  }
+  .about-index .about-header {
+    padding-top:calc(var(--shell-start) - 15px) !important; /* existing service-band top inset */
+  }
+  .rp-hero>.rp-eyebrow {
+    padding-top:calc(var(--shell-start) - 1px) !important; /* existing top rule */
+  }
+  .ay-context-bar {
+    block-size:18px !important;
+    min-block-size:0 !important;
+  }
+  .ay-composition-intro,.publications-intro {
+    padding-top:calc(var(--shell-start) - var(--shell-opening-top-rule,0px)) !important;
+  }
+  :is(.press-index__intro,.essays-index__intro,.interview-index__intro,.publications-intro) {
+    --shell-opening-top-rule:1px; /* measured existing opening top rule */
+  }
+  .ay-composition-intro-grid:has(>.ay-context-bar) {
+    padding-top:0 !important; /* opening boundary belongs to the outer shell */
+  }
+  .publications-intro__eyebrow {
+    block-size:auto !important;
+    min-block-size:0 !important;
+  }
+  #about-page .about-hero-copy {
+    padding-top:calc(var(--shell-start) - 2.25rem) !important; /* preserve portrait/hero inset */
+  }
+  #about-page .about-hero .about-system-label {
+    margin-block-start:0 !important; /* remove font-relative user-agent page-origin margin */
+  }
+
+  /* LEVEL 2: only the inspected operation-first opening component.
+     Its graph/evidence viewport and all graph presentation rules stay untouched. */
+  .research-detail-protocol__screen--opening {
+    padding-top:var(--shell-instrument-start) !important;
+  }
+
+  /* Targeted parity ledger only. Local component owners, not page-family scales.
+     Known failed Press/Statement/Lab H2 fits remain at their baseline. */
+  :is(#about-page .about-evidence h3,#about-page #contact-title,
+      .ph-method__grid h3.ay-type-h3,
+      .lab-method h3.ay-type-h3,#panel-canon .seven-copy>h2,
+      #rp-native-scheme-title,#rp-threads-title,#rp-case-selector-title,
+      #rp-selected-case-title,.rp-selected-case__reading>h3,
+      #rp-observations-title) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:32px !important;
+    line-height:36px !important;
+    font-weight:400 !important;
+    letter-spacing:-.32px !important;
+  }
+
+  /* Statement record TITLE trial caused two new row wraps (1 -> 2 lines).
+     That role is rolled back to its frozen baseline; defer re-layout, no fit hacks. */
+
+  /* Explicit lead nodes are narrative TEXT, not their surrounding service UI. */
+  :is(.statement-header__lead>p[data-ay-v2-role="lead"],
+      .ay-injected-hero__lead>p[data-ay-v2-role="lead"]) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:16px !important;
+    line-height:24px !important;
+    font-weight:400 !important;
+    letter-spacing:-.16px !important;
+  }
+
+  /* Record emphasis and source locators do not become display/section headings. */
+  :is(.profile-register h3,.profile-education h3,
+      .v16-essay-media>aside>h2.v16-title,.ay-godbot-evidence figcaption>h3) {
+    font-family:'Source Sans 3',sans-serif !important;
+    font-size:16px !important;
+    line-height:24px !important;
+    font-weight:500 !important;
+    letter-spacing:-.16px !important;
+  }
+
+  /* Dataset registers / field keys: SYSTEM, regardless of their HTML heading tag. */
+  :is(#territories-title,.ay-project-top__meta>span,
+      .ay-project-top__concept-label,.ay-project-top__register>h2,
+      .likes12-opening__meta,.oracle12-opening__meta,
+      .programmer12-score>p,.nowords12-entry>div>p.v12-index) {
+    font-family:'PT Mono',monospace !important;
+    font-size:13px !important;
+    line-height:18px !important;
+    font-weight:400 !important;
+    letter-spacing:normal !important;
+  }
+
+  /* Research service labels are MICRO, not TITLE; outside SVG/graph entities. */
+  h2.research-detail-protocol__label {
+    font-family:'PT Mono',monospace !important;
+    font-size:11px !important;
+    line-height:14px !important;
+    font-weight:400 !important;
+    letter-spacing:normal !important;
+  }
+}
+}

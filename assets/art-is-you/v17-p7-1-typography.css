@@ -1,0 +1,93 @@
+
+500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
+
+/* ART.IS.YOU — P7.1 TYPOGRAPHY NORMALIZATION
+   Scope: 27 canonical routes.
+   Changes font roles only. Geometry, sizes, leading, spacing, media and content stay inherited from P6.2/P6.1. */
+:root{
+  --ay-font-sans:'Source Sans 3',sans-serif;
+  --ay-font-mono:'PT Mono', monospace;
+  --p61-sans:'Source Sans 3',sans-serif;
+  --p61-mono:'PT Mono', monospace;
+}
+
+body.v17-canon.p7-1-type{
+  font-family:var(--ay-font-sans)!important;
+}
+
+/* Editorial / narrative layer = Plex Sans. */
+body.v17-canon.p7-1-type #allrecords :is(
+  h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,
+  .t-text,.t-descr,.t-title,.t-heading,.t-name,
+  .ay-type-display,.ay-type-h2,.ay-type-h3,.ay-type-body,.ay-type-lead,
+  [class*="__title"],[class*="__lead"],[class*="__copy"],[class*="__description"]
+),
+body.v17-canon.p7-1-type :is(.v2-page,.v2-clean-page,.v3-clean-page,.programmer-page,.prearchive-linear) :is(
+  h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,
+  .ay-type-display,.ay-type-h2,.ay-type-h3,.ay-type-body,.ay-type-lead
+){
+  font-family:var(--ay-font-sans)!important;
+}
+
+/* Controls and global navigation remain editorial Sans unless explicitly technical. */
+body.v17-canon.p7-1-type :is(a,button,input,select,textarea,label),
+body.v17-canon.p7-1-type .ay-desktop-header,
+body.v17-canon.p7-1-type .ay-desktop-header :is(a,span,button){
+  font-family:var(--ay-font-sans)!important;
+}
+
+/* Technical layer = Plex Mono. Keep existing sizes/leading from previous contracts. */
+body.v17-canon.p7-1-type :is(
+  .ay-context-bar,.v2-context,.v4-context,
+  .ay-type-meta,.ay-type-label,
+  [class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],
+  [class*="__index"],[class*="__status"],[class*="__code"],[class*="__formula"],
+  .v16-stage__bar,.v16-kicker,.v16-rule,.v16-source,
+  .ph-status,.ph-film-index,.ph-nav,.ph-sectionbar,.ph-eyebrow,.ph-formulas,
+  .ph-method__formula,.ph-data dt,.ph-end div,
+  .pl-kicker,.pl-meta,.v2-meta,.v2-aside-code
+),
+body.v17-canon.p7-1-type :is(
+  .ay-context-bar,.v2-context,.v4-context,
+  .ay-type-meta,.ay-type-label,
+  [class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],
+  [class*="__index"],[class*="__status"],[class*="__code"],[class*="__formula"],
+  .v16-stage__bar,.v16-kicker,.v16-rule,.v16-source,
+  .ph-status,.ph-film-index,.ph-nav,.ph-sectionbar,.ph-eyebrow,.ph-formulas,
+  .ph-method__formula,.ph-data dt,.ph-end div,
+  .pl-kicker,.pl-meta,.v2-meta,.v2-aside-code
+) *{
+  font-family:var(--ay-font-mono)!important;
+}
+
+/* Image / object captions are part of the technical apparatus. */
+body.v17-canon.p7-1-type #allrecords :is(
+  figcaption,[class*="caption"],.t-descr_xxs,small
+),
+body.v17-canon.p7-1-type :is(.v2-page,.v2-clean-page,.v3-clean-page,.programmer-page,.prearchive-linear) :is(
+  figcaption,[class*="caption"],small
+),
+body.v17-canon.p7-1-type #allrecords :is(
+  figcaption,[class*="caption"],.t-descr_xxs,small
+) *{
+  font-family:var(--ay-font-mono)!important;
+}
+
+/* Longform articles: neutralize Tilda inline font variables and old Source Sans 3 fallbacks. */
+body.v17-canon.p7-1-type.v17-text-article #allrecords [style*="Source Sans 3"],
+body.v17-canon.p7-1-type.v17-text-article #allrecords [style*="--t-text-font"]{
+  font-family:var(--ay-font-sans)!important;
+}
+
+/* Post Human legacy font declarations are explicitly closed. */
+body.v17-canon.p7-1-type :is(.ph-human__image figcaption,.ph-caption,.ph-film-index,.ph-status dt){
+  font-family:var(--ay-font-mono)!important;
+}
+
+/* True artwork/immersive surfaces retain their own internal typographic behavior. */
+body.v17-canon.p7-1-type .ay-module-experience .tn-atom,
+body.v17-canon.p7-1-type #allrecords[data-tilda-page-alias="dark"] .tn-atom{
+  font-family:inherit;
+}

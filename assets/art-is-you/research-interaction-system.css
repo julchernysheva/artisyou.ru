@@ -1,0 +1,165 @@
+/* Research interaction grammar — scoped to Protoarchive and Field Research. */
+:root {
+  --research-motion-hover: 160ms;
+  --research-motion-state: 220ms;
+  --research-motion-enter: 320ms;
+  --research-motion-reveal: var(--research-motion-enter);
+  --research-paper: #efefea;
+  --research-interaction-ink: #2c2927;
+  --research-interaction-muted: #695e58;
+  --research-interaction-line: var(--rule);
+  --research-interaction-active: var(--ui-accent);
+  --research-interaction-relation: var(--ui-accent);
+  --research-interaction-focus: #064cff;
+  --research-node-micro: 3px;
+  --research-node-standard: 4px;
+  --research-node-primary: 5px;
+  --research-line-base: 1px;
+  --research-line-hover: 1.3px;
+  --research-line-active: 1.5px;
+  --research-context-hover: .5;
+  --research-context-active: .32;
+  --research-label-primary: 11px;
+  --research-label-secondary: 10px;
+  --research-label-meta: 9px;
+  --research-label-gap: 10px;
+}
+
+/* Protoarchive: the existing timeline stays intact; interaction only changes its reading state. */
+.prearchive-linear .pl-event {
+  cursor: pointer;
+  outline: 0;
+  transition: opacity var(--research-motion-state) ease, color var(--research-motion-state) ease;
+}
+.prearchive-linear[data-interaction-state="preview"] .pl-event:not(.is-preview) { opacity: var(--research-context-hover); }
+.prearchive-linear[data-interaction-state="selected"] .pl-event:not(.is-selected) { opacity: var(--research-context-active); }
+.prearchive-linear .pl-event.is-preview,
+.prearchive-linear .pl-event.is-selected { opacity: 1; }
+.prearchive-linear .pl-node {
+  width: 11px;
+  height: 11px;
+  left: 155px;
+  top: 10px;
+  border-width: var(--research-line-base);
+  background: var(--research-paper);
+}
+.prearchive-linear .pl-event.is-preview .pl-node {
+  border-color: var(--research-interaction-focus);
+  border-width: 1.3px;
+}
+.prearchive-linear .pl-event.is-selected .pl-node {
+  border-color: var(--research-interaction-active);
+  border-width: 1.55px;
+  background: var(--aiy-paper, #efefea);
+}
+.prearchive-linear .pl-event.is-preview .pl-card { border-top-color: var(--research-interaction-focus); border-top-width: 1.3px; }
+.prearchive-linear .pl-event.is-preview :is(.pl-year, .pl-name, .pl-metric, .pl-type) { color: var(--research-interaction-focus); }
+.prearchive-linear .pl-event.is-preview .pl-tag { border-color: var(--research-interaction-focus); color: var(--research-interaction-focus); }
+.prearchive-linear .pl-event.is-selected .pl-card { border-top-color: var(--research-interaction-relation); border-top-width: 1.5px; }
+.prearchive-linear .pl-event.is-selected .pl-year,
+.prearchive-linear .pl-event.is-selected .pl-name,
+.prearchive-linear .pl-event.is-selected .pl-metric,
+.prearchive-linear .pl-event.is-selected .pl-type { color: var(--research-interaction-ink); font-weight: 600; }
+.prearchive-linear .pl-event.is-selected .pl-tag { border-color: var(--research-interaction-active); }
+.prearchive-linear .pl-event:focus-visible .pl-card {
+  outline: 1px solid var(--research-interaction-focus);
+  outline-offset: 6px;
+}
+.prearchive-linear .pl-event.is-selected:focus-visible .pl-node { background: var(--research-interaction-active); border-color: var(--research-interaction-focus); }
+
+/* Field Research: index links become a preview/pin control for their existing anchors. */
+.lab-page {
+  --lab-line: var(--rule);
+  --lab-state-ink: #2c2927;
+  --lab-state-active: var(--ui-accent);
+  --lab-state-relation: var(--ui-accent);
+}
+.lab-page .lab-index__card,
+.lab-page .lab-case,
+.lab-page .lab-sectionbar {
+  transition: opacity var(--research-motion-state) ease, color var(--research-motion-hover) ease, border-color var(--research-motion-hover) ease;
+}
+.lab-page[data-interaction-state="preview"] .lab-index__card:not(.is-preview) { opacity: var(--research-context-hover); }
+.lab-page[data-interaction-state="selected"] .lab-index__card:not(.is-selected) { opacity: var(--research-context-active); }
+.lab-page .lab-index__card.is-preview,
+.lab-page .lab-index__card.is-selected { opacity: 1; }
+.lab-page .lab-index__card.is-preview {
+  background: transparent;
+  box-shadow: inset 0 -1.3px 0 var(--research-interaction-focus);
+}
+.lab-page .lab-index__card.is-preview .lab-index__content :is(h2, p) { color: var(--research-interaction-focus); }
+.lab-page .lab-index__card.is-selected {
+  background: transparent;
+  box-shadow: inset 0 -1.5px 0 var(--lab-state-active);
+}
+.lab-page .lab-index__card.is-selected .lab-index__content h2,
+.lab-page .lab-index__card.is-selected .lab-index__content p { color: var(--lab-state-ink); }
+.lab-page .lab-case.is-preview,
+.lab-page .lab-case.is-selected { position: relative; }
+.lab-page .lab-case.is-preview::before,
+.lab-page .lab-case.is-selected::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 1.3px solid var(--research-interaction-focus);
+}
+.lab-page .lab-case.is-selected::before { border-top-color: var(--lab-state-relation); border-top-width: 1.5px; }
+.lab-page .lab-index__card:focus-visible {
+  outline: 1px solid var(--research-interaction-focus);
+  outline-offset: 4px;
+}
+/* Existing image movement was decorative rather than informational. */
+.lab-page .lab-hero__item:hover img,
+.lab-page .lab-index__card:hover .lab-index__image img { transform: none; }
+
+/* Bioart retains its morphology; this only separates preview, selection and focus. */
+.bio-timeline .bio-morph__project,
+.bio-timeline .bio-ledger--morph .bio-ledger__row {
+  transition: opacity var(--research-motion-state) ease, color var(--research-motion-hover) ease;
+}
+.bio-timeline[data-bio-interaction-state="preview"] .bio-morph__project:not(.is-preview),
+.bio-timeline[data-bio-interaction-state="preview"] .bio-ledger--morph .bio-ledger__row:not(.is-preview) { opacity: var(--research-context-hover); }
+.bio-timeline[data-bio-interaction-state="selected"] .bio-morph__project:not(.is-selected),
+.bio-timeline[data-bio-interaction-state="selected"] .bio-ledger--morph .bio-ledger__row:not(.is-selected) { opacity: var(--research-context-active); }
+.bio-timeline .bio-morph__project:hover .bio-morph__node {
+  fill: var(--bio-paper, #efefea) !important;
+  stroke: var(--research-interaction-focus) !important;
+  stroke-width: 1.3px !important;
+}
+.bio-timeline .bio-morph__project:hover text { fill: var(--research-interaction-focus) !important; }
+.bio-timeline .bio-morph__project:hover .bio-morph__hit { stroke: var(--research-interaction-focus) !important; stroke-width: 1px !important; }
+.bio-timeline .bio-morph__project.is-selected .bio-morph__node {
+  fill: var(--bio-paper, #efefea) !important;
+  stroke: var(--research-interaction-active) !important;
+  stroke-width: 1.55px !important;
+}
+.bio-timeline .bio-morph__project.is-selected text,
+.bio-timeline .bio-ledger--morph .bio-ledger__row.is-selected :is(.bio-ledger__main strong, .bio-ledger__role) { color: var(--research-interaction-ink) !important; fill: var(--research-interaction-ink) !important; }
+.bio-timeline .bio-morph__project.is-selected .bio-morph__hit { stroke: var(--research-interaction-relation) !important; stroke-width: 1.5px !important; }
+.bio-timeline .bio-ledger--morph .bio-ledger__row.is-selected { box-shadow: inset 2px 0 0 var(--research-interaction-relation); }
+.bio-timeline .bio-ledger--morph .bio-ledger__row.is-preview { box-shadow: inset 1.3px 0 0 var(--research-interaction-focus); }
+.bio-timeline .bio-morph__project:focus-visible .bio-morph__node {
+  stroke: var(--research-interaction-focus) !important;
+  stroke-width: 1.5px !important;
+}
+.bio-timeline .bio-morph__project.is-selected:focus-visible .bio-morph__node { fill: var(--research-interaction-active) !important; }
+.bio-timeline .bio-morph__project:focus-visible text { fill: var(--research-interaction-focus) !important; }
+.bio-timeline .bio-morph__project:focus-visible .bio-morph__hit { stroke: var(--research-interaction-focus) !important; stroke-width: 1px !important; }
+.bio-timeline .bio-ledger--morph .bio-ledger__select:focus-visible { outline: 1px solid var(--research-interaction-focus); outline-offset: -1px; }
+.bio-timeline .bio-morph__project .bio-morph__node { stroke-width: var(--research-line-base); }
+.bio-timeline .bio-morph__project--environment .bio-morph__node,
+.bio-timeline .bio-morph__project--cell .bio-morph__node { stroke-width: 1.2px; }
+
+@media (max-width: 760px) {
+  .prearchive-linear .pl-node { left: 13px; top: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prearchive-linear .pl-event,
+  .lab-page .lab-index__card,
+  .lab-page .lab-case,
+  .lab-page .lab-sectionbar,
+  .bio-timeline .bio-morph__project,
+  .bio-timeline .bio-ledger--morph .bio-ledger__row { transition: none; }
+}

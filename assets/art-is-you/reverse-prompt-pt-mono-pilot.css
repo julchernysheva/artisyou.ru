@@ -1,0 +1,31 @@
+/* TASK 08D: Reverse Prompt system roles only. Font family is the only change.
+   Editorial prose and all SVG/spatial labels retain the frozen cascade.
+   Geometry-sensitive roles were excluded by the 1440/390 metric test. */
+html body.reverse-prompt-detail main :is(
+  .research-detail-protocol__register,
+  .research-detail-protocol__label,
+  .ri-research-taxonomy,
+  .ri-identity__fullscreen,
+  .rp-native-scheme__register,
+  .rp-native-scheme__step,
+  .rp-native-scheme__metric b,
+  .rp-native-scheme__results li,
+  .reverse-prompt-analytics__register,
+  .rp-threads__data,
+  .rp-case-selector__items button,
+  .rp-case-selector__status,
+  .rp-selected-case__header > p,
+  .rp-selected-case__reading > p:first-child,
+  .rp-selected-case__comparison > p:first-child,
+  .rp-selected-case summary,
+  .rp-case-source figcaption,
+  .rp-case-model__label,
+  .rp-case-model__meta dt,
+  .rp-case-model__meta dd,
+  .rp-observation__metric,
+  .rp-case-authorship,
+  .rp-evidence-link,
+  .rp-evidence-index__case
+) {
+  font-family: "PT Mono", monospace !important;
+}

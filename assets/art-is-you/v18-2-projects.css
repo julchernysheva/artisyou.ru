@@ -1,0 +1,139 @@
+/* V18.2 Projects — strict grid / precise displacement / material memory */
+body.v18-2-projects .projects-index{--xs:16px;--s:32px;--m:64px;--l:112px;--xl:176px;--signal:#064CFF;overflow:visible!important}
+
+/* First screen */
+body.v18-2-projects .projects-index__intro{padding:var(--s) 0 var(--m)!important;position:relative!important;isolation:isolate;overflow:visible!important}
+body.v18-2-projects .projects-index__eyebrow{padding:0!important;border:0!important;position:relative;z-index:4}
+body.v18-2-projects .projects-index__eyebrow::before,body.v18-2-projects .projects-index__eyebrow::after{content:none!important}
+body.v18-2-projects .projects-index__intro-grid{position:relative!important;z-index:2}
+body.v18-2-projects .projects-index__heading{grid-column:1/span 4!important;margin:0 0 4px!important;max-width:none!important;font-size:clamp(64px,7.8vw,120px)!important;line-height:.79!important;letter-spacing:-.072em!important;position:relative;z-index:4}
+body.v18-2-projects .projects-index__lead{grid-column:9/-1!important;align-self:start!important;margin-top:56px!important;max-width:29ch!important;font-size:15px!important;line-height:1.42!important;position:relative;z-index:4}
+body.v18-2-projects .projects-index__intro::before,body.v18-2-projects .projects-index__intro::after,body.v18-2-projects .projects-index__intro-grid::after{content:""!important;position:absolute;pointer-events:none;background-image:url('/assets/art-is-you/0xmem-reactor-poster.webp');background-repeat:no-repeat;filter:grayscale(1) sepia(.05)}
+body.v18-2-projects .projects-index__intro::before{z-index:1;left:34.1%;top:92px;width:clamp(320px,35vw,540px);height:clamp(230px,29vw,430px);background-size:235% auto;background-position:49% 33%;opacity:.16;transform:translateX(8px) rotate(-.7deg)}
+body.v18-2-projects .projects-index__intro::after{z-index:2;left:48.7%;top:154px;width:clamp(180px,20vw,310px);height:clamp(250px,28vw,410px);background-size:390% auto;background-position:67% 61%;opacity:.23;transform:translateX(-5px) rotate(.9deg);filter:grayscale(1) sepia(.03) contrast(1.04)}
+body.v18-2-projects .projects-index__intro-grid::after{z-index:0;left:62.3%;top:36px;width:clamp(110px,12vw,185px);height:clamp(150px,18vw,270px);background-size:510% auto;background-position:29% 72%;opacity:.065;transform:rotate(-1.4deg);filter:grayscale(1) blur(.35px)}
+
+/* Existing filter, stripped of panel language */
+body.v18-2-projects .projects-index__filters{display:flex!important;flex-wrap:wrap!important;gap:8px 25px!important;margin:0 0 var(--m)!important;padding:0!important;border:0!important;overflow:visible!important}
+body.v18-2-projects .projects-index__filters a{flex:0 0 auto!important;min-width:0!important;padding:0!important;border:0!important;background:transparent!important;font-size:11px!important;line-height:18px!important;opacity:.64}
+body.v18-2-projects .projects-index__filters::before,body.v18-2-projects .projects-index__filters::after,body.v18-2-projects .projects-index__filters a::before,body.v18-2-projects .projects-index__filters a::after{content:none!important;display:none!important}
+body.v18-2-projects .projects-index__filters a:hover,body.v18-2-projects .projects-index__filters a:focus-visible{color:var(--signal)!important;opacity:1}
+
+/* Four explicit bands on one 12-column system */
+body.v18-2-projects .projects-index__grid{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-template-rows:auto auto auto auto!important;column-gap:24px!important;row-gap:0!important;align-items:start!important;overflow:visible!important;border:0!important;background:transparent!important}
+body.v18-2-projects .project-card{min-width:0!important;margin:0!important;border:0!important;background:transparent!important;overflow:visible!important;transition:none!important}
+body.v18-2-projects .project-card:hover{background:transparent!important}
+body.v18-2-projects .project-card__image,body.v18-2-projects .project-card__content{min-height:0!important;border:0!important;background:transparent!important}
+body.v18-2-projects .project-card__image{overflow:hidden!important}
+body.v18-2-projects .project-card__image::before,body.v18-2-projects .project-card__image::after{content:none!important}
+body.v18-2-projects .project-card__meta{opacity:.58}
+body.v18-2-projects .project-card__meta span::before,body.v18-2-projects .project-card__meta span::after{content:none!important}
+body.v18-2-projects .project-card__title{margin-bottom:var(--xs)!important}
+body.v18-2-projects .project-card__description{max-width:32ch!important}
+
+/* Godbot: first event */
+body.v18-2-projects .project-card--hero{grid-column:1/-1!important;grid-row:1!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;column-gap:24px!important;min-height:clamp(590px,66vw,850px)!important;margin-bottom:var(--l)!important;position:relative!important;isolation:isolate}
+body.v18-2-projects .project-card--hero .project-card__image{grid-column:5/-1!important;grid-row:1!important;height:clamp(590px,66vw,850px)!important;position:relative!important;background:#d9d6cf!important}
+body.v18-2-projects .project-card--hero .project-card__image img{width:152%!important;height:152%!important;max-width:none!important;object-fit:cover!important;object-position:59% 43%!important;filter:grayscale(1) sepia(.04) contrast(1.16) brightness(.72)!important;opacity:.93!important;transform:translate(-5%,-3%) scale(2.48)!important;transform-origin:53% 40%!important;transition:opacity 1.2s ease!important}
+body.v18-2-projects .project-card--hero .project-card__image::before,body.v18-2-projects .project-card--hero .project-card__image::after{content:""!important;display:block!important;position:absolute;z-index:2;pointer-events:none;background:url('/assets/art-is-you/0xmem-reactor-poster.webp') no-repeat;filter:grayscale(1) sepia(.04)}
+body.v18-2-projects .project-card--hero .project-card__image::before{left:-18%;top:9%;width:51%;height:46%;background-size:280% auto;background-position:46% 31%;opacity:.14;transform:rotate(-.6deg)}
+body.v18-2-projects .project-card--hero .project-card__image::after{left:7%;bottom:8%;width:31%;height:39%;background-size:430% auto;background-position:71% 64%;opacity:.2;transform:rotate(.8deg)}
+body.v18-2-projects .project-card--hero .ay-live-experience__caption,body.v18-2-projects .project-card--hero .ay-live-experience__activate{display:none!important}
+body.v18-2-projects .project-card--hero .project-card__content{grid-column:1/span 4!important;grid-row:1!important;align-self:end!important;z-index:3!important;padding:0 18px var(--m) 0!important}
+body.v18-2-projects .project-card--hero .project-card__main{display:block!important}
+body.v18-2-projects .project-card--hero .project-card__description{max-width:29ch!important}
+body.v18-2-projects .project-card--hero .project-card__link{margin-top:var(--s)!important}
+
+/* Band A */
+body.v18-2-projects .project-card--large{grid-column:1/span 7!important;grid-row:2!important;padding-bottom:var(--xl)!important}
+body.v18-2-projects .project-card--large .project-card__image{width:100%!important;aspect-ratio:1.48/1!important}
+body.v18-2-projects .project-card--large .project-card__content{width:55%!important;margin-left:auto!important;padding:var(--s) 0 0!important}
+body.v18-2-projects .project-card--medium{grid-column:9/-1!important;grid-row:2!important;padding-top:var(--m)!important;padding-bottom:var(--xl)!important}
+body.v18-2-projects .project-card--medium .project-card__image{width:74%!important;aspect-ratio:1/1!important;margin-left:auto!important}
+body.v18-2-projects .project-card--medium .project-card__content{width:100%!important;padding:var(--s) 0 0!important}
+
+/* Band B: one visual register and shared text baseline */
+body.v18-2-projects :is(#performance,#ai-art,#editorial){grid-row:3!important;display:grid!important;grid-template-rows:330px auto!important;align-items:end!important;padding-bottom:var(--l)!important}
+body.v18-2-projects #performance{grid-column:1/span 3!important}
+body.v18-2-projects #ai-art{grid-column:5/span 4!important}
+body.v18-2-projects #editorial{grid-column:10/-1!important}
+body.v18-2-projects :is(#performance,#ai-art,#editorial) .project-card__image{align-self:end!important;margin:0!important}
+body.v18-2-projects #performance .project-card__image{width:57%!important;height:255px!important;margin-left:auto!important}
+body.v18-2-projects #ai-art .project-card__image{width:100%!important;height:330px!important}
+body.v18-2-projects #editorial .project-card__image{width:72%!important;height:282px!important;margin-left:auto!important}
+body.v18-2-projects #editorial .project-card__image img{object-position:center top!important}
+body.v18-2-projects :is(#performance,#ai-art,#editorial) .project-card__content{width:100%!important;margin:0!important;padding:var(--s) 0 0!important;align-self:start!important}
+
+/* Band C: second event */
+body.v18-2-projects #post-human{grid-column:3/span 9!important;grid-row:4!important;padding-bottom:var(--l)!important}
+body.v18-2-projects #post-human .project-card__image{width:100%!important;aspect-ratio:1.72/1!important;background:#d8d4cc!important}
+body.v18-2-projects #post-human .project-card__image img{filter:grayscale(.88) sepia(.12) saturate(.32) contrast(.92) brightness(.92)!important}
+body.v18-2-projects #post-human .project-card__content{width:38%!important;margin:0!important;padding:var(--s) 0 0!important}
+body.v18-2-projects :is(.project-card--large,.project-card--medium,#performance,#ai-art,#editorial,#post-human) .project-card__image img{width:100%!important;height:100%!important;object-fit:cover!important}
+
+@media(max-width:960px){
+ body.v18-2-projects .projects-index{--l:88px;--xl:136px}
+ body.v18-2-projects .projects-index__heading{font-size:clamp(58px,10vw,90px)!important}
+ body.v18-2-projects .project-card--hero,body.v18-2-projects .project-card--hero .project-card__image{min-height:620px!important;height:620px!important}
+ body.v18-2-projects :is(#performance,#ai-art,#editorial){grid-template-rows:260px auto!important}
+ body.v18-2-projects #performance .project-card__image{height:205px!important}
+ body.v18-2-projects #ai-art .project-card__image{height:260px!important}
+ body.v18-2-projects #editorial .project-card__image{height:224px!important}
+}
+@media(max-width:639px){
+ body.v18-2-projects .projects-index{--s:24px;--m:48px;--l:80px;--xl:112px}
+ body.v18-2-projects .projects-index__intro{min-height:350px!important;padding-top:18px!important}
+ body.v18-2-projects .projects-index__intro-grid{min-height:270px!important;display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:12px!important}
+ body.v18-2-projects .projects-index__heading{grid-column:1/span 4!important;font-size:55px!important;line-height:.84!important;margin:0!important}
+ body.v18-2-projects .projects-index__lead{grid-column:3/-1!important;margin-top:36px!important;font-size:14px!important}
+ body.v18-2-projects .projects-index__intro::before{left:24%;top:92px;width:250px;height:205px;opacity:.13}
+ body.v18-2-projects .projects-index__intro::after{left:52%;top:130px;width:135px;height:185px;opacity:.2}
+ body.v18-2-projects .projects-index__intro-grid::after{left:65%;top:22px;width:82px;height:140px;opacity:.055}
+ body.v18-2-projects .projects-index__grid{display:block!important}
+ body.v18-2-projects .project-card{display:block!important;width:100%!important;padding:0!important;margin:0 0 var(--l)!important}
+ body.v18-2-projects .project-card--hero{min-height:0!important}
+ body.v18-2-projects .project-card--hero .project-card__image{width:calc(100% + 20px)!important;height:72vh!important;min-height:0!important;margin-right:-20px!important}
+ body.v18-2-projects .project-card--hero .project-card__image img{width:175%!important;height:145%!important;transform:translate(-8%,-4%) scale(2.35)!important}
+ body.v18-2-projects .project-card--hero .project-card__content{padding:var(--s) 0 0!important}
+ body.v18-2-projects :is(.project-card--large,.project-card--medium,#performance,#ai-art,#editorial,#post-human) .project-card__image{width:100%!important;height:auto!important;aspect-ratio:1.35/1!important;margin:0!important}
+ body.v18-2-projects #performance .project-card__image{width:56%!important;aspect-ratio:.72/1!important;margin-left:8%!important}
+ body.v18-2-projects #editorial .project-card__image{width:70%!important;aspect-ratio:.78/1!important;margin-left:auto!important}
+ body.v18-2-projects #post-human .project-card__image{width:92%!important;aspect-ratio:1.5/1!important;margin-left:auto!important}
+ body.v18-2-projects :is(.project-card--large,.project-card--medium,#performance,#ai-art,#editorial,#post-human) .project-card__content{width:100%!important;margin:0!important;padding:var(--s) 0 0!important}
+ body.v18-2-projects .project-card--medium{margin-bottom:var(--xl)!important}
+}
+@media(prefers-reduced-motion:reduce){body.v18-2-projects .project-card__image img{transition:none!important}}
+
+/* This page stylesheet loads before the legacy cascade. These declarations
+   deliberately out-rank it so the explicit 12-column coordinates stay exact. */
+html body.v18-2-projects.v18-2-projects .projects-index__heading{grid-column:1/span 4!important}
+html body.v18-2-projects.v18-2-projects .project-card--large{grid-column:1/span 7!important;grid-row:2!important}
+html body.v18-2-projects.v18-2-projects .project-card--medium{grid-column:9/-1!important;grid-row:2!important}
+html body.v18-2-projects.v18-2-projects #performance{grid-column:1/span 3!important;grid-row:3!important}
+html body.v18-2-projects.v18-2-projects #ai-art{grid-column:5/span 4!important;grid-row:3!important}
+html body.v18-2-projects.v18-2-projects #editorial{grid-column:10/-1!important;grid-row:3!important}
+html body.v18-2-projects.v18-2-projects #post-human{grid-column:3/span 9!important;grid-row:4!important;display:block!important}
+html body.v18-2-projects.v18-2-projects .project-card--hero .project-card__image{height:clamp(590px,66vw,850px)!important;aspect-ratio:auto!important}
+
+/* Legacy project CSS uses #allrecords and nth-child selectors. Keep this
+   page's authored coordinates above that old index contract. */
+html body.v18-2-projects #allrecords .projects-index__heading{grid-column:1/span 4!important}
+html body.v18-2-projects #allrecords .projects-index__grid>.project-card--large{grid-column:1/span 7!important;grid-row:2!important}
+html body.v18-2-projects #allrecords .projects-index__grid>.project-card--medium{grid-column:9/-1!important;grid-row:2!important}
+html body.v18-2-projects #allrecords .projects-index__grid>#performance{grid-column:1/span 3!important;grid-row:3!important}
+html body.v18-2-projects #allrecords .projects-index__grid>#ai-art{grid-column:5/span 4!important;grid-row:3!important}
+html body.v18-2-projects #allrecords .projects-index__grid>#editorial{grid-column:10/-1!important;grid-row:3!important}
+html body.v18-2-projects #allrecords .projects-index__grid>#post-human{grid-column:3/span 9!important;grid-row:4!important;display:block!important}
+html body.v18-2-projects #allrecords .project-card--hero .project-card__image{height:clamp(590px,66vw,850px)!important;aspect-ratio:auto!important}
+html body.v18-2-projects #allrecords #media-art{grid-column:1/span 7!important;grid-row:2!important}
+html body.v18-2-projects #allrecords #artifact{grid-column:9/-1!important;grid-row:2!important}
+html body.v18-2-projects #allrecords #worldbuilding .project-card__image{height:clamp(590px,66vw,850px)!important;aspect-ratio:auto!important}
+html body.v18-2-projects #allrecords :is(#performance,#ai-art,#editorial){grid-template-rows:330px auto!important}
+html body.v18-2-projects #allrecords :is(#performance,#ai-art,#editorial) .project-card__image{grid-row:1!important;align-self:end!important}
+html body.v18-2-projects #allrecords :is(#performance,#ai-art,#editorial) .project-card__content{grid-row:2!important;align-self:start!important;margin:0!important;padding:var(--s) 0 0!important}
+
+@media(max-width:639px){
+ html body.v18-2-projects.v18-2-projects .projects-index__heading{grid-column:1/span 4!important}
+ html body.v18-2-projects.v18-2-projects .project-card{display:block!important;width:100%!important}
+ html body.v18-2-projects.v18-2-projects .project-card--hero .project-card__image{height:72vh!important;min-height:0!important}
+}

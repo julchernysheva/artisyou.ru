@@ -1,0 +1,110 @@
+/* V12 — next five public/index pages. Scoped; locked 13 pages never load this file. */
+@media screen and (min-width: 961px) {
+  body.v12-batch3 :is(.ay-home,.projects-index,.research-index,.about-index,.press-index) {
+    color: var(--color-text) !important;
+    background: var(--color-paper) !important;
+  }
+
+  body.v12-batch3 .ay-home {
+    --ay-text: var(--color-text); --ay-line: var(--color-line); --ay-bg: var(--color-paper); --ay-hover: #E5E5DF;
+  }
+  body.v12-batch3 .projects-index {
+    --projects-text: var(--color-text); --projects-line: var(--color-line); --projects-background: var(--color-paper); --projects-hover: #E5E5DF;
+  }
+  body.v12-batch3 .research-index {
+    --research-text: var(--color-text); --research-line: var(--color-line); --research-background: var(--color-paper); --research-hover: #E5E5DF;
+  }
+  body.v12-batch3 .about-index {
+    --about-text: var(--color-text); --about-line: var(--color-line); --about-bg: var(--color-paper); --about-hover: #E5E5DF;
+  }
+  body.v12-batch3 .press-index {
+    --press-text: var(--color-text); --press-line: var(--color-line); --press-bg: var(--color-paper); --press-hover: #E5E5DF;
+  }
+
+  /* One opening geometry: title and lead always start together. */
+  body.v12-batch3 :is(.ay-home__intro-grid,.projects-index__intro-grid,.research-index__intro-grid,.about-header__grid,.press-index__intro-grid) {
+    align-items: start !important;
+    padding-block: 32px !important;
+    min-height: 0 !important;
+  }
+  body.v12-batch3 :is(.ay-home__lead,.projects-index__lead,.research-index__lead,.about-header__grid > p,.press-index__lead) {
+    align-self: start !important;
+    max-width: 42ch !important;
+    margin: 0 !important;
+  }
+
+  /* All local navigation rows use the same 41px component height. */
+  body.v12-batch3 :is(.ay-home__nav,.projects-index__filters,.research-index__filters,.about-nav,.press-index__nav) {
+    min-height: 41px !important;
+    align-items: stretch !important;
+  }
+  body.v12-batch3 :is(.ay-home__nav,.projects-index__filters,.research-index__filters,.about-nav,.press-index__nav) > a {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 41px !important;
+    padding: 0 18px !important;
+  }
+
+  /* Project and research indexes: one card typography + content-driven cards. */
+  body.v12-batch3 .projects-index :is(.project-card__content,.project-card__content--hero,.project-card__content--compact),
+  body.v12-batch3 .research-index :is(.research-card__content,.research-card__content--hero,.research-card__content--feature,.research-card__content--side,.research-card__content--compact) {
+    min-height: 0 !important;
+    padding: 24px !important;
+  }
+  body.v12-batch3 .projects-index .project-card__meta,
+  body.v12-batch3 .research-index .research-card__meta { margin-bottom: 24px !important; }
+  body.v12-batch3 .projects-index .project-card__title,
+  body.v12-batch3 .research-index .research-card__title {
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+    font-size: var(--type-card-title) !important;
+    line-height: var(--leading-card-title) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em !important;
+  }
+  body.v12-batch3 .projects-index .project-card__description,
+  body.v12-batch3 .research-index .research-card__description {
+    max-width: 42ch !important;
+    margin-bottom: 24px !important;
+    font-size: var(--type-card-subtitle) !important;
+    line-height: var(--leading-card-subtitle) !important;
+    font-weight: 400 !important;
+  }
+
+  /* Homepage cards use the same hierarchy; only media/art surfaces keep their own scale. */
+  body.v12-batch3 .ay-home :is(.ay-home__project-content,.ay-home__research-content,.ay-home__feature-content,.ay-home__research-feature-content,.ay-home__statement-side,.ay-home__network-copy) {
+    min-height: 0 !important;
+  }
+  body.v12-batch3 .ay-home :is(.ay-home__project-content h2,.ay-home__research-content h2,.ay-home__feature-content h2,.ay-home__research-feature-content h2) {
+    font-size: var(--type-card-title) !important;
+    line-height: var(--leading-card-title) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em !important;
+  }
+  body.v12-batch3 .ay-home :is(.ay-home__project-lead,.ay-home__research-content > p,.ay-home__feature-content > p,.ay-home__research-feature-content > p) {
+    font-size: var(--type-card-subtitle) !important;
+    line-height: var(--leading-card-subtitle) !important;
+  }
+  body.v12-batch3 .ay-home--modern-research .ay-home__intro { min-height: 0 !important; }
+
+  /* Profile: remove legacy height forcing from editorial/textual modules. */
+  body.v12-batch3 .about-index :is(.about-opening__content,.about-profile__statement,.about-profile__content,.about-practice__item,.about-method__intro,.about-method__steps,.about-system-map__content,.about-trajectory__heading,.about-trajectory__item,.about-awards__intro,.about-awards__item,.about-explore__card) {
+    min-height: 0 !important;
+  }
+  body.v12-batch3 .about-index .about-practice__item { padding-block: 32px !important; }
+
+  /* Press/archive cards: content-driven, same title/subtitle hierarchy. */
+  body.v12-batch3 .press-index :is(.press-feature__content,.press-media-card__content,.press-platform,.press-secondary__content) { min-height: 0 !important; }
+  body.v12-batch3 .press-index :is(.press-media-card__content h2,.press-directory__item h2,.press-platform h2) {
+    font-size: var(--type-card-title) !important;
+    line-height: var(--leading-card-title) !important;
+    font-weight: 400 !important;
+  }
+  body.v12-batch3 .press-index :is(.press-media-card__content > p,.press-directory__item p,.press-platform p) {
+    font-size: var(--type-card-subtitle) !important;
+    line-height: var(--leading-card-subtitle) !important;
+  }
+
+  /* Do not create page-level vertical rails. Component borders remain local. */
+  body.v12-batch3 :is(.ay-home,.projects-index,.research-index,.about-index,.press-index) { border-inline: 0 !important; }
+}

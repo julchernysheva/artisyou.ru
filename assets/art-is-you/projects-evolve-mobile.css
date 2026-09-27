@@ -1,0 +1,48 @@
+/* STEP 3 only: existing type roles, no desktop or shared selectors. */
+@layer projects-evolve-mobile {
+  @media (max-width: 768px) {
+    #projects-evolve-mobile { display:block !important; overflow-anchor:none; }
+    #projects-evolve-mobile * { box-sizing:border-box; font-family:"Source Sans 3",sans-serif !important; }
+    #projects-evolve-mobile .projects-mobile__row { border-top:1px solid var(--index-rule); }
+    #projects-evolve-mobile .projects-mobile__row:last-child { border-bottom:1px solid var(--index-rule); }
+    #projects-evolve-mobile .projects-mobile__heading { margin:0 !important; padding:0 !important; }
+    #projects-evolve-mobile .projects-mobile__toggle {
+      display:grid; grid-template-columns:24px minmax(0,1fr) 20px; align-items:start; gap:10px;
+      width:100%; min-height:84px; padding:18px 0 !important; margin:0 !important;
+      border:0; border-radius:0; background:none; color:var(--index-ink); text-align:left; cursor:pointer;
+    }
+    #projects-evolve-mobile .projects-mobile__name {
+      display:block; font:400 var(--ay-size-statement,24px)/var(--ay-leading-statement,30px) "Source Sans 3",sans-serif !important;
+      text-transform:none !important; letter-spacing:-.025em !important;
+    }
+    #projects-evolve-mobile .projects-mobile__metadata,
+    #projects-evolve-mobile .projects-mobile__number,
+    #projects-evolve-mobile .projects-mobile__cue,
+    #projects-evolve-mobile .projects-mobile__caption,
+    #projects-evolve-mobile .projects-mobile__logic {
+      font:400 var(--ay-size-micro,13px)/var(--ay-leading-micro,18px) "Source Sans 3",sans-serif !important;
+      letter-spacing:normal !important; text-transform:none !important;
+    }
+    #projects-evolve-mobile .projects-mobile__metadata { display:block; margin-top:8px; color:var(--index-muted); }
+    #projects-evolve-mobile .projects-mobile__number,
+    #projects-evolve-mobile .projects-mobile__cue { padding-top:5px; }
+    #projects-evolve-mobile .is-open .projects-mobile__toggle { background:var(--ui-accent,#064cff); color:#fff; }
+    #projects-evolve-mobile .is-open .projects-mobile__metadata { color:#fff; }
+    #projects-evolve-mobile .projects-mobile__panel { padding:0 0 24px !important; }
+    #projects-evolve-mobile .projects-mobile__panel[hidden] { display:none !important; }
+    #projects-evolve-mobile .projects-mobile__evidence { margin:0 0 12px !important; }
+    #projects-evolve-mobile .projects-mobile__image { display:block; width:100%; height:auto; max-height:none; aspect-ratio:auto; object-fit:contain; }
+    #projects-evolve-mobile .projects-mobile__caption { margin-top:8px; color:var(--index-muted); }
+    #projects-evolve-mobile .projects-mobile__description,
+    #projects-evolve-mobile .projects-mobile__operation,
+    #projects-evolve-mobile .projects-mobile__cta {
+      font:400 var(--ay-size-body,16px)/var(--ay-leading-body,24px) "Source Sans 3",sans-serif !important;
+      letter-spacing:normal !important; text-transform:none !important;
+    }
+    #projects-evolve-mobile .projects-mobile__description,
+    #projects-evolve-mobile .projects-mobile__operation { margin:0 !important; }
+    #projects-evolve-mobile .projects-mobile__logic { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:8px 0 12px !important; border-bottom:1px solid var(--index-rule); }
+    #projects-evolve-mobile .projects-mobile__cta { display:inline-flex; align-items:center; min-height:44px; margin-top:8px !important; color:#064cff !important; text-underline-offset:6px; }
+    #projects-evolve-mobile :is(button,a):focus-visible { outline:2px solid #064cff !important; outline-offset:3px !important; }
+  }
+}

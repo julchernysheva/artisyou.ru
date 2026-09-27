@@ -1,0 +1,22 @@
+/* PASS 03B: internal inspector hierarchy and hit areas only. Geometry stays in 03A. */
+#drawer .route-path{font-size:14px;line-height:20px}
+#drawer :is(.route-claim,.source-title,.card-copy,.card-copy.lead,.card-empty,.entity-link){font-size:13px;line-height:19px}
+#drawer :is(.card-key,.card-tag,.relation-type,.route-public-type,.source-status,.card-head .meta,.eyebrow){font-size:10px;line-height:14px}
+#drawer .selected-badge{font-size:9px;line-height:12px}
+#drawer :is(.route-path,.route-claim,.source-title,.card-copy,.card-empty,.entity-link,.relation-type){overflow-wrap:anywhere;min-width:0}
+#drawer .card-tabs{flex-wrap:wrap;gap:0 10px;padding:0 18px;overflow:visible}
+#drawer :is(.card-tab,.route-focus,.source-link){font-size:11px;line-height:16px;min-height:44px;min-width:44px;box-sizing:border-box}
+#drawer .card-tab{display:inline-flex;align-items:center;gap:4px;padding:6px 0;white-space:normal}
+#drawer .card-tab .count{margin-left:0}
+#drawer .route-focus{display:inline-flex;align-items:center;padding:8px 0;margin-top:4px}
+#drawer .source-link{display:flex;align-items:center;width:fit-content;max-width:100%;padding:8px 0;margin-top:2px;overflow-wrap:anywhere}
+#drawer .entity-link{min-height:44px;min-width:44px;padding:6px 0}
+#drawer .relation{align-items:start}
+#drawer .relation-type{padding-top:6px}
+#drawer .close{width:44px;height:44px;min-width:44px;min-height:44px;top:4px;right:4px;padding:0}
+#drawer :is(button,a):focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+#drawer .inspector-toggle:focus-visible,#drawer .close:focus-visible{outline-offset:-3px}
+@media(max-width:600px){
+ #drawer .inspector-toggle{font:400 11px/16px var(--mono);color:var(--warm)}
+ #drawer .close{top:0;right:0}
+}

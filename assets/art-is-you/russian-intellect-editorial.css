@@ -1,0 +1,10 @@
+/* Page-shell editorial layout only. No graph or global typography selectors. */
+.ri-editorial-protocol{padding:24px var(--research-detail-safe);}
+.ri-editorial-methodology{margin-top:20px;}
+.ri-methodology-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+.ri-methodology-grid>*{min-width:0;}
+.ri-public-corpus{min-height:14px;}
+.ri-editorial-protocol .ri-map-description{margin-top:16px!important;margin-bottom:0!important;}
+@media(max-width:979px){.ri-methodology-grid{grid-template-columns:1fr;}}
+/* The split editorial groups no longer share the old three-field height reserve. */
+@media(max-width:560px){.ri-integration-shell .research-detail-evidence-frame{min-height:0;}}

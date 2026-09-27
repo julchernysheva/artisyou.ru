@@ -1,0 +1,113 @@
+/* Art Interviews opening and research frame, aligned with the approved preview. */
+.c3b-documentary { margin:0; }
+.c3b-opening { padding:28px 32px 64px; }
+.c3b-opening-grid { display:block; margin-top:24px; min-height:82.72px; }
+.c3b-opening-grid h1 {
+  width:min(760px,100%);
+  font:400 64px/62.72px 'Source Sans 3',sans-serif;
+  letter-spacing:-3.52px;
+}
+.c3b-question { width:min(760px,100%); margin-top:79.28125px; }
+.c3b-question h2 {
+  margin:0;
+  width:min(440px,100%);
+  font:400 18px/23px 'Source Sans 3',sans-serif!important;
+  letter-spacing:normal!important;
+}
+.c3b-documentary .c3b-lead {
+  width:min(760px,100%);
+  max-width:760px;
+  margin-top:24px!important;
+  font:400 16px/24px 'Source Sans 3',sans-serif!important;
+  letter-spacing:-.01em!important;
+}
+#research-frame { position:relative; padding:28px 32px 88px; }
+#research-frame .c3b-film-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(12px,1.3vw,24px);
+  width:74.58%;
+  margin-left:25.42%;
+}
+#research-frame .c3b-film-grid>div {
+  grid-column:auto;
+  min-width:0;
+  border-top:1px solid var(--rule);
+  padding-top:9px;
+}
+#research-frame .c3b-film-media,
+#research-frame .c3b-film-copy { width:auto; margin:0; }
+#research-frame .c3b-frame-label {
+  margin:0 0 26px!important;
+  font:400 16px/24px 'Source Sans 3',sans-serif!important;
+  letter-spacing:-.01em!important;
+}
+#research-frame .text {
+  font:400 16px/24px 'Source Sans 3',sans-serif!important;
+  letter-spacing:-.01em!important;
+  color:var(--ink);
+}
+#research-frame .text+.text { margin-top:16px; }
+#research-frame .c3b-frame-formula {
+  position:absolute;
+  top:28px;
+  left:32px;
+  width:calc(25.42% - 32px);
+  margin:0!important;
+  font:500 12px/18px 'PT Mono',monospace!important;
+}
+.c3b-local-nav {
+  margin:0 32px;
+  padding:18px 0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+#films,.c3b-special,.c3b-sources { margin-inline:32px; }
+
+@media(max-width:960px) {
+  .c3b-opening { padding:24px 20px 40px; }
+  .c3b-opening-grid { margin-top:0; min-height:64px; }
+  .c3b-opening-grid h1 {
+    font-size:44px;
+    line-height:44px;
+    letter-spacing:-2.2px;
+  }
+  .c3b-question { margin-top:88px; }
+  .c3b-question h2 {
+    width:min(350px,100%);
+    font-size:16px!important;
+    line-height:20px!important;
+    letter-spacing:normal!important;
+  }
+  .c3b-documentary .c3b-lead {
+    margin-top:20px!important;
+    font-size:16px!important;
+    line-height:24px!important;
+  }
+  #research-frame { padding:40px 20px 56px; }
+  #research-frame .c3b-film-grid { width:100%; margin-left:0; }
+  #research-frame .c3b-frame-label {
+    font-size:13px!important;
+    line-height:18px!important;
+    font-weight:500!important;
+    letter-spacing:.025em!important;
+  }
+  #research-frame .text {
+    font-size:16px!important;
+    line-height:24px!important;
+    letter-spacing:normal!important;
+  }
+  #research-frame .c3b-frame-formula {
+    position:static;
+    width:auto;
+    margin-top:32px!important;
+  }
+  .c3b-local-nav { margin:0 20px; }
+  #films,.c3b-special,.c3b-sources { margin-inline:20px; }
+}
+
+@media(max-width:640px) {
+  #research-frame .c3b-film-grid { display:block; }
+  #research-frame .c3b-film-grid>div { padding-bottom:28px; }
+  #research-frame .c3b-film-grid>div+div { margin-top:0; }
+}

@@ -1,0 +1,149 @@
+/* Shared visual shell for the final Research / Projects alignment pass.
+   Scope is deliberately limited to the two indexes, Likes Pond and Reverse Prompt. */
+
+body:has(.index-baseline),
+body[data-shared-system-page] {
+  --shared-paper: var(--surface);
+  --shared-ink: var(--ink);
+  --shared-muted: var(--muted);
+  --shared-rule: var(--rule);
+  --shared-accent: var(--ui-accent);
+  --shared-gutter: 32px;
+  background: var(--shared-paper);
+  color: var(--shared-ink);
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* Header: one stable reading line, with the existing logo retained as the
+   established home affordance. The navigation belongs to the right edge. */
+body:has(.index-baseline) .ay-desktop-header,
+body[data-shared-system-page] .ay-desktop-header {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  height: 66px !important;
+  min-height: 66px !important;
+  padding-inline: var(--shared-gutter) !important;
+  border-bottom: 1px solid var(--shared-rule) !important;
+  background: var(--shared-paper) !important;
+  font-family: "Source Sans 3", sans-serif !important;
+}
+
+body:has(.index-baseline) .ay-desktop-header__nav,
+body[data-shared-system-page] .ay-desktop-header__nav {
+  justify-self: end;
+}
+
+body:has(.index-baseline) .ay-desktop-header__balance,
+body[data-shared-system-page] .ay-desktop-header__balance {
+  display: none;
+}
+
+body:has(.index-baseline) .ay-desktop-header :is(a, button),
+body[data-shared-system-page] .ay-desktop-header :is(a, button) {
+  font-family: "Source Sans 3", sans-serif !important;
+}
+
+body:has(.index-baseline) .ay-desktop-header__menu,
+body[data-shared-system-page] .ay-desktop-header__menu {
+  gap: clamp(22px, 2.1vw, 36px);
+}
+
+/* Reverse Prompt keeps its own research instruments. Only shared type, rules,
+   gutters and measured section rhythm are normalized here. */
+body[data-shared-system-page="reverse-prompt"] {
+  --research-detail-paper: var(--shared-paper);
+  --research-detail-ink: var(--shared-ink);
+  --research-detail-line: var(--shared-rule);
+  --research-detail-safe: var(--shared-gutter);
+}
+
+body[data-shared-system-page="reverse-prompt"] main,
+body[data-shared-system-page="reverse-prompt"] main * {
+  font-family: "Source Sans 3", sans-serif !important;
+}
+
+body[data-shared-system-page="reverse-prompt"] :is(
+  .research-detail-protocol__register,
+  .research-detail-protocol__label,
+  .rp-inline-method__label,
+  .reverse-prompt-analytics__register,
+  .reverse-prompt-analytics__label,
+  .rp-method__label,
+  .rp-native-scheme__register,
+  .rp-native-scheme__step,
+  .rp-native-scheme__entity,
+  .rp-native-scheme__translation,
+  .rp-native-scheme__note,
+  .rp-native-scheme__strip,
+  .rp-native-scheme__legend,
+  .rp-case__number,
+  .rp-case__outcome,
+  .rp-detail__label,
+  .rp-case-source figcaption,
+  .rp-case-machine figcaption,
+  .rp-case-model__label,
+  .rp-case-comparison__label,
+  .rp-evidence-index__case
+) {
+  font-family: "PT Mono", monospace !important;
+}
+
+body[data-shared-system-page="reverse-prompt"] :is(
+  .rp-inline-method,
+  .rp-case-workbench,
+  .reverse-prompt-analytics__section,
+  .rp-native-scheme
+) {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-color: var(--shared-rule);
+}
+
+body[data-shared-system-page="reverse-prompt"] :is(
+  .rp-case-selector,
+  .rp-inline-method,
+  .rp-case-workbench,
+  .reverse-prompt-analytics__section,
+  .rp-native-scheme
+) {
+  padding-inline: var(--shared-gutter);
+}
+
+/* Likes Pond is the project-specific exception in scope. Its established
+   content and media remain intact; only the shared 32px rhythm is asserted. */
+body[data-shared-system-page="likes-pond"] .ay-project-top {
+  --pt-margin: var(--shared-gutter);
+}
+
+@media (max-width: 960px) {
+  body:has(.index-baseline),
+  body[data-shared-system-page] { --shared-gutter: 16px; }
+
+  body:has(.index-baseline) .ay-desktop-header,
+  body[data-shared-system-page] .ay-desktop-header {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding-inline: var(--shared-gutter) !important;
+  }
+
+  body[data-shared-system-page="reverse-prompt"] { --research-detail-safe: var(--shared-gutter); }
+  body[data-shared-system-page="reverse-prompt"] :is(
+    .rp-case-selector,
+    .rp-inline-method,
+    .rp-case-workbench,
+    .reverse-prompt-analytics__section,
+    .rp-native-scheme,
+    .rp-case-drawer__sheet
+  ) { padding-inline: var(--shared-gutter); }
+
+  body[data-shared-system-page="reverse-prompt"] :is(
+    .rp-inline-method,
+    .rp-case-workbench,
+    .reverse-prompt-analytics__section,
+    .rp-native-scheme
+  ) { padding-top: 48px; padding-bottom: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(.index-baseline) .ay-desktop-header *,
+  body[data-shared-system-page] .ay-desktop-header * { transition-duration: 0ms !important; }
+}

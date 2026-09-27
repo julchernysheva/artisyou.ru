@@ -1,0 +1,85 @@
+/* Approved C2 desktop evidence component. Only NEW evidence descendants are owned here.
+   Existing frozen typography metrics/palette are reused, not modified. */
+@media (min-width: 769px) {
+  .c2-own-evidence {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
+    margin: 56px 0 72px;
+    padding: 0;
+  }
+  .c2-own-evidence figure { margin: 0; min-width: 0; }
+  .c2-own-evidence img { display: block; width: 100%; height: auto; }
+  .c2-own-evidence__identity { grid-column: 1 / -1; margin: 0 0 8px; }
+  .c2-own-evidence__caption { margin-top: 16px; }
+  .c2-own-evidence__caption span { display: block; margin-top: 8px; }
+  .c2-own-evidence__document { grid-column: 2 / span 6; }
+  .c2-own-evidence__context { grid-column: 9 / span 4; display: flex; flex-direction: column; align-self: stretch; }
+  .c2-own-evidence__context > p { margin: 0; }
+  .c2-own-evidence__artifact { margin-top: auto !important; padding-top: 48px; }
+  .c2-own-evidence--bioart { margin: 32px 0 64px; }
+  .c2-own-evidence__field { grid-column: 1 / span 9; }
+  .c2-own-evidence__field-note { grid-column: 10 / span 3; align-self: end; margin: 0 0 44px; }
+  .c2-own-evidence__experience { display: block; width: 100%; height: 840px; border: 0; background: var(--surface); }
+  .c2-own-evidence__experience-link { display: inline-block; margin-top: 12px; color: inherit; text-underline-offset: 3px; }
+}
+
+/* Reuse canonical semantic layer: inherited global p/figcaption !important
+   rules must not assign TEXT/legacy caption metrics to these NEW MICRO labels.
+   Existing page nodes are outside this selector's ownership. */
+@layer desktop-shell-contract {
+  @media (min-width: 769px) {
+    .c2-own-evidence__micro,
+    .c2-own-evidence__micro > span {
+      font-family: 'PT Mono', monospace !important;
+      font-size: 11px !important;
+      line-height: 14px !important;
+      font-weight: 400 !important;
+      letter-spacing: normal !important;
+      color: var(--ink) !important;
+    }
+  }
+}
+
+/* Mobile presentation of the same canonical evidence nodes. Desktop rules above
+   remain unchanged so the approved 1440 composition retains pixel parity. */
+@media (max-width: 768px) {
+  .c2-own-evidence {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    margin: 40px 0 56px;
+    padding: 0;
+  }
+  .c2-own-evidence figure { margin: 0; min-width: 0; }
+  .c2-own-evidence img { display: block; width: 100%; height: auto; }
+  .c2-own-evidence__identity,
+  .c2-own-evidence__document,
+  .c2-own-evidence__context,
+  .c2-own-evidence__field,
+  .c2-own-evidence__field-note { grid-column: 1; min-width: 0; }
+  .c2-own-evidence__identity { margin: 0; }
+  .c2-own-evidence__caption { margin-top: 16px; }
+  .c2-own-evidence__caption span { display: block; margin-top: 8px; }
+  .c2-own-evidence__context > p,
+  .c2-own-evidence__field-note { margin: 0; }
+  .c2-own-evidence--bioart { margin: 32px 0 56px; }
+  .c2-own-evidence__experience { display: block; width: 100%; height: min(72svh, 620px); min-height: 520px; border: 0; background: var(--surface); }
+  .c2-own-evidence__experience-link { display: inline-block; margin-top: 12px; color: inherit; text-underline-offset: 3px; }
+}
+
+@layer desktop-shell-contract {
+  @media (max-width: 768px) {
+    .c2-own-evidence__micro,
+    .c2-own-evidence__micro > span {
+      font-family: 'PT Mono', monospace !important;
+      font-size: 11px !important;
+      line-height: 16px !important;
+      font-weight: 400 !important;
+      letter-spacing: normal !important;
+      color: var(--ink) !important;
+    }
+  }
+}

@@ -1,0 +1,347 @@
+
+
+/* ART.IS.YOU — P6.1 FINAL HERO + TYPE CASCADE
+   Scope: 27 canonical routes.
+   Contract: one compact opening, one Plex type hierarchy, no viewport hero forcing.
+   This file MUST be the last author stylesheet. */
+:root{
+  --p61-paper:#EFEFEA;
+  --p61-ink:#2C2927;
+  --p61-text:#695E58;
+  --p61-line:var(--rule);
+  --p61-accent:#064CFF;
+  --p61-sans:'Source Sans 3',sans-serif;
+  --p61-mono:'PT Mono', monospace;
+  --p61-gutter:32px;
+  --p61-gap:24px;
+  --p61-context-h:32px;
+  --p61-context-to-title:48px;
+  --p61-opening-bottom:32px;
+  --p61-lead-measure:38ch;
+  --p61-body:16px;
+  --p61-body-leading:24px;
+  --p61-lead:18px;
+  --p61-lead-leading:25px;
+  --p61-meta:11px;
+  --p61-meta-leading:14px;
+}
+
+body.v17-canon.p6-1-canon{
+  font-family:var(--p61-sans)!important;
+  color:var(--p61-text);
+  background:var(--p61-paper)!important;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:geometricPrecision;
+}
+body.v17-canon.p6-1-canon *,
+body.v17-canon.p6-1-canon *::before,
+body.v17-canon.p6-1-canon *::after{box-sizing:border-box}
+
+/* One editorial type cascade across all routes. */
+body.v17-canon.p6-1-canon #allrecords :is(h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,figcaption),
+body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) :is(h1,h2,h3,h4,h5,h6,p,blockquote,li,dt,dd,figcaption){
+  font-family:var(--p61-sans)!important;
+}
+
+body.v17-canon.p6-1-canon :is(
+  .ay-context-bar,.v2-context,.v4-context,.ph-kicker,.pl-kicker,
+  .ay-type-meta,.ay-type-label,[class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],.v16-stage__bar,
+  .ph-status dt,.ph-film-index,.ph-caption,.ph-nav,.ph-sectionbar,.ph-status,
+  .ph-world__text>span,.ph-eyebrow,.ph-formulas,.ph-archive figcaption,
+  .ph-method__grid article>span,.ph-method__formula,.ph-data dt,.ph-end div
+),
+body.v17-canon.p6-1-canon :is(
+  .ay-context-bar,.v2-context,.v4-context,.ph-kicker,.pl-kicker,
+  .ay-type-meta,.ay-type-label,[class*="__meta"],[class*="__eyebrow"],[class*="__kicker"],
+  [class*="sectionbar"],[class*="section-bar"],.v16-stage__bar,
+  .ph-status dt,.ph-film-index,.ph-caption,.ph-nav,.ph-sectionbar,.ph-status,
+  .ph-world__text>span,.ph-eyebrow,.ph-formulas,.ph-archive figcaption,
+  .ph-method__grid article>span,.ph-method__formula,.ph-data dt,.ph-end div
+) *{
+  font-family:var(--p61-mono)!important;
+  font-size:var(--p61-meta)!important;
+  line-height:var(--p61-meta-leading)!important;
+  font-weight:500!important;
+  letter-spacing:.025em!important;
+  text-transform:uppercase;
+}
+
+/* Explicitly close the remaining Post Human Courier declarations. */
+body.v17-canon.p6-1-canon .ph-human__image figcaption{
+  font-family:var(--p61-mono)!important;
+}
+
+/* Global navigation/header typography is part of the same cascade. */
+body.v17-canon.p6-1-canon .ay-desktop-header,
+body.v17-canon.p6-1-canon .ay-desktop-header :is(a,span,button){
+  font-family:var(--p61-sans)!important;
+  font-size:14px!important;
+  line-height:18px!important;
+  font-weight:400!important;
+}
+body.v17-canon.p6-1-canon .ay-desktop-header__submenu :is(a,span){font-size:13px!important}
+
+/* Inline Source Sans 3 in the two longform essays is neutralized without touching copy/style semantics. */
+body.v17-canon.p6-1-canon.v17-text-article #allrecords [style*="Source Sans 3"],
+body.v17-canon.p6-1-canon.v17-text-article #allrecords [style*="var(--t-text-font"]{
+  font-family:var(--p61-sans)!important;
+}
+
+@media screen and (min-width:961px){
+  /* Canonical scale. */
+  body.v17-canon.p6-1-canon #allrecords h1,
+  body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) h1,
+  body.v17-canon.p6-1-canon .ay-type-display,
+  body.v17-canon.p6-1-canon .ay-type-display *{
+    margin:0!important;
+    font-family:var(--p61-sans)!important;
+    font-size:clamp(52px,5vw,72px)!important;
+    line-height:.98!important;
+    font-weight:400!important;
+    font-style:normal!important;
+    letter-spacing:-.055em!important;
+    color:var(--p61-ink)!important;
+    text-wrap:balance;
+  }
+
+  body.v17-canon.p6-1-canon #allrecords :is(h2,.ay-type-h2,.t-title_xl,.t-title_l,.t-title_md),
+  body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) :is(h2,.ay-type-h2){
+    font-family:var(--p61-sans)!important;
+    font-size:32px!important;
+    line-height:36px!important;
+    font-weight:400!important;
+    letter-spacing:-.03em!important;
+  }
+  body.v17-canon.p6-1-canon #allrecords :is(h3,h4,h5,h6,.ay-type-h3,.t-heading,.t-name,.t-section__title,.t220__title),
+  body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) :is(h3,h4,h5,h6,.ay-type-h3){
+    font-family:var(--p61-sans)!important;
+    font-size:24px!important;
+    line-height:30px!important;
+    font-weight:400!important;
+    letter-spacing:-.02em!important;
+  }
+  body.v17-canon.p6-1-canon #allrecords :is(p,li,blockquote,dd,.t-text,.t-descr,.ay-type-body),
+  body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) :is(p,li,blockquote,dd,.ay-type-body){
+    font-family:var(--p61-sans)!important;
+    font-size:var(--p61-body)!important;
+    line-height:var(--p61-body-leading)!important;
+    font-weight:400!important;
+    letter-spacing:-.01em!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__lead,.projects-index__lead,.research-index__lead,.statement-header__lead,
+    .about-header__grid>p,.press-index__lead,.essays-index__lead,.ay-injected-hero__lead,
+    .v2-hero__lead,.programmer-header__lead,.lab-header__lead,.interview-index__lead,
+    .ph-hero__lead,.archive-header__lead,.bio-timeline__lead,.pl-definition,.or-hero__lead
+  ),
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__lead,.projects-index__lead,.research-index__lead,.statement-header__lead,
+    .about-header__grid>p,.press-index__lead,.essays-index__lead,.ay-injected-hero__lead,
+    .v2-hero__lead,.programmer-header__lead,.lab-header__lead,.interview-index__lead,
+    .ph-hero__lead,.archive-header__lead,.bio-timeline__lead,.pl-definition,.or-hero__lead
+  ) *{
+    font-family:var(--p61-sans)!important;
+    font-size:var(--p61-lead)!important;
+    line-height:var(--p61-lead-leading)!important;
+    font-weight:400!important;
+    letter-spacing:-.015em!important;
+    color:var(--p61-ink)!important;
+  }
+  body.v17-canon.p6-1-canon #allrecords :is(figcaption,[class*="caption"],.t-descr_xxs,small){
+    font-family:var(--p61-sans)!important;
+    font-size:12px!important;
+    line-height:16px!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+  body.v17-canon.p6-1-canon #allrecords .project-card__title,
+  body.v17-canon.p6-1-canon #allrecords .project-card__title *{
+    font-family:var(--p61-sans)!important;font-size:28px!important;line-height:32px!important;
+    font-weight:400!important;letter-spacing:-.02em!important;
+  }
+  body.v17-canon.p6-1-canon #allrecords .project-card__description,
+  body.v17-canon.p6-1-canon #allrecords .project-card__description *{
+    font-family:var(--p61-sans)!important;font-size:16px!important;line-height:22px!important;
+    font-weight:400!important;letter-spacing:-.01em!important;
+  }
+
+  /* Common compact opening. Technical row -> 48px -> H1 8/12 + lead 4/12 -> 32px. */
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro,.projects-index__intro,.research-index__intro,.statement-header,
+    .about-header,.press-index__intro,.essays-index__intro,.ay-injected-hero,
+    .v2-hero,.programmer-header,.lab-header,.interview-index__intro,
+    .archive-header,.bio-timeline__intro
+  ){
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding-top:32px!important;
+    padding-bottom:0!important;
+    border-bottom:1px solid var(--p61-line)!important;
+    background:var(--p61-paper)!important;
+  }
+  body.v17-canon.p6-1-canon .ay-injected-hero{
+    padding-left:var(--p61-gutter)!important;
+    padding-right:var(--p61-gutter)!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro,.projects-index__intro,.research-index__intro,.statement-header,
+    .about-header,.press-index__intro,.essays-index__intro,.ay-injected-hero,
+    .v2-hero,.programmer-header,.lab-header,.interview-index__intro,
+    .archive-header,.bio-timeline__intro
+  ) > :is(.ay-context-bar,.v2-context,[class*="__eyebrow"],.ay-type-label){
+    position:static!important;
+    inset:auto!important;
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    width:100%!important;
+    height:var(--p61-context-h)!important;
+    min-height:var(--p61-context-h)!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro-grid,.projects-index__intro-grid,.research-index__intro-grid,
+    .statement-header__grid,.about-header__grid,.press-index__intro-grid,
+    .essays-index__intro-grid,.ay-injected-hero__grid,.v2-hero__grid,
+    .programmer-header__grid,.lab-header__grid,.interview-index__intro-grid,
+    .archive-header__grid,.bio-timeline__intro-grid
+  ){
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    column-gap:var(--p61-gap)!important;
+    align-items:start!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:var(--p61-context-to-title) 0 0!important;
+    padding:0 0 var(--p61-opening-bottom)!important;
+    border:0!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro-grid,.projects-index__intro-grid,.research-index__intro-grid,
+    .statement-header__grid,.about-header__grid,.press-index__intro-grid,
+    .essays-index__intro-grid,.ay-injected-hero__grid,.v2-hero__grid,
+    .programmer-header__grid,.lab-header__grid,.interview-index__intro-grid,
+    .archive-header__grid,.bio-timeline__intro-grid
+  ) > :first-child{
+    grid-column:1 / span 8!important;
+    align-self:start!important;
+    min-width:0!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__lead,.projects-index__lead,.research-index__lead,.statement-header__lead,
+    .about-header__grid>p,.press-index__lead,.essays-index__lead,.ay-injected-hero__lead,
+    .v2-hero__lead,.programmer-header__lead,.lab-header__lead,.interview-index__lead,
+    .archive-header__lead,.bio-timeline__lead
+  ){
+    grid-column:9 / -1!important;
+    align-self:start!important;
+    max-width:var(--p61-lead-measure)!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  body.v17-canon.p6-1-canon .ay-injected-hero__grid>.nw-hero-left{
+    grid-column:1 / span 8!important;
+    align-self:start!important;
+  }
+  body.v17-canon.p6-1-canon .ay-injected-hero__grid>.nw-hero-lead{
+    grid-column:9 / -1!important;
+    align-self:start!important;
+    margin:0!important;
+  }
+
+  /* Oracle: title module ends before local nav and restored media. */
+  body.v17-canon.p6-1-canon .or-hero{
+    min-height:0!important;height:auto!important;margin:0!important;padding:32px 0 0!important;background:var(--p61-paper)!important;
+  }
+  body.v17-canon.p6-1-canon .or-hero>.v4-context{
+    position:static!important;display:flex!important;justify-content:space-between!important;align-items:center!important;
+    width:100%!important;height:var(--p61-context-h)!important;min-height:var(--p61-context-h)!important;margin:0!important;padding:0!important;border:0!important;
+  }
+  body.v17-canon.p6-1-canon .or-hero__title{
+    display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;column-gap:var(--p61-gap)!important;
+    align-items:start!important;min-height:0!important;height:auto!important;margin:var(--p61-context-to-title) 0 0!important;
+    padding:0 0 var(--p61-opening-bottom)!important;border-bottom:1px solid var(--p61-line)!important;
+  }
+  body.v17-canon.p6-1-canon .or-hero__title>h1{grid-column:1 / span 8!important;align-self:start!important}
+  body.v17-canon.p6-1-canon .or-hero__lead{grid-column:9 / -1!important;align-self:start!important;max-width:var(--p61-lead-measure)!important;margin:0!important;padding:0!important}
+
+  /* Post Human: kicker is the technical row; film remains after nav. */
+  body.v17-canon.p6-1-canon .ph-hero{min-height:0!important;height:auto!important;margin:0!important;padding:0!important;background:var(--p61-paper)!important}
+  body.v17-canon.p6-1-canon .ph-hero__top{
+    position:relative!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    grid-template-rows:var(--p61-context-h) auto!important;column-gap:var(--p61-gap)!important;row-gap:var(--p61-context-to-title)!important;
+    align-items:start!important;align-content:start!important;min-height:0!important;height:auto!important;margin:0!important;
+    padding:32px 0 var(--p61-opening-bottom)!important;border-bottom:1px solid var(--p61-line)!important;
+  }
+  body.v17-canon.p6-1-canon .ph-hero__top>.ph-kicker{
+    position:static!important;inset:auto!important;grid-column:1 / -1!important;grid-row:1!important;
+    display:flex!important;justify-content:space-between!important;align-items:center!important;width:100%!important;
+    height:var(--p61-context-h)!important;min-height:var(--p61-context-h)!important;margin:0!important;padding:0!important;
+  }
+  body.v17-canon.p6-1-canon .ph-hero__top>h1{grid-column:1 / span 8!important;grid-row:2!important;align-self:start!important}
+  body.v17-canon.p6-1-canon .ph-hero__lead{grid-column:9 / -1!important;grid-row:2!important;align-self:start!important;max-width:var(--p61-lead-measure)!important;margin:0!important;padding:0!important}
+
+  /* Protoarchive: .pl-top is its technical system row; definition is the 4/12 lead. */
+  body.v17-canon.p6-1-canon .prearchive-linear{padding-top:0!important}
+  body.v17-canon.p6-1-canon .pl-top{
+    height:41px!important;min-height:41px!important;padding-left:0!important;padding-right:0!important;
+    font-family:var(--p61-mono)!important;font-size:var(--p61-meta)!important;line-height:var(--p61-meta-leading)!important;
+  }
+  body.v17-canon.p6-1-canon .pl-hero{
+    display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;column-gap:var(--p61-gap)!important;
+    align-items:start!important;min-height:0!important;height:auto!important;margin:0!important;padding:48px 0 var(--p61-opening-bottom)!important;
+    border-bottom:1px solid var(--p61-line)!important;
+  }
+  body.v17-canon.p6-1-canon .pl-hero>div:first-child{grid-column:1 / span 8!important;align-self:start!important;min-width:0!important}
+  body.v17-canon.p6-1-canon .pl-definition{grid-column:9 / -1!important;align-self:start!important;max-width:var(--p61-lead-measure)!important;margin:0!important}
+  body.v17-canon.p6-1-canon .pl-kicker{position:static!important;inset:auto!important;margin:0 0 16px!important}
+  body.v17-canon.p6-1-canon .pl-lead{font-family:var(--p61-sans)!important;font-size:16px!important;line-height:24px!important;margin:20px 0 0!important;max-width:42ch!important}
+}
+
+@media screen and (max-width:960px){
+  :root{--p61-gutter:20px;--p61-gap:16px;--p61-context-to-title:32px;--p61-opening-bottom:32px}
+  body.v17-canon.p6-1-canon #allrecords h1,
+  body.v17-canon.p6-1-canon :is(.v2-page,.programmer-page,.prearchive-linear) h1,
+  body.v17-canon.p6-1-canon .ay-type-display{
+    font-family:var(--p61-sans)!important;font-size:clamp(40px,11vw,56px)!important;line-height:.98!important;
+    font-weight:400!important;letter-spacing:-.05em!important;color:var(--p61-ink)!important;margin:0!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro,.projects-index__intro,.research-index__intro,.statement-header,.about-header,
+    .press-index__intro,.essays-index__intro,.ay-injected-hero,.v2-hero,.programmer-header,
+    .lab-header,.interview-index__intro,.archive-header,.bio-timeline__intro
+  ){
+    min-height:0!important;height:auto!important;margin:0!important;padding-top:24px!important;padding-bottom:0!important;
+  }
+  body.v17-canon.p6-1-canon .ay-injected-hero{padding-left:var(--p61-gutter)!important;padding-right:var(--p61-gutter)!important}
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__intro-grid,.projects-index__intro-grid,.research-index__intro-grid,.statement-header__grid,
+    .about-header__grid,.press-index__intro-grid,.essays-index__intro-grid,.ay-injected-hero__grid,
+    .v2-hero__grid,.programmer-header__grid,.lab-header__grid,.interview-index__intro-grid,
+    .archive-header__grid,.bio-timeline__intro-grid,.or-hero__title,.ph-hero__top,.pl-hero
+  ){
+    display:block!important;min-height:0!important;height:auto!important;margin:var(--p61-context-to-title) 0 0!important;
+    padding:0 0 var(--p61-opening-bottom)!important;
+  }
+  body.v17-canon.p6-1-canon :is(
+    .ay-home__lead,.projects-index__lead,.research-index__lead,.statement-header__lead,.about-header__grid>p,
+    .press-index__lead,.essays-index__lead,.ay-injected-hero__lead,.v2-hero__lead,.programmer-header__lead,
+    .lab-header__lead,.interview-index__lead,.ph-hero__lead,.archive-header__lead,.bio-timeline__lead,.or-hero__lead,.pl-definition
+  ){
+    margin-top:28px!important;max-width:44ch!important;font-family:var(--p61-sans)!important;
+    font-size:var(--p61-lead)!important;line-height:var(--p61-lead-leading)!important;
+  }
+  body.v17-canon.p6-1-canon .ph-hero__top>.ph-kicker{position:static!important;margin:0 0 32px!important}
+  body.v17-canon.p6-1-canon .or-hero{padding-top:24px!important}
+  body.v17-canon.p6-1-canon .or-hero>.v4-context{height:32px!important;min-height:32px!important;padding:0!important}
+  body.v17-canon.p6-1-canon .pl-hero{margin-top:0!important;padding-top:32px!important}
+  body.v17-canon.p6-1-canon .pl-definition{margin-top:28px!important}
+}

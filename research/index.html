@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Исследования Art.Is.You — AI, память, язык и авторство</title>
+  <meta name="description" content="Эссе и исследования Art.Is.You об искусственном интеллекте, алгоритмическом авторстве, памяти, языке, промптах и культурных последствиях AI.">
+  <link rel="canonical" href="https://artisyou.ru/research/">
+  <link rel="icon" href="/assets/static.tildacdn.com/favicon.ico" sizes="32x32" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Art.Is.You">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://artisyou.ru/research/">
+  <meta property="og:title" content="Исследования Art.Is.You — AI, память, язык и авторство">
+  <meta property="og:description" content="Эссе и исследования Art.Is.You об искусственном интеллекте, алгоритмическом авторстве, памяти, языке, промптах и культурных последствиях AI.">
+  <meta property="og:image" content="https://artisyou.ru/assets/art-is-you/research/russian-intellect-current-neutral.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Исследования Art.Is.You — AI, память, язык и авторство">
+  <meta name="twitter:description" content="Эссе и исследования Art.Is.You об искусственном интеллекте, алгоритмическом авторстве, памяти, языке, промптах и культурных последствиях AI.">
+  <meta name="twitter:image" content="https://artisyou.ru/assets/art-is-you/research/russian-intellect-current-neutral.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Исследования Art.Is.You","url":"https://artisyou.ru/research/","description":"Эссе и исследования об искусственном интеллекте, алгоритмическом авторстве, памяти и языке."}</script>
+  
+  
+  <link rel="stylesheet" href="/assets/art-is-you/design-tokens.css">
+  <link rel="stylesheet" href="/assets/art-is-you/desktop-baseline.css">
+  <link rel="stylesheet" href="/assets/art-is-you/footer.css">
+  <link rel="stylesheet" href="./research-index-v2.css?v=2">
+  <script src="/assets/art-is-you/header.js?v=projects-ru-city-20260925"></script>
+</head>
+<body>
+  <art-is-you-header></art-is-you-header>
+  <main id="research-prototype">
+    <section class="rp-hero" aria-labelledby="rp-title">
+      <p class="rp-eyebrow">RESEARCH / ИССЛЕДОВАНИЯ</p>
+      <div class="rp-hero-grid">
+        <h1 id="rp-title">Исследования</h1>
+        <p>Новое редко возникает с нуля. Меня интересует, как старые идеи продолжают жить внутри современных технологий и что происходит с ними в культуре эпохи AI.</p>
+      </div>
+    </section>
+
+    <section class="rp-territories" aria-labelledby="territories-title">
+      <h2 class="rp-section-title" id="territories-title">Пять исследовательских территорий</h2>
+      <div class="rp-workspace">
+        <div class="rp-selector" role="tablist" aria-label="Выбор исследования"></div>
+        <article class="rp-active" id="rp-active" role="tabpanel" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="rp-atlas" aria-labelledby="atlas-title">
+      <header class="rp-atlas-header">
+        <div>
+          <p class="rp-eyebrow">SYSTEM / SHARED CONCEPTS</p>
+          <h2 id="atlas-title">Карта связей между исследованиями</h2>
+        </div>
+        <button class="rp-atlas-reset" type="button">Сбросить выбор</button>
+      </header>
+      <p class="rp-atlas-lead">Общие понятия связывают территории, но не превращают соседство в причинность или иерархию.</p>
+      <div class="rp-atlas-scroll" tabindex="0" aria-label="Горизонтальная область карты связей">
+        <svg class="rp-atlas-canvas" viewBox="0 0 1320 660" role="group" aria-labelledby="atlas-svg-title atlas-svg-desc">
+          <title id="atlas-svg-title">Связи пяти исследовательских территорий</title>
+          <desc id="atlas-svg-desc">Выберите территорию, чтобы выделить подтверждённые общие понятия и связанные исследования.</desc>
+          <g class="rp-atlas-edges" aria-hidden="true">
+            <path data-territories="living field" data-concept="material" d="M1142 330 L660 574 L1142 516"/>
+            <path data-territories="reverse prearchive" data-concept="reconstruction" d="M178 330 L420 516 L178 516"/>
+          </g>
+          <g class="rp-atlas-concepts" aria-hidden="true">
+            <g data-concept="material" transform="translate(660 574)"><circle r="7"/><text y="-18">АКТИВНЫЙ МАТЕРИАЛ</text></g>
+            <g data-concept="reconstruction" transform="translate(420 516)"><circle r="7"/><text y="-18">РЕКОНСТРУКЦИЯ БЕЗ ПРЯМОГО ДОСТУПА</text></g>
+          </g>
+          <g class="rp-atlas-territories">
+            <g class="rp-atlas-node" role="button" tabindex="0" aria-pressed="false" data-territory="ri" transform="translate(178 144)"><circle r="60"/><text><tspan x="0" y="-8">РУССКИЙ</tspan><tspan x="0" y="14">ИНТЕЛЛЕКТ</tspan></text></g>
+            <g class="rp-atlas-node" role="button" tabindex="0" aria-pressed="false" data-territory="reverse" transform="translate(178 330)"><circle r="60"/><text><tspan x="0" y="-8">ОБРАТНЫЙ</tspan><tspan x="0" y="14">ПРОМПТ</tspan></text></g>
+            <g class="rp-atlas-node" role="button" tabindex="0" aria-pressed="false" data-territory="prearchive" transform="translate(178 516)"><circle r="60"/><text>ПРЕАРХИВ</text></g>
+            <g class="rp-atlas-node" role="button" tabindex="0" aria-pressed="false" data-territory="living" transform="translate(1142 330)"><circle r="60"/><text><tspan x="0" y="-8">ЖИВОЕ КАК</tspan><tspan x="0" y="14">МЕДИУМ</tspan></text></g>
+            <g class="rp-atlas-node" role="button" tabindex="0" aria-pressed="false" data-territory="field" transform="translate(1142 516)"><circle r="60"/><text><tspan x="0" y="-8">ПОЛЕВЫЕ</tspan><tspan x="0" y="14">ИССЛЕДОВАНИЯ</tspan></text></g>
+          </g>
+        </svg>
+      </div>
+      <p class="rp-atlas-note" aria-live="polite">NORMAL / все территории и связи показаны равноправно.</p>
+    </section>
+  </main>
+  <footer class="ay-site-footer"></footer>
+  <script src="./research-index-v2.js?v=3"></script>
+  <script src="/assets/art-is-you/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* STEP 4: secondary access only. No main-five or shared selectors. */
+@layer projects-other-roles {
+  .index-baseline__other[data-roles="ready"] p {
+    display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px 24px;
+  }
+  .index-baseline__other[data-roles="ready"] a {
+    display:inline-flex; flex-direction:column; justify-content:center;
+    min-height:44px; color:inherit; text-decoration:none;
+  }
+  .index-baseline__other[data-roles="ready"] .projects-other__name {
+    font:400 var(--ay-size-body,16px)/var(--ay-leading-body,24px) "Source Sans 3",sans-serif !important;
+    letter-spacing:normal !important; text-transform:none !important;
+  }
+  .index-baseline__other[data-roles="ready"] .projects-other__role {
+    font:400 var(--ay-size-micro,13px)/var(--ay-leading-micro,18px) "Source Sans 3",sans-serif !important;
+    letter-spacing:normal !important; text-transform:none !important; color:var(--index-muted);
+  }
+  .index-baseline__other[data-roles="ready"] a:hover .projects-other__name {
+    text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:4px;
+  }
+  .index-baseline__other[data-roles="ready"] a:focus-visible {
+    outline:2px solid #064cff !important; outline-offset:4px !important;
+  }
+  @media(max-width:768px) {
+    .index-baseline__other[data-roles="ready"] p { column-gap:16px; }
+  }
+}

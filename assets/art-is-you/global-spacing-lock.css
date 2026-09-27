@@ -1,0 +1,83 @@
+/* ART.IS.YOU — shared semantic spacing tokens
+   Spacing-only contract. Typography, grid, media and copy remain page-owned. */
+html body.ay-system-page {
+  --space-meta-title: 12px;
+  --space-title-thesis: 14px;
+  --space-thesis-body: 12px;
+  --space-title-body: 16px;
+  --space-body-body: 12px;
+  --space-body-cta: 22px;
+  --space-rule-content: 20px;
+  --space-module: 44px;
+  --space-band: 60px;
+}
+
+/* Shared intro rhythm: L2 → L3. */
+html body.ay-system-page .research-index__lead .research-canon-subtitle,
+html body.ay-system-page .publications-intro__subtitle,
+html body.ay-system-page .about-header__position,
+html body.ay-system-page .projects-index__intro-copy p:first-child {
+  display: block;
+  margin: 0 0 22px !important;
+}
+/* The canon stylesheet has a higher-specificity 21px subtitle rule. */
+html body.ay-system-page.v17-canon.p6-1-canon #allrecords .research-index__lead .research-canon-subtitle {
+  margin-bottom: 22px !important;
+}
+html body.ay-system-page .research-index__lead .research-canon-lead,
+html body.ay-system-page .publications-intro__lead,
+html body.ay-system-page .about-header__lead,
+html body.ay-system-page .projects-index__intro-copy p:nth-child(2) {
+  display: block;
+  margin: 0 !important;
+}
+
+/* Research: L7 → L4 → L5/L6 → L8. */
+html body.ay-system-page .research-canon-content { row-gap: var(--space-module) !important; }
+html body.ay-system-page .research-canon-card__meta { margin: 0 0 var(--space-meta-title) !important; }
+html body.ay-system-page .research-canon-card__body { margin-top: 0 !important; }
+html body.ay-system-page.v17-canon.p6-1-canon #allrecords .research-canon-card__body { margin-top: 0 !important; }
+html body.ay-system-page .research-canon-card__body h2 { margin: 0 0 var(--space-title-body) !important; }
+html body.ay-system-page .research-canon-card__body:has(.research-canon-question) h2 { margin-bottom: var(--space-title-thesis) !important; }
+html body.ay-system-page .research-canon-card__question,
+html body.ay-system-page .research-canon-question { margin: 0 0 var(--space-thesis-body) !important; }
+html body.ay-system-page .research-canon-card__body p:not(.research-canon-question) { margin: 0 0 var(--space-body-body) !important; }
+html body.ay-system-page .research-canon-card__body p:not(.research-canon-question):last-of-type { margin-bottom: 0 !important; }
+html body.ay-system-page .research-canon-cta,
+html body.ay-system-page .research-canon-status { margin: var(--space-body-cta) 0 0 !important; }
+
+/* Publications: meta/title/body/source stacks. */
+html body.ay-system-page .publications-row__meta { margin: 0 0 var(--space-meta-title) !important; }
+html body.ay-system-page .publications-row__title { margin-top: 0 !important; margin-bottom: 0 !important; }
+html body.ay-system-page .publications-row__title h2 { margin-top: 0 !important; margin-bottom: var(--space-title-body) !important; }
+html body.ay-system-page .publications-argument .publications-row__description { margin-top: 0 !important; }
+html body.ay-system-page .publications-row__description { margin-top: 0 !important; margin-bottom: 0 !important; }
+html body.ay-system-page .publications-row__description p { margin: 0 !important; }
+html body.ay-system-page .publications-row__source { margin-top: var(--space-body-cta) !important; }
+/* Publications bands retain their page-owned editorial padding; do not stack a second gap. */
+html body.ay-system-page .publications-field { row-gap: 0; }
+
+/* About: combined heading → body → CTA, with rules breathing above content. */
+html body.ay-system-page .about-canonical-content { row-gap: var(--space-band) !important; }
+html body.ay-system-page .about-canonical-section,
+html body.ay-system-page .about-stack-section { padding-top: var(--space-rule-content) !important; }
+html body.ay-system-page .about-section-heading { margin: 0 0 var(--space-title-body) !important; }
+html body.ay-system-page .about-canonical-copy > p,
+html body.ay-system-page .about-stack-section > p,
+html body.ay-system-page .about-master-module__text > p { margin: 0 0 var(--space-body-body) !important; }
+html body.ay-system-page .about-canonical-copy > p:last-of-type,
+html body.ay-system-page .about-stack-section > p:last-of-type,
+html body.ay-system-page .about-master-module__text > p:last-of-type { margin-bottom: 0 !important; }
+html body.ay-system-page .about-canonical-links,
+html body.ay-system-page .about-canonical-formula,
+html body.ay-system-page .about-master-module__micro { margin-top: var(--space-body-cta) !important; }
+html body.ay-system-page .about-index .about-canonical-links { margin-top: var(--space-body-cta) !important; }
+html body.ay-system-page .about-index .about-stack-section > p.about-canonical-formula { margin-top: var(--space-body-cta) !important; }
+
+/* Projects: canonical entries use the same natural-flow stack. */
+html body.ay-system-page .projects-canonical-grid { row-gap: var(--space-band) !important; }
+html body.ay-system-page .project-entry__meta { margin: 0 0 var(--space-meta-title) !important; }
+html body.ay-system-page .project-entry__copy h2 { margin-top: 0 !important; margin-bottom: var(--space-title-body) !important; }
+html body.ay-system-page .project-entry__copy > p { margin-top: 0 !important; margin-bottom: var(--space-body-body) !important; }
+html body.ay-system-page .project-entry__copy > p:last-of-type { margin-bottom: 0 !important; }
+html body.ay-system-page .project-entry__copy > a { display: inline-block; margin-top: var(--space-body-cta) !important; }

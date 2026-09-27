@@ -1,0 +1,41 @@
+.ay-semantic-relation {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  align-items: baseline;
+  margin: 72px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.ay-semantic-relation__type { grid-column: 1 / span 3; }
+
+.ay-semantic-relation a {
+  grid-column: 5 / span 5;
+  color: #064cff;
+  text-decoration: none;
+}
+
+.ay-semantic-relation a:hover,
+.ay-semantic-relation a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 639px) {
+  .ay-semantic-relation {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    margin-top: 48px;
+  }
+
+  .ay-semantic-relation__type,
+  .ay-semantic-relation a { grid-column: 1; }
+}

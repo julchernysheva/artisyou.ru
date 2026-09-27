@@ -1,0 +1,93 @@
+/* ART.IS.YOU V17 P7.6.8A — PAPER / GUTTERS / CLICK-ACTIVATE
+   Restore the canonical warm paper and safe text gutters after LESS UI.
+   Full-bleed system objects remain full viewport width.
+*/
+:root{
+  --p768a-paper:#EFEFEA;
+  --p768a-label-paper:#F5F2EC;
+  --p768a-gutter:32px;
+  --p768a-gutter-mobile:20px;
+}
+html,
+body.v17-canon,
+body.v17-canon #allrecords,
+body.v17-canon #allrecords > .r,
+body.v17-canon #allrecords > .r > .t123,
+body.v17-canon #allrecords > .r > .t123 > .t-container_100,
+body.v17-canon #allrecords > .r > .t123 > .t-container_100 > .t-width_100,
+body.v17-canon #t-footer,
+body.v17-canon #t-footer > .r,
+body.v17-canon #t-footer .t123,
+body.v17-canon #t-footer .t-container_100,
+body.v17-canon #t-footer .t-width_100{
+  background-color:var(--p768a-paper)!important;
+}
+
+/* Canonical page edge. Text and local content never sit on viewport edge. */
+body.v17-canon .ay-desktop-header{padding-left:var(--p768a-gutter)!important;padding-right:var(--p768a-gutter)!important}
+body.v17-canon :is(
+  .ay-page-shell,.v2-page,.programmer-page.v2-page,.prearchive-linear,
+  .v16-story,.v16-full-details,.v16-essay-media,.statement-v16-portrait,
+  .ay-injected-hero
+){
+  padding-left:var(--p768a-gutter)!important;
+  padding-right:var(--p768a-gutter)!important;
+}
+/* Captions for true full-bleed systems return to the same textual axis. */
+body.v17-canon :is(.ay-home__ri-map-caption,.v17-topography-bar){
+  padding-left:var(--p768a-gutter)!important;
+  padding-right:var(--p768a-gutter)!important;
+}
+
+/* Live cards: calm paper at rest, never white UI panels. */
+body.v17-canon .ay-live-experience,
+body.v17-canon .ay-home__system-strip,
+body.v17-canon .ay-home__system-strip-media,
+body.v17-canon .project-card__image.ay-live-experience{
+  background:var(--p768a-paper)!important;
+}
+body.v17-canon .ay-live-experience__poster{background:var(--p768a-label-paper)!important}
+
+/* Home long system strip: Archive Transition is shown almost whole, never cover-cropped. */
+body.p7-6-8-live-system .ay-home__system-strip-media{
+  height:auto!important;
+  aspect-ratio:16 / 9;
+  min-height:0!important;
+  overflow:hidden;
+}
+body.p7-6-8-live-system .ay-home__system-strip-media .ay-live-experience__poster,
+body.p7-6-8-live-system .ay-home__system-strip-media .ay-home__archive-transition-poster{
+  padding:8px!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+body.p7-6-8-live-system .ay-home__system-strip-meta{padding:12px 0 11px!important}
+
+/* Click gate for direct GitHub systems: visible, but pointer interaction starts only after click. */
+.ay-embed-gate{position:relative!important;isolation:isolate}
+.ay-embed-gate > iframe{pointer-events:none!important}
+.ay-embed-gate.is-active > iframe{pointer-events:auto!important}
+.ay-embed-gate__activate{
+  position:absolute;z-index:20;top:12px;right:12px;
+  min-height:30px;padding:7px 10px 6px;border:1px solid rgba(105,94,88,.55);
+  background:var(--surface);color:#695E58;
+  font-family:'PT Mono', monospace;font-size:10px;line-height:14px;
+  font-weight:500;letter-spacing:.055em;text-transform:uppercase;cursor:pointer;
+}
+.ay-embed-gate__activate:hover,.ay-embed-gate__activate:focus-visible{border-color:#064CFF;color:#064CFF;outline:none}
+.ay-embed-gate.is-active > .ay-embed-gate__activate{display:none}
+
+@media(max-width:960px){
+  body.v17-canon .ay-desktop-header{padding-left:var(--p768a-gutter-mobile)!important;padding-right:var(--p768a-gutter-mobile)!important}
+  body.v17-canon :is(
+    .ay-page-shell,.v2-page,.programmer-page.v2-page,.prearchive-linear,
+    .v16-story,.v16-full-details,.v16-essay-media,.statement-v16-portrait,
+    .ay-injected-hero
+  ){padding-left:var(--p768a-gutter-mobile)!important;padding-right:var(--p768a-gutter-mobile)!important}
+  body.v17-canon :is(.ay-home__ri-map-caption,.v17-topography-bar){padding-left:var(--p768a-gutter-mobile)!important;padding-right:var(--p768a-gutter-mobile)!important}
+  body.p7-6-8-live-system .ay-home__system-strip-media{aspect-ratio:4 / 3}
+}
+@media(max-width:639px){
+  body.p7-6-8-live-system .ay-home__system-strip-media{aspect-ratio:1 / 1;min-height:0!important}
+  .ay-embed-gate__activate{top:8px;right:8px}
+}
