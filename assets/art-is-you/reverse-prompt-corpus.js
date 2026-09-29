@@ -364,6 +364,8 @@
     const featuredCaseHost = featuredMount?.querySelector('[data-rp-featured-case]');
     const selectorItems = [...(selectorMount?.querySelectorAll('[data-rp-case-selector-item]') || [])];
     const selectedCaseHost = selectorMount?.querySelector('[data-rp-selected-case]');
+    const caseHome = selectedCaseHost?.parentElement;
+    const graphCaseHome = mount.querySelector('.rp-threads__status');
     const evidenceList = provenanceMount?.querySelector('[data-rp-evidence-list]');
     const evidenceModeButtons = [...(provenanceMount?.querySelectorAll('[data-rp-evidence-mode]') || [])];
     let routeGroups = [...mount.querySelectorAll('[data-rp-thread]')];
@@ -398,6 +400,12 @@
       }
     };
     desktopCaseBrowser.addEventListener('change', () => {
+      if (desktopCaseBrowser.matches) {
+        selectedArtistId ||= '10';
+        caseHome?.append(selectedCaseHost);
+        selectedCaseHost.hidden = false;
+        syncCaseSelection();
+      } else clearGraph();
       updateCaseSelector(selectedCaseHost?.dataset.caseId || selectedArtistId);
     });
     selectorMount?.addEventListener('click', (event) => {
@@ -425,8 +433,8 @@
     };
 
     const setPreview = (record) => {
-      previewMedia.hidden = !record;
-      previewMedia.innerHTML = record ? outputPreview(record) : '';
+      previewMedia.hidden = !record || !desktopCaseBrowser.matches;
+      previewMedia.innerHTML = record && desktopCaseBrowser.matches ? outputPreview(record) : '';
     };
     const relatedToNode = (record, node) => {
       if (node.dataset.kind === 'artist') return record.case_id === node.dataset.value;
@@ -461,6 +469,10 @@
       apply(selection, `${entry.id} ${entry.artist} / 2 попытки.`, true, previewRecord);
       syncCaseSelection();
       updateCaseSelector(entry.id, disclosure);
+      if (!desktopCaseBrowser.matches) {
+        graphCaseHome.append(selectedCaseHost);
+        selectedCaseHost.hidden = false;
+      }
     };
     const restoreGraph = () => {
       if (graphFilter) apply(graphFilter.selection, graphFilter.message, true, graphFilter.previewRecord);
@@ -470,7 +482,16 @@
         apply(selection, `${entry.id} ${entry.artist} / 2 попытки.`, true, selection[0]);
       } else apply([], '', false, null);
     };
-    const clearGraph = () => { graphFilter = null; graphPinned = false; restoreGraph(); };
+    const clearGraph = () => {
+      graphFilter = null; graphPinned = false;
+      if (!desktopCaseBrowser.matches) {
+        selectedArtistId = null;
+        selectedCaseHost.hidden = true;
+        caseHome?.append(selectedCaseHost);
+        syncCaseSelection();
+      }
+      restoreGraph();
+    };
     const recordsForNode = (node) => records.filter((record) => relatedToNode(record, node));
     const describe = (selection, title) => `${title} / ${selection.length} ${selection.length === 1 ? 'попытка' : 'попыток'}.`;
     const isPinnedSelection = (selection) => Boolean(graphFilter) && selection.length === graphFilter.selection.length && selection.every((record) => graphFilter.selection.some((current) => recordKey(current) === recordKey(record)));
@@ -484,7 +505,10 @@
       if (pin && isPinnedSelection(selection)) { clearGraph(); return null; }
       const title = node.dataset.kind === 'artist' ? `${node.dataset.value} ${cases.find((entry) => entry.id === node.dataset.value).artist}` : label(node.dataset.value);
       const message = describe(selection, title);
-      if (pin) { graphPinned = false; graphFilter = { selection, message, previewRecord: null }; }
+      if (pin) {
+        if (!desktopCaseBrowser.matches) clearGraph();
+        graphPinned = false; graphFilter = { selection, message, previewRecord: null };
+      }
       apply(selection, message, pin, node.dataset.kind === 'artist' ? selection[0] : null);
       return node.dataset.kind === 'artist' ? node.dataset.value : null;
     };
@@ -509,7 +533,15 @@
     const selectCase = (caseId, disclosure = '') => {
       const entry = cases.find((item) => item.id === caseId);
       if (!entry) return;
+      const mobile = !desktopCaseBrowser.matches;
+      if (mobile && !disclosure && selectedArtistId === caseId && !selectedCaseHost.hidden) { clearGraph(); return; }
+      const row = selectorItems.find(item => item.dataset.caseId === caseId);
+      const rowTop = row?.getBoundingClientRect().top;
       selectArtist(entry.id, byCase(entry.id)[0], disclosure);
+      if (mobile) {
+        row?.parentElement.append(selectedCaseHost);
+        if (!disclosure && row) window.scrollBy(0, row.getBoundingClientRect().top - rowTop);
+      }
       if (disclosure) {
         const target = selectedCaseHost.querySelector(`[data-rp-disclosure="${disclosure}"] summary`);
         target?.focus({ preventScroll: true });
@@ -585,7 +617,7 @@
     };
     bindGraph();
     document.addEventListener('pointerdown', event => {
-      if (!map.contains(event.target) && !selectorMount?.contains(event.target) && !provenanceMount?.contains(event.target)) clearGraph();
+      if (!map.contains(event.target) && !selectorMount?.contains(event.target) && !selectedCaseHost?.contains(event.target) && !provenanceMount?.contains(event.target)) clearGraph();
     });
     window.matchMedia('(max-width: 960px)').addEventListener('change', () => {
       const focused = map.contains(document.activeElement) ? document.activeElement.getAttribute('aria-label') : null;
@@ -599,10 +631,11 @@
     });
     updateFeaturedCase('10');
     selectArtist(selectedArtistId);
+    if (!desktopCaseBrowser.matches) clearGraph();
     [selectorMount, provenanceMount].forEach(container => container?.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
       const disclosure = event.target.closest('details[open]');
-      if (!disclosure) return;
+      if (!disclosure) { if (!desktopCaseBrowser.matches) clearGraph(); return; }
       event.preventDefault();
       disclosure.open = false;
       disclosure.querySelector('summary')?.focus();

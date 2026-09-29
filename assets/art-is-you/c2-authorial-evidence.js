@@ -15,8 +15,8 @@
       evidence.innerHTML = `
         <p class="c2-own-evidence__identity c2-own-evidence__micro">АВТОРСКИЙ ПРИМЕР / ВНЕ СРАВНИТЕЛЬНОГО РЕЕСТРА</p>
         <figure class="c2-own-evidence__document">
-          <iframe class="c2-own-evidence__experience" src="https://julchernysheva.github.io/bogobot/experiences/archive-transition/" title="Интерактивный опыт Богобота «Архив перехода»" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          <a class="c2-own-evidence__experience-link c2-own-evidence__micro" href="https://julchernysheva.github.io/bogobot/experiences/archive-transition/" target="_blank" rel="noreferrer noopener">Открыть Архив перехода ↗</a>
+          <iframe class="c2-own-evidence__experience" src="/assets/art-is-you/archive-transition/" title="Интерактивный опыт Богобота «Архив перехода»" loading="lazy" sandbox="allow-scripts allow-downloads allow-forms allow-top-navigation-by-user-activation"></iframe>
+          <a class="c2-own-evidence__experience-link c2-own-evidence__micro" href="/assets/art-is-you/archive-transition/" target="_blank" rel="noreferrer noopener">Открыть Архив перехода ↗</a>
           <figcaption class="c2-own-evidence__caption c2-own-evidence__micro">БОГОБОТ / «АРХИВ ПЕРЕХОДА»<span>Авторская архивная система. Юлия Чернышева.<br>Публикация в исследовании «Преархив» — 2026.</span></figcaption>
         </figure>
         <div class="c2-own-evidence__context">

@@ -136,6 +136,11 @@
   :is(.projects-evolve__link,.projects-mobile__toggle,.rp-row-button):focus-visible {
     outline-color:#fff!important;
   }
+  @media(max-width:768px) {
+    .projects-mobile__row:has(.projects-mobile__cta[href="/projects/nowords/"]) .projects-mobile__toggle:focus-visible {
+      outline-color:var(--ui-accent,#064cff)!important;outline-offset:3px!important;
+    }
+  }
   /* Questions are already rendered verbatim in the selected evidence panel.
      Closed rows contain the same identity + metadata roles in both indexes. */
   .rp-selector .rp-row-question { display:none!important; }

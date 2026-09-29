@@ -92,8 +92,8 @@
 }
 @media(max-width:700px){
   #artact-desktop-temp{gap:104px}
-  #artact-desktop-temp .artact-curator-group{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:22px}
-  #artact-desktop-temp .artact-curator-group>:is(.artact-work__link,.artact-work__item):last-child{grid-column:1/-1;width:calc((100% - 16px)/2);justify-self:center}
+  #artact-desktop-temp .artact-curator-group{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;padding:4px 2px 10px}
+  #artact-desktop-temp .artact-curator-group>:is(.artact-work__link,.artact-work__item){flex:0 0 min(74vw,280px);min-width:0;scroll-snap-align:start}
   .artact-montage{padding-bottom:40px}
   .artact-public{padding-top:48px}
   .artact-public__list{margin-top:40px;margin-bottom:48px}

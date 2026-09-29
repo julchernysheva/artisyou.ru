@@ -13,7 +13,8 @@
  const core=main.querySelector('.home-core');
  (core||hero).after(map);
  if(core){
-  const steps=[...core.querySelectorAll('.home-core__sequence li')];
+  for(const version of core.querySelectorAll('[data-frame-version]')){
+  const steps=[...version.querySelectorAll('li')];
   let selected=null,hovered=null,focused=null;
   const paint=()=>{
    const active=selected??focused??hovered;
@@ -38,6 +39,7 @@
   core.addEventListener('keydown',event=>{if(event.key==='Escape'){selected=null;hovered=null;focused=null;paint();}});
   document.addEventListener('pointerdown',event=>{if(selected!==null&&!core.contains(event.target)){selected=null;hovered=null;focused=null;paint();}});
   paint();
+  }
  }
  const archiveImage=hero.querySelector('.hero-visual');
  const field=map.querySelector('.method-map__field'),svg=map.querySelector('svg'),paths=svg.querySelector('.method-map__lines'),ports=svg.querySelector('.method-map__ports');
@@ -118,7 +120,13 @@
   // Active paths above neutral shared trunks.
   applyState();
  };
- const observer=new ResizeObserver(draw);observer.observe(field);observer.observe(hero);controls.forEach(el=>observer.observe(el));document.fonts.ready.then(draw);draw();
+ // Do not mutate SVG geometry inside desktop resize delivery (WebKit loop).
+ let drawFrame=0;
+ const scheduleDraw=()=>{
+  if(!matchMedia('(min-width:961px)').matches){draw();return;}
+  if(!drawFrame)drawFrame=requestAnimationFrame(()=>{drawFrame=0;draw();});
+ };
+ const observer=new ResizeObserver(scheduleDraw);observer.observe(field);observer.observe(hero);controls.forEach(el=>observer.observe(el));document.fonts.ready.then(scheduleDraw);draw();
  const arrange=()=>{
   if(document.documentElement.dataset.openingSystem!=='ready')return false;
   errorNode.prepend(archiveImage);

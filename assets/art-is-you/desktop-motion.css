@@ -1,0 +1,44 @@
+/* Desktop-only state vocabulary. Geometry, text and the index reference stay native. */
+@media (min-width:961px) {
+  html.desktop-motion-preparing body { visibility:hidden; }
+  /* Like the approved indexes, selection is immediate; only relation ink eases. */
+  #about-page #practice-block .about-practice-step,
+  .reverse-prompt-detail [data-rp-case-selector-item],
+  .reverse-prompt-detail [data-rp-featured-case-item] { transition:none; }
+  #about-page #practice-block .about-practice-step:is(.is-active,:focus-visible),
+  .reverse-prompt-detail [data-rp-case-selector-item]:is(.is-preview,:focus-visible),
+  .reverse-prompt-detail [data-rp-featured-case-item]:is(:hover,:focus-visible) {
+    background:var(--ui-accent,#064cff)!important;color:#fff!important;border-color:var(--ui-accent,#064cff)!important;
+  }
+  .reverse-prompt-detail [data-rp-case-selector-item]:is(.is-preview,:focus-visible) * { color:#fff!important; }
+  #about-page #practice-block .about-practice-step.is-selected { box-shadow:inset 0 0 0 2px #fff; }
+  #about-page #practice-block .about-practice-step:focus-visible,
+  .rp-native-scheme__module:focus-visible { outline:2px solid var(--ui-accent,#064cff);outline-offset:3px; }
+  .home-core__sequence li::after,
+  .home-core__sequence li,.home-core__questions,
+  .method-map .method-node__title :is(button,a),
+  #about-page #practice-block :is(.about-practice-arrow,.about-practice-form),
+  .method-map__lines path,.method-map__ports circle,
+  .rp-native-scheme__connector,.rp-native-scheme__module {
+    transition:color 160ms ease-out,border-color 160ms ease-out,background-color 160ms ease-out,stroke 160ms ease-out;
+  }
+  .home-core__sequence li.is-active::after { color:var(--ui-accent,#064cff); }
+  .home-core__sequence li.is-related { box-shadow:inset 0 1px var(--ui-accent,#064cff); }
+  .rp-native-scheme__module { cursor:pointer; }
+  .rp-native-scheme__connector { color:var(--muted,#695e58); }
+  .rp-native-scheme__connector svg { color:inherit; }
+  .rp-native-scheme__connector path { stroke:currentColor; }
+  .rp-native-scheme__connector marker path { fill:currentColor;stroke:none; }
+  .rp-native-scheme__connector.is-active { color:var(--ui-accent,#064cff); }
+  .rp-native-scheme__module.is-active { color:var(--ui-accent,#064cff);background:rgba(6,76,255,.055);box-shadow:inset 0 0 0 1px var(--ui-accent,#064cff); }
+  .rp-native-scheme__module.is-selected { box-shadow:inset 0 0 0 2px var(--ui-accent,#064cff); }
+  .rp-native-scheme__module.is-related { border-left-color:var(--ui-accent,#064cff); }
+}
+@media (min-width:961px) and (prefers-reduced-motion:reduce) {
+  .home-core__sequence li::after,
+  .home-core__sequence li,.home-core__questions,
+  .method-map .method-node__title :is(button,a),
+  #about-page #practice-block :is(.about-practice-arrow,.about-practice-form),
+  .method-map__lines path,.method-map__ports circle,
+  .rp-native-scheme__connector,.rp-native-scheme__module { transition:none; }
+}

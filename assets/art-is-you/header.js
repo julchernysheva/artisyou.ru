@@ -112,11 +112,11 @@
             </li>
             <li class="ay-desktop-header__item ay-menu-group${publicationsCurrent ? ' is-current' : ''}">
               <div class="ay-menu-toprow">
-                <a class="ay-desktop-header__toplink" href="/publications/"${isCurrent('/publications/') ? ' aria-current="page"' : (publicationsCurrent ? ' aria-current="location"' : '')}>Блог</a>
-                <button class="ay-menu-trigger ay-menu-caret" type="button" aria-expanded="false" aria-label="Открыть разделы Блог"><span class="ay-desktop-header__arrow" aria-hidden="true"></span></button>
+                <a class="ay-desktop-header__toplink" href="/publications/"${isCurrent('/publications/') ? ' aria-current="page"' : (publicationsCurrent ? ' aria-current="location"' : '')}>Публикации</a>
+                <button class="ay-menu-trigger ay-menu-caret" type="button" aria-expanded="false" aria-label="Открыть разделы публикаций"><span class="ay-desktop-header__arrow" aria-hidden="true"></span></button>
               </div>
               <ul class="ay-desktop-header__submenu ay-menu-panel ay-menu-panel--publications">
-                <li>${link('/publications/', 'Все тексты блога')}</li>
+                <li>${link('/publications/', 'Все публикации')}</li>
                 <li>${familyLink('/research/interview/', 'Интервью', '/research/interview/')}</li>
               </ul>
             </li>
@@ -143,6 +143,10 @@
           }
         }
         html,body{overflow-x:clip!important}
+        /* Keep the trigger in viewport even while the menu locks body scrolling. */
+        html:root body art-is-you-header{display:block!important;height:66px;position:relative!important;z-index:10000!important}
+        html:root body art-is-you-header .ay-menu-header.ay-desktop-header{position:fixed!important;inset:0 0 auto!important;width:100%!important;z-index:10000!important}
+        @media(max-width:960px){html:root body art-is-you-header{height:64px}}
         .ay-menu-header button{border:0;margin:0;padding:0;background:none;color:var(--ay-text);font:inherit;cursor:pointer}
         .ay-menu-header .ay-menu-toprow{display:flex;align-items:center;height:100%}
         .ay-menu-header .ay-menu-toprow>.ay-desktop-header__toplink{width:auto}
@@ -204,7 +208,7 @@
           .ay-menu-header .ay-desktop-header__brand-name{display:inline-flex!important;align-items:center!important;gap:8px!important;min-height:44px!important}
         }
         @media(min-width:961px){
-          html:root body art-is-you-header .ay-menu-header.ay-desktop-header.ay-desktop-header--flat{position:sticky!important;top:0!important;left:0!important;right:0!important;width:100%!important;max-width:none!important;height:66px!important;min-height:66px!important;margin:0!important;padding:0 32px!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important}
+          html:root body art-is-you-header .ay-menu-header.ay-desktop-header.ay-desktop-header--flat{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;max-width:none!important;height:66px!important;min-height:66px!important;margin:0!important;padding:0 32px!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__identity{grid-column:1!important;justify-self:start!important;gap:9px!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-mark{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;flex:0 0 20px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-logo{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;flex:0 0 20px!important}

@@ -288,7 +288,28 @@ body.reverse-prompt-detail .rp-research-cases .rp-case-source__media img {
 body.reverse-prompt-detail .rp-research-cases .rp-selected-case__reading { margin-top:32px; padding-top:18px; border-top:1px solid var(--rule); }
 
 @media (max-width:1024px) {
-  body.reverse-prompt-detail .rp-research-cases .rp-research-selector-field { padding:48px 20px 56px; }
+  /* The corpus previously inherited desktop-only gutters: mobile started at x=0. */
+  body.reverse-prompt-detail .rp-research-corpus .rp-threads { padding:32px 20px 24px; }
+  body.reverse-prompt-detail .rp-thread-map { margin-top:24px; }
+  body.reverse-prompt-detail .rp-threads__status { margin-top:12px; padding:0; border:0; }
+  body.reverse-prompt-detail .rp-threads__preview:empty { display:none; }
+  body.reverse-prompt-detail .rp-thread-preview[hidden],
+  body.reverse-prompt-detail .rp-selected-case-host[hidden] { display:none; }
+  body.reverse-prompt-detail .rp-research-cases .rp-research-selector-field { padding-top:24px; }
+  /* One evidence host follows the active graph node or artist row, not a distant default case. */
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case { display:flex; flex-direction:column; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case__top { display:contents; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case__header { order:0; padding:16px 0; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-source { order:1; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-source__media img { width:100%; height:240px; max-height:240px; object-fit:contain; object-position:center; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case__systems { order:2; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; padding-top:12px; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-model { min-width:0; margin:0; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-model__media { min-height:0; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-model__media img { width:100%; height:160px; max-height:160px; object-fit:contain; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case__reading { order:3; margin-top:24px; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-selected-case__comparison { order:4; }
+  body.reverse-prompt-detail .rp-selected-case-host .rp-case-model__meta { overflow-wrap:anywhere; }
+  body.reverse-prompt-detail .rp-research-cases .rp-research-selector-field { padding:24px 20px 56px; }
   body.reverse-prompt-detail .rp-research-cases .rp-case-browser__intro { display:block; margin-bottom:24px; }
   body.reverse-prompt-detail .rp-research-cases .rp-case-selector__title { margin-top:12px; }
   body.reverse-prompt-detail .rp-research-cases .rp-case-selector__status { margin-top:12px; }

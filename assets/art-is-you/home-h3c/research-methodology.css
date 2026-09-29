@@ -95,3 +95,35 @@
 @media(prefers-reduced-motion:reduce){
  .home-core__sequence li,.home-core__questions,.method-map .method-node__title :is(button,a){transition:none}
 }
+
+/* Proposed Home restructure is mobile-only; desktop retains its six-stage frame. */
+.home-core__mobile{display:none}
+.home-core__desktop-guide{display:none}
+@media(min-width:1360px){
+ .home-core{--frame-rail:clamp(160px,12vw,240px);display:grid;grid-template-columns:var(--frame-rail) minmax(0,1fr);column-gap:24px;row-gap:16px;align-items:start}
+ .h3b-home .home-core__label{grid-column:1;grid-row:1;margin:0}
+ .home-core__subtitle{grid-column:1;grid-row:2;margin:0}
+ .home-core>[data-frame-version=desktop]{grid-column:2;grid-row:2;gap:16px}
+ .home-core>[data-frame-version=desktop] li:not(:last-child){padding-right:0}
+ .home-core>[data-frame-version=desktop] li:not(:last-child)::after{right:0}
+ .home-core>[data-frame-version=desktop] .home-core__step-title{min-height:84px}
+ .home-core__desktop-guide{grid-column:2;grid-row:1;align-self:end;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin:0;color:var(--muted);font:400 13px/18px 'PT Mono',monospace}
+ .home-core__desktop-guide span:first-child{grid-column:1/span 4}
+ .home-core__desktop-guide span:last-child{grid-column:5/span 2}
+ .home-core>[data-frame-version=desktop] .home-core__questions{position:relative}
+ .home-core>[data-frame-version=desktop] li:first-child .home-core__questions::before{content:'КАК? →';position:absolute;top:0;left:calc(-1 * (var(--frame-rail) + 24px));font:400 13px/21px 'PT Mono',monospace;color:var(--muted);pointer-events:none}
+}
+@media(max-width:768px){
+ .home-core>[data-frame-version=desktop]{display:none}
+ .home-core__mobile{display:block}
+ .home-core__mobile .home-core__sequence{display:block}
+ .home-core__mobile .home-core__sequence li{padding:16px 0 32px}
+ .home-core__mobile .home-core__sequence li button{display:block}
+ .home-core__mobile .home-core__sequence li:first-child::before{content:'ЧТО ИССЛЕДУЮ? ↓';display:block;margin-bottom:16px;font:400 13px/18px 'PT Mono',monospace;color:var(--muted)}
+ .home-core__mobile .home-core__outcomes li:first-child::before{content:'РАДИ ЧЕГО? ↓'}
+ .home-core__mobile .home-core__questions{display:block;margin-top:12px}
+ .home-core__mobile .home-core__questions::before{content:'КАК? →';display:block;margin-bottom:8px;font:400 11px/16px 'PT Mono',monospace;color:var(--muted)}
+ .home-core__mobile .home-core__outcomes .home-core__questions::before{display:none}
+ .home-core__mobile .home-core__question+.home-core__question{margin-top:6px}
+ .home-core__mobile .home-core__sequence li:last-child::after{display:none}
+}
