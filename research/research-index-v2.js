@@ -39,7 +39,7 @@ function render(index,user=true){
   interacted=interacted||user;
   if(index===selected&&active.children.length){placePreview();return;}
   selected=index;const i=items[index];
-  active.innerHTML=`<header class="index-preview__header"><span class="index-preview__number">${i.id}</span><div class="index-preview__identity"><h2>${i.title}</h2><p class="index-preview__meta">${i.category} · ${i.id} / ${String(items.length).padStart(2,'0')}</p></div></header>${media(i)}<p class="rp-selected-question">${i.question}</p><a class="rp-cta" href="${i.route}">Открыть исследование →</a>`;
+  active.innerHTML=`<header class="index-preview__header"><span class="index-preview__number">${i.id}</span><div class="index-preview__identity"><h2>${i.title}</h2><p class="index-preview__meta">${i.category} · ${i.id} / ${String(items.length).padStart(2,'0')}</p></div></header>${media(i)}<p class="rp-selected-question">${i.question}</p><div class="rp-proof"><p><span class="rp-proof__label">МЕТОД</span><span>${i.process}</span></p><p><span class="rp-proof__label">РЕЗУЛЬТАТ</span><span>${i.result}</span></p></div><a class="rp-cta" href="${i.route}">Открыть исследование →</a>`;
   placePreview();
 }
 const togglePreview=n=>{expanded=n===selected?!expanded:true;render(n);};

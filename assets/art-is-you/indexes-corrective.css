@@ -1,0 +1,12 @@
+#research-prototype .rp-proof{display:grid;gap:10px;margin:18px 0 22px;padding:14px 0;border-top:1px solid var(--rp-line);border-bottom:1px solid var(--rp-line)}
+#research-prototype .rp-proof p{display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;margin:0;font:400 15px/1.42 "Source Sans 3",sans-serif}
+#research-prototype .rp-proof__label{color:var(--rp-muted);font:400 11px/1.45 "PT Mono",monospace;letter-spacing:.035em}
+#research-prototype .rp-atlas-cue{display:none}
+@media(max-width:720px){
+  #research-prototype .rp-proof{gap:12px;margin:16px 0 18px;padding:12px 0}
+  #research-prototype .rp-proof p{grid-template-columns:minmax(0,1fr);gap:3px;font-size:15px;line-height:1.4}
+  #research-prototype .rp-atlas-cue{display:block;margin:0 0 10px;color:var(--rp-muted);font:400 11px/1.4 "PT Mono",monospace;letter-spacing:.04em}
+}
+@media(min-width:1024px){
+  .publications-index .wb-desktop .wb-title .wb-theme{display:block;margin:0 0 11px;color:var(--muted);font:400 11px/1.4 "PT Mono",monospace;letter-spacing:.04em;text-transform:uppercase}
+}
