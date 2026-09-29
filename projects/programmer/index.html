@@ -41,11 +41,22 @@
       font-synthesis: none;
     }
   </style>
-<link rel="stylesheet" href="/assets/art-is-you/typography-system-v1.css?v=1"><link rel="stylesheet" href="/assets/art-is-you/art-direction-pass-02.css?v=2"><link rel="stylesheet" href="/assets/art-is-you/project-hero-approved.css?v=1"><script defer src="/assets/art-is-you/project-hero-approved.js?v=1"></script></head>
+<link rel="stylesheet" href="/assets/art-is-you/typography-system-v1.css?v=1"><link rel="stylesheet" href="/assets/art-is-you/art-direction-pass-02.css?v=2"><link rel="stylesheet" href="/assets/art-is-you/project-hero-approved.css?v=1"><link rel="stylesheet" href="/assets/art-is-you/detail-attribution.css"><script defer src="/assets/art-is-you/project-hero-approved.js?v=1"></script></head>
 <body data-ay-type-system="v1" data-v12-project="programmer">
   <div data-v12-root></div>
   <script src="/assets/art-is-you/header.js?v=projects-ru-city-20260925"></script>
   <script src="/assets/art-is-you/project-v1-2.js?v=programmer-complete-1"></script>
+  <script>
+    (() => {
+      const lead = document.querySelector('.programmer12-instruction > div > p:last-child');
+      if (!lead) return;
+      const attribution = document.createElement('span');
+      attribution.className = 'detail-attribution';
+      attribution.style.cssText = 'font-family: PT Mono, monospace !important; font-size: 10px !important; line-height: 14px !important; font-weight: 500 !important; letter-spacing: .04em !important';
+      attribution.textContent = 'АВТОР ИДЕИ / ЮЛИЯ ЧЕРНЫШЕВА';
+      lead.append(attribution);
+    })();
+  </script>
   <script defer src="/assets/art-is-you/footer.js"></script>
 </body>
 </html>
