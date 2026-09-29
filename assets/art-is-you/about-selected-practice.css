@@ -1,0 +1,19 @@
+#about-page .about-selected-practice{padding-top:2.5rem;padding-bottom:2.5rem}
+#about-page .about-selected-practice__list{border-top:1px solid var(--about-rule)}
+#about-page .about-selected-practice__case{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr);gap:24px;padding:1.5rem 0;border-bottom:1px solid var(--about-rule)}
+#about-page .about-selected-practice__identity h3{margin:0 0 .5rem;font:400 28px/1.1 'Source Sans 3',sans-serif}
+#about-page .about-selected-practice__identity a{color:var(--about-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+#about-page .about-selected-practice__identity a:is(:hover,:focus-visible){color:var(--about-blue)}
+#about-page .about-selected-practice__identity a:focus-visible{outline:2px solid var(--about-blue);outline-offset:4px}
+#about-page .about-selected-practice__type{margin:0;color:var(--about-muted);font:400 12px/1.5 'PT Mono',monospace}
+#about-page .about-selected-practice__proof p{margin:0;font:400 16px/1.5 'Source Sans 3',sans-serif}
+#about-page .about-selected-practice__proof p+p{margin-top:.5rem}
+#about-page .about-selected-practice__proof p span{margin-right:.5rem;color:var(--about-muted);font:400 11px/1.5 'PT Mono',monospace}
+#about-page .about-experience-detail p{margin:.5rem 0 0;color:var(--about-muted);font:400 14px/1.45 'Source Sans 3',sans-serif}
+@media(max-width:720px){
+  #about-page .about-selected-practice{padding-top:1.5rem;padding-bottom:1.5rem}
+  #about-page .about-selected-practice__case{grid-template-columns:minmax(0,1fr);gap:.75rem;padding:1.25rem 0}
+  #about-page .about-selected-practice__identity h3{font-size:26px}
+  #about-page #experience-block .about-row{gap:.75rem;padding:.875rem 0}
+  #about-page :is(#recognition-block,#public-activity-block) .about-row{gap:.5rem;padding:.75rem 0}
+}
