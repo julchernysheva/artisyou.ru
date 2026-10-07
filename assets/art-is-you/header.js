@@ -85,10 +85,9 @@
         <div class="ay-desktop-header__identity">
           <a class="ay-desktop-header__brand-name${isCurrent('/') ? ' is-current' : ''}" href="/" aria-label="ART.IS.YOU — главная страница"${isCurrent('/') ? ' aria-current="page"' : ''}>
             <img class="ay-desktop-header__brand-logo" src="/assets/static.tildacdn.com/artisyoufavikon.png" width="180" height="180" alt="" decoding="async">
-            <span>ART.IS.YOU</span>
           </a>
         </div>
-        <button class="ay-menu-toggle" type="button" aria-expanded="false" aria-controls="ay-primary-menu" aria-label="Открыть меню"><span>Меню</span><i aria-hidden="true"></i></button>
+        <button class="ay-menu-toggle" type="button" aria-expanded="false" aria-controls="ay-primary-menu" aria-label="Открыть меню"><i aria-hidden="true"></i></button>
         <nav aria-label="Основная навигация" class="ay-desktop-header__nav">
           <ul class="ay-desktop-header__menu" id="ay-primary-menu">
             <li class="ay-desktop-header__item ay-menu-group${researchCurrent ? ' is-current' : ''}">
@@ -128,8 +127,11 @@
       <style>
         @layer header-navigation-contract {
           .ay-menu-header .ay-menu-group > .ay-menu-toprow :is(.ay-desktop-header__toplink,.ay-menu-caret){color:var(--ink,#2c2927)!important;background:transparent!important}
-          .ay-menu-header .ay-menu-group:is(:hover,:focus-within) > .ay-menu-toprow :is(.ay-desktop-header__toplink,.ay-menu-caret){color:var(--ui-accent,#064cff)!important}
+          .ay-menu-header .ay-menu-group.is-open > .ay-menu-toprow :is(.ay-desktop-header__toplink,.ay-menu-caret){color:var(--ui-accent,#064cff)!important}
           .ay-menu-header .ay-menu-toprow .ay-desktop-header__arrow{color:inherit!important;border-color:currentColor!important}
+          .ay-menu-header .ay-menu-group > .ay-menu-toprow .ay-desktop-header__arrow{transform:translateY(-2px) rotate(45deg)!important}
+          .ay-menu-header .ay-menu-group.is-open > .ay-menu-toprow .ay-desktop-header__arrow{transform:translateY(2px) rotate(225deg)!important}
+          .ay-menu-header .ay-desktop-header__brand-logo{width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;flex:0 0 42px!important}
           .ay-menu-header .ay-menu-toprow .ay-desktop-header__toplink::after{display:none!important}
           .ay-menu-header .ay-menu-panel > li > a{display:flex!important;align-items:center!important;width:100%!important;box-sizing:border-box!important;min-height:44px!important;color:var(--ink,#2c2927)!important;background:transparent!important;pointer-events:auto!important;transition:none!important}
           .ay-menu-header .ay-menu-panel > li > a :is(span,small,strong){color:inherit!important}
@@ -138,7 +140,7 @@
           @media(min-width:961px){
             .ay-menu-header .ay-menu-group{position:relative!important}
             .ay-menu-header .ay-menu-group > .ay-menu-panel{top:100%!important;margin-top:0!important;transform:none!important;transition:none!important;pointer-events:auto!important}
-            .ay-menu-header .ay-menu-group:not(.is-dismissed):is(:hover,:focus-within,.is-open) > .ay-menu-panel{opacity:1!important;visibility:visible!important}
+            .ay-menu-header .ay-menu-group.is-open > .ay-menu-panel{opacity:1!important;visibility:visible!important}
             .ay-menu-header .ay-menu-group.is-dismissed > .ay-menu-panel{opacity:0!important;visibility:hidden!important}
           }
         }
@@ -177,7 +179,7 @@
         .ay-menu-header .ay-menu-nested-trigger:hover,.ay-menu-header .ay-menu-nested-trigger:focus-visible{color:var(--ay-accent);background:rgba(208,205,199,.24);outline:none}
         .ay-menu-toggle{display:none}
         @media(min-width:961px){
-          .ay-menu-header .ay-menu-group:not(.is-open):not(:hover):not(:focus-within)>.ay-menu-panel{opacity:0!important;visibility:hidden!important;transition-delay:0s!important}
+          .ay-menu-header .ay-menu-group:not(.is-open)>.ay-menu-panel{opacity:0!important;visibility:hidden!important;transition-delay:0s!important}
           .ay-menu-header .ay-desktop-header__submenu{max-height:min(76vh,620px);overflow-y:auto}
           .ay-menu-header .ay-desktop-header__submenu--nested{overflow-y:auto}
           .ay-menu-group.is-open>.ay-menu-panel,.ay-desktop-header__nested.is-open>.ay-menu-panel{opacity:1!important;visibility:visible!important;transform:translateY(0)!important;transition-delay:0s!important}
@@ -185,8 +187,15 @@
         @media(max-width:960px){
           html.ay-menu-lock,html.ay-menu-lock body{overflow:hidden!important}
           .ay-menu-header{grid-template-columns:1fr auto!important;height:64px!important;overflow:visible}
-          .ay-menu-header .ay-menu-toggle{display:flex;align-items:center;gap:9px;justify-self:end;min-width:64px;min-height:44px;font-size:13px!important}
-          .ay-menu-header .ay-menu-toggle i{display:block;width:14px;height:10px;border-top:1px solid currentColor;border-bottom:1px solid currentColor}
+          .ay-menu-header .ay-menu-toggle{display:flex;align-items:center;justify-content:center;justify-self:end;min-width:48px;min-height:48px}
+          .ay-menu-header .ay-menu-toggle i{display:block;position:relative;width:24px;height:16px;background:linear-gradient(currentColor,currentColor) center/24px 1.5px no-repeat}
+          .ay-menu-header .ay-menu-toggle i::before,.ay-menu-header .ay-menu-toggle i::after{position:absolute;left:0;width:24px;height:1.5px;background:currentColor;content:'';transition:transform 160ms ease,top 160ms ease,bottom 160ms ease}
+          .ay-menu-header .ay-menu-toggle i::before{top:0}
+          .ay-menu-header .ay-menu-toggle i::after{bottom:0}
+          .ay-menu-header.is-mobile-open .ay-menu-toggle i{background:none}
+          .ay-menu-header.is-mobile-open .ay-menu-toggle i::before{top:7px;transform:rotate(45deg)}
+          .ay-menu-header.is-mobile-open .ay-menu-toggle i::after{bottom:7px;transform:rotate(-45deg)}
+          .ay-menu-header .ay-menu-toggle:focus-visible{outline:2px solid var(--ui-accent,#064cff);outline-offset:2px}
           .ay-menu-header .ay-desktop-header__nav{display:none;position:absolute;top:63px;left:0;right:0;height:calc(100vh - 63px);height:calc(100dvh - 63px);overflow:auto;overscroll-behavior:contain;background:#EFEFEA;border-bottom:1px solid var(--ay-line);padding:12px 20px 40px}
           .ay-menu-header.is-mobile-open .ay-desktop-header__nav{display:block}
           .ay-menu-header .ay-desktop-header__menu{display:block;height:auto}
@@ -199,19 +208,22 @@
           .ay-menu-header .ay-desktop-header__submenu{display:none;position:static;min-width:0;max-height:none;margin:0;padding:0 0 12px 14px;border:0;border-left:1px solid var(--ay-line);box-shadow:none;opacity:1;visibility:visible;transform:none;background:transparent;transition:none}
           .ay-menu-header .is-open>.ay-menu-panel{display:block}
           .ay-menu-header .ay-desktop-header__submenu a,.ay-menu-header .ay-menu-nested-trigger{display:flex;align-items:center;min-height:44px;padding:8px 12px;font-size:13px!important;white-space:normal}
-          .ay-menu-header .ay-menu-panel--research{width:100%;max-width:none}
-          .ay-menu-header .ay-menu-panel--research .ay-research-menu__link{min-height:52px;padding:10px 12px!important}
+          .ay-menu-header .ay-menu-panel--research{width:100%;max-width:none;padding-left:0;border-left:0}
+          .ay-menu-header .ay-menu-panel--research .ay-research-menu__link{min-height:58px;padding:10px 12px!important}
+          .ay-menu-header .ay-menu-panel--research .ay-research-menu__label{font-size:16px;line-height:20px}
+          .ay-menu-header .ay-menu-panel--research .ay-research-menu__type{font-size:10px;line-height:13px}
           .ay-menu-header .ay-menu-panel--projects{padding-bottom:0}
           .ay-menu-header .ay-menu-panel--projects>li>a{min-height:52px;padding:10px 12px!important}
           .ay-menu-header .ay-desktop-header__submenu--nested{margin:3px 0 5px 12px}
           .ay-menu-header .ay-desktop-header__arrow{margin-right:3px}
-          .ay-menu-header .ay-desktop-header__brand-name{display:inline-flex!important;align-items:center!important;gap:8px!important;min-height:44px!important}
+          .ay-menu-header .ay-desktop-header__brand-name{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:48px!important;min-height:48px!important}
+          .ay-menu-header .ay-desktop-header__brand-logo{width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important}
         }
         @media(min-width:961px){
           html:root body art-is-you-header .ay-menu-header.ay-desktop-header.ay-desktop-header--flat{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;max-width:none!important;height:66px!important;min-height:66px!important;margin:0!important;padding:0 32px!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__identity{grid-column:1!important;justify-self:start!important;gap:9px!important}
-          html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-mark{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;flex:0 0 20px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
-          html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-logo{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;flex:0 0 20px!important}
+          html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-mark{width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;flex:0 0 42px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+          html:root body art-is-you-header .ay-menu-header .ay-desktop-header__brand-logo{width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;flex:0 0 42px!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__nav{grid-column:2!important;justify-self:center!important;height:100%!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__balance{grid-column:3!important;justify-self:end!important}
           html:root body art-is-you-header .ay-menu-header .ay-desktop-header__menu{height:100%!important;width:auto!important;max-width:none!important;display:flex!important;gap:36px!important;align-items:stretch!important}
@@ -231,6 +243,9 @@
       const groups = [...this.querySelectorAll('.ay-menu-group')];
       const desktopMedia = matchMedia('(min-width:961px)');
       const desktop = () => desktopMedia.matches;
+      let focusFromPointer = false;
+      document.addEventListener('pointerdown', () => { focusFromPointer = true; }, true);
+      document.addEventListener('keydown', () => { focusFromPointer = false; }, true);
       const triggerFor = group => group.querySelector('.ay-menu-caret');
       const setOpen = (group, open) => {
         group.classList.toggle('is-open', open);
@@ -259,7 +274,7 @@
           group.classList.remove('is-dismissed'); closeGroups(group); setOpen(group, true);
         });
         group.addEventListener('focusin', event => {
-          if (!desktop() || group.contains(event.relatedTarget)) return;
+          if (!desktop() || focusFromPointer || group.contains(event.relatedTarget)) return;
           group.classList.remove('is-dismissed'); closeGroups(group); setOpen(group, true);
         });
         group.addEventListener('pointerleave', () => { if (desktop() && !group.contains(document.activeElement)) { group.classList.remove('is-dismissed'); setOpen(group, false); } });

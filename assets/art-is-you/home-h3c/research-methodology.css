@@ -113,6 +113,16 @@
  .home-core>[data-frame-version=desktop] .home-core__questions{position:relative}
  .home-core>[data-frame-version=desktop] li:first-child .home-core__questions::before{content:'КАК? →';position:absolute;top:0;left:calc(-1 * (var(--frame-rail) + 24px));font:400 13px/21px 'PT Mono',monospace;color:var(--muted);pointer-events:none}
 }
+@media(min-width:960px) and (max-width:1359px){
+ .home-core{--frame-rail:clamp(144px,12vw,160px);display:grid;grid-template-columns:var(--frame-rail) minmax(0,1fr);column-gap:16px;row-gap:16px;align-items:start}
+ .h3b-home .home-core__label{grid-column:1;grid-row:1;margin:0}
+ .home-core__subtitle{grid-column:1;grid-row:2;margin:0}
+ .home-core>[data-frame-version=desktop]{grid-column:2;grid-row:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 16px}
+ .home-core>[data-frame-version=desktop] li,.home-core>[data-frame-version=desktop] li:not(:last-child){padding:16px 0 0}
+ .home-core>[data-frame-version=desktop] li:not(:last-child)::after{content:'→';left:auto;right:0;top:16px;bottom:auto;transform:none}
+ .home-core>[data-frame-version=desktop] li:nth-child(3)::after{display:none}
+ .home-core>[data-frame-version=desktop] .home-core__step-title{min-height:84px}
+}
 @media(max-width:768px){
  .home-core>[data-frame-version=desktop]{display:none}
  .home-core__mobile{display:block}

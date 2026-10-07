@@ -86,3 +86,24 @@
     object-fit: contain !important;
   }
 }
+
+/* Keep the existing evidence image, but subordinate it to the text of PUB-01. */
+@media (max-width: 1023px) {
+  html body.publications-index-page .publications-index .publications-row[data-publication="01"] .publications-editorial-image--01 {
+    width: min(72%, 270px) !important;
+    max-width: 100% !important;
+    margin: 0 0 24px !important;
+  }
+  html body.publications-index-page .publications-index .publications-row[data-publication="01"] .publications-editorial-image--01 img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  html body.publications-index-page .publications-index .wb-desktop .wb-blog-record[data-wb-id="PUB-01"] > .wb-evidence {
+    width: 156px !important;
+    max-width: 100% !important;
+  }
+}
