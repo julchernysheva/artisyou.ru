@@ -3077,17 +3077,21 @@ function schedulePersonHoverClear(rt,id){
  if(HOVER_CLEAR_TIMER)clearTimeout(HOVER_CLEAR_TIMER);
  HOVER_CLEAR_TIMER=setTimeout(()=>{if(HOVERED_ID===id)clearPersonHover(rt)},75);
 }
-function applyPersonHover(rt,id){
- if(SELECTED_ID||IS_PANNING||ACTIVE_MODE!=='MAP'||document.getElementById('drawer').classList.contains('open'))return;
- if(HOVER_CLEAR_TIMER){clearTimeout(HOVER_CLEAR_TIMER);HOVER_CLEAR_TIMER=null}
- document.querySelectorAll('.hist-node.hover-focus').forEach(node=>node.classList.remove('hover-focus'));
- HOVERED_ID=id;resetClasses();clearHoverClasses();
+function historicalPairsFor(rt,id){
  const related=new Set([id]),incidentEdgeIds=new Set();
  rt.historical.edges.forEach(edge=>{
   if(edge.source_id===id||edge.target_id===id){
    incidentEdgeIds.add(edge.edge_id);related.add(edge.source_id);related.add(edge.target_id);
   }
  });
+ return{related,incidentEdgeIds};
+}
+function applyPersonHover(rt,id){
+ if(SELECTED_ID||IS_PANNING||ACTIVE_MODE!=='MAP'||document.getElementById('drawer').classList.contains('open'))return;
+ if(HOVER_CLEAR_TIMER){clearTimeout(HOVER_CLEAR_TIMER);HOVER_CLEAR_TIMER=null}
+ document.querySelectorAll('.hist-node.hover-focus').forEach(node=>node.classList.remove('hover-focus'));
+ HOVERED_ID=id;resetClasses();clearHoverClasses();
+ const {related,incidentEdgeIds}=historicalPairsFor(rt,id);
  document.querySelectorAll('.hist-edge').forEach(edge=>{
   const active=incidentEdgeIds.has(edge.dataset.edgeId);
   edge.classList.toggle('hover-active',active);edge.classList.toggle('dim',!active);
@@ -3553,6 +3557,15 @@ function routeClosure(rt,rids){
  });
  return{routes,entities,histEdges};
 }
+function selectedRouteClosure(rt,rids){
+ const closure=routeClosure(rt,rids);
+ if(SELECTED_ID){
+  const {related,incidentEdgeIds}=historicalPairsFor(rt,SELECTED_ID);
+  related.forEach(id=>closure.entities.add(id));
+  incidentEdgeIds.forEach(id=>closure.histEdges.add(id));
+ }
+ return closure;
+}
 function resetClasses(){
  restoreSelectedRailLabelAnchors();
  delete document.getElementById('map').dataset.selectedHierarchy;
@@ -3564,8 +3577,8 @@ function resetClasses(){
 }
 
 function selectedDisclosureEntityIds(rt,rids){
- if(!SELECTED_ID||(!CARD_ROUTE_FOCUS&&rt.entityById[SELECTED_ID]?.entity_type!=='COMPANY'))return new Set();
- const closure=routeClosure(rt,rids),ids=new Set(closure.entities);
+ if(!SELECTED_ID)return new Set();
+ const closure=selectedRouteClosure(rt,rids),ids=new Set(closure.entities);
  // Only actual base references belonging to the displayed focused path.
  if(CARD_ROUTE_FOCUS)rt.historical.edges.forEach(edge=>{
   if(closure.histEdges.has(edge.edge_id)){ids.add(edge.source_id);ids.add(edge.target_id)}
@@ -3577,7 +3590,7 @@ function applySelectedGraphHierarchy(rt,rids){
  const map=document.getElementById('map');
  if(!SELECTED_ID||(!CARD_ROUTE_FOCUS&&rt.entityById[SELECTED_ID]?.entity_type!=='COMPANY'))return;
  map.dataset.selectedHierarchy=CARD_ROUTE_FOCUS?'route':'company';
- const primary=routeClosure(rt,rids),primaryNodes=selectedDisclosureEntityIds(rt,rids);
+ const primary=selectedRouteClosure(rt,rids),primaryNodes=selectedDisclosureEntityIds(rt,rids);
  primaryNodes.add(SELECTED_ID);
  const companyIds=[...primaryNodes].filter(id=>rt.entityById[id]?.entity_type==='COMPANY');
  const company=routeClosure(rt,uniq(companyIds.flatMap(id=>canonicalCompanyRouteIds(rt,id))));
@@ -3592,7 +3605,7 @@ function applySelectedGraphHierarchy(rt,rids){
 }
 
 function applyRoutes(rt,rids,primaryEntities=new Set()){
- const cl=routeClosure(rt,rids);
+ const cl=selectedRouteClosure(rt,rids);
  const disclosure=selectedDisclosureEntityIds(rt,rids);
  document.querySelectorAll('.modern-edge').forEach(e=>{const on=cl.routes.has(e.dataset.route);e.classList.toggle('active',on);e.classList.toggle('dim',!on)});
  document.querySelectorAll('.modern-label').forEach(label=>{const on=cl.routes.has(label.dataset.route);label.classList.toggle('active',on);label.classList.toggle('dim',!on&&rids.length>0)});
