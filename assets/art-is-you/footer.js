@@ -236,7 +236,7 @@
       var platformMap = "ЛЮДИ / КУЛЬТУРА / ТЕХНОЛОГИИ";
       var platformCopy = "Art.Is.You — авторская исследовательская платформа о людях, культуре и технологиях.";
       var navigationColumn = '<nav aria-label="Навигация" class="ay-site-footer__topics ay-site-footer__navigation ay-site-footer__column"><a href="/research/"><span>Исследования</span></a><a href="/projects/"><span>Проекты</span></a><a href="/publications/"><span>Публикации</span></a></nav>';
-      var profileColumn = '<section class="ay-site-footer__about ay-site-footer__profile ay-site-footer__column"><h2>Юлия Чернышева</h2><p>— креативный R&amp;D-директор. Исследует, как технологии меняют человека и общество вокруг него — и какие культурные сдвиги из этого следуют.</p></section>';
+      var profileColumn = '<section class="ay-site-footer__about ay-site-footer__profile ay-site-footer__column"><h2>Юлия Чернышева</h2><p>Исследую, как технологии меняют человека и культуру. Особенно меня интересует момент, когда созданные нами системы начинают определять наши решения.</p></section>';
 
       footer.innerHTML = `
         <div class="ay-site-footer__bar"><span>ART.IS.YOU / INDEPENDENT PLATFORM</span><span>${platformMap}</span></div>
