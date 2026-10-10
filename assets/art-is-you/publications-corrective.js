@@ -7,7 +7,7 @@
       .sort((a, b) => Number(a.dataset.publication) - Number(b.dataset.publication));
     const records = new Map([...grid.querySelectorAll('.wb-blog-record[data-wb-id]')]
       .map(record => [record.dataset.wbId, record]));
-    if (rows.length !== 10 || records.size !== 10) return;
+    if (!rows.length || records.size !== rows.length) return;
 
     for (const row of rows) {
       const number = row.dataset.publication;
@@ -32,7 +32,7 @@
       const theme = document.createElement('span');
       theme.className = 'wb-theme';
       theme.setAttribute('aria-hidden', 'true');
-      theme.textContent = `${number} / 10 · ${category}`;
+      theme.textContent = `${number} / ${rows.length} · ${category}`;
       title.prepend(theme);
       grid.append(record);
     }
