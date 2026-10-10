@@ -73,7 +73,7 @@ function riAssertProvenance(rt){
  const fields=['relation_id','evidence_status','evidence_refs','supported_claim','supported_relation_scope','locator','temporal_scope','verification_status','retrieval_status'];
  const malformed=keys.filter(id=>records[id].relation_id!==id||fields.some(f=>!(f in records[id]))||!riEvidenceLabel(records[id].evidence_status));
  window.RI_PROVENANCE_QA={displayed:ids.length,resolved:ids.filter(id=>records[id]).length,missing,orphans,malformed,unique:set.size};
- if(ids.length!==201||set.size!==201||keys.length!==201||missing.length||orphans.length||malformed.length)throw new Error('Relation provenance coverage failed');
+ if(ids.length!==200||set.size!==200||keys.length!==200||missing.length||orphans.length||malformed.length)throw new Error('Relation provenance coverage failed');
  const counts=rows=>Object.fromEntries(['DIRECT','CONTEXTUAL','INHERITED','MISSING'].map(s=>[s,rows.filter(p=>p.evidence_status===s).length]));
  window.RI_PROVENANCE_COUNTS={historical:counts(keys.map(k=>records[k]).filter(p=>p.relation_class==='HISTORICAL')),modern:counts(keys.map(k=>records[k]).filter(p=>p.relation_class==='MODERN')),company_endpoints:counts(keys.map(k=>records[k]).filter(p=>p.company_endpoint))};
 }

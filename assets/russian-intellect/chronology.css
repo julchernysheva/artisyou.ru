@@ -1,0 +1,11 @@
+.ri-people{margin:48px 32px;padding:24px 0;border-top:1px solid #b8b1a8;color:#2c2927}
+.ri-people h2{font:400 12px/1.5 'PT Mono',monospace;margin:0 0 12px}
+.ri-people__note{font:400 16px/1.5 'Source Sans 3',sans-serif;margin:0 0 24px;max-width:65ch;color:#695e58}
+.ri-people ol{margin:0;padding:0;list-style:none;columns:4;column-gap:32px}
+.ri-people li{break-inside:avoid}
+.ri-people button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;min-height:60px;padding:8px 0;background:none;border:0;color:inherit;font:400 16px/1.35 'Source Sans 3',sans-serif;cursor:pointer}
+.ri-people__years{font:400 11px/1.5 'PT Mono',monospace;color:#695e58;margin-top:4px}
+.ri-people button:hover,.ri-people button:focus-visible{color:#064cff;text-decoration:underline;text-underline-offset:.2em}
+.ri-people button:focus-visible{outline:2px solid #064cff;outline-offset:2px}
+@media(max-width:1023px){.ri-people ol{columns:2}}
+@media(max-width:720px){.ri-people{margin:32px 16px}.ri-people ol{columns:1}}

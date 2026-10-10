@@ -2842,46 +2842,6 @@ window.RI_RELATION_PROVENANCE = {
       ],
       "confidence": "HIGH_FOR_STATED_SCOPE"
     },
-    "PA002": {
-      "relation_id": "PA002",
-      "relation_class": "HISTORICAL",
-      "source_entity_id": "B057",
-      "target_entity_id": "B058",
-      "source_entity": "Алексей Григорьевич Ивахненко",
-      "target_entity": "Владимир Семёнович Степашко",
-      "route_id": "",
-      "company_endpoint": false,
-      "relation_type": "TEACHING",
-      "evidence_status": "DIRECT",
-      "evidence_refs": [
-        {
-          "source_url": "https://www.gmdh.net/AG/AG.htm",
-          "source_title": "Олексій Григорович Івахненко: Життєвий і творчий шлях ученого (МННЦ ІТС, 2003)",
-          "locator": "Главные этапы научной деятельности; заключительные абзацы о киевской школе; web lines 80–81",
-          "supporting_fragment_summary": "Степашко прямо назван учеником Ивахненко и продолжателем индуктивного моделирования.",
-          "retrieval_status": "RETRIEVED_TEXT"
-        }
-      ],
-      "supported_claim": "Степашко — ученик Ивахненко.",
-      "supported_relation_scope": "TEACHING; не утверждать конкретное PhD-руководство без записи о защите",
-      "locator": [
-        "Главные этапы научной деятельности; заключительные абзацы о киевской школе; web lines 80–81"
-      ],
-      "temporal_scope": [
-        "К моменту издания 2003; точные годы ученичества не указаны"
-      ],
-      "verification_status": "EXPLICIT_RELATION_FRAGMENT",
-      "retrieval_status": [
-        "RETRIEVED_TEXT"
-      ],
-      "source_title": [
-        "Олексій Григорович Івахненко: Життєвий і творчий шлях ученого (МННЦ ІТС, 2003)"
-      ],
-      "source_url": [
-        "https://www.gmdh.net/AG/AG.htm"
-      ],
-      "confidence": "HIGH_FOR_STATED_SCOPE"
-    },
     "PA003": {
       "relation_id": "PA003",
       "relation_class": "HISTORICAL",
