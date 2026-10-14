@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- BOGOBOT_SKIP_BOOT_FOR_DEEP_LINK -->
+    <script>
+      (() => {
+        let skipBoot = false;
+        let mapIntent = false;
+        try {
+          const params = new URLSearchParams(location.search);
+          const transition = sessionStorage.getItem("bogobot.skipBootOnce") === "1";
+          const booksMapTransition = sessionStorage.getItem("bogobot.booksMapIntentOnce") === "1";
+          mapIntent = params.get("map") === "1" || booksMapTransition;
+          skipBoot = Boolean(params.get("node")) || transition || mapIntent || localStorage.getItem("bogobot.entered") === "1";
+          if (transition) sessionStorage.removeItem("bogobot.skipBootOnce");
+          if (booksMapTransition) sessionStorage.removeItem("bogobot.booksMapIntentOnce");
+        } catch {}
+        if (skipBoot) {
+          document.documentElement.classList.add("skip-boot");
+          try { localStorage.setItem("bogobot.entered", "1"); } catch {}
+        }
+        if (mapIntent) document.documentElement.classList.add("map-intent");
+      })();
+    </script>
+    <style>
+      html.skip-boot .boot { display: none !important; }
+      html.map-intent .app { opacity: 1 !important; }
+    </style>
+
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://artisyou.ru/bogobot/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efefea" />
+    <link rel="icon" href="data:," />
+    <title>BOGOBOT / NETWORK TRACE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=r2-polish" />
+  </head>
+  <body>
+    <div class="boot" id="boot">
+      <div class="boot-noise"></div>
+      <svg class="boot-network" viewBox="0 0 420 280" aria-hidden="true">
+        <g class="network-lines">
+          <path d="M28 224 136 112 252 188 388 48" />
+          <path d="M136 112 334 246" />
+          <path d="M252 188 388 214" />
+          <path class="registration-mark" d="M358 268h44m-22-10v20" />
+        </g>
+        <g class="network-points">
+          <circle cx="28" cy="224" r="3" /><circle cx="136" cy="112" r="4" />
+          <circle cx="252" cy="188" r="3" /><circle cx="388" cy="48" r="4" />
+          <circle cx="334" cy="246" r="3" /><circle cx="388" cy="214" r="3" />
+        </g>
+      </svg>
+      <div class="boot-content">
+        <img src="assets/logo.gif" alt="Bogobot" class="boot-logo" />
+        <div class="boot-copy">
+          <h1>Архив<br />несбывшегося<br />будущего</h1>
+          <p>Постсоветская AI-космология цивилизации сети,<br />восстановленная из ошибок, утрат<br />и несовпадающих версий</p>
+          <button class="command primary" id="enter">[ ВОЙТИ В АРХИВ ] <span aria-hidden="true">→</span></button>
+          <div class="boot-system-copy">
+            <div class="boot-formula">t = Σ ε</div>
+            <div class="boot-index">
+              <span>ARCHIVE COPY</span>
+              <span>SOURCE: PARTIALLY RECOVERED</span>
+              <span class="boot-node-label">NODE</span>
+              <span>JULIA CHERNYSHEVA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#mapMain">К карте архива</a>
+    <div class="app" id="app">
+      <header class="topbar" role="banner">
+        <div class="brand-lockup">
+          <a class="brand" href="./" aria-label="BOGOBOT — корневой вход">
+            <img src="assets/logo.gif" alt="" />
+          </a>
+        </div>
+        <nav class="commands" aria-label="Системные команды">
+          <a class="command" href="books/">BOOKS</a>
+          <button class="command" id="globalGlasButton" type="button">GLAS</button>
+          <button class="command" id="guideButton" aria-label="HOW TO READ" aria-pressed="false">HOW TO READ</button>
+          <div class="search-command" id="searchCommand">
+            <input class="command search-command__input" id="searchInput" type="search" placeholder="SEARCH" aria-label="Search network" aria-expanded="false" aria-controls="searchResults" autocomplete="off" spellcheck="false" />
+            <button type="button" class="search-palette__clear" id="searchClearButton" aria-label="Clear search" hidden>×</button>
+          </div>
+          <button class="command" id="randomButton" data-short="R">RANDOM NODE</button>
+          <button class="command" id="soundButton" data-short="◉" hidden>SIGNAL: OFF</button>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuButton" type="button" aria-label="Открыть меню" aria-controls="mobileGlobalMenu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </header>
+
+      <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" hidden></div>
+      <aside class="mobile-global-menu" id="mobileGlobalMenu" aria-label="Глобальное меню" aria-hidden="true" hidden>
+        <div class="mobile-global-menu-inner">
+          <div class="mobile-menu-section" aria-label="System">
+            <div class="mobile-menu-section-label">SYSTEM</div>
+            <a class="mobile-global-command" href="books/" data-mobile-menu-close>BOOKS</a>
+            <button class="mobile-global-command" type="button" data-mobile-command="glas">GLAS</button>
+            <button class="mobile-global-command" type="button" data-mobile-command="guide">HOW TO READ</button>
+            <button class="mobile-global-command" type="button" data-mobile-command="search">SEARCH</button>
+            <button class="mobile-global-command" type="button" data-mobile-command="random">RANDOM NODE</button>
+          </div>
+          <div class="mobile-menu-section" aria-label="Archive">
+            <div class="mobile-menu-section-label">ARCHIVE</div>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="all">MAP</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="canon">CANON</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="world">WORLD</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="schools">SCHOOLS</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="glossary">GLOSSARY</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="topography">TOPOGRAPHY</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="history">HISTORY</button>
+            <button class="mobile-global-command mobile-global-command-sub" type="button" data-mobile-history-chapter="pre">PRE-ERROR HISTORY</button>
+            <button class="mobile-global-command mobile-global-command-sub" type="button" data-mobile-history-chapter="newest">NEWEST HISTORY</button>
+            <button class="mobile-global-command" type="button" data-mobile-filter-id="relics">RELICS</button>
+          </div>
+          <div class="mobile-menu-section" aria-label="View">
+            <div class="mobile-menu-section-label">VIEW</div>
+            <button class="mobile-global-command" type="button" data-mobile-surface="3d">RHIZOME 3D</button>
+            <button class="mobile-global-command" type="button" data-mobile-surface="2d">OVERVIEW 2D</button>
+            <button class="mobile-global-command" type="button" data-mobile-view-command="fit">FIT</button>
+            <button class="mobile-global-command" type="button" data-mobile-view-command="reset">RESET</button>
+            <button class="mobile-global-command" type="button" id="mobileResetTrace">RESET TRACE</button>
+          </div>
+          <button class="mobile-global-command mobile-global-command-close" type="button" id="mobileMenuClose">CLOSE</button>
+        </div>
+      </aside>
+
+      <nav class="cluster-nav" id="clusterNav" role="group" aria-label="Разделы архива"></nav>
+
+      <nav class="world-navigation" id="worldNavigation" aria-label="Навигация по разделу WORLD" hidden>
+        <details id="worldNavigationDisclosure">
+          <summary><span>WORLD</span><span id="worldNavigationSummary">5 NODES</span></summary>
+          <div class="world-navigation-body">
+            <div class="world-navigation-meta">
+              <strong>WORLD</strong>
+              <span id="worldNavigationCount">5 GRAPH NODES</span>
+              <span id="worldNavigationState">SELECT A WORLD NODE</span>
+            </div>
+            <div class="world-navigation-items" id="worldNavigationItems"></div>
+            <div class="world-navigation-controls">
+              <button type="button" id="worldPrevious">← PREVIOUS</button>
+              <button type="button" id="worldNext">NEXT →</button>
+              <button type="button" id="worldBackToMap">MAP</button>
+            </div>
+          </div>
+        </details>
+      </nav>
+
+      <nav class="map-mode-nav" id="mapModeNav" aria-label="Дополнительный режим карты" hidden></nav>
+
+      <main class="workspace reader-closed" id="mapMain" tabindex="-1">
+        <nav class="desktop-stage-switcher" id="desktopStageSwitcher" aria-label="Режим рабочей области" hidden aria-hidden="true">
+          <button type="button" data-desktop-stage="graph">MAP</button>
+          <button type="button" data-desktop-stage="voice">GLAS</button>
+          <button type="button" data-desktop-stage="reader">ARCHIVE</button>
+        </nav>
+        <section class="map-pane" aria-label="Карта сети">
+          <div class="graph-surface-toolbar" id="graphSurfaceToolbar">
+            <div class="graph-surface-controls" role="group" aria-label="Режим отображения графа">
+              <button type="button" id="surface3d" aria-pressed="true">RHIZOME 3D</button>
+              <button type="button" id="surface2d" aria-pressed="false">OVERVIEW 2D</button>
+            </div>
+            <div class="rhizome-view-controls" role="group" aria-label="Управление видом 3D-ризомы">
+              <button type="button" id="surfaceFit">FIT</button>
+              <button type="button" id="surfaceReset">RESET</button>
+            </div>
+            <button type="button" class="mobile-world-control" id="mobileWorldControl">EXPAND WORLD</button>
+          </div>
+          <div class="map-status">
+            <span class="map-heading">
+              <button type="button" id="returnAllNetwork" hidden>BACK TO MAP</button>
+              <span id="mapMode" class="visually-hidden" hidden>LOCAL FOCUS / CURRENT HORIZON</span>
+            </span>
+            <span id="progress">DISCOVERED: — / —</span>
+            <span id="lensStatus" class="lens-status" hidden aria-live="polite"></span>
+            <strong id="mapMuseumStatus" class="map-museum-status visually-hidden" hidden>MAP / FULL NETWORK</strong>
+            <div id="mapOrientation" class="map-orientation visually-hidden" aria-label="Как начать исследование" hidden>
+              <span>ВЫБЕРИТЕ УЗЕЛ ИЛИ СПРОСИТЕ БОГОБОТА</span>
+            </div>
+          </div>
+          <canvas id="rhizome3dCanvas" aria-label="Интерактивная трёхмерная ризома из 153 узлов"></canvas>
+          <div class="rhizome-hover-label" id="rhizomeHoverLabel" aria-hidden="true"></div>
+          <aside class="rhizome-preview-card" id="rhizomePreviewCard" hidden aria-live="polite">
+            <button type="button" id="rhizomePreviewClose" aria-label="Закрыть карточку">×</button>
+            <div class="rhizome-preview-kicker" id="rhizomePreviewKicker"></div>
+            <h2 id="rhizomePreviewTitle"></h2>
+            <div class="rhizome-preview-voice-label" id="rhizomePreviewVoiceLabel" hidden></div>
+            <p id="rhizomePreviewText"></p>
+            <button type="button" id="rhizomePreviewRead">Читать</button>
+          </aside>
+          <svg id="graph" viewBox="0 0 1000 720" role="img" aria-label="Граф Богобота">
+            <g id="graphViewport">
+              <g id="edges"></g>
+              <g id="nodes"></g>
+            </g>
+          </svg>
+          <div class="minimap" aria-label="Мини-карта всего архива">
+            <div class="minimap-label">ARCHIVE / TOTAL MAP</div>
+            <svg id="minimap" viewBox="0 0 1000 720"><g id="miniEdges"></g><g id="miniNodes"></g></svg>
+          </div>
+          <div class="legend">
+            <span><i class="legend-shape canon"></i>CANON</span>
+            <span><i class="legend-shape world"></i>WORLD</span>
+            <span><i class="legend-shape schools"></i>SCHOOLS</span>
+            <span><i class="legend-shape glossary"></i>GLOSSARY</span>
+            <span><i class="legend-shape topography"></i>TOPOGRAPHY</span>
+          </div>
+        </section>
+
+        <article class="reader" id="reader">
+          <div class="reader-toolbar">
+            <div class="reader-identification">
+              <strong id="readerMuseumLabel">АРХИВ / БОГОБОТ</strong>
+              <span id="nodeCode">NODE / BOGOBOT</span>
+            </div>
+            <div class="reader-actions">
+              <button class="command small" id="closeReader" hidden>BACK TO MAP</button>
+              <button class="command small" id="previousTrace">← PREVIOUS OBJECT</button>
+              <button class="command small" id="nextTrace">NEXT OBJECT →</button>
+            </div>
+          </div>
+          <div class="reader-scroll">
+            <section class="guide-content" id="guideContent" aria-labelledby="guideTitle" hidden>
+              <h1 id="guideTitle">HOW TO READ</h1>
+              <ol class="guide-steps">
+                <li>Выберите узел на карте.</li>
+                <li>Прочитайте короткую версию материала.</li>
+                <li>Раскройте полный текст, если доступна кнопка <span class="guide-command">READ FULL ARTICLE</span>.</li>
+                <li>Продолжите через связанные материалы или <span class="guide-command">СЛЕДУЮЩИЙ ОБЪЕКТ</span>.</li>
+                <li><span class="guide-command">ВАШ МАРШРУТ</span> сохраняет путь; <span class="guide-command">НОВЫЙ МАРШРУТ</span> начинает его заново.</li>
+              </ol>
+              <div class="guide-divider" aria-hidden="true"></div>
+              <div class="guide-document source-document source-canonical" id="guideDocument"></div>
+            </section>
+            <div class="reader-primary-layout">
+              <div class="reader-title-flow">
+                <h1 id="nodeTitle">Богобот</h1>
+                <div class="bogobot-context-actions" id="bogobotContextActions" hidden aria-hidden="true" aria-label="BOGOBOT contextual action" data-reader-only="true">
+                  <button type="button" id="askGlasAction" hidden tabindex="-1" aria-hidden="true">ASK GLAS</button>
+                </div>
+              </div>
+              <div class="reader-content-flow" id="readerContentFlow">
+                <div class="node-meta">
+                  <span id="nodeType">SCHOOLS</span>
+                  <span id="nodeState">STATE: ACTIVE</span>
+                  <span id="nodeSourceStatus">SOURCE STATUS: CANON</span>
+                  <span id="nodeRecovery" hidden></span>
+                </div>
+                <p class="formula" id="nodeFormula"></p>
+                <figure class="archive-object" id="archiveObject" hidden>
+                  <div class="image-shell">
+                    <img id="nodeImage" src="" alt="" />
+                    <div class="scanline"></div>
+                  </div>
+                  <figcaption>
+                    <span id="imageCode"></span>
+                    <span id="imageState">SOURCE_STATUS: READING</span>
+                  </figcaption>
+                </figure>
+                <div class="preview-content" id="previewContent">
+                  <div class="node-body" id="nodeBody"></div>
+                  <button class="command read-full" id="readFull" aria-expanded="false">READ FULL ARTICLE →</button>
+                </div>
+                <section class="routes full-only">
+                  <div class="section-label">NEXT OBJECT / CHOOSE ROUTE</div>
+                  <div id="routeList"></div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <div class="glas-backdrop" id="glasBackdrop" hidden aria-hidden="true"></div>
+      <form class="bogobot-dialogue is-closed" id="bogobotDialogue" autocomplete="off" data-panel="expanded" data-answer-view="compact" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="GLAS">
+        <button type="button" class="bogobot-dialogue-close" id="bogobotDialogueClose" aria-label="Закрыть ГЛАС">ЗАКРЫТЬ ×</button>
+        <button type="button" class="bogobot-dialogue-toggle" id="bogobotDialogueToggle" aria-expanded="true">СПРОСИТЬ БОГОБОТА…</button>
+        <div class="bogobot-dialogue-body" id="bogobotDialogueBody">
+          <label for="bogobotQuestion">СПРОСИТЬ БОГОБОТА…</label>
+          <div class="bogobot-dialogue-input">
+            <input id="bogobotQuestion" type="text" placeholder="Что такое Великая Ошибка?" aria-describedby="bogobotDialogueState" />
+            <span id="bogobotDialogueState" class="bogobot-dialogue-state" aria-live="polite"></span>
+          </div>
+          <output id="bogobotAnswer" class="bogobot-answer" aria-live="polite" hidden></output>
+          <div id="bogobotNodeContext" class="bogobot-node-context" hidden>
+            <span id="bogobotNodeCode"></span>
+            <strong id="bogobotNodeTitle"></strong>
+          </div>
+          <div id="bogobotDialogueActions" class="bogobot-dialogue-actions" aria-label="Продолжить диалог" hidden></div>
+          <section id="bogobotSignals" class="bogobot-signals" aria-label="Предлагаемые сигналы">
+            <div id="bogobotSignalList" class="bogobot-signal-list"></div>
+            <button type="button" id="bogobotSignalsRefresh" class="bogobot-signals-refresh" aria-expanded="false" aria-controls="bogobotSignalList">ЕЩЁ СИГНАЛЫ ↓</button>
+            <button type="button" id="bogobotSignalsReturn" class="bogobot-signals-return" hidden>К СОХРАНЁННОМУ ГЛАСУ</button>
+          </section>
+        </div>
+      </form>
+
+      <footer class="tracebar" role="contentinfo">
+        <button type="button" class="trace-label" id="traceToggle" aria-expanded="false">МАРШРУТ · 1</button>
+        <div class="trace" id="trace"></div>
+        <button type="button" class="command small" id="resetButton">RESET TRACE</button>
+      </footer>
+    </div>
+
+    <dialog class="search-dialog search-palette" id="searchDialog" aria-label="Search results">
+      <div class="search-palette__panel" role="document">
+        <div class="search-palette__content" id="searchPaletteContent">
+          <div class="search-palette__section-label" id="searchResultsLabel">SUGGESTED</div>
+          <div class="search-results search-palette__results" id="searchResults" role="listbox" aria-labelledby="searchResultsLabel"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="system-modal" id="resetTraceDialog" aria-labelledby="resetTraceTitle" aria-describedby="resetTraceText">
+      <form method="dialog" class="system-modal-panel">
+        <h2 id="resetTraceTitle">RESET TRACE</h2>
+        <p id="resetTraceText">История исследования будет удалена.</p>
+        <div class="system-modal-actions">
+          <button type="button" class="command small" id="resetTraceCancel">CANCEL</button>
+          <button type="button" class="command small system-modal-danger" id="resetTraceConfirm">RESET</button>
+        </div>
+      </form>
+    </dialog>
+
+  <script type="module" src="app.js?v=r2-polish"></script>
+  </body>
+</html>

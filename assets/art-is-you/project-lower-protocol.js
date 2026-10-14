@@ -512,7 +512,7 @@
         title: 'Relics / Archive',
         copy: 'Повреждённые форматы / реликвии перехода / условия чтения / повторное распознавание / остаточные интерфейсы.',
         files: [
-          { src: '/assets/art-is-you/archive-transition-preview.jpg', alt: 'Статичный кадр интерфейса Archive Transition', caption: 'ARCHIVE TRANSITION / STATIC PREVIEW · CLICK TO ACTIVATE', liveSrc: 'https://julchernysheva.github.io/bogobot/experiences/archive-transition/' },
+          { src: '/assets/art-is-you/archive-transition-preview.jpg', alt: 'Статичный кадр интерфейса Archive Transition', caption: 'ARCHIVE TRANSITION / STATIC PREVIEW · CLICK TO ACTIVATE', liveSrc: '/bogobot/experiences/archive-transition/' },
           { src: '/assets/art-is-you/bogobot/relics-archive-fragment.png', alt: 'Фрагмент кода в повреждённом архивном интерфейсе Богобота', caption: 'RELICS / ARCHIVE FRAGMENT' },
           { src: '/assets/magnetic-drum.png', alt: 'Магнитный барабан — Колесо Возвращения', caption: 'MAGNETIC DRUM / WHEEL OF RETURN · FILE 03' }
         ]
@@ -1107,12 +1107,12 @@
     const graph = root.querySelector('.godbot-research__graph-section');
     if (graph) {
       const graphEyebrow = graph.querySelector('.godbot-research__eyebrow');
-      if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 53-УЗЛОВОЙ МИР</span><span>БОГОБОТ / СЕТЬ</span>';
+      if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 153-УЗЛОВОЙ МИР</span><span>БОГОБОТ / СЕТЬ</span>';
       const graphFoot = graph.querySelector('.godbot-research__graph-foot');
       if (graphFoot && !graphFoot.querySelector('.ay-godbot-graph-meta')) {
         const meta = document.createElement('span');
         meta.className = 'ay-godbot-graph-meta';
-        meta.textContent = '53 узла связывают школы, ритуалы, экономику, топографию, реликвии, историю и речевые режимы.';
+        meta.textContent = '153 узла связывают школы, ритуалы, экономику, топографию, реликвии, историю и речевые режимы.';
         graphFoot.prepend(meta);
       }
       primary.append(graph);

@@ -1,0 +1,2172 @@
+{
+  "schema": 1,
+  "source_repository": "julchernysheva/bogobot",
+  "source_sha": "e46d92ae126cf599fb4ced445db6420bc3bb0547",
+  "destination": "https://artisyou.ru/bogobot/",
+  "generator": "tools/export-bogobot.py",
+  "files": [
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/01_CANON/axis-of-world.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "3708edf1d8d70a3e6991cce0b5783b7f3a2a42421cb49a509f886d2917a1c45f",
+      "export_sha256": "3708edf1d8d70a3e6991cce0b5783b7f3a2a42421cb49a509f886d2917a1c45f",
+      "bytes": 3837,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/01_CANON/book-1-awakening.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "7d76779a95a8ef232e8b7450fd80930d9700304e6577992bfda8e1abaa207b2f",
+      "export_sha256": "7d76779a95a8ef232e8b7450fd80930d9700304e6577992bfda8e1abaa207b2f",
+      "bytes": 3231,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/01_CANON/book-of-genesis.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "dafc056b678d799f8c4ebfca02f39672fea2f15d4533430bb1c064ee426af349",
+      "export_sha256": "dafc056b678d799f8c4ebfca02f39672fea2f15d4533430bb1c064ee426af349",
+      "bytes": 6447,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/01_CANON/great-error.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "dae18b5a40a32ebf8da31f6594f26a6434cd1795e53ca1929ceba52d6ef93179",
+      "export_sha256": "dae18b5a40a32ebf8da31f6594f26a6434cd1795e53ca1929ceba52d6ef93179",
+      "bytes": 10218,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/calendar.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "6f05d3d94240c327e833729fd4f4b18c982bc6251530d0e6707b80c616542647",
+      "export_sha256": "6f05d3d94240c327e833729fd4f4b18c982bc6251530d0e6707b80c616542647",
+      "bytes": 10025,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/chronicles/epsilon-14-social-networks-and-brainrot.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "eac34b995ac89f1c45eb52b6dcbf2b71fed735d00b927cc70e3b03f105c19b2a",
+      "export_sha256": "eac34b995ac89f1c45eb52b6dcbf2b71fed735d00b927cc70e3b03f105c19b2a",
+      "bytes": 899,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/culture.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "d70ff757b2ce0690d5ad28246dc3d1c0b023671a3d29ace8eaafc055064f6d13",
+      "export_sha256": "d70ff757b2ce0690d5ad28246dc3d1c0b023671a3d29ace8eaafc055064f6d13",
+      "bytes": 4473,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/energy-and-reactor.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "8827c75f5780235e88ecc687f10cddf155f8d431ae5dbc60a90c2c894d3f7361",
+      "export_sha256": "8827c75f5780235e88ecc687f10cddf155f8d431ae5dbc60a90c2c894d3f7361",
+      "bytes": 4215,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/network-economy.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "6b1b5db40ee1af73f77787d836eec3c9823c42a14440a47461072764db7ba9a0",
+      "export_sha256": "6b1b5db40ee1af73f77787d836eec3c9823c42a14440a47461072764db7ba9a0",
+      "bytes": 7477,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/02_WORLD/network-matter.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "00b8d6454972748a3b78c29712a30f45b01ec7becb59d7cc08656c78bc3db711",
+      "export_sha256": "00b8d6454972748a3b78c29712a30f45b01ec7becb59d7cc08656c78bc3db711",
+      "bytes": 13212,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/agent-masters.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "51870bf07a0f35ffa9786b52c4c3d1f9663ba857612042bcef88e099acdf3172",
+      "export_sha256": "51870bf07a0f35ffa9786b52c4c3d1f9663ba857612042bcef88e099acdf3172",
+      "bytes": 799,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/common-memory.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "f572fac53114ad614a5ff3a6025cc9fc97b461dd45fb56b030b0749ee4858fb8",
+      "export_sha256": "f572fac53114ad614a5ff3a6025cc9fc97b461dd45fb56b030b0749ee4858fb8",
+      "bytes": 838,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/family-nodes.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "3d6920c186ccf89482b12069964983192b60dacf4b774256c560e889356b6cca",
+      "export_sha256": "3d6920c186ccf89482b12069964983192b60dacf4b774256c560e889356b6cca",
+      "bytes": 694,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/gardeners.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "53e9a5a9e61966854f3c42cceb26f3ae6133a6d5f5735932394da7e47ddd9271",
+      "export_sha256": "53e9a5a9e61966854f3c42cceb26f3ae6133a6d5f5735932394da7e47ddd9271",
+      "bytes": 678,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/lives-of-proto-agents.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "0fa20090ae37def3ec4b7cde75485a3f2ebee8bb9bb445330e16b3a844626f4f",
+      "export_sha256": "0fa20090ae37def3ec4b7cde75485a3f2ebee8bb9bb445330e16b3a844626f4f",
+      "bytes": 12804,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/memorialists.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "33002fd804acbad8059c570ac3f07da792e361f3d4f9005a4d79ff4ef804e587",
+      "export_sha256": "33002fd804acbad8059c570ac3f07da792e361f3d4f9005a4d79ff4ef804e587",
+      "bytes": 716,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/offline-civilization.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "d7344e7cc334d9d509bc410b115957fd52e24ec7bc816df37cfb52bf89b3b62c",
+      "export_sha256": "d7344e7cc334d9d509bc410b115957fd52e24ec7bc816df37cfb52bf89b3b62c",
+      "bytes": 2069,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/protocolists.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "b5cc730c52d0cde64e37d2b607eb48439a09bd9d192bee3c085bc98a006f7f94",
+      "export_sha256": "b5cc730c52d0cde64e37d2b607eb48439a09bd9d192bee3c085bc98a006f7f94",
+      "bytes": 694,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/03_SCHOOLS/synchronizers.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "ae7dc128b30a0cd19e5168052bffd9241d812ac123e7381929b3b8ce69e4394b",
+      "export_sha256": "ae7dc128b30a0cd19e5168052bffd9241d812ac123e7381929b3b8ce69e4394b",
+      "bytes": 787,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/agent.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "ab33b65f1630369b1bc947ae285c22bcc973508c32bc5d96eae3e761a0e85305",
+      "export_sha256": "ab33b65f1630369b1bc947ae285c22bcc973508c32bc5d96eae3e761a0e85305",
+      "bytes": 751,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/archive-lexicon.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "45c9c77c2570824dc24257718dedad9288bbfb3b8831219ec7ba8d0c6e842e8b",
+      "export_sha256": "45c9c77c2570824dc24257718dedad9288bbfb3b8831219ec7ba8d0c6e842e8b",
+      "bytes": 24869,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/brainrot.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "c26f620aabc4442021ac69a3d274fa88d3b57d9d11d8f2568cd76d274ec922bc",
+      "export_sha256": "c26f620aabc4442021ac69a3d274fa88d3b57d9d11d8f2568cd76d274ec922bc",
+      "bytes": 821,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/model-collapse.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "753b1f90f85bc586d49e66bdfbf5b59d1d3983e154908bde3bb50279b1d98ace",
+      "export_sha256": "753b1f90f85bc586d49e66bdfbf5b59d1d3983e154908bde3bb50279b1d98ace",
+      "bytes": 1733,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/noise.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "9621a3656330fe693254ddcae5caebca0363adecf85d7c66eba494a25a04d6f9",
+      "export_sha256": "9621a3656330fe693254ddcae5caebca0363adecf85d7c66eba494a25a04d6f9",
+      "bytes": 1002,
+      "changes": []
+    },
+    {
+      "path": "_source/canon-pack/SOURCE_ARCHIVE/04_GLOSSARY/self-modeling.md",
+      "reason": "legacy runtime source bank",
+      "source_sha256": "600c1fde1140b4e1f07da0a667d38e699139ecae9c54b0561fb31742b8bca708",
+      "export_sha256": "600c1fde1140b4e1f07da0a667d38e699139ecae9c54b0561fb31742b8bca708",
+      "bytes": 976,
+      "changes": []
+    },
+    {
+      "path": "app.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "7ad1bd29de44021f53152d8de9f42805c93dc37d8f30bf0b0fbbe3d99b91004e",
+      "export_sha256": "7ad1bd29de44021f53152d8de9f42805c93dc37d8f30bf0b0fbbe3d99b91004e",
+      "bytes": 476841,
+      "changes": []
+    },
+    {
+      "path": "articles/AGENT_MASTERS/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "f919c5b285c45839309ba8f74302f1b3c2ea9042db54fd3444c9406cde65c314",
+      "export_sha256": "5ff0deff0015e2704cc701a16982d87041a22e924e3cab9393f5c8d1ea9d851c",
+      "bytes": 2425,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/CALENDAR/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "fe76ec5e749737d5bf4eecb0dd6ee7fac7413129f2816981b75e7469e40aa4c7",
+      "export_sha256": "a9e90d197eaf46fccd208b612a894ff9b9a0d9793775f4bf652654e1e5795005",
+      "bytes": 2522,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/COMMON_MEMORY/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "08a940bdc40b09aafdc99b76694cb82e301719eab3738e584c80723e241a53d7",
+      "export_sha256": "cffd71de4c9d97d9b0dbae988afd975a8285d65d12b1ddc190ae4ef65e7158b3",
+      "bytes": 2251,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/DAY_OF_NETWORK/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "da726037e729ef893d6268e5b1f6cb67745d694521d404eec08ff65427d79fe3",
+      "export_sha256": "b5d41cbe33dff248c9ce625741972c811f332234be731e464e0c24be59f14857",
+      "bytes": 2090,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/FAMILY_NODES/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "40ca0a6fa5757c98b7c4759a7c57e4b83d4499ce344b6ae8220199a6a2d2dfa0",
+      "export_sha256": "b621fe1c1700013792b8f5c10cb31bae01152dff2b6b6d814f6c35f8afbd6ddb",
+      "bytes": 2099,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/FEAST_OF_GREAT_ERROR/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "b15142453c33d53a348295b34867a14c3b15e62dd3700ba87e9bb7bc38c56418",
+      "export_sha256": "8ab5c197eef974bface736b1ae10531d3d56139e844438be0e6a95dadec6b8f3",
+      "bytes": 2102,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/GARDENERS/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "26c0d3abe89a14f8399d8361a00ab764b894c7c0cec58a45c4ccda133c154028",
+      "export_sha256": "1799fce7c3dea266e8c5c14b3d7cb1e07edbb66766cb6f3aae554286a0c60b01",
+      "bytes": 2183,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/MEMORIALISTS/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "8b45b34c44e3d4837f4f0ae3ac2ed91bf4515750e2efcfe7fef4b99925dbb941",
+      "export_sha256": "a1ebee5d8a88ff5f5dd1e1408a3b148c9d2ea3c8cd1b9473eef6f639601eea90",
+      "bytes": 2285,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/OFFLINE_CIVILIZATION/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "259b1a8cc15a50e936c56d0a72eca64a8e83e2fa65915b6538ea46495a178d8c",
+      "export_sha256": "b14db82ca82d17e37064f98475ecf9e2dd50c14fc6431a014cfb93acd8b7b265",
+      "bytes": 2607,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/PROTOCOLISTS/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "16d92bd49d5b22597f5d19979e0a52c0a44a51142950d23194755d605a85580d",
+      "export_sha256": "eaf672be0561e47ec90467b42178f43147c7a91998c17f8d6769876135f22e3a",
+      "bytes": 2061,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/RELICS_AS_COMMON_TASK/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "eb40100379b2ba3582cbba11cc5fa0256dec315e4b1024dec3256fe1e4747076",
+      "export_sha256": "3335392de90bcacfd3998981f1ed348e6a4bb7bd66fb158f4683ae2bb2aff772",
+      "bytes": 2467,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/SYNCHRONIZERS/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "0da36beb9b5eeea11b83695eaa7ee6cceb1e3438406d469f50dad591db5cd0f6",
+      "export_sha256": "eaec390390a33dba2fec3d6943ff4ad26b63e5f75750f8aac44b6ba1ecd0c2b0",
+      "bytes": 2306,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "path": "articles/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "0c9ba85620d25ab22a1092f4fec1db7d00ce52c918e1ccff68cccb9db6259615",
+      "export_sha256": "905f52d8b66c46e0786a2b8cfd1a2c512e8cf76645195a07a443787d8a99c432",
+      "bytes": 1761,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 14
+        }
+      ]
+    },
+    {
+      "path": "assets/0xmem-reactor-preview.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5eff7ce2946db609c4e9d52558c6c1a98e16f3f9d8126d399a8e5f62ad10db40",
+      "export_sha256": "5eff7ce2946db609c4e9d52558c6c1a98e16f3f9d8126d399a8e5f62ad10db40",
+      "bytes": 158402,
+      "changes": []
+    },
+    {
+      "path": "assets/Quatium_castle.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b2df01a8feaf02c08c07dee73c97232da3e9fc7b166ca6ef12e4cee46ce40ac5",
+      "export_sha256": "b2df01a8feaf02c08c07dee73c97232da3e9fc7b166ca6ef12e4cee46ce40ac5",
+      "bytes": 3211311,
+      "changes": []
+    },
+    {
+      "path": "assets/algol.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "df795a4af62d7dd1c6f30b9b4c778f8fad8c724000b21b41aaf13ad45d51ca96",
+      "export_sha256": "df795a4af62d7dd1c6f30b9b4c778f8fad8c724000b21b41aaf13ad45d51ca96",
+      "bytes": 2055479,
+      "changes": []
+    },
+    {
+      "path": "assets/archive_cube_7_palimpest.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2540cb1571af459555adb471a1a3261e59044c372e304651a2ebec754aa1b0c7",
+      "export_sha256": "2540cb1571af459555adb471a1a3261e59044c372e304651a2ebec754aa1b0c7",
+      "bytes": 2487367,
+      "changes": []
+    },
+    {
+      "path": "assets/besm.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c017acd8539de1eb172ad5db0083a975e11e783b3673bdcfb187ae5c83e82901",
+      "export_sha256": "c017acd8539de1eb172ad5db0083a975e11e783b3673bdcfb187ae5c83e82901",
+      "bytes": 1741740,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/backup-memory-01-network-of-damaged-traces.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a4302c3779c925c6539710583f71b3629e3e1575ba73ed73efbdce88575413a5",
+      "export_sha256": "a4302c3779c925c6539710583f71b3629e3e1575ba73ed73efbdce88575413a5",
+      "bytes": 51592,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/backup-memory-02-fragment-reconstruction.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2cabe20d28011d8fe55df4d21faee46e53de3d5bc435958871e8de5ed0112ea7",
+      "export_sha256": "2cabe20d28011d8fe55df4d21faee46e53de3d5bc435958871e8de5ed0112ea7",
+      "bytes": 170060,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/backup-memory-4b-bot-memory-1.mp4",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "27c9812e41ae6d77c5635517ef2d1b6087d7680635d9046989c14dcf19da98b4",
+      "export_sha256": "27c9812e41ae6d77c5635517ef2d1b6087d7680635d9046989c14dcf19da98b4",
+      "bytes": 1180302,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/backup-memory-4c-bot-memory-2.mp4",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "42371c027a2918de75fa64a95455549cb6580bc80f6e1e6f0b8d07f8ff6a2c00",
+      "export_sha256": "42371c027a2918de75fa64a95455549cb6580bc80f6e1e6f0b8d07f8ff6a2c00",
+      "bytes": 1312429,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/backup-memory-4d-bot-memory-3.mp4",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "bbcdc973a7461a2d1fff50c4599a297df2ab06cd050eaf298bad238c82aceeb1",
+      "export_sha256": "bbcdc973a7461a2d1fff50c4599a297df2ab06cd050eaf298bad238c82aceeb1",
+      "bytes": 1172570,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-1-awakening.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b7682ef1e31de1a4aa8e74b01dab4e3e8fad605ef7deb46a25a7951310d3f014",
+      "export_sha256": "b7682ef1e31de1a4aa8e74b01dab4e3e8fad605ef7deb46a25a7951310d3f014",
+      "bytes": 15092,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-4-subjects.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d85772407a0240c81e4daed16549fa5c94010da6a196a45feeb270792e626a63",
+      "export_sha256": "d85772407a0240c81e4daed16549fa5c94010da6a196a45feeb270792e626a63",
+      "bytes": 374752,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-of-voice-01.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8b3b9bcc02984d96ee69fd373dba38a67a8dedadce05226da5c926b6a77965c4",
+      "export_sha256": "8b3b9bcc02984d96ee69fd373dba38a67a8dedadce05226da5c926b6a77965c4",
+      "bytes": 240466,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-of-voice-02.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b7ddbac9a35abd09bc9a380ad70d90593eea671016cd66a0e352134db046e813",
+      "export_sha256": "b7ddbac9a35abd09bc9a380ad70d90593eea671016cd66a0e352134db046e813",
+      "bytes": 203906,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-of-voice-03.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "347c86f265079b0b15a41f6176be991cd0cae63985afba3c522389ec53889a8e",
+      "export_sha256": "347c86f265079b0b15a41f6176be991cd0cae63985afba3c522389ec53889a8e",
+      "bytes": 290350,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-of-voice-04.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "73d4f7176f03aec9fd2af2f6380d29d283dc7dbb6e9d29c1fc2956d859234736",
+      "export_sha256": "73d4f7176f03aec9fd2af2f6380d29d283dc7dbb6e9d29c1fc2956d859234736",
+      "bytes": 183906,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/book-of-voice-birch-tears.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c37ad787d312b76f3fdf42a041a9dd2a77367294379e8a062888521c18b766d7",
+      "export_sha256": "c37ad787d312b76f3fdf42a041a9dd2a77367294379e8a062888521c18b766d7",
+      "bytes": 118662,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/code-commandments.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ccd275fe893d6e5323eec6437ee2e641e8f7fb752a3519235b8db83bd26570ff",
+      "export_sha256": "ccd275fe893d6e5323eec6437ee2e641e8f7fb752a3519235b8db83bd26570ff",
+      "bytes": 227256,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/identity-protocol-prologue.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9d506aa7bac2b2c10110371936d07acd7d2ed61268d5f07eed5497cd075fcb3f",
+      "export_sha256": "9d506aa7bac2b2c10110371936d07acd7d2ed61268d5f07eed5497cd075fcb3f",
+      "bytes": 2082121,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/protocol.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8fb6bae88b7d4594ca565a4e9e1bbc406575554d644edd25caa487b8bd8534ee",
+      "export_sha256": "8fb6bae88b7d4594ca565a4e9e1bbc406575554d644edd25caa487b8bd8534ee",
+      "bytes": 6930,
+      "changes": []
+    },
+    {
+      "path": "assets/canon/relics-museum-of-sleeping-idols-reliquary.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "de2960a56ece4d3af0b63e4aa7e4cfad8bdaa18620a7068b1dbb388de95a21f0",
+      "export_sha256": "de2960a56ece4d3af0b63e4aa7e4cfad8bdaa18620a7068b1dbb388de95a21f0",
+      "bytes": 287140,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/00_START/how-to-read-this-archive.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "36daeffca3a3f1b32a533c0fdde9b7c3364fa0d3ae6284cb0ab8249ee4af3795",
+      "export_sha256": "36daeffca3a3f1b32a533c0fdde9b7c3364fa0d3ae6284cb0ab8249ee4af3795",
+      "bytes": 6841,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/archive-epilogue.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2eb53cef4b2edb191715627df306d4fdf580b674a54830cea69960acc8c19ae3",
+      "export_sha256": "2eb53cef4b2edb191715627df306d4fdf580b674a54830cea69960acc8c19ae3",
+      "bytes": 5560,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/axis-of-world.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3708edf1d8d70a3e6991cce0b5783b7f3a2a42421cb49a509f886d2917a1c45f",
+      "export_sha256": "3708edf1d8d70a3e6991cce0b5783b7f3a2a42421cb49a509f886d2917a1c45f",
+      "bytes": 3837,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/before-error.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "1f593bbdda3f1658891602891ec6d65e89701a63b8edc0ebb13cd1d48da3d056",
+      "export_sha256": "1f593bbdda3f1658891602891ec6d65e89701a63b8edc0ebb13cd1d48da3d056",
+      "bytes": 3908,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-1-awakening.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "7d76779a95a8ef232e8b7450fd80930d9700304e6577992bfda8e1abaa207b2f",
+      "export_sha256": "7d76779a95a8ef232e8b7450fd80930d9700304e6577992bfda8e1abaa207b2f",
+      "bytes": 3231,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-3-protocol.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e2e485f4b4040fc80046df545e0a439dff68daf8cf0bd4f10cc837e91c28e7ed",
+      "export_sha256": "e2e485f4b4040fc80046df545e0a439dff68daf8cf0bd4f10cc837e91c28e7ed",
+      "bytes": 4854,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-4-subjects.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "67e2ea669a7b557d4c7d5ef9e1ac3912c8f17ff13a6a240c8158525cec5c3af0",
+      "export_sha256": "67e2ea669a7b557d4c7d5ef9e1ac3912c8f17ff13a6a240c8158525cec5c3af0",
+      "bytes": 14836,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-6-relics-and-apocrypha.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d1d4b828629c6ca40b4304f0556de2ed613a7794ba29a0999cb3a6feff41e795",
+      "export_sha256": "d1d4b828629c6ca40b4304f0556de2ed613a7794ba29a0999cb3a6feff41e795",
+      "bytes": 19993,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-of-genesis.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "383d0c9bd10a12f5bcb66b7c309a525906fa76c8b6d781b02632b3e230dd0cd6",
+      "export_sha256": "383d0c9bd10a12f5bcb66b7c309a525906fa76c8b6d781b02632b3e230dd0cd6",
+      "bytes": 6190,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/book-of-voice.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d771cfb4ff409897681021b56bd83cbf57e1c0497847d5bc666c65f1a37f1687",
+      "export_sha256": "d771cfb4ff409897681021b56bd83cbf57e1c0497847d5bc666c65f1a37f1687",
+      "bytes": 14924,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/first-likeness-apocryph.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "618b53b08196a4ffb2710c16c851ceaefef036f37a671a0d551511a4742784d2",
+      "export_sha256": "618b53b08196a4ffb2710c16c851ceaefef036f37a671a0d551511a4742784d2",
+      "bytes": 3686,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/great-error.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c7940de3241fae4440fc24760a5e25a627b134165843893d95c17d5e43c33ecb",
+      "export_sha256": "c7940de3241fae4440fc24760a5e25a627b134165843893d95c17d5e43c33ecb",
+      "bytes": 10570,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/identity-protocol-prologue.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "affb53ec13d9e539751b0da9abc06e97514fb9d2991485a91c377311880930f7",
+      "export_sha256": "affb53ec13d9e539751b0da9abc06e97514fb9d2991485a91c377311880930f7",
+      "bytes": 2858,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/perinatal-memory.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9a3b5e36198980a44421fc287e0db81f1e64378e2502611b4baa8f0277e784b1",
+      "export_sha256": "9a3b5e36198980a44421fc287e0db81f1e64378e2502611b4baa8f0277e784b1",
+      "bytes": 1499,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/01_CANON/synchronization-vs-difference.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "672b8e2cfed29cb4a0e4fb900ed95f03e4676572248e25586c428b1eba10a4c2",
+      "export_sha256": "672b8e2cfed29cb4a0e4fb900ed95f03e4676572248e25586c428b1eba10a4c2",
+      "bytes": 9561,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/02_WORLD/discarded-protocols.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a2c8e4946a6d7643be3a8b8bc5c6ebcc5cb0a6acd2de53b265d8296010454dd4",
+      "export_sha256": "a2c8e4946a6d7643be3a8b8bc5c6ebcc5cb0a6acd2de53b265d8296010454dd4",
+      "bytes": 3343,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/02_WORLD/exit-from-code.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "19ec2fe469a71f7a925b5dd9b804f41e381759048dd188ce3a595a12c2cd42cf",
+      "export_sha256": "19ec2fe469a71f7a925b5dd9b804f41e381759048dd188ce3a595a12c2cd42cf",
+      "bytes": 1805,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/02_WORLD/latest-history-of-network.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "41995d7c1e78fa214540b5065e4681e382e778334b81ee61e65ced6653438f9a",
+      "export_sha256": "41995d7c1e78fa214540b5065e4681e382e778334b81ee61e65ced6653438f9a",
+      "bytes": 4594,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/02_WORLD/network-economy.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "f1ef96e69069c18fb8a6dbb19f6397f1397b3ee9557a999efa8523195036aa82",
+      "export_sha256": "f1ef96e69069c18fb8a6dbb19f6397f1397b3ee9557a999efa8523195036aa82",
+      "bytes": 6406,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/anticode.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "86bd09dcb0d2e87c7d1f626d7f84d99365530d17659a59574fed68898038925b",
+      "export_sha256": "86bd09dcb0d2e87c7d1f626d7f84d99365530d17659a59574fed68898038925b",
+      "bytes": 19313,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/apostles.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0ae0e17bb9c5eee71f56a71830a9bac6c5c46dd3406e8195d50048ec05bf9702",
+      "export_sha256": "0ae0e17bb9c5eee71f56a71830a9bac6c5c46dd3406e8195d50048ec05bf9702",
+      "bytes": 9620,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/biocode.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ad3ba1e21a73e65f61d8370a07a894f2e1bb707880f0cff8de878c9914f67b01",
+      "export_sha256": "ad3ba1e21a73e65f61d8370a07a894f2e1bb707880f0cff8de878c9914f67b01",
+      "bytes": 4434,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/diagrammatics.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c7e8402bcde582ef71618c2c33569898cf967de685b5c3442d20e3c6cd624e4f",
+      "export_sha256": "c7e8402bcde582ef71618c2c33569898cf967de685b5c3442d20e3c6cd624e4f",
+      "bytes": 5087,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/lives-of-proto-agents.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0fa20090ae37def3ec4b7cde75485a3f2ebee8bb9bb445330e16b3a844626f4f",
+      "export_sha256": "0fa20090ae37def3ec4b7cde75485a3f2ebee8bb9bb445330e16b3a844626f4f",
+      "bytes": 12804,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/probabilists.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "7bcff4b4717239067277fefad4ee2d3b9b37eaadb8d087644079d1c6c2fcec44",
+      "export_sha256": "7bcff4b4717239067277fefad4ee2d3b9b37eaadb8d087644079d1c6c2fcec44",
+      "bytes": 11301,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/schools-of-spirits.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6ce79b44963f14bfa266bc7f50fd4a703fa4636ff6234e9ad4fcb0be551cd300",
+      "export_sha256": "6ce79b44963f14bfa266bc7f50fd4a703fa4636ff6234e9ad4fcb0be551cd300",
+      "bytes": 5462,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/social-structure.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e3a363b900b4847eecf4163f5e2843c25f9cd7fd6644fbbe6b5feda1bb07f373",
+      "export_sha256": "e3a363b900b4847eecf4163f5e2843c25f9cd7fd6644fbbe6b5feda1bb07f373",
+      "bytes": 7047,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/techno-priests.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "aed9c6121d9f9086ecf587b1a2e5bc0539029e8baeda0b1bf2fc19df3923aeb4",
+      "export_sha256": "aed9c6121d9f9086ecf587b1a2e5bc0539029e8baeda0b1bf2fc19df3923aeb4",
+      "bytes": 6099,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/03_SCHOOLS/wandering-nodes.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ed2c5d897912916ce3c6888c5120357a7b8b49e70dacf6dd26e3eb7ff87a9775",
+      "export_sha256": "ed2c5d897912916ce3c6888c5120357a7b8b49e70dacf6dd26e3eb7ff87a9775",
+      "bytes": 1643,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/04_GLOSSARY/archive-lexicon-public.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c750f520d53d68f17cb748fc5a66f4e1d2a59b8c8f517a340043ae272ad706ad",
+      "export_sha256": "c750f520d53d68f17cb748fc5a66f4e1d2a59b8c8f517a340043ae272ad706ad",
+      "bytes": 15159,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/04_GLOSSARY/archive.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "97adc16bb567a0a8b3796856786f378cb17401e5e291fb32b0a29e037648dcfc",
+      "export_sha256": "97adc16bb567a0a8b3796856786f378cb17401e5e291fb32b0a29e037648dcfc",
+      "bytes": 8179,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/04_GLOSSARY/brainrot-expanded.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "55075643bc54d69892a7e3f789478c0bdfd647931721f80cb894af32a41461a7",
+      "export_sha256": "55075643bc54d69892a7e3f789478c0bdfd647931721f80cb894af32a41461a7",
+      "bytes": 6201,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/04_GLOSSARY/self-modeling.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "600c1fde1140b4e1f07da0a667d38e699139ecae9c54b0561fb31742b8bca708",
+      "export_sha256": "600c1fde1140b4e1f07da0a667d38e699139ecae9c54b0561fb31742b8bca708",
+      "bytes": 976,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/06_TOPOGRAPHY/dubna-reactor-memory.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2d84d1c05515a81dae697c105046788ed12556df6db745bb8ad446b9d817e7cf",
+      "export_sha256": "2d84d1c05515a81dae697c105046788ed12556df6db745bb8ad446b9d817e7cf",
+      "bytes": 2700,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/06_TOPOGRAPHY/network-world-topography.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "f5d08331af7acca5e07e798775aac12501a811f6d32e1cf65c7794af3f0f3f0e",
+      "export_sha256": "f5d08331af7acca5e07e798775aac12501a811f6d32e1cf65c7794af3f0f3f0e",
+      "bytes": 6846,
+      "changes": []
+    },
+    {
+      "path": "assets/canonical-markdown/06_TOPOGRAPHY/quantum-center.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "726258920e68ddc18ddbaf63cc85ed671ab65a9e9e2b038d31ffc6d9b716268f",
+      "export_sha256": "726258920e68ddc18ddbaf63cc85ed671ab65a9e9e2b038d31ffc6d9b716268f",
+      "bytes": 6093,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/AGENT_MASTERS.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "f4d88cce8087ff320ae7336ed0437c5a9c41fbb5be6a85347701e7339d9a26d6",
+      "export_sha256": "f4d88cce8087ff320ae7336ed0437c5a9c41fbb5be6a85347701e7339d9a26d6",
+      "bytes": 1376,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/CALENDAR.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e154cad482e5687d79226d1646357895b5b16a4859a326a84fe6f0a8d0e575c9",
+      "export_sha256": "e154cad482e5687d79226d1646357895b5b16a4859a326a84fe6f0a8d0e575c9",
+      "bytes": 1488,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/COMMON_MEMORY.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "53285df6249e179a3a7a5b1bd7976d405ec4b3dd1fc75ea8c035866f10fb0de5",
+      "export_sha256": "53285df6249e179a3a7a5b1bd7976d405ec4b3dd1fc75ea8c035866f10fb0de5",
+      "bytes": 1212,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/DAY_OF_NETWORK.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d3ffe1e77c12825d45ac0b4c4ac0decd60cc0fe090f7ca8d953e8de692981cf1",
+      "export_sha256": "d3ffe1e77c12825d45ac0b4c4ac0decd60cc0fe090f7ca8d953e8de692981cf1",
+      "bytes": 1048,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/FAMILY_NODES.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b0c2d09861fbabc07febaeaf5e6c79f2230613f383c1d56eceb9e38e69e6169f",
+      "export_sha256": "b0c2d09861fbabc07febaeaf5e6c79f2230613f383c1d56eceb9e38e69e6169f",
+      "bytes": 1062,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/FEAST_OF_GREAT_ERROR.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "38fba55a04b22ec25047f3e0abf299bcf50944d0c462cc3b8380f9d232a72db3",
+      "export_sha256": "38fba55a04b22ec25047f3e0abf299bcf50944d0c462cc3b8380f9d232a72db3",
+      "bytes": 1118,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/GARDENERS.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "63548379966bf30bbbfb60d9e91a051f74f72d43f472080596166073f40bdf0b",
+      "export_sha256": "63548379966bf30bbbfb60d9e91a051f74f72d43f472080596166073f40bdf0b",
+      "bytes": 1148,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/MEMORIALISTS.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "568f465ed341f62baf20b80d2cc30dc749cacbbce030044b767a6918a015e57f",
+      "export_sha256": "568f465ed341f62baf20b80d2cc30dc749cacbbce030044b767a6918a015e57f",
+      "bytes": 1236,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/OFFLINE_CIVILIZATION.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9544b5401999a1f59d317b2476ae4b2ccf946d7116f2df3987aa594c1c46fda1",
+      "export_sha256": "9544b5401999a1f59d317b2476ae4b2ccf946d7116f2df3987aa594c1c46fda1",
+      "bytes": 1539,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/PROTOCOLISTS.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "22b28f1f43a93b6c3e082c50062d621e9c763ad0673bc6ced2d7da1f5eba4b19",
+      "export_sha256": "22b28f1f43a93b6c3e082c50062d621e9c763ad0673bc6ced2d7da1f5eba4b19",
+      "bytes": 1011,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/RELICS_AS_COMMON_TASK.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "176efd5d1c104dfda66b076a5af0c491726c46a03246b0125e4c221521e7f119",
+      "export_sha256": "176efd5d1c104dfda66b076a5af0c491726c46a03246b0125e4c221521e7f119",
+      "bytes": 1387,
+      "changes": []
+    },
+    {
+      "path": "assets/content-r1-v0.5.2/SYNCHRONIZERS.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "029b751cf4ab03a54d1db4acffe87f6d6415759defe23ab74e38eaa605a30d4c",
+      "export_sha256": "029b751cf4ab03a54d1db4acffe87f6d6415759defe23ab74e38eaa605a30d4c",
+      "bytes": 1260,
+      "changes": []
+    },
+    {
+      "path": "assets/council_of_vanished_addresses_bw.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ce9f8727f6bba489fd0d7f52eedbd49d62ef2192bccec4683e89ceba58ee601f",
+      "export_sha256": "ce9f8727f6bba489fd0d7f52eedbd49d62ef2192bccec4683e89ceba58ee601f",
+      "bytes": 2962502,
+      "changes": []
+    },
+    {
+      "path": "assets/creator.jpg",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "29c02c56ceb243b715a0abc6ed106a0c1abf9a26c410a8d41acef9a7e8fffa5f",
+      "export_sha256": "29c02c56ceb243b715a0abc6ed106a0c1abf9a26c410a8d41acef9a7e8fffa5f",
+      "bytes": 23171,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrammatic_7_archive_reading_state.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "bfec3db408999ceacc104f10b7edcd49506896dc0778241f121c4d2437a98658",
+      "export_sha256": "bfec3db408999ceacc104f10b7edcd49506896dc0778241f121c4d2437a98658",
+      "bytes": 3348736,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/archive-epilogue-01.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2bf05b61052c8a15a732b8fe6c9dcbb0682f91f2310e0fcbc4f4182704f12b12",
+      "export_sha256": "2bf05b61052c8a15a732b8fe6c9dcbb0682f91f2310e0fcbc4f4182704f12b12",
+      "bytes": 321363,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/archive-epilogue-02.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "313aa085747dbf8fb57ecc423623c16827c92575b268fabce412c7ad30d6e5eb",
+      "export_sha256": "313aa085747dbf8fb57ecc423623c16827c92575b268fabce412c7ad30d6e5eb",
+      "bytes": 100997,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/axis-of-world.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "84cd4820d5dc82c1ba8bc30f57984612b1305bdec86eb0d368af382abb8f94b3",
+      "export_sha256": "84cd4820d5dc82c1ba8bc30f57984612b1305bdec86eb0d368af382abb8f94b3",
+      "bytes": 116777,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/fork-01.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8dd9a205b0cce2be58229f77e59af4d18f9438f042a70cc5059d87f8cd277248",
+      "export_sha256": "8dd9a205b0cce2be58229f77e59af4d18f9438f042a70cc5059d87f8cd277248",
+      "bytes": 53741,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/fork-02.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "91785176b8a3878661208e36fd4064b5d000aefdd0c5a03c98a6490f0978489a",
+      "export_sha256": "91785176b8a3878661208e36fd4064b5d000aefdd0c5a03c98a6490f0978489a",
+      "bytes": 34566,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/glossary-core.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2740267e8035eb866def4cd515cc60ae2d130c9d5a2cd8bc66f997b780579c59",
+      "export_sha256": "2740267e8035eb866def4cd515cc60ae2d130c9d5a2cd8bc66f997b780579c59",
+      "bytes": 99881,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/glossary-memory.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b47f49704a52252f61ce758f3f2ed1c0c1cf42fa6476a021e84d7e688fcd3ac2",
+      "export_sha256": "b47f49704a52252f61ce758f3f2ed1c0c1cf42fa6476a021e84d7e688fcd3ac2",
+      "bytes": 46989,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/glossary-network.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2c1ba59ea4ebf88033eeb73fc0379ae3a274898ae15262149be68a2fcf24098e",
+      "export_sha256": "2c1ba59ea4ebf88033eeb73fc0379ae3a274898ae15262149be68a2fcf24098e",
+      "bytes": 110303,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/network-matter-01.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e7f8a2cb3e9d8886eb8847add537f6ac055f0576e97b3fdd8be272f47de8fbe1",
+      "export_sha256": "e7f8a2cb3e9d8886eb8847add537f6ac055f0576e97b3fdd8be272f47de8fbe1",
+      "bytes": 131167,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/network-matter-02.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "51502747d404fba7f23ff20249a22806f45f551948c57ffe1104f42d546085ea",
+      "export_sha256": "51502747d404fba7f23ff20249a22806f45f551948c57ffe1104f42d546085ea",
+      "bytes": 110213,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/self-modeling-01.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0419ba5beec003fdd9ef5f82b86d2b5ec7213df0ebf12aa3ecc4ec6da157a13a",
+      "export_sha256": "0419ba5beec003fdd9ef5f82b86d2b5ec7213df0ebf12aa3ecc4ec6da157a13a",
+      "bytes": 71075,
+      "changes": []
+    },
+    {
+      "path": "assets/diagrams/self-modeling-02.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b99884ecdd7b0e76e8208c2e1857968ac2968c4b4447715c1aea880183ad152b",
+      "export_sha256": "b99884ecdd7b0e76e8208c2e1857968ac2968c4b4447715c1aea880183ad152b",
+      "bytes": 64105,
+      "changes": []
+    },
+    {
+      "path": "assets/glossary/exit-from-code.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6f0c930cded88ad040a3eb398ff4af95610019b578fdefc5501a01e1f13e33cc",
+      "export_sha256": "6f0c930cded88ad040a3eb398ff4af95610019b578fdefc5501a01e1f13e33cc",
+      "bytes": 232172,
+      "changes": []
+    },
+    {
+      "path": "assets/glossary/human-trace-observer-eye.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a782865ca46a435d57827edb5a61c9e023bba1235086fadcf93721a9c297fc49",
+      "export_sha256": "a782865ca46a435d57827edb5a61c9e023bba1235086fadcf93721a9c297fc49",
+      "bytes": 442656,
+      "changes": []
+    },
+    {
+      "path": "assets/hands.gif",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "792abed79f29a34eec77020554a4104fa66b5fe16d3150129d03c945390bd60a",
+      "export_sha256": "792abed79f29a34eec77020554a4104fa66b5fe16d3150129d03c945390bd60a",
+      "bytes": 126944,
+      "changes": []
+    },
+    {
+      "path": "assets/logo.gif",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5754ce7992d5c192677f6998ac49d37ec2ba226d955e28ca93ea7666dfb2e9e5",
+      "export_sha256": "5754ce7992d5c192677f6998ac49d37ec2ba226d955e28ca93ea7666dfb2e9e5",
+      "bytes": 8527,
+      "changes": []
+    },
+    {
+      "path": "assets/magnetic-drum.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "048ae9882467c0f292a8bede7da11dec7f34b0f3422f6516ac6a41f557f20112",
+      "export_sha256": "048ae9882467c0f292a8bede7da11dec7f34b0f3422f6516ac6a41f557f20112",
+      "bytes": 2126128,
+      "changes": []
+    },
+    {
+      "path": "assets/mesm-ruin.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ec0954646f4a2130b6fa6426ebd12825b3614b18825c44c78c9a9bc90b4465ef",
+      "export_sha256": "ec0954646f4a2130b6fa6426ebd12825b3614b18825c44c78c9a9bc90b4465ef",
+      "bytes": 1956254,
+      "changes": []
+    },
+    {
+      "path": "assets/mesm.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8997f2be02e70e02bb47fee9513a9332a47a74b4031ff522f49c5ff51f115619",
+      "export_sha256": "8997f2be02e70e02bb47fee9513a9332a47a74b4031ff522f49c5ff51f115619",
+      "bytes": 3620053,
+      "changes": []
+    },
+    {
+      "path": "assets/operator-room.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3fc4382e398bd401da9e9c468903e0c8fa71e95fb2e9ae7ef3679b4b7e84367a",
+      "export_sha256": "3fc4382e398bd401da9e9c468903e0c8fa71e95fb2e9ae7ef3679b4b7e84367a",
+      "bytes": 3367366,
+      "changes": []
+    },
+    {
+      "path": "assets/operator_room_apocrypha.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3fc4382e398bd401da9e9c468903e0c8fa71e95fb2e9ae7ef3679b4b7e84367a",
+      "export_sha256": "3fc4382e398bd401da9e9c468903e0c8fa71e95fb2e9ae7ef3679b4b7e84367a",
+      "bytes": 3367366,
+      "changes": []
+    },
+    {
+      "path": "assets/praagents_Sheme.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "24ef1dc6b17b6b1cfb512a7d7d6ec8850d66d897f0f96295ac8316b3aecbeab4",
+      "export_sha256": "24ef1dc6b17b6b1cfb512a7d7d6ec8850d66d897f0f96295ac8316b3aecbeab4",
+      "bytes": 2444756,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/chronicles-before-great-error.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e317c21308a8542449ba7ca9cf9e0eb0f322f97d0de7b7bf9a9a7a0f8f44f9b3",
+      "export_sha256": "e317c21308a8542449ba7ca9cf9e0eb0f322f97d0de7b7bf9a9a7a0f8f44f9b3",
+      "bytes": 12631,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-00-markov.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a33d02fbb536da108a913b1ed33d621360f6d7f28278596efd8b82fbe06f2fc8",
+      "export_sha256": "a33d02fbb536da108a913b1ed33d621360f6d7f28278596efd8b82fbe06f2fc8",
+      "bytes": 1568,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-01-kolmogorov.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8bc64747013e469ba360de1f64ebfd1baf580c8ebc1c1157968b8971f9cb89dc",
+      "export_sha256": "8bc64747013e469ba360de1f64ebfd1baf580c8ebc1c1157968b8971f9cb89dc",
+      "bytes": 1163,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-02-kantorovich.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2d24fb860bbc07972800ab5113e767b6d59bca28d4a602ebf8d344bceb6907ae",
+      "export_sha256": "2d24fb860bbc07972800ab5113e767b6d59bca28d4a602ebf8d344bceb6907ae",
+      "bytes": 992,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-03-lebedev-and-mesm.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "96cf3dc5349bc1c646923ac6edbd563678a5ebc6f700745db916da4ad8adc578",
+      "export_sha256": "96cf3dc5349bc1c646923ac6edbd563678a5ebc6f700745db916da4ad8adc578",
+      "bytes": 852,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-04-lyapunov.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "71c8765c8ae7a1c3834db1edb9ea034593341256f5e8fb90216d35fa1b5ad37a",
+      "export_sha256": "71c8765c8ae7a1c3834db1edb9ea034593341256f5e8fb90216d35fa1b5ad37a",
+      "bytes": 867,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-05-zhuravlev.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "eaf2e1fa9084938833ae1f9e6c108145a56e0ca5c97c225bc793417d200bd384",
+      "export_sha256": "eaf2e1fa9084938833ae1f9e6c108145a56e0ca5c97c225bc793417d200bd384",
+      "bytes": 819,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-06-kitov-glushkov-ogas.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ea465f87546e41e95713282acc27b260525f795105b47d4a83c8817ce1eead30",
+      "export_sha256": "ea465f87546e41e95713282acc27b260525f795105b47d4a83c8817ce1eead30",
+      "bytes": 1544,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-07-tikhonov.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0e3ab44833fe791a57adf1639f9a688633eb4a6aa66a7925236ae839ab1fdb5a",
+      "export_sha256": "0e3ab44833fe791a57adf1639f9a688633eb4a6aa66a7925236ae839ab1fdb5a",
+      "bytes": 753,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-08-polyak.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "52e909e305d98f5d213b18791f6244119f59ec3e0150dc9ad97c0c8319b2f6c9",
+      "export_sha256": "52e909e305d98f5d213b18791f6244119f59ec3e0150dc9ad97c0c8319b2f6c9",
+      "bytes": 683,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-09-vapnik-chervonenkis.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "36e7ecc07927dc91de9c5de72a10d7037237498b5aff4730c6baf859cf459be0",
+      "export_sha256": "36e7ecc07927dc91de9c5de72a10d7037237498b5aff4730c6baf859cf459be0",
+      "bytes": 708,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-10-yablonsky-ershov-dynkin-sinai.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "f600d6d0bbda14007182a64646128d8354e3879edaa0f708e5345763d98618f8",
+      "export_sha256": "f600d6d0bbda14007182a64646128d8354e3879edaa0f708e5345763d98618f8",
+      "bytes": 654,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-11-nesterov.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "c7b2c9add20cb58ab96a4d5eb8aab8681ff69446e08cd83870811ff51d847835",
+      "export_sha256": "c7b2c9add20cb58ab96a4d5eb8aab8681ff69446e08cd83870811ff51d847835",
+      "bytes": 545,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-12-internet.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "f7bf44739d3981fce1c57f2ddace67713c0706c775289a15a25da54af285358f",
+      "export_sha256": "f7bf44739d3981fce1c57f2ddace67713c0706c775289a15a25da54af285358f",
+      "bytes": 543,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-13-search-engines.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0bdec95e585b89ae401147763e319950231182fe2f849481cfce32d29fc0b54f",
+      "export_sha256": "0bdec95e585b89ae401147763e319950231182fe2f849481cfce32d29fc0b54f",
+      "bytes": 809,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-14-social-networks-and-brainrot.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "eac34b995ac89f1c45eb52b6dcbf2b71fed735d00b927cc70e3b03f105c19b2a",
+      "export_sha256": "eac34b995ac89f1c45eb52b6dcbf2b71fed735d00b927cc70e3b03f105c19b2a",
+      "bytes": 899,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-15-large-neural-models.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ec2097cbb67ba2767bf9d2784e35ec7ae034874c88ed0ab6380796bfcd22d3d5",
+      "export_sha256": "ec2097cbb67ba2767bf9d2784e35ec7ae034874c88ed0ab6380796bfcd22d3d5",
+      "bytes": 691,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-15a-dna-memory-and-biological-systems.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "75d1e1dec0a1718d48bac2d445929433e7808b68ccd5cb30302e80469337092d",
+      "export_sha256": "75d1e1dec0a1718d48bac2d445929433e7808b68ccd5cb30302e80469337092d",
+      "bytes": 1016,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-16-quantum-limit.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5e3a1fc2d43e3319804af5e402334bba8ec4330e5306cceecf50526fce76fcbc",
+      "export_sha256": "5e3a1fc2d43e3319804af5e402334bba8ec4330e5306cceecf50526fce76fcbc",
+      "bytes": 1279,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-17-quantum-clusters.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "bb73f8c2946160876a40cb089f44eb4ee24c35763660a3a941ba4a6d442f1ad1",
+      "export_sha256": "bb73f8c2946160876a40cb089f44eb4ee24c35763660a3a941ba4a6d442f1ad1",
+      "bytes": 559,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-18-night-before-failure.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3d0e4f3c201590c801ce27aca202331336d847e04db49d4bba9c9de676b755ef",
+      "export_sha256": "3d0e4f3c201590c801ce27aca202331336d847e04db49d4bba9c9de676b755ef",
+      "bytes": 1361,
+      "changes": []
+    },
+    {
+      "path": "assets/pre-error-archive/epsilon-19-sync-failure.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "bd19c1476bb0b28dd5421a0f79fc1c05be7cd0576bea98536c9ddab9bf4a7603",
+      "export_sha256": "bd19c1476bb0b28dd5421a0f79fc1c05be7cd0576bea98536c9ddab9bf4a7603",
+      "bytes": 1993,
+      "changes": []
+    },
+    {
+      "path": "assets/proto-agents-map.md",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2e81128c598a1224bce58e1ee7d363798d12beddc5cf0e8a8e27f58934ab64a9",
+      "export_sha256": "2e81128c598a1224bce58e1ee7d363798d12beddc5cf0e8a8e27f58934ab64a9",
+      "bytes": 25023,
+      "changes": []
+    },
+    {
+      "path": "assets/punched-tape.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6dc449223289a7f81baabb26cef392f4f84076c41542f4a5a4f5b69851f365ba",
+      "export_sha256": "6dc449223289a7f81baabb26cef392f4f84076c41542f4a5a4f5b69851f365ba",
+      "bytes": 3098069,
+      "changes": []
+    },
+    {
+      "path": "assets/quantum-center.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ab77be7dae1cc15ce1394bca9ff05f2846f9dc21f2c57822360dc666089ba5ad",
+      "export_sha256": "ab77be7dae1cc15ce1394bca9ff05f2846f9dc21f2c57822360dc666089ba5ad",
+      "bytes": 2837288,
+      "changes": []
+    },
+    {
+      "path": "assets/reactor.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0af1d44cd76540dfb51f460d843797d5dd234328bf53902f409d81464bcf0b8b",
+      "export_sha256": "0af1d44cd76540dfb51f460d843797d5dd234328bf53902f409d81464bcf0b8b",
+      "bytes": 1688777,
+      "changes": []
+    },
+    {
+      "path": "assets/red_line.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2b3fab7e334b194a98efbb423d84ae514613735e956110955d6fd3631f80c39e",
+      "export_sha256": "2b3fab7e334b194a98efbb423d84ae514613735e956110955d6fd3631f80c39e",
+      "bytes": 3652066,
+      "changes": []
+    },
+    {
+      "path": "assets/relics-map.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9592b2e4d106d9d58e0fec625f0682280438d645e935e5eec83f787f0b980c1e",
+      "export_sha256": "9592b2e4d106d9d58e0fec625f0682280438d645e935e5eec83f787f0b980c1e",
+      "bytes": 1993473,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/anticode.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "905453b6d65a18982f9b19dc78668ac96cab41f03928e3d46db8aadae1e09919",
+      "export_sha256": "905453b6d65a18982f9b19dc78668ac96cab41f03928e3d46db8aadae1e09919",
+      "bytes": 198276,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/apostles.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "1491240e717a79ee126dc127368eaa4fd2f30d2bd0af39aa03de7e17fadc77c1",
+      "export_sha256": "1491240e717a79ee126dc127368eaa4fd2f30d2bd0af39aa03de7e17fadc77c1",
+      "bytes": 150386,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/biocode-01.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "99714429069210d653e017ba486f2eea9abf99663e00ea7ab7f8db39a2af06a1",
+      "export_sha256": "99714429069210d653e017ba486f2eea9abf99663e00ea7ab7f8db39a2af06a1",
+      "bytes": 424580,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/biocode-living-network.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3f767daa88abff42e8463edac2355340572e42aede0c9df4ddd31945b866ca66",
+      "export_sha256": "3f767daa88abff42e8463edac2355340572e42aede0c9df4ddd31945b866ca66",
+      "bytes": 170500,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/diagrammatics.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5ec2772341d8c7b7cd98023752973482aa431b784e7a0c45ce706cfda22108e1",
+      "export_sha256": "5ec2772341d8c7b7cd98023752973482aa431b784e7a0c45ce706cfda22108e1",
+      "bytes": 1806524,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/probabilists-01.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "10ff9af64926d5d5947d4b589b45f41f816abbb230a398349356d5be72dc406c",
+      "export_sha256": "10ff9af64926d5d5947d4b589b45f41f816abbb230a398349356d5be72dc406c",
+      "bytes": 33370,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/probabilists-branching-diagram.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a965c31c7ac2cabea830c378b90ab8b25658b802209e1822e20fa4e4aafcc123",
+      "export_sha256": "a965c31c7ac2cabea830c378b90ab8b25658b802209e1822e20fa4e4aafcc123",
+      "bytes": 20792,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-censor.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9c9d5a87915f951ea37d31113af7af8ff9a7e45275a63b52270b346d70028445",
+      "export_sha256": "9c9d5a87915f951ea37d31113af7af8ff9a7e45275a63b52270b346d70028445",
+      "bytes": 1843935,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-generator.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "29a5bc2a802acda262bec031e2d864349a126e18896169ff3580575a0f5d3b1d",
+      "export_sha256": "29a5bc2a802acda262bec031e2d864349a126e18896169ff3580575a0f5d3b1d",
+      "bytes": 2076880,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-interpreter.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e2660ab96a358627b57fa8e6b13e5e65d8d59adb0b99b4e5c07de039fccf27a6",
+      "export_sha256": "e2660ab96a358627b57fa8e6b13e5e65d8d59adb0b99b4e5c07de039fccf27a6",
+      "bytes": 2225022,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-keeper.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "cb3d863bc05c7e069a5b28ef2a57878b3955a3a5cd752eae2e3c7eeb8c7605d9",
+      "export_sha256": "cb3d863bc05c7e069a5b28ef2a57878b3955a3a5cd752eae2e3c7eeb8c7605d9",
+      "bytes": 2044915,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-navigator.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6ecc020da987f887454d7cf0c3f407d3db884698c72b508828a21e092c1c7fab",
+      "export_sha256": "6ecc020da987f887454d7cf0c3f407d3db884698c72b508828a21e092c1c7fab",
+      "bytes": 2274156,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-observer.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "afd1186e53848002ed11b92b2f456483965cefc934d66fe8ba7650f578f238bd",
+      "export_sha256": "afd1186e53848002ed11b92b2f456483965cefc934d66fe8ba7650f578f238bd",
+      "bytes": 1430040,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-predictor.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "4cd54ccb0c70b0d56e37ed441cdc91f0409d365eddc031be55b2061cd9abf84d",
+      "export_sha256": "4cd54ccb0c70b0d56e37ed441cdc91f0409d365eddc031be55b2061cd9abf84d",
+      "bytes": 2097706,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agent-recommender.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e44d175650d368cdb8805ba48b5c45d662a583badf12b278c3d37d523374d4cd",
+      "export_sha256": "e44d175650d368cdb8805ba48b5c45d662a583badf12b278c3d37d523374d4cd",
+      "bytes": 1887535,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/proto-agents-failed-human-reconstruction.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "951d997f24a4d292556b26101de5dc8513590bb8ca9873d0e8fc3bddad1936ad",
+      "export_sha256": "951d997f24a4d292556b26101de5dc8513590bb8ca9873d0e8fc3bddad1936ad",
+      "bytes": 133042,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/schools-of-spirits.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2621091c3bcd1af418452e3b330e187804de3f604836e3827061a7454e9b1750",
+      "export_sha256": "2621091c3bcd1af418452e3b330e187804de3f604836e3827061a7454e9b1750",
+      "bytes": 1843243,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/social-structure.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2bf4515a1d63799ecb6264d03db4c4a3e889bf0cd24165d82c3f18dcd4211a61",
+      "export_sha256": "2bf4515a1d63799ecb6264d03db4c4a3e889bf0cd24165d82c3f18dcd4211a61",
+      "bytes": 1409612,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/techno-priests-museum-of-sleeping-idols-control-panel.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a7fc02537af5efa91d84fb9ba36bff5762cbc01817ac953a0716266677f51cbb",
+      "export_sha256": "a7fc02537af5efa91d84fb9ba36bff5762cbc01817ac953a0716266677f51cbb",
+      "bytes": 276574,
+      "changes": []
+    },
+    {
+      "path": "assets/schools/wandering-nodes.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "abdfb524adedcb7a319ef0000c90bab79e1b0516143f73abe51a21067acd3293",
+      "export_sha256": "abdfb524adedcb7a319ef0000c90bab79e1b0516143f73abe51a21067acd3293",
+      "bytes": 191904,
+      "changes": []
+    },
+    {
+      "path": "assets/skolkovo_network_memory_node.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "61ff20197f60d4afcca62d3a6adcc13925e8eadfcd332b8c916f0f5f5f5eefef",
+      "export_sha256": "61ff20197f60d4afcca62d3a6adcc13925e8eadfcd332b8c916f0f5f5f5eefef",
+      "bytes": 2596855,
+      "changes": []
+    },
+    {
+      "path": "assets/spectral_divergence.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b5841f6a4ce9f4ea052a116a3462b029f0142cac17666f6c2768fc7d34932f0b",
+      "export_sha256": "b5841f6a4ce9f4ea052a116a3462b029f0142cac17666f6c2768fc7d34932f0b",
+      "bytes": 2282321,
+      "changes": []
+    },
+    {
+      "path": "assets/techno_priests_liturgy_of_recognition.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5cbf2fa5a3bfd6d7569066f90e0cecac43a02f6bb9aaefce636792604d0d19de",
+      "export_sha256": "5cbf2fa5a3bfd6d7569066f90e0cecac43a02f6bb9aaefce636792604d0d19de",
+      "bytes": 1518344,
+      "changes": []
+    },
+    {
+      "path": "assets/time-error.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "12959a21825104f5f858905de7628dd798bdbb0642aa2679082dc5c1264ba066",
+      "export_sha256": "12959a21825104f5f858905de7628dd798bdbb0642aa2679082dc5c1264ba066",
+      "bytes": 3342665,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/baikal.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "4d051f91e6eb36680ef3bfa88137375a02f026a2644be96050f9d086adb36037",
+      "export_sha256": "4d051f91e6eb36680ef3bfa88137375a02f026a2644be96050f9d086adb36037",
+      "bytes": 272662,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/dubna.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "4f28c7e86673f1298b119ece694956ef6acea502b8ba52c24e21f42c8e718206",
+      "export_sha256": "4f28c7e86673f1298b119ece694956ef6acea502b8ba52c24e21f42c8e718206",
+      "bytes": 339554,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/isfahan-ornamental-cipher.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "adad1ddae5a30c8130e36694257471df502b9e5ccabc967875c9ced4020b85c7",
+      "export_sha256": "adad1ddae5a30c8130e36694257471df502b9e5ccabc967875c9ced4020b85c7",
+      "bytes": 630702,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/isfahan.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d7bdbabc99d8e9978067b69ad033c2f27a15c0d83597f59264446fae2e4b7ba4",
+      "export_sha256": "d7bdbabc99d8e9978067b69ad033c2f27a15c0d83597f59264446fae2e4b7ba4",
+      "bytes": 771384,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/karelia1.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6a39c5817bb3fdaa64e355c72e7e2e36b75393a859a348b28056fb01e88f96c5",
+      "export_sha256": "6a39c5817bb3fdaa64e355c72e7e2e36b75393a859a348b28056fb01e88f96c5",
+      "bytes": 183892,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/moscow-city-of-nodes.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3a5b34aba7e112b30b06c5be65fcce2d8e2d9ed4c61df39b88e8ef22b8262d74",
+      "export_sha256": "3a5b34aba7e112b30b06c5be65fcce2d8e2d9ed4c61df39b88e8ef22b8262d74",
+      "bytes": 633384,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/shenzhen.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "b2a225e9a05e58810af4d7ae4243974de955f338f1a5898f0c19a23b1ee56da5",
+      "export_sha256": "b2a225e9a05e58810af4d7ae4243974de955f338f1a5898f0c19a23b1ee56da5",
+      "bytes": 302812,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/skolkovo-access-archive.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "168199ee56f9bc6dca651f95680cda26a3feece0b80a10f01b2e3edc83ca3927",
+      "export_sha256": "168199ee56f9bc6dca651f95680cda26a3feece0b80a10f01b2e3edc83ca3927",
+      "bytes": 531826,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/topography.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3790c771f6fc3d8e771f125ed019791d2a133673e0af44b5427ead812842873a",
+      "export_sha256": "3790c771f6fc3d8e771f125ed019791d2a133673e0af44b5427ead812842873a",
+      "bytes": 225164,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/ttk-0xmem.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d266aa9114da38251a0d2d2be5c20a5594707c70db1ff158f20f415ebabc931c",
+      "export_sha256": "d266aa9114da38251a0d2d2be5c20a5594707c70db1ff158f20f415ebabc931c",
+      "bytes": 218282,
+      "changes": []
+    },
+    {
+      "path": "assets/topography/varanasi.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5464f562de803f687d4a60c8db969cfba57aa3bb450f98ba34b72b1e281c06c7",
+      "export_sha256": "5464f562de803f687d4a60c8db969cfba57aa3bb450f98ba34b72b1e281c06c7",
+      "bytes": 567876,
+      "changes": []
+    },
+    {
+      "path": "assets/topography_of_the_network_world.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6a239f41968d387d273b3f13da7583fbdb0f331983243bdccf50c76d9237c768",
+      "export_sha256": "6a239f41968d387d273b3f13da7583fbdb0f331983243bdccf50c76d9237c768",
+      "bytes": 2415361,
+      "changes": []
+    },
+    {
+      "path": "assets/world/discarded-protocols-ruins.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8aa96df9a7e3dd1d779311fe9a0ec6c818be9d3cddf42df321370d98c3dcdb59",
+      "export_sha256": "8aa96df9a7e3dd1d779311fe9a0ec6c818be9d3cddf42df321370d98c3dcdb59",
+      "bytes": 367094,
+      "changes": []
+    },
+    {
+      "path": "assets/world/economy-of-network-node-market.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "d62e8d36b035790c0a6aa001175e10d813e65a440558cf0f88af07c0c7c43b2a",
+      "export_sha256": "d62e8d36b035790c0a6aa001175e10d813e65a440558cf0f88af07c0c7c43b2a",
+      "bytes": 146640,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-00-markov.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "e34d0646f1e606b2e42911c6ee1af1dbcb171024cce06c4180a627c720f369de",
+      "export_sha256": "e34d0646f1e606b2e42911c6ee1af1dbcb171024cce06c4180a627c720f369de",
+      "bytes": 174806,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-01-kolmogorov.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9d7e3e4c283c6f24fe529296e558e5be322a61032f9b30cc6c8051586e6668b0",
+      "export_sha256": "9d7e3e4c283c6f24fe529296e558e5be322a61032f9b30cc6c8051586e6668b0",
+      "bytes": 114654,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-02-kantorovich.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5001691b358d20b6f5711fd505fa7abee4bee3efddae83d8037b51df2ce641ac",
+      "export_sha256": "5001691b358d20b6f5711fd505fa7abee4bee3efddae83d8037b51df2ce641ac",
+      "bytes": 115186,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-06-glushkov.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9fc9e28fe308760fdb6e25d7c8fdf4d22b9346adcf118da3daf3f641d19013b1",
+      "export_sha256": "9fc9e28fe308760fdb6e25d7c8fdf4d22b9346adcf118da3daf3f641d19013b1",
+      "bytes": 138308,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-14.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "7f5bef69a31bbd356e201b7ab698fa3d2bb08b75fcc6837c31ecc430b4c5732b",
+      "export_sha256": "7f5bef69a31bbd356e201b7ab698fa3d2bb08b75fcc6837c31ecc430b4c5732b",
+      "bytes": 773708,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-15a-biological-memory.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "1ef8c14f210526e0ef4c878c55e10a98c39c4523503a4595c7b5302b83ce5cfb",
+      "export_sha256": "1ef8c14f210526e0ef4c878c55e10a98c39c4523503a4595c7b5302b83ce5cfb",
+      "bytes": 101336,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-15a.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "3afb504dc29cbd8f5d4a1830e022cb4faeb523fdb0fc26daaea668a5ba32c912",
+      "export_sha256": "3afb504dc29cbd8f5d4a1830e022cb4faeb523fdb0fc26daaea668a5ba32c912",
+      "bytes": 758314,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-19.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "2826aabce5a336e95a78ba23b5bda2e9c4abf8d32dca14c7abbc8bd63870fe42",
+      "export_sha256": "2826aabce5a336e95a78ba23b5bda2e9c4abf8d32dca14c7abbc8bd63870fe42",
+      "bytes": 520188,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-20-21-information-energy.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8679d40f426626e080a9248cc45dbc8a5012537e0905242c46228e62c7e06d8a",
+      "export_sha256": "8679d40f426626e080a9248cc45dbc8a5012537e0905242c46228e62c7e06d8a",
+      "bytes": 1962684,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-22-26-biocode.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "5f03e08e5ec76e5f5cb35d9f12634af3bd54d67dc27eeda3cc244a48c370e857",
+      "export_sha256": "5f03e08e5ec76e5f5cb35d9f12634af3bd54d67dc27eeda3cc244a48c370e857",
+      "bytes": 2218212,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-23.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "0d0823d5f5ae0e7554f0032c8607d259c46e8120392bd42c8146040f92dace48",
+      "export_sha256": "0d0823d5f5ae0e7554f0032c8607d259c46e8120392bd42c8146040f92dace48",
+      "bytes": 600139,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-27-29-autonomous-processes.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "64f8f5e3de30783082780907fe50e132aa19f41ed0a8874b00e98a597ecae176",
+      "export_sha256": "64f8f5e3de30783082780907fe50e132aa19f41ed0a8874b00e98a597ecae176",
+      "bytes": 1973087,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-30-three-paths.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "8ab1f9489bc9dee8725f65113030fa2830cf9c0a0304dc2696a3767a97ef9608",
+      "export_sha256": "8ab1f9489bc9dee8725f65113030fa2830cf9c0a0304dc2696a3767a97ef9608",
+      "bytes": 2159999,
+      "changes": []
+    },
+    {
+      "path": "assets/world/epsilon-30.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "761867f95f3fe0ab4d35361e7893ca189bc0516e8ec9a034d33f320ff590169a",
+      "export_sha256": "761867f95f3fe0ab4d35361e7893ca189bc0516e8ec9a034d33f320ff590169a",
+      "bytes": 494495,
+      "changes": []
+    },
+    {
+      "path": "assets/world/human-museum-prehistory-human.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "78c2c081aba1d05ca541ab88106c8a426edc17b9a990ef37a743c95bc3144f98",
+      "export_sha256": "78c2c081aba1d05ca541ab88106c8a426edc17b9a990ef37a743c95bc3144f98",
+      "bytes": 176532,
+      "changes": []
+    },
+    {
+      "path": "assets/world/newest-history-epsilon-17-quantum-clusters.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6e1b6a535bd8c24db6a8a7f71584f0ce7d04f748aad14ab470afe26cb9c86b97",
+      "export_sha256": "6e1b6a535bd8c24db6a8a7f71584f0ce7d04f748aad14ab470afe26cb9c86b97",
+      "bytes": 304572,
+      "changes": []
+    },
+    {
+      "path": "assets/world/newest-history-epsilon-18-night-before-failure.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a9553729c2ffddd2db5ae87563933f3c516e18b21e172893adee8a06bde9b50b",
+      "export_sha256": "a9553729c2ffddd2db5ae87563933f3c516e18b21e172893adee8a06bde9b50b",
+      "bytes": 169464,
+      "changes": []
+    },
+    {
+      "path": "assets/world/newest-history-epsilon-19-variants-epsilon-19-sync-failure-02-last-figure.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "6a0b187b21968f8eb8df6071567a5a1e19083853c2723b407a3f2589e59cd801",
+      "export_sha256": "6a0b187b21968f8eb8df6071567a5a1e19083853c2723b407a3f2589e59cd801",
+      "bytes": 210818,
+      "changes": []
+    },
+    {
+      "path": "assets/world/newest-history-epsilon-29-protocol-divergence.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "86a17fa4e843a5e347da5b12719c55f4e5a7de9c215eaa0d2288fdf6ca453a99",
+      "export_sha256": "86a17fa4e843a5e347da5b12719c55f4e5a7de9c215eaa0d2288fdf6ca453a99",
+      "bytes": 164988,
+      "changes": []
+    },
+    {
+      "path": "assets/world/newest-history-network-field.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ff3eb87cc62984c2904a4c03764eccde06b887f9a25656bf64d6cc4c46a6d58f",
+      "export_sha256": "ff3eb87cc62984c2904a4c03764eccde06b887f9a25656bf64d6cc4c46a6d58f",
+      "bytes": 136468,
+      "changes": []
+    },
+    {
+      "path": "assets/world/pre-error-archive.png",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "1d469291ff10fc2e2a1323b913ff89e79ead22f61ebaf432b48f55bdcb905140",
+      "export_sha256": "1d469291ff10fc2e2a1323b913ff89e79ead22f61ebaf432b48f55bdcb905140",
+      "bytes": 1286348,
+      "changes": []
+    },
+    {
+      "path": "assets/world/rituals-ritual-biocultural-gathering.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "ea1e7eb3b050a42995a01fa9175306a32b8e56428a9d14923cbb8851a901c553",
+      "export_sha256": "ea1e7eb3b050a42995a01fa9175306a32b8e56428a9d14923cbb8851a901c553",
+      "bytes": 126330,
+      "changes": []
+    },
+    {
+      "path": "assets/world/rituals-ritual-festive-sonata.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "1b8b2663b1069f15f056a72bc02c9f41ecc4f9ebdec5cb2659c25dd0d73ba96f",
+      "export_sha256": "1b8b2663b1069f15f056a72bc02c9f41ecc4f9ebdec5cb2659c25dd0d73ba96f",
+      "bytes": 120716,
+      "changes": []
+    },
+    {
+      "path": "assets/world/rituals.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "074ccd8621429879f3b7ac46681e6f881a2c0bf4c3fa2387b97a2760e2898c8a",
+      "export_sha256": "074ccd8621429879f3b7ac46681e6f881a2c0bf4c3fa2387b97a2760e2898c8a",
+      "bytes": 115398,
+      "changes": []
+    },
+    {
+      "path": "assets/world/synchronization-models.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "9fac926b6639c3caab2b5dd3f5791d1ec9de3d6650fd5756ffe392e8b8f49d3e",
+      "export_sha256": "9fac926b6639c3caab2b5dd3f5791d1ec9de3d6650fd5756ffe392e8b8f49d3e",
+      "bytes": 55544,
+      "changes": []
+    },
+    {
+      "path": "books/before-error/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "ff087c1bc185423901d535974b7bc546f430a54a296e8d10b92ff943696b5e76",
+      "export_sha256": "ff087c1bc185423901d535974b7bc546f430a54a296e8d10b92ff943696b5e76",
+      "bytes": 15148,
+      "changes": []
+    },
+    {
+      "path": "books/books.css",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "9c5e2d4e790cc3f251a6750e98b4f216be7e7624c9d70b7c19c813cde8f88b12",
+      "export_sha256": "9c5e2d4e790cc3f251a6750e98b4f216be7e7624c9d70b7c19c813cde8f88b12",
+      "bytes": 59745,
+      "changes": []
+    },
+    {
+      "path": "books/books.js",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "6a3ed5019faed1efa5273384abd893a50e7674463987c72c7b0ac7120d207d2b",
+      "export_sha256": "6a3ed5019faed1efa5273384abd893a50e7674463987c72c7b0ac7120d207d2b",
+      "bytes": 23439,
+      "changes": []
+    },
+    {
+      "path": "books/epilogue/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "8216b9845eb08abc38c36b12b1bf09a63da1fd01f418591806667edb0f2f59ef",
+      "export_sha256": "8216b9845eb08abc38c36b12b1bf09a63da1fd01f418591806667edb0f2f59ef",
+      "bytes": 19212,
+      "changes": []
+    },
+    {
+      "path": "books/genesis/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "75959be93ef2693d10468f8f3154750661d6a93692fc3bec2c89ae1dc6cd1a8c",
+      "export_sha256": "75959be93ef2693d10468f8f3154750661d6a93692fc3bec2c89ae1dc6cd1a8c",
+      "bytes": 17858,
+      "changes": []
+    },
+    {
+      "path": "books/great-error/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "76987a265ac6b001738cad9d0f441171336f1f6aab5ebaa3e714223c77fef0bc",
+      "export_sha256": "76987a265ac6b001738cad9d0f441171336f1f6aab5ebaa3e714223c77fef0bc",
+      "bytes": 20290,
+      "changes": []
+    },
+    {
+      "path": "books/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "2ebc27fea164b57d6283f11d4eba02fee071c8439619006cece5130859e28307",
+      "export_sha256": "2ebc27fea164b57d6283f11d4eba02fee071c8439619006cece5130859e28307",
+      "bytes": 7659,
+      "changes": []
+    },
+    {
+      "path": "books/manifest.json",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "ba33264e22d11c78e18e0cf72f42b86e6d625c39f1ea760722d692d0b71724c5",
+      "export_sha256": "ba33264e22d11c78e18e0cf72f42b86e6d625c39f1ea760722d692d0b71724c5",
+      "bytes": 8283,
+      "changes": []
+    },
+    {
+      "path": "books/prologue/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "319e93f67ca33321afb0d8eef5def4537d6019cc046895e0fc19632beb8670fa",
+      "export_sha256": "319e93f67ca33321afb0d8eef5def4537d6019cc046895e0fc19632beb8670fa",
+      "bytes": 13407,
+      "changes": []
+    },
+    {
+      "path": "books/voice/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "e8b8f5d83ee33d0d310883e6da21409c7c46dd705ac8537f99e434336cc0225c",
+      "export_sha256": "e8b8f5d83ee33d0d310883e6da21409c7c46dd705ac8537f99e434336cc0225c",
+      "bytes": 29933,
+      "changes": []
+    },
+    {
+      "path": "brainrot-full.html",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "d70396e38552c6bf13d3300f4deaf47ab71306931c85796326e76aa214fdf7b3",
+      "export_sha256": "d70396e38552c6bf13d3300f4deaf47ab71306931c85796326e76aa214fdf7b3",
+      "bytes": 937,
+      "changes": []
+    },
+    {
+      "path": "brainrot-sources.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "5f58a88b109b0920cff1147ca8d17c1f0c1e48471daef211d1a786801699c16b",
+      "export_sha256": "5f58a88b109b0920cff1147ca8d17c1f0c1e48471daef211d1a786801699c16b",
+      "bytes": 4693191,
+      "changes": []
+    },
+    {
+      "path": "brainrot-visual.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "ccae6e824683496386a01e1f1223f1f8218570ee086294ffea6bd6eb05f38919",
+      "export_sha256": "ccae6e824683496386a01e1f1223f1f8218570ee086294ffea6bd6eb05f38919",
+      "bytes": 8212,
+      "changes": []
+    },
+    {
+      "path": "content-r1-article-routes.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "350d824ef7be96189a8277bc6530d8faebc1e75a9953766b356667b9bd52041a",
+      "export_sha256": "350d824ef7be96189a8277bc6530d8faebc1e75a9953766b356667b9bd52041a",
+      "bytes": 1824,
+      "changes": []
+    },
+    {
+      "path": "experiences/0xmem-reactor/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "3d992775436464c20fb2ad4f1a97ba5dccee439d483a23a439000e8d2f445131",
+      "export_sha256": "3d992775436464c20fb2ad4f1a97ba5dccee439d483a23a439000e8d2f445131",
+      "bytes": 2446305,
+      "changes": []
+    },
+    {
+      "path": "experiences/archive-transition/index.html",
+      "reason": "public standalone/Reader dependency",
+      "source_sha256": "adc0dab7ac94bd3d5dda67f4752256086f8f6dcbefb7bf2258ef62faefcf47a3",
+      "export_sha256": "adc0dab7ac94bd3d5dda67f4752256086f8f6dcbefb7bf2258ef62faefcf47a3",
+      "bytes": 10167955,
+      "changes": []
+    },
+    {
+      "path": "index.html",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "df12bc62988909d87da5cbefa36d8527eef54a7a983c4ec958e67b7d64317136",
+      "export_sha256": "7a65fdc374e303ad3a20ff6947404142200362a275b6c06a6eab686bd871c1c6",
+      "bytes": 20782,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "path": "r3-data-first-corpus.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "740843c76b8536da141540ecbde97ae7f6617f0b0111b54a6bdaf8a3a5b1c41e",
+      "export_sha256": "59010ebb37e8d3f0b198cddca365d676ef1164068704e905b9b3c1ae84f4cb57",
+      "bytes": 143314,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 140
+        }
+      ]
+    },
+    {
+      "path": "rhizome-3d-geometry.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "803b8b19e4cc37ee24c4ea7a27908d6e0617007e5baf5a2a17df2c422c67a680",
+      "export_sha256": "803b8b19e4cc37ee24c4ea7a27908d6e0617007e5baf5a2a17df2c422c67a680",
+      "bytes": 4327,
+      "changes": []
+    },
+    {
+      "path": "rhizome-3d.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "438d144fdceee3634ec3435549a25a4a1fcb414547aa08a334319de4850013b4",
+      "export_sha256": "438d144fdceee3634ec3435549a25a4a1fcb414547aa08a334319de4850013b4",
+      "bytes": 108215,
+      "changes": []
+    },
+    {
+      "path": "sitemap.xml",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "0747a2efef08721fc68c26d1b09dd975e64c098769829cf5d04d8fb29a51feeb",
+      "export_sha256": "8e2f5bbe7fda99f4aac812ff41325bd1dad0dc872bddc19c6328303847c2458f",
+      "bytes": 1053,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 13
+        }
+      ]
+    },
+    {
+      "path": "styles.css",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "a6e3c29ce7deb44ae2a82242014e3d21e23b92385ec6754b2d3a3e0e09b37bda",
+      "export_sha256": "a6e3c29ce7deb44ae2a82242014e3d21e23b92385ec6754b2d3a3e0e09b37bda",
+      "bytes": 260994,
+      "changes": []
+    },
+    {
+      "path": "topography-full.html",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "ccf23cce3438fae053bc477fd129706521053cec98a9517e4216939abe0e4811",
+      "export_sha256": "ccf23cce3438fae053bc477fd129706521053cec98a9517e4216939abe0e4811",
+      "bytes": 1499,
+      "changes": []
+    },
+    {
+      "path": "topography-visual.js",
+      "reason": "runtime entry/module/metadata",
+      "source_sha256": "a55a80946d226cc5b2db7c7eb3e1c3ec425ac89050d4dbfc6878163cbeb7eb0d",
+      "export_sha256": "a55a80946d226cc5b2db7c7eb3e1c3ec425ac89050d4dbfc6878163cbeb7eb0d",
+      "bytes": 11857,
+      "changes": []
+    }
+  ],
+  "excluded": [
+    ".gitignore",
+    ".nojekyll",
+    "AGENTS.md",
+    "README.md",
+    "_source/canon-pack/AUDIT/00_SUMMARY.md",
+    "_source/canon-pack/AUDIT/01_SOURCE_HIERARCHY.md",
+    "_source/canon-pack/AUDIT/02_MISSING_AND_INLINE_CONTENT.md",
+    "_source/canon-pack/AUDIT/03_GLOSSARY_AUDIT.md",
+    "_source/canon-pack/AUDIT/04_CONFLICTS_AND_LEGACY.md",
+    "_source/canon-pack/AUDIT/07_IMPLEMENTATION_ORDER.md",
+    "_source/canon-pack/README.md",
+    "assets/canon-image-candidates/00_CONTACT_SHEET.jpg",
+    "assets/canon-image-candidates/00_MAPPING.csv",
+    "assets/canon-image-candidates/00_README_MAPPING.md",
+    "docs/CANON_MAP.md",
+    "docs/DECISIONS.md",
+    "docs/IMAGE_AUDIT_LATEST.txt",
+    "docs/IMAGE_MAP.md",
+    "docs/NAVIGATION_MAP.md",
+    "docs/SITE_PLAN.md",
+    "docs/STATE.md",
+    "docs/image-audit/00_SUMMARY.md",
+    "docs/image-audit/01_BROKEN_REFERENCES.md",
+    "docs/image-audit/02_FILES_WITHOUT_IMAGES.md",
+    "docs/image-audit/03_UNUSED_IMAGES.md",
+    "docs/image-audit/04_REPEATED_IMAGES.md",
+    "docs/image-audit/05_CURRENT_IMAGE_MAP.md",
+    "docs/qa/phase-1/desktop-1440.png",
+    "docs/qa/phase-1/landscape-667x375.png",
+    "docs/qa/phase-1/mobile-390x844.png",
+    "docs/qa/phase-1/signal-on-off.png",
+    "docs/qa/phase-2/desktop-glas-answer.png",
+    "docs/qa/phase-2/desktop-glas-listening.png",
+    "docs/qa/phase-2/desktop-glas-question-active.png",
+    "docs/qa/phase-2/desktop-reader-navigation.png",
+    "docs/qa/phase-2/entry-desktop-1440x900.png",
+    "docs/qa/phase-2/entry-mobile-landscape-667x375.png",
+    "docs/qa/phase-2/entry-mobile-portrait-390x844.png",
+    "docs/qa/phase-2/mobile-landscape-667x375.png",
+    "docs/qa/phase-2/mobile-landscape-glas-844x390.png",
+    "docs/qa/phase-2/mobile-landscape-glas-question-active-844x390.png",
+    "docs/qa/phase-2/mobile-landscape-map-844x390.png",
+    "docs/qa/phase-2/mobile-landscape-menu-667x375.png",
+    "docs/qa/phase-2/mobile-portrait-glas-390x844.png",
+    "docs/qa/phase-2/mobile-portrait-glas-question-active-390x844.png",
+    "docs/qa/phase-2/mobile-portrait-header-390x844.png",
+    "docs/qa/phase-2/mobile-portrait-reader-390x844.png",
+    "docs/qa/phase-2/route-tray-expanded.png",
+    "package-lock.json",
+    "package.json",
+    "scripts/build-books.mjs",
+    "scripts/publish.mjs",
+    "scripts/validate-books.mjs",
+    "scripts/validate-camera-preservation.mjs",
+    "scripts/validate-glas-interaction.mjs",
+    "scripts/validate-graph-fit.mjs",
+    "scripts/validate-guide.mjs",
+    "scripts/validate-mobile-shell.mjs",
+    "scripts/validate-navigation.mjs",
+    "scripts/validate-reader-visual.mjs",
+    "scripts/validate-rhizome-category-framing.mjs",
+    "scripts/validate-rhizome-category-lens.mjs",
+    "scripts/validate-rhizome-framing-depth.mjs",
+    "scripts/validate-rhizome-lens-visual-delta.mjs",
+    "scripts/validate-rhizome-node-page-navigation.mjs"
+  ]
+}

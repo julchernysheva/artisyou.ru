@@ -89,3 +89,8 @@
 @media(prefers-reduced-motion:reduce) {
   #seven-module .seven-panel,#seven-module .seven-tab { transition:none; }
 }
+
+/* Local BOGOBOT embed; preserves the existing territory layout. */
+#seven-module .seven-media iframe { display:block; width:100%; height:580px; border:0; }
+@media(max-width:640px) { #seven-module .seven-media iframe { height:480px; } }
+@media(min-width:641px) { #seven-module #panel-topography .seven-media { grid-column:1 / -1; grid-row:2; } }
