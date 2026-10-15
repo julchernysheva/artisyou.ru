@@ -93,3 +93,13 @@
   .ay-approved-hero--programmer .ay-approved-hero__extra{left:20px;top:365px}
   .ay-approved-hero--nowords .ay-approved-hero__media--1{left:0;top:370px;width:100%;height:390px}
 }
+
+/* Keep the dark opening full-bleed while preserving the shared text gutters. */
+@layer global-opening-contract {
+body[data-v12-project="nowords"] .ay-approved-hero--nowords[data-opening-shell][data-opening-in-frame] {
+  width: calc(100% + 2 * var(--opening-gutter)) !important;
+  max-width: none !important;
+  margin-inline: calc(-1 * var(--opening-gutter)) !important;
+  padding-inline: var(--opening-gutter) !important;
+}
+}
