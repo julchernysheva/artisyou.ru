@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_repository": "julchernysheva/bogobot",
-  "source_sha": "e46d92ae126cf599fb4ced445db6420bc3bb0547",
+  "source_sha": "a0c5a44e6611dfb6ceeb33b72ebe275ce4d33c6a",
   "destination": "https://artisyou.ru/bogobot/",
   "generator": "tools/export-bogobot.py",
   "files": [
@@ -208,205 +208,114 @@
     {
       "path": "app.js",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "7ad1bd29de44021f53152d8de9f42805c93dc37d8f30bf0b0fbbe3d99b91004e",
-      "export_sha256": "7ad1bd29de44021f53152d8de9f42805c93dc37d8f30bf0b0fbbe3d99b91004e",
-      "bytes": 476841,
+      "source_sha256": "99aeb5af9d88c948123a3f681a4d8d3ef346ffbcc4f454b4e0e0f91b3067ce77",
+      "export_sha256": "99aeb5af9d88c948123a3f681a4d8d3ef346ffbcc4f454b4e0e0f91b3067ce77",
+      "bytes": 477546,
       "changes": []
     },
     {
       "path": "articles/AGENT_MASTERS/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "f919c5b285c45839309ba8f74302f1b3c2ea9042db54fd3444c9406cde65c314",
+      "source_sha256": "5ff0deff0015e2704cc701a16982d87041a22e924e3cab9393f5c8d1ea9d851c",
       "export_sha256": "5ff0deff0015e2704cc701a16982d87041a22e924e3cab9393f5c8d1ea9d851c",
       "bytes": 2425,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/CALENDAR/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "fe76ec5e749737d5bf4eecb0dd6ee7fac7413129f2816981b75e7469e40aa4c7",
+      "source_sha256": "a9e90d197eaf46fccd208b612a894ff9b9a0d9793775f4bf652654e1e5795005",
       "export_sha256": "a9e90d197eaf46fccd208b612a894ff9b9a0d9793775f4bf652654e1e5795005",
       "bytes": 2522,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/COMMON_MEMORY/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "08a940bdc40b09aafdc99b76694cb82e301719eab3738e584c80723e241a53d7",
+      "source_sha256": "cffd71de4c9d97d9b0dbae988afd975a8285d65d12b1ddc190ae4ef65e7158b3",
       "export_sha256": "cffd71de4c9d97d9b0dbae988afd975a8285d65d12b1ddc190ae4ef65e7158b3",
       "bytes": 2251,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/DAY_OF_NETWORK/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "da726037e729ef893d6268e5b1f6cb67745d694521d404eec08ff65427d79fe3",
+      "source_sha256": "b5d41cbe33dff248c9ce625741972c811f332234be731e464e0c24be59f14857",
       "export_sha256": "b5d41cbe33dff248c9ce625741972c811f332234be731e464e0c24be59f14857",
       "bytes": 2090,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/FAMILY_NODES/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "40ca0a6fa5757c98b7c4759a7c57e4b83d4499ce344b6ae8220199a6a2d2dfa0",
+      "source_sha256": "b621fe1c1700013792b8f5c10cb31bae01152dff2b6b6d814f6c35f8afbd6ddb",
       "export_sha256": "b621fe1c1700013792b8f5c10cb31bae01152dff2b6b6d814f6c35f8afbd6ddb",
       "bytes": 2099,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/FEAST_OF_GREAT_ERROR/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "b15142453c33d53a348295b34867a14c3b15e62dd3700ba87e9bb7bc38c56418",
+      "source_sha256": "8ab5c197eef974bface736b1ae10531d3d56139e844438be0e6a95dadec6b8f3",
       "export_sha256": "8ab5c197eef974bface736b1ae10531d3d56139e844438be0e6a95dadec6b8f3",
       "bytes": 2102,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/GARDENERS/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "26c0d3abe89a14f8399d8361a00ab764b894c7c0cec58a45c4ccda133c154028",
+      "source_sha256": "1799fce7c3dea266e8c5c14b3d7cb1e07edbb66766cb6f3aae554286a0c60b01",
       "export_sha256": "1799fce7c3dea266e8c5c14b3d7cb1e07edbb66766cb6f3aae554286a0c60b01",
       "bytes": 2183,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/MEMORIALISTS/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "8b45b34c44e3d4837f4f0ae3ac2ed91bf4515750e2efcfe7fef4b99925dbb941",
+      "source_sha256": "a1ebee5d8a88ff5f5dd1e1408a3b148c9d2ea3c8cd1b9473eef6f639601eea90",
       "export_sha256": "a1ebee5d8a88ff5f5dd1e1408a3b148c9d2ea3c8cd1b9473eef6f639601eea90",
       "bytes": 2285,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/OFFLINE_CIVILIZATION/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "259b1a8cc15a50e936c56d0a72eca64a8e83e2fa65915b6538ea46495a178d8c",
+      "source_sha256": "b14db82ca82d17e37064f98475ecf9e2dd50c14fc6431a014cfb93acd8b7b265",
       "export_sha256": "b14db82ca82d17e37064f98475ecf9e2dd50c14fc6431a014cfb93acd8b7b265",
       "bytes": 2607,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/PROTOCOLISTS/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "16d92bd49d5b22597f5d19979e0a52c0a44a51142950d23194755d605a85580d",
+      "source_sha256": "eaf672be0561e47ec90467b42178f43147c7a91998c17f8d6769876135f22e3a",
       "export_sha256": "eaf672be0561e47ec90467b42178f43147c7a91998c17f8d6769876135f22e3a",
       "bytes": 2061,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/RELICS_AS_COMMON_TASK/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "eb40100379b2ba3582cbba11cc5fa0256dec315e4b1024dec3256fe1e4747076",
+      "source_sha256": "3335392de90bcacfd3998981f1ed348e6a4bb7bd66fb158f4683ae2bb2aff772",
       "export_sha256": "3335392de90bcacfd3998981f1ed348e6a4bb7bd66fb158f4683ae2bb2aff772",
       "bytes": 2467,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/SYNCHRONIZERS/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "0da36beb9b5eeea11b83695eaa7ee6cceb1e3438406d469f50dad591db5cd0f6",
+      "source_sha256": "eaec390390a33dba2fec3d6943ff4ad26b63e5f75750f8aac44b6ba1ecd0c2b0",
       "export_sha256": "eaec390390a33dba2fec3d6943ff4ad26b63e5f75750f8aac44b6ba1ecd0c2b0",
       "bytes": 2306,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 5
-        }
-      ]
+      "changes": []
     },
     {
       "path": "articles/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "0c9ba85620d25ab22a1092f4fec1db7d00ce52c918e1ccff68cccb9db6259615",
+      "source_sha256": "905f52d8b66c46e0786a2b8cfd1a2c512e8cf76645195a07a443787d8a99c432",
       "export_sha256": "905f52d8b66c46e0786a2b8cfd1a2c512e8cf76645195a07a443787d8a99c432",
       "bytes": 1761,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 14
-        }
-      ]
+      "changes": []
     },
     {
       "path": "assets/0xmem-reactor-preview.png",
@@ -2019,17 +1928,10 @@
     {
       "path": "index.html",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "df12bc62988909d87da5cbefa36d8527eef54a7a983c4ec958e67b7d64317136",
+      "source_sha256": "7a65fdc374e303ad3a20ff6947404142200362a275b6c06a6eab686bd871c1c6",
       "export_sha256": "7a65fdc374e303ad3a20ff6947404142200362a275b6c06a6eab686bd871c1c6",
       "bytes": 20782,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 1
-        }
-      ]
+      "changes": []
     },
     {
       "path": "r3-data-first-corpus.js",
@@ -2065,24 +1967,17 @@
     {
       "path": "sitemap.xml",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "0747a2efef08721fc68c26d1b09dd975e64c098769829cf5d04d8fb29a51feeb",
+      "source_sha256": "8e2f5bbe7fda99f4aac812ff41325bd1dad0dc872bddc19c6328303847c2458f",
       "export_sha256": "8e2f5bbe7fda99f4aac812ff41325bd1dad0dc872bddc19c6328303847c2458f",
       "bytes": 1053,
-      "changes": [
-        {
-          "operation": "public origin replacement only",
-          "from": "https://julchernysheva.github.io/bogobot/",
-          "to": "https://artisyou.ru/bogobot/",
-          "occurrences": 13
-        }
-      ]
+      "changes": []
     },
     {
       "path": "styles.css",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "a6e3c29ce7deb44ae2a82242014e3d21e23b92385ec6754b2d3a3e0e09b37bda",
-      "export_sha256": "a6e3c29ce7deb44ae2a82242014e3d21e23b92385ec6754b2d3a3e0e09b37bda",
-      "bytes": 260994,
+      "source_sha256": "0032b757720fbaad8348841bb7a975a10d842ce2c015816078a8c4c7ebac5199",
+      "export_sha256": "0032b757720fbaad8348841bb7a975a10d842ce2c015816078a8c4c7ebac5199",
+      "bytes": 261866,
       "changes": []
     },
     {
