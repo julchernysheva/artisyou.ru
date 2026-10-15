@@ -5972,6 +5972,20 @@ function renderReader() {
   const related=renderRelatedMaterials(n,note)
   const contentEnd=related||note
   renderExperienceAction(n,contentEnd)
+  $("#backupMemoryExperiment")?.remove()
+  if(n.id==="BACKUP_MEMORY"){
+    const experiment=document.createElement("section")
+    experiment.id="backupMemoryExperiment"
+    experiment.className="support-links"
+    const link=document.createElement("a")
+    link.className="support-link"
+    link.href="/projects/godbot/spatial-study.html"
+    link.target="_blank"
+    link.rel="noopener"
+    link.textContent="Пространственный эксперимент V8"
+    experiment.append(link)
+    contentEnd.after(experiment)
+  }
   const footer=ensureReaderFooter()
   renderClusterNavigation(n)
   renderHistoryNavigation(n)
