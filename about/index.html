@@ -66,11 +66,56 @@
       <h2 class="about-section-index about-system-label" id="research-logic-title">ИССЛЕДОВАТЕЛЬСКАЯ ЛОГИКА</h2>
       <div class="about-section-content">
         <p class="about-research-logic__opening">Я исследую момент, когда технологическая система начинает опережать человеческое понимание — и человек всё больше подстраивается под то, чем, как ему кажется, всё ещё управляет.</p>
-        <ol class="about-research-logic__steps">
-          <li><span class="about-research-logic__label">01 / СИСТЕМНЫЙ СДВИГ</span><p>Что меняется в технологии быстрее, чем человек успевает это понять?</p></li>
-          <li><span class="about-research-logic__label">02 / ПОТЕРЯ ПРЕДСКАЗУЕМОСТИ</span><p>Когда человек перестаёт понимать, что система сделает дальше, и начинает адаптироваться к ней?</p></li>
-          <li><span class="about-research-logic__label">03 / ЧЕЛОВЕЧЕСКОЕ ПОСЛЕДСТВИЕ</span><p>Как эта адаптация меняет поведение, мышление и ощущение собственной агентности?</p></li>
-        </ol>
+        <div class="about-calculator">
+          <style>
+            #research-logic-block .about-calculator{color:#2c2927;background:#efefea;font:400 16px/1.5 'Source Sans 3',sans-serif}
+            #research-logic-block .calculator-row{padding:1rem 0;border-top:1px solid #b8b1a8;min-width:0}
+            #research-logic-block .calculator-label{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+            #research-logic-block .calculator-label label{min-width:0}
+            #research-logic-block .calculator-value{font:400 13px/1.5 'PT Mono',monospace;color:#064cff;flex:none}
+            #research-logic-block input[type=range]{display:block;width:100%;height:44px;margin:0;accent-color:#064cff;cursor:pointer;box-sizing:border-box}
+            #research-logic-block input[type=range]:focus-visible{outline:2px solid #064cff;outline-offset:2px}
+            #research-logic-block .calculator-endpoints{display:flex;justify-content:space-between;gap:1rem;color:#695e58;font-size:14px}
+            #research-logic-block progress{display:block;width:100%;height:6px;margin:19px 0;background:#b8b1a8;border:0;appearance:none}
+            #research-logic-block progress::-webkit-progress-bar{background:#b8b1a8}
+            #research-logic-block progress::-webkit-progress-value{background:#064cff}
+            #research-logic-block progress::-moz-progress-bar{background:#064cff}
+          </style>
+          <div class="calculator-row">
+            <div class="calculator-label"><label for="technology">Скорость развития технологий</label><output class="calculator-value" id="technology-value" for="technology">60</output></div>
+            <input type="range" id="technology" min="0" max="100" step="1" value="60">
+            <div class="calculator-endpoints"><span>0 — Медленно</span><span>100 — Быстро</span></div>
+          </div>
+          <div class="calculator-row">
+            <div class="calculator-label"><label for="understanding">Понимание технологий человеком</label><output class="calculator-value" id="understanding-value" for="understanding">40</output></div>
+            <input type="range" id="understanding" min="0" max="100" step="1" value="40">
+            <div class="calculator-endpoints"><span>0 — Низкое</span><span>100 — Высокое</span></div>
+          </div>
+          <div class="calculator-row">
+            <div class="calculator-label"><label for="gap">Разрыв между развитием и пониманием</label><output class="calculator-value" id="gap-value" for="technology understanding">20</output></div>
+            <progress id="gap" max="100" value="20">20 из 100</progress>
+            <div class="calculator-endpoints"><span>0</span><span>100</span></div>
+          </div>
+          <script>
+            (() => {
+              const root = document.querySelector('#research-logic-block .about-calculator');
+              const technology = root.querySelector('#technology');
+              const understanding = root.querySelector('#understanding');
+              function update() {
+                const t = Number(technology.value), u = Number(understanding.value);
+                const gap = Math.abs(t - u);
+                root.querySelector('#technology-value').value = String(t);
+                root.querySelector('#understanding-value').value = String(u);
+                root.querySelector('#gap-value').value = String(gap);
+                root.querySelector('#gap').value = gap;
+                root.querySelector('#gap').textContent = gap + ' из 100';
+              }
+              technology.addEventListener('input', update);
+              understanding.addEventListener('input', update);
+              update();
+            })();
+          </script>
+        </div>
       </div>
     </section>
     <section class="about-band about-selected-practice" id="selected-practice-block" aria-labelledby="selected-practice-title">
