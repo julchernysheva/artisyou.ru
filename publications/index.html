@@ -38,10 +38,29 @@
 <link rel="stylesheet" href="/assets/art-is-you/publications.css?v=11"/>
 <link rel="stylesheet" href="/assets/art-is-you/indexes-corrective.css"/>
 <script src="/assets/art-is-you/header.js?v=projects-ru-city-20260925"></script>
+<style>
+body.publications-index-page [data-opening-shell] > .publications-heart-visual{display:block;width:min(100%,880px);margin:28px auto 0;padding:0 16px;box-sizing:border-box;grid-column:1 / -1}
+body.publications-index-page .publications-heart-visual img{display:block;width:100%;height:auto;max-width:100%}
+</style>
 </head>
 <body class="ay-system-page v17-canon p6-1-canon p7-1-type p7-6-5-plexus p7-6-5b-less-ui p7-6-8a-restored p7-6-9-system-lock publications-index-page">
 <art-is-you-header></art-is-you-header>
 <main class="publications-index ay-page-shell">
+<figure class="publications-heart-visual" hidden><img src="/assets/art-is-you/publications/t9-mechanical-heart.gif" alt="Механическое сердце связано с розами через систему трубок и кнопку T9" width="1200" height="676" decoding="async"></figure>
+<script>
+(()=>{
+ const place=()=>{
+  const host=[...document.querySelectorAll('[data-opening-shell]')].find(e=>e.getBoundingClientRect().width>0&&e.matches('[data-opening-shell="publications"],[data-opening-shell="publications-mobile"]'));
+  const figure=document.querySelector('.publications-heart-visual');
+  if(!host||!figure)return false;
+  host.append(figure);figure.hidden=false;return true;
+ };
+ if(!place()){
+  const observer=new MutationObserver(()=>{if(place())observer.disconnect()});
+  observer.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['data-opening-shell']});
+ }
+})();
+</script>
 <header class="publications-intro">
   <div class="publications-intro__eyebrow ay-type-label"><span>ART.IS.YOU / Публикации</span></div>
   <div class="publications-intro__grid ay-grid-12">
