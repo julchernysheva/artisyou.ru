@@ -1,0 +1,38 @@
+/* Isolated integration of the supplied research form; no shared selectors. */
+#research-frame .rf-form{min-width:0;color:var(--ink);font:400 16px/1.5 'Source Sans 3',sans-serif}
+#research-frame .rf-form *{box-sizing:border-box}
+#research-frame .rf-form [hidden]{display:none!important}
+#research-frame .rf-form .micro{font:400 11px/16px 'PT Mono',monospace;letter-spacing:.05em;color:var(--muted)}
+#research-frame .rf-form .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+#research-frame .rf-form .progress{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin:4px 0 8px}
+#research-frame .rf-form .progress button{height:44px;padding:0;border:0;background:linear-gradient(#d4d0ca,#d4d0ca) center/100% 5px no-repeat;cursor:pointer}
+#research-frame .rf-form .progress button.active{background-image:linear-gradient(var(--ui-accent),var(--ui-accent))}
+#research-frame .rf-form .progress button.done{background-image:linear-gradient(var(--ink),var(--ink))}
+#research-frame .rf-form .topic{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+#research-frame .rf-form .topic label{color:var(--muted);font-size:12px;flex:none}
+#research-frame .rf-form .topic input{min-width:0;width:100%;padding:10px 0;min-height:44px;background:transparent;border:0;border-bottom:1px solid var(--rule);font:inherit;font-size:14px;color:inherit;border-radius:0}
+#research-frame .rf-form .step{min-width:0}
+#research-frame .rf-form #rf-question{font:400 26px/32px 'Source Sans 3',sans-serif;letter-spacing:-.025em;margin:0 0 16px;min-height:64px}
+#research-frame .rf-form textarea{display:block;resize:vertical;width:100%;height:144px;min-height:110px;max-height:180px;background:transparent;border:1px solid var(--rule);border-radius:0;padding:14px;font:inherit;color:inherit}
+#research-frame .rf-form .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:16px;margin-top:16px}
+#research-frame .rf-form .saved{font:400 11px/16px 'PT Mono',monospace;color:var(--muted)}
+#research-frame .rf-form .actions{display:flex;gap:8px;flex-wrap:wrap}
+#research-frame .rf-form button.action{min-height:44px;padding:10px 16px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:400 13px/20px 'Source Sans 3',sans-serif;cursor:pointer}
+#research-frame .rf-form button.primary{background:var(--ink);color:var(--surface)}
+#research-frame .rf-form button:disabled{opacity:.35;cursor:not-allowed}
+#research-frame .rf-form :is(button,input,textarea):focus-visible{outline:2px solid var(--ui-accent);outline-offset:3px}
+#research-frame .rf-form .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#research-frame{display:block;background:transparent}
+#research-frame .rf-layout{display:grid;grid-template-columns:220px calc(222px + 8.333333%) minmax(0,1fr);gap:32px;align-items:start;min-width:0}
+#research-frame .rf-layout>.rf-logic__title{grid-column:1;grid-row:1;margin-bottom:0}
+#research-frame .rf-layout>.rf-logic{grid-column:2;grid-row:1;min-width:0}
+#research-frame .rf-layout>.rf-form{grid-column:3;grid-row:1;border:1px solid var(--rule);padding:24px}
+#research-frame .rf-logic__title,#research-frame .rf-form__title{margin:0 0 28px;font:400 24px/32px 'Source Sans 3',sans-serif;letter-spacing:0}
+#research-frame .rf-logic__steps{list-style:none;padding:0;margin:0;font:400 13px/20px 'PT Mono',monospace}
+#research-frame .rf-logic__steps li{position:relative;display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:0 0 32px}
+#research-frame .rf-logic__steps li:not(:last-child)::after{content:'';position:absolute;left:10px;top:25px;bottom:5px;width:1px;background:var(--rule)}
+#research-frame .rf-logic__steps li:last-child{padding-bottom:0}
+#research-frame .rf-logic__number{color:var(--ui-accent)}
+@media(max-width:1099px){#research-frame .rf-layout{grid-template-columns:minmax(0,1fr)}#research-frame .rf-layout>.rf-logic__title,#research-frame .rf-layout>.rf-logic,#research-frame .rf-layout>.rf-form{grid-column:1;grid-row:auto}#research-frame .rf-logic__steps{max-width:320px}}
+@media(max-width:600px){#research-frame .rf-layout{gap:24px}#research-frame .rf-layout>.rf-form{padding:16px}}
+@media(max-width:600px){#research-frame .rf-form .topic{align-items:stretch;flex-direction:column;gap:0}#research-frame .rf-form #rf-question{font-size:22px;line-height:28px;min-height:0}#research-frame .rf-form textarea{height:160px}#research-frame .rf-form .top{align-items:flex-start}#research-frame .rf-form .actions{gap:6px}}
