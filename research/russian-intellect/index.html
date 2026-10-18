@@ -61,7 +61,7 @@
     <section class="ri-mobile-entry" aria-labelledby="ri-mobile-title">
       <p class="ri-mobile-entry__eyebrow">РУССКИЙ ИНТЕЛЛЕКТ</p>
       <h2 id="ri-mobile-title">Интерактивная карта рассчитана на большой экран.</h2>
-      <p class="ri-mobile-entry__counts">81 человек · 28 технологий · 8 компаний · 36 современных маршрутов</p>
+      <p class="ri-mobile-entry__counts">88 человек · 39 технологий · 8 компаний · 42 современных маршрута · 89 исторических связей</p>
       <p>Откройте проект на планшете или компьютере, чтобы исследовать связи между людьми, научными школами, технологиями и компаниями.</p>
       <a href="/research/">ИССЛЕДОВАНИЯ →</a>
     </section>
@@ -117,7 +117,7 @@
           [rt.historical.edges.length, 'ИСТОРИЧЕСКИЕ СВЯЗИ']
         ];
         // Frozen figures are assertions only; displayed values come from RI_RUNTIME.
-        const expected = [81, 28, 8, 36, 74];
+        const expected = [88, 39, 8, 42, 89];
         const verified = figures.every(([value], index) => value === expected[index]);
         output.dataset.status = verified ? 'verified' : 'mismatch';
         output.textContent = verified
