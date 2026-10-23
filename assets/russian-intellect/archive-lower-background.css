@@ -1,0 +1,43 @@
+/* One continuous archival background below the map; no graph selectors. */
+.ri-integration-shell .ri-archive-lower-region {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  isolation: isolate;
+}
+.ri-archive-lower-region > * { grid-column: 1; position: relative; z-index: 1; min-width: 0; }
+.ri-archive-lower-region > .ri-application { grid-row: 1; }
+.ri-archive-lower-region > .ri-people { grid-row: 2; }
+.ri-archive-lower-region > .ri-mobile-entry { grid-row: 3; }
+.ri-archive-lower-region > .ri-editorial-protocol { grid-row: 4; }
+.ri-archive-lower-region > .research-detail-evidence-frame { grid-row: 5; }
+.ri-archive-lower-region > .ri-archive-credit { grid-row: 6; }
+.ri-integration-shell .ri-archive-lower-region::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 2 / 7;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(239,239,234,.85), rgba(239,239,234,.85)), url("archive/8_540.gif");
+  background-position: center, right 6% center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+}
+.ri-integration-shell .ri-archive-lower-region > :not(.ri-application),
+.ri-integration-shell .ri-editorial-protocol :is(.ri-editorial-corpus,.ri-editorial-methodology,.ri-methodology-grid,.research-detail-protocol__field) {
+  background-color: transparent;
+}
+.ri-integration-shell .ri-archive-credit {
+  margin: 0;
+  padding: 16px var(--research-detail-safe, 32px) 20px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  font: 400 12px/1.5 "Source Sans 3", sans-serif;
+  overflow-wrap: anywhere;
+}
+.ri-archive-credit a { color: inherit; text-underline-offset: 3px; }
+.ri-archive-credit a:hover { color: var(--ui-accent); }
+.ri-archive-credit a:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
+.ri-archive-credit__status { display: block; margin-top: 4px; }
+@media (max-width: 767px) {
+  .ri-integration-shell .ri-archive-lower-region::before { background-position: center; }
+}
