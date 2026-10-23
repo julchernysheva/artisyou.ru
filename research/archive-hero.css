@@ -1,0 +1,16 @@
+/* Природа. 1955. № 8. Печатная с. 83 (страница 85 пользовательского PDF).
+   Исходный скан не ретуширован; пропорции сохранены. */
+#research-prototype .rp-hero {
+  position: relative;
+  isolation: isolate;
+}
+#research-prototype .rp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/assets/research-archive/priroda-1955-08-p83.jpg") center top / cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: .12;
+}

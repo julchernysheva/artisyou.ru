@@ -1,0 +1,22 @@
+/* Природа. 1955. № 8. Титульный лист: страница 2
+   пользовательского PDF. Пропорции скана сохранены. */
+.research-detail-protocol__screen--opening {
+  position: relative;
+  isolation: isolate;
+}
+.research-detail-protocol__screen--opening::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/assets/research-archive/priroda-1955-08-title-pdf2.jpg") center top / 60% auto no-repeat;
+  mix-blend-mode: multiply;
+  opacity: .12;
+}
+@media (max-width: 720px) {
+  .research-detail-protocol__screen--opening::before {
+    background-size: 100% auto;
+    background-position: center top;
+  }
+}
