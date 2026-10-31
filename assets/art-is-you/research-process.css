@@ -1,0 +1,110 @@
+/* Editorial work-in-progress, not network progress or a readiness percentage. */
+html body .ay-research-process {
+  box-sizing: border-box;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 300px);
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin: 32px 0 0;
+  padding: 17px 0 0;
+  border-top: 1px solid #b8b1a8;
+  color: #2c2927;
+  font-family: "Source Sans 3", sans-serif;
+}
+html body .ay-research-process__title {
+  margin: 0 !important;
+  color: #064cff !important;
+  font: 500 12px/18px "Source Sans 3", sans-serif !important;
+  letter-spacing: .045em !important;
+  text-transform: uppercase;
+}
+html body .ay-research-process__note {
+  margin: 4px 0 0 !important;
+  color: #695e58 !important;
+  font: 400 13px/19px "Source Sans 3", sans-serif !important;
+  letter-spacing: 0 !important;
+  max-width: none !important;
+}
+html body .ay-research-process__graphic {
+  display: block;
+  position: relative;
+  height: 23px;
+  overflow: hidden;
+  border-top: 1px solid #b8b1a8;
+  border-bottom: 1px solid #b8b1a8;
+  background: repeating-linear-gradient(90deg, #b8b1a8 0 1px, transparent 1px calc(100% / 12));
+}
+/* Exception within the existing opening layer: this text-empty span is artwork,
+   not an abandoned container. Shared styles and the normalizer remain untouched. */
+@layer global-opening-contract {
+  html body .ay-research-process__graphic { display: block !important; }
+}
+.ay-research-process__visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+  position: relative;
+}
+html body .ay-research-process__pause {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  cursor: pointer;
+}
+html body .ay-research-process__toggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.ay-research-process__pause::before {
+  content: "Ⅱ";
+  color: #064cff;
+  font: 400 16px/1 sans-serif;
+}
+.ay-research-process__pause:has(input:checked)::before { content: "▷"; }
+.ay-research-process__pause:has(input:focus-visible) {
+  outline: 2px solid #064cff;
+  outline-offset: 2px;
+}
+.ay-research-process__visual:has(input:checked) .ay-research-process__graphic::before {
+  animation-play-state: paused;
+}
+.ay-research-process__graphic::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 20%;
+  background: #064cff;
+  animation: ay-research-in-progress 6s ease-in-out infinite alternate;
+}
+@keyframes ay-research-in-progress {
+  from { transform: translateX(0); }
+  to { transform: translateX(400%); }
+}
+@media (max-width: 720px) {
+  html body .ay-research-process {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 15px;
+  }
+  html body .ay-research-process__graphic { height: 17px; }
+  .ay-research-process__visual { grid-template-columns: minmax(0, 1fr) 44px; }
+  html body .ay-research-process__pause { width: 44px; height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ay-research-process__graphic::before { animation: none; left: 40%; }
+  .ay-research-process__visual { grid-template-columns: minmax(0, 1fr); }
+  html body .ay-research-process__pause { display: none; }
+}
