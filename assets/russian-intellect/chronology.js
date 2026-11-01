@@ -30,5 +30,7 @@
   const style=win.document.createElement('style');style.textContent='.hist-node.people-index-focus{opacity:1!important}.hist-node.people-index-focus .dot{stroke:#064cff!important;stroke-width:4!important}.hist-node.people-index-focus .label-plate{stroke:#064cff!important;stroke-width:2!important}';win.document.head.append(style);
   section.append(list);document.querySelector('.ri-application').after(section);
  };
- frame.addEventListener('load',build);if(frame.contentWindow.RI_RUNTIME)build();
+ let attempts=0;
+ const ready=()=>{build();if(!document.querySelector('.ri-people')&&++attempts<60)setTimeout(ready,500)};
+ frame.addEventListener('load',ready);ready();
 })();
