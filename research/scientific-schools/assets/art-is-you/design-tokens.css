@@ -1,0 +1,96 @@
+:root {
+  --ink: #2c2927;
+  --muted: #695e58;
+  --surface: #efefea;
+  --ui-accent: #064cff;
+  --rule: #b8b1a8;
+  --ay-ink: var(--ink);
+  --ay-muted: var(--muted);
+  --ay-paper: var(--surface);
+  --ay-rule: var(--rule);
+  --ay-blue: var(--ui-accent);
+  --ay-font-sans: var(--font-primary);
+  --ay-font-mono: var(--font-mono);
+
+  --color-paper: var(--surface);
+  --color-text: var(--muted);
+  --color-ink: var(--ink);
+  --color-accent: var(--ui-accent);
+  --color-line: var(--rule);
+  --color-white: var(--surface);
+  --color-black: var(--ink);
+
+  --ay-bg: var(--color-paper);
+  --ay-text: var(--color-text);
+  --ay-line: var(--color-line);
+  --ay-accent: var(--color-accent);
+
+  /* Canonical desktop type hierarchy: one role = one scale. */
+  --type-meta: 11px;
+  --type-caption: 12px;
+  --type-small: 14px;
+  --type-body: 16px;
+  --type-lead: 18px;
+  --type-h3: 24px;
+  --type-h2: 32px;
+  --type-display: 40px;
+  --type-display-long: 40px;
+  --type-card-title: 28px;
+  --type-card-subtitle: 16px;
+
+  --leading-meta: 14px;
+  --leading-caption: 16px;
+  --leading-small: 18px;
+  --leading-body: 24px;
+  --leading-lead: 24px;
+  --leading-h3: 30px;
+  --leading-h2: 36px;
+  --leading-display: 44px;
+  --leading-card-title: 32px;
+  --leading-card-subtitle: 22px;
+
+  --ay-type-meta: var(--type-meta);
+  --ay-type-label: var(--type-meta);
+  --ay-type-small-body: var(--type-small);
+  --ay-type-body: var(--type-body);
+  --ay-type-nav: var(--type-small);
+  --ay-type-lead: var(--type-lead);
+  --ay-type-h3: var(--type-h3);
+  --ay-type-h2: var(--type-h2);
+  --ay-type-display: var(--type-display);
+  --ay-type-display-long: var(--type-display-long);
+  --ay-type-display-compact: var(--type-display);
+
+  --ay-leading-display: var(--leading-display);
+  --ay-leading-heading: var(--leading-h2);
+  --ay-leading-card: var(--leading-h3);
+  --ay-leading-lead: var(--leading-lead);
+  --ay-leading-body: var(--leading-body);
+  --ay-leading-small: var(--leading-small);
+  --ay-leading-system: var(--leading-meta);
+
+  --ay-tracking-display: -0.04em;
+  --ay-tracking-heading: -0.03em;
+  --ay-tracking-card: -0.02em;
+  --ay-tracking-lead: -0.015em;
+  --ay-tracking-body: -0.01em;
+  --ay-tracking-system: 0.025em;
+
+  /* One canonical desktop geometry. */
+  --ay-grid-columns: 12;
+  --ay-grid-gutter: 32px;
+  --ay-grid-gap: 24px;
+  --ay-grid-gap-compact: 16px;
+  --ay-section-space: 64px;
+  --ay-text-measure: 42ch;
+  --ay-text-measure-wide: 52ch;
+
+  /* Restricted spacing scale. */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+}

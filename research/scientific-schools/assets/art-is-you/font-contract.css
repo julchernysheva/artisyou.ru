@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/art-is-you/fonts/SourceSans3-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/art-is-you/fonts/SourceSans3-Semibold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  src: url('/assets/art-is-you/fonts/PTM55FT.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: 'Source Sans 3';
+  --font-mono: 'PT Mono';
+  font-synthesis: none;
+}

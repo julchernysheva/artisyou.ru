@@ -1,0 +1,1477 @@
+{
+  "schema_version": 3,
+  "relations": [
+    {
+      "key": "luzin:luzin-1",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "B003",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-1"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:luzin-2",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "B002",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-2"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:luzin-3",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "P002",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-3"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:luzin-4",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "P003",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-4"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:luzin-5",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "B013",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-5"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:luzin-6",
+      "school": "luzin",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "B036",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "luzin-6"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "luzin:v3-luzin-lyapunov",
+      "school": "luzin",
+      "legacy_edge": {
+        "id": "v3-luzin-lyapunov",
+        "source": "B001",
+        "target": "P004",
+        "type": "Научное руководство",
+        "claim": "Лузин непосредственно руководил занятиями Ляпунова теорией множеств; руководство диссертацией не утверждается.",
+        "source_id": "LY2011",
+        "page": "19",
+        "pdf_page": 19,
+        "scan": "evidence/scans/lyapunov2011-019.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED_V3",
+        "directed": true
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов. 100 лет со дня рождения. Очерк научной, педагогической и общественной деятельности",
+        "url": "https://www.computer-museum.ru/books/Lyapunov.pdf",
+        "file": "lyapunov2011.pdf",
+        "kind": "Биографический очерк в сборнике, 2011; вторичный источник",
+        "sha256": "868337a40e3f1b53dccb148681f7a76a581c4ca58310b65733dc647b0941866a",
+        "id": "LY2011"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "V3 scan reviewed"
+    },
+    {
+      "key": "lavrentyev:lavrentyev-1",
+      "school": "lavrentyev",
+      "legacy_edge": {
+        "source": "B001",
+        "target": "B036",
+        "type": "Научная школа",
+        "claim": "Лаврентьев включает участника в состав Лузитании; формальное руководство диссертацией не утверждается.",
+        "source_id": "L",
+        "page": "26",
+        "pdf_page": 25,
+        "scan": "evidence/scans/luzitania-025.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lavrentyev-1"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lavrentyev:lavrentyev-2",
+      "school": "lavrentyev",
+      "legacy_edge": {
+        "source": "B036",
+        "target": "B008",
+        "type": "Совместная организация",
+        "claim": "Лаврентьев называет Соболева соратником в организации нового научного центра.",
+        "source_id": "L",
+        "page": "125",
+        "pdf_page": 123,
+        "scan": "evidence/scans/lavrentyev125-123.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "lavrentyev-2"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lavrentyev:lavrentyev-3",
+      "school": "lavrentyev",
+      "legacy_edge": {
+        "source": "B036",
+        "target": "P017",
+        "type": "Приглашение",
+        "claim": "Лаврентьев вместе с Соболевым пригласил Марчука перейти в Сибирское отделение.",
+        "source_id": "L",
+        "page": "134",
+        "pdf_page": 132,
+        "scan": "evidence/scans/lavrentyev134-132.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lavrentyev-3"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lavrentyev:lavrentyev-4",
+      "school": "lavrentyev",
+      "legacy_edge": {
+        "source": "B008",
+        "target": "P017",
+        "type": "Приглашение",
+        "claim": "Соболев вместе с Лаврентьевым посетил Марчука в Обнинске и получил согласие на переезд.",
+        "source_id": "L",
+        "page": "134",
+        "pdf_page": 132,
+        "scan": "evidence/scans/lavrentyev134-132.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lavrentyev-4"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lavrentyev:lavrentyev-5",
+      "school": "lavrentyev",
+      "legacy_edge": {
+        "source": "B019",
+        "target": "P017",
+        "type": "Учитель и ученик",
+        "claim": "Лаврентьев прямо называет Марчука учеником Кибеля.",
+        "source_id": "L",
+        "page": "134",
+        "pdf_page": 132,
+        "scan": "evidence/scans/lavrentyev134-132.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lavrentyev-5"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-1",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "B036",
+        "target": "P004",
+        "type": "Приглашение",
+        "claim": "Н. А. Ляпунова пишет о приглашении её отца Лаврентьевым и Соболевым в Новосибирск; поездка состоялась летом 1961 года.",
+        "source_id": "Y",
+        "page": "Воспоминания Н. А. Ляпуновой; сноска 37",
+        "pdf_page": 30,
+        "scan": "evidence/scans/lyapunov-school-030.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lyapunov-1"
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов",
+        "url": "https://www.computer-museum.ru/books/lyapunov-90.pdf",
+        "file": "lyapunov2001.pdf",
+        "kind": "Сборник воспоминаний и документов / 2001",
+        "sha256": "48110fa713dbc63101c1c30d10aa5d388ce96ccd20f2ffc534cd6f3a9d08d951",
+        "id": "Y"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-2",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "B008",
+        "target": "P004",
+        "type": "Приглашение",
+        "claim": "Соболев назван вторым инициатором приглашения Ляпунова.",
+        "source_id": "Y",
+        "page": "Воспоминания Н. А. Ляпуновой; сноска 37",
+        "pdf_page": 30,
+        "scan": "evidence/scans/lyapunov-school-030.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lyapunov-2"
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов",
+        "url": "https://www.computer-museum.ru/books/lyapunov-90.pdf",
+        "file": "lyapunov2001.pdf",
+        "kind": "Сборник воспоминаний и документов / 2001",
+        "sha256": "48110fa713dbc63101c1c30d10aa5d388ce96ccd20f2ffc534cd6f3a9d08d951",
+        "id": "Y"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-3",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "P004",
+        "target": "P006",
+        "type": "Учитель и ученик",
+        "claim": "Н. А. Ляпунова называет учёного среди учеников отца, уже работавших в Академгородке.",
+        "source_id": "Y",
+        "page": "Воспоминания Н. А. Ляпуновой",
+        "pdf_page": 30,
+        "scan": "evidence/scans/lyapunov-school-030.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lyapunov-3"
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов",
+        "url": "https://www.computer-museum.ru/books/lyapunov-90.pdf",
+        "file": "lyapunov2001.pdf",
+        "kind": "Сборник воспоминаний и документов / 2001",
+        "sha256": "48110fa713dbc63101c1c30d10aa5d388ce96ccd20f2ffc534cd6f3a9d08d951",
+        "id": "Y"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-4",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "P004",
+        "target": "P015",
+        "type": "Учитель и ученик",
+        "claim": "Н. А. Ляпунова называет учёного среди учеников отца, уже работавших в Академгородке.",
+        "source_id": "Y",
+        "page": "Воспоминания Н. А. Ляпуновой",
+        "pdf_page": 30,
+        "scan": "evidence/scans/lyapunov-school-030.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "lyapunov-4"
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов",
+        "url": "https://www.computer-museum.ru/books/lyapunov-90.pdf",
+        "file": "lyapunov2001.pdf",
+        "kind": "Сборник воспоминаний и документов / 2001",
+        "sha256": "48110fa713dbc63101c1c30d10aa5d388ce96ccd20f2ffc534cd6f3a9d08d951",
+        "id": "Y"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-5",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "P004",
+        "target": "B050",
+        "type": "Совместная работа",
+        "claim": "Воспоминания описывают совместную организацию Совета по кибернетике Бергом и Ляпуновым.",
+        "source_id": "Y",
+        "page": "Воспоминания; сноска 17",
+        "pdf_page": 20,
+        "scan": "evidence/scans/lyapunov-note-020.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "lyapunov-5"
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов",
+        "url": "https://www.computer-museum.ru/books/lyapunov-90.pdf",
+        "file": "lyapunov2001.pdf",
+        "kind": "Сборник воспоминаний и документов / 2001",
+        "sha256": "48110fa713dbc63101c1c30d10aa5d388ce96ccd20f2ffc534cd6f3a9d08d951",
+        "id": "Y"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:lyapunov-6",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "source": "B036",
+        "target": "B008",
+        "type": "Совместная организация",
+        "claim": "Лаврентьев называет Соболева соратником в организации нового научного центра.",
+        "source_id": "L",
+        "page": "125",
+        "pdf_page": 123,
+        "scan": "evidence/scans/lavrentyev125-123.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "lyapunov-6"
+      },
+      "source_record": {
+        "title": "Век Лаврентьева. Опыты жизни",
+        "url": "https://prometeus.nsc.ru/elibrary/2000vek/024-030.ssi",
+        "pdf_url": "https://prometeus.nsc.ru/elibrary/2000vek/lavrage.pdf",
+        "file": "lavrage.pdf",
+        "kind": "Авторские воспоминания / 2000",
+        "sha256": "2b74c19110cd9c16cf88888dd903edaf4da3aef196f3d90593f2003df5bc31d4",
+        "id": "L"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "lyapunov:v3-luzin-lyapunov",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "id": "v3-luzin-lyapunov",
+        "source": "B001",
+        "target": "P004",
+        "type": "Научное руководство",
+        "claim": "Лузин непосредственно руководил занятиями Ляпунова теорией множеств; руководство диссертацией не утверждается.",
+        "source_id": "LY2011",
+        "page": "19",
+        "pdf_page": 19,
+        "scan": "evidence/scans/lyapunov2011-019.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED_V3",
+        "directed": true
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов. 100 лет со дня рождения. Очерк научной, педагогической и общественной деятельности",
+        "url": "https://www.computer-museum.ru/books/Lyapunov.pdf",
+        "file": "lyapunov2011.pdf",
+        "kind": "Биографический очерк в сборнике, 2011; вторичный источник",
+        "sha256": "868337a40e3f1b53dccb148681f7a76a581c4ca58310b65733dc647b0941866a",
+        "id": "LY2011"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "V3 scan reviewed"
+    },
+    {
+      "key": "lyapunov:v3-kolmogorov-lyapunov",
+      "school": "lyapunov",
+      "legacy_edge": {
+        "id": "v3-kolmogorov-lyapunov",
+        "source": "P003",
+        "target": "P004",
+        "type": "Научная рекомендация",
+        "claim": "В 1939–1940 годах по рекомендации Колмогорова Ляпунов статистически обрабатывал материал Керкиса; соавторство не утверждается.",
+        "source_id": "LY2011",
+        "page": "19",
+        "pdf_page": 19,
+        "scan": "evidence/scans/lyapunov2011-019.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED_V3",
+        "directed": true
+      },
+      "source_record": {
+        "title": "Алексей Андреевич Ляпунов. 100 лет со дня рождения. Очерк научной, педагогической и общественной деятельности",
+        "url": "https://www.computer-museum.ru/books/Lyapunov.pdf",
+        "file": "lyapunov2011.pdf",
+        "kind": "Биографический очерк в сборнике, 2011; вторичный источник",
+        "sha256": "868337a40e3f1b53dccb148681f7a76a581c4ca58310b65733dc647b0941866a",
+        "id": "LY2011"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "V3 scan reviewed"
+    },
+    {
+      "key": "kantorovich:kantorovich-1",
+      "school": "kantorovich",
+      "legacy_edge": {
+        "source": "P009",
+        "target": "B012",
+        "type": "Совместное исследование",
+        "claim": "Канторович описывает совместную с Гавуриным разработку транспортной задачи и метода потенциалов.",
+        "source_id": "K",
+        "page": "202",
+        "pdf_page": 20,
+        "scan": "evidence/scans/kantorovich202-20.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "kantorovich-1"
+      },
+      "source_record": {
+        "title": "Л. В. Канторович. Мой путь в науке",
+        "url": "https://drive.google.com/file/d/112ok9ntrK-pWC3cwJfWvF7JTVpgw-nEH/view",
+        "file": "rm2433.pdf",
+        "kind": "Авторский текст / УМН, 1987, 42:2, 183–213",
+        "sha256": "53db39612b62dc552025aa833207760184983f91d9da27a05d6c02bfefb1057c",
+        "id": "K"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "kantorovich:kantorovich-2",
+      "school": "kantorovich",
+      "legacy_edge": {
+        "source": "P003",
+        "target": "P009",
+        "type": "Поддержка публикации",
+        "claim": "Канторович сообщает о поддержке Колмогоровым публикации совместной работы с Гавуриным.",
+        "source_id": "K",
+        "page": "202",
+        "pdf_page": 20,
+        "scan": "evidence/scans/kantorovich202-20.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "kantorovich-2"
+      },
+      "source_record": {
+        "title": "Л. В. Канторович. Мой путь в науке",
+        "url": "https://drive.google.com/file/d/112ok9ntrK-pWC3cwJfWvF7JTVpgw-nEH/view",
+        "file": "rm2433.pdf",
+        "kind": "Авторский текст / УМН, 1987, 42:2, 183–213",
+        "sha256": "53db39612b62dc552025aa833207760184983f91d9da27a05d6c02bfefb1057c",
+        "id": "K"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "kantorovich:kantorovich-3",
+      "school": "kantorovich",
+      "legacy_edge": {
+        "source": "B013",
+        "target": "P009",
+        "type": "Приглашение на семинар",
+        "claim": "Канторович вспоминает приглашение Люстерника в 1943 году на семинар о машинных вычислениях.",
+        "source_id": "K",
+        "page": "204",
+        "pdf_page": 22,
+        "scan": "evidence/scans/kantorovich204-22.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "kantorovich-3"
+      },
+      "source_record": {
+        "title": "Л. В. Канторович. Мой путь в науке",
+        "url": "https://drive.google.com/file/d/112ok9ntrK-pWC3cwJfWvF7JTVpgw-nEH/view",
+        "file": "rm2433.pdf",
+        "kind": "Авторский текст / УМН, 1987, 42:2, 183–213",
+        "sha256": "53db39612b62dc552025aa833207760184983f91d9da27a05d6c02bfefb1057c",
+        "id": "K"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "glushkov:glushkov-1",
+      "school": "glushkov",
+      "legacy_edge": {
+        "source": "P008",
+        "target": "B039",
+        "type": "Научное руководство",
+        "claim": "В записи рассказа Глушков называет Стогния своим аспирантом и указывает защиту в 1959 году.",
+        "source_id": "G",
+        "page": "Часть вторая; абзац «Когда мой аспирант…»",
+        "pdf_page": 1,
+        "scan": "evidence/scans/glushkov-stogniy-1.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": true,
+        "id": "glushkov-1"
+      },
+      "source_record": {
+        "title": "Б. Малиновский. Академик Виктор Глушков. Исповедь учёного",
+        "url": "https://computer-museum.ru/galglory/glushkov_book_4_1.htm",
+        "file": "/Users/julia.chernysheva/Downloads/glushkov_1.webarchive.pdf",
+        "kind": "Запись рассказа В. М. Глушкова / локальная PDF-копия веб-страницы",
+        "sha256": "85385468b85202e2b0d9cbbec795efbcea648bf3e387643571fa1160fbd01f85",
+        "id": "G"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "glushkov:glushkov-2",
+      "school": "glushkov",
+      "legacy_edge": {
+        "source": "P008",
+        "target": "B034",
+        "type": "Совместное руководство проектом",
+        "claim": "Текст называет Глушкова, Дашевского и Ющенко руководителями завершающего этапа создания ЭВМ «Киев».",
+        "source_id": "G",
+        "page": "Часть вторая; абзац об ЭВМ «Киев»",
+        "pdf_page": 1,
+        "scan": "evidence/scans/glushkov-sesm-1.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "glushkov-2"
+      },
+      "source_record": {
+        "title": "Б. Малиновский. Академик Виктор Глушков. Исповедь учёного",
+        "url": "https://computer-museum.ru/galglory/glushkov_book_4_1.htm",
+        "file": "/Users/julia.chernysheva/Downloads/glushkov_1.webarchive.pdf",
+        "kind": "Запись рассказа В. М. Глушкова / локальная PDF-копия веб-страницы",
+        "sha256": "85385468b85202e2b0d9cbbec795efbcea648bf3e387643571fa1160fbd01f85",
+        "id": "G"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "glushkov:glushkov-3",
+      "school": "glushkov",
+      "legacy_edge": {
+        "source": "P008",
+        "target": "B052",
+        "type": "Совместное руководство проектом",
+        "claim": "Текст называет Глушкова, Дашевского и Ющенко руководителями завершающего этапа создания ЭВМ «Киев».",
+        "source_id": "G",
+        "page": "Часть вторая; абзац об ЭВМ «Киев»",
+        "pdf_page": 1,
+        "scan": "evidence/scans/glushkov-sesm-1.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "glushkov-3"
+      },
+      "source_record": {
+        "title": "Б. Малиновский. Академик Виктор Глушков. Исповедь учёного",
+        "url": "https://computer-museum.ru/galglory/glushkov_book_4_1.htm",
+        "file": "/Users/julia.chernysheva/Downloads/glushkov_1.webarchive.pdf",
+        "kind": "Запись рассказа В. М. Глушкова / локальная PDF-копия веб-страницы",
+        "sha256": "85385468b85202e2b0d9cbbec795efbcea648bf3e387643571fa1160fbd01f85",
+        "id": "G"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "glushkov:glushkov-4",
+      "school": "glushkov",
+      "legacy_edge": {
+        "source": "B034",
+        "target": "B052",
+        "type": "Совместное руководство проектом",
+        "claim": "Текст называет Глушкова, Дашевского и Ющенко руководителями завершающего этапа создания ЭВМ «Киев».",
+        "source_id": "G",
+        "page": "Часть вторая; абзац об ЭВМ «Киев»",
+        "pdf_page": 1,
+        "scan": "evidence/scans/glushkov-sesm-1.png",
+        "verification": "TEXT_AND_RENDER_VISUALLY_CHECKED",
+        "directed": false,
+        "id": "glushkov-4"
+      },
+      "source_record": {
+        "title": "Б. Малиновский. Академик Виктор Глушков. Исповедь учёного",
+        "url": "https://computer-museum.ru/galglory/glushkov_book_4_1.htm",
+        "file": "/Users/julia.chernysheva/Downloads/glushkov_1.webarchive.pdf",
+        "kind": "Запись рассказа В. М. Глушкова / локальная PDF-копия веб-страницы",
+        "sha256": "85385468b85202e2b0d9cbbec795efbcea648bf3e387643571fa1160fbd01f85",
+        "id": "G"
+      },
+      "identity_status": "MATCHED",
+      "evidence_gate": "PASS_FOR_DISPLAYED_CLAIM",
+      "basis": "Inherited V1 scan evidence; provenance retained"
+    },
+    {
+      "key": "kolmogorov:1",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "luzin",
+        "target": "kolmogorov",
+        "type": "Учитель — ученик",
+        "description": "Колмогоров говорил о Лузине как об учителе.",
+        "citation": "МИАН, биография Колмогорова.",
+        "url": "https://www.mi-ras.ru/index.php?c=inmemoriapage&id=14007&l=1",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:2",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "nikolsky",
+        "type": "Учитель — ученик",
+        "description": "Никольский назван учеником Колмогорова; не уточняется формальный статус диссертации.",
+        "citation": "«Колмогоров в воспоминаниях учеников», сноска к воспоминаниям, 2006.",
+        "url": "https://mccme.ru/free-books/re-kolmogorov.pdf",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:3",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "dynkin",
+        "type": "Учитель — ученик",
+        "description": "МГУ называет Дынкина учеником Колмогорова и Гельфанда.",
+        "citation": "МГУ, памяти Е. Б. Дынкина.",
+        "url": "https://math.msu.ru/node/553",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:4",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "gelfand",
+        "target": "dynkin",
+        "type": "Учитель — ученик",
+        "description": "МГУ называет Дынкина учеником Гельфанда и Колмогорова.",
+        "citation": "МГУ, памяти Е. Б. Дынкина.",
+        "url": "https://math.msu.ru/node/553",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:5",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "arnold",
+        "type": "Учитель — ученик",
+        "description": "МГУ называет Арнольда учеником Колмогорова.",
+        "citation": "Летопись Московского университета, В. И. Арнольд.",
+        "url": "https://letopis.msu.ru/peoples/8587",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:6",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "sinai",
+        "type": "Учитель — ученик",
+        "description": "Синай в интервью говорит, что стал одним из учеников Колмогорова.",
+        "citation": "Интервью с Я. Г. Синаем, «Математическое просвещение», с. 52.",
+        "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mp&option_lang=rus&paperid=838&what=fullt",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:7",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "dynkin",
+        "target": "sinai",
+        "type": "Научное наставничество",
+        "description": "Синай рассказывает о статье, написанной под руководством Дынкина; формальное руководство диссертацией не утверждается.",
+        "citation": "Интервью с Я. Г. Синаем, «Математическое просвещение», с. 52.",
+        "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mp&option_lang=rus&paperid=838&what=fullt",
+        "status": "VERIFIED",
+        "relation_type": "TEACHER"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:8",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "uspensky",
+        "type": "Учитель — ученик",
+        "description": "Успенский указан как ученик Колмогорова в воспоминаниях.",
+        "citation": "«Колмогоров в воспоминаниях учеников», 2006.",
+        "url": "https://mccme.ru/free-books/re-kolmogorov.pdf",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:9",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "shiryaev",
+        "type": "Учитель — ученик",
+        "description": "Ширяев включён в список учеников Колмогорова.",
+        "citation": "Проект «Колмогоров: ученики».",
+        "url": "https://kolmogorov.world/students",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:10",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "khinchin",
+        "target": "kolmogorov",
+        "type": "Соавторство",
+        "description": "Совместная публикация 1925 года о сходимости рядов случайных величин.",
+        "citation": "А. Н. Ширяев, к 120-летию А. Н. Колмогорова, 2023.",
+        "url": "https://m.mathnet.ru/links/a81d0a2881874bae3221159c42808184/vmumm4572.pdf",
+        "status": "VERIFIED",
+        "relation_type": "COAUTHOR"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:11",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "alexandrov",
+        "target": "khinchin",
+        "type": "Соавторство",
+        "description": "Совместная статья об Андрее Колмогорове к пятидесятилетию.",
+        "citation": "Александров, Хинчин, УМН 8:3 (1953), с. 177–200.",
+        "url": "https://www.mathnet.ru/php/archive.phtml?jrnid=rm&option_lang=rus&paperid=8219&wshow=paper",
+        "status": "VERIFIED",
+        "relation_type": "COAUTHOR"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:12",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "alexandrov",
+        "target": "kolmogorov",
+        "type": "Коллеги",
+        "description": "Колмогоров пишет о многолетней дружбе и научном окружении.",
+        "citation": "А. Н. Колмогоров, «Воспоминания о П. С. Александрове», УМН 41:6 (1986).",
+        "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=2316&what=fullt",
+        "status": "VERIFIED",
+        "relation_type": "COLLEAGUE"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:13",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "prokhorov",
+        "type": "Учитель — ученик",
+        "description": "Прохоров назван учеником Колмогорова.",
+        "citation": "Некролог Ю. В. Прохорова, 2014, с. 1049.",
+        "url": "https://www.mathnet.ru/links/700c608c56405ccccb8bdd09a911b348/zvmmf10057.pdf",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:14",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "dobrushin",
+        "type": "Учитель — ученик",
+        "description": "Кафедра МГУ перечисляет Добрушина среди аспирантов Колмогорова; формальная роль при защите отдельно не установлена.",
+        "citation": "МГУ, история аспирантуры кафедры теории вероятностей.",
+        "url": "https://new.math.msu.su/department/probab/os/aspirantura.html",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:15",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "tikhomirov",
+        "type": "Учитель — ученик",
+        "description": "Тихомиров рассказывает о Колмогорове как учителе.",
+        "citation": "В. М. Тихомиров, «Слово об учителе», в сборнике 2006, с. 208.",
+        "url": "https://mccme.ru/free-books/re-kolmogorov.pdf#page=105",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:16",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "gnedenko",
+        "type": "Учитель — ученик",
+        "description": "Гнеденко назван фактическим учеником Колмогорова; формальное руководство диссертацией не утверждается.",
+        "citation": "МГУ, история аспирантуры кафедры теории вероятностей.",
+        "url": "https://new.math.msu.su/department/probab/os/aspirantura.html",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:17",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "fomin",
+        "type": "Учитель — ученик",
+        "description": "Фомин указан в перечне фактических учеников Колмогорова.",
+        "citation": "МГУ, история аспирантуры кафедры теории вероятностей.",
+        "url": "https://new.math.msu.su/department/probab/os/aspirantura.html",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:18",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "obukhov",
+        "type": "Учитель — ученик",
+        "description": "Обухов указан в перечне фактических учеников Колмогорова.",
+        "citation": "МГУ, история аспирантуры кафедры теории вероятностей.",
+        "url": "https://new.math.msu.su/department/probab/os/aspirantura.html",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:19",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "dynkin",
+        "target": "chentsov",
+        "type": "Учитель — ученик",
+        "description": "Издание называет Ченцова сначала учеником Дынкина, затем Смирнова.",
+        "citation": "Колмогоров в воспоминаниях учеников, 2006, с. 445.",
+        "url": "https://mccme.ru/free-books/re-kolmogorov.pdf#page=223",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:20",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "smirnov",
+        "target": "chentsov",
+        "type": "Учитель — ученик",
+        "description": "Издание называет Ченцова сначала учеником Дынкина, затем Смирнова.",
+        "citation": "Колмогоров в воспоминаниях учеников, 2006, с. 445.",
+        "url": "https://mccme.ru/free-books/re-kolmogorov.pdf#page=223",
+        "status": "VERIFIED",
+        "relation_type": "STUDENT"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:21",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "tikhomirov",
+        "type": "Соавторство",
+        "description": "Совместная статья об ε-энтропии и ε-ёмкости.",
+        "citation": "Колмогоров, Тихомиров, УМН 14:2 (1959), с. 3–86.",
+        "url": "https://www.mathnet.ru/php/archive.phtml?jrnid=rm&option_lang=rus&paperid=7289&wshow=paper",
+        "status": "VERIFIED",
+        "relation_type": "COAUTHOR"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "kolmogorov:22",
+      "school": "kolmogorov",
+      "legacy_edge": {
+        "source": "kolmogorov",
+        "target": "fomin",
+        "type": "Соавторство",
+        "description": "Совместный учебник по теории функций и функциональному анализу.",
+        "citation": "Колмогоров, Фомин, Элементы теории функций и функционального анализа, 4-е изд., Наука, 1976.",
+        "url": "https://www.mathnet.ru/php/searchrefs.phtml?option_lang=rus&refid=3828&wshow=refcitedby",
+        "status": "VERIFIED",
+        "relation_type": "COAUTHOR"
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e002",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e002",
+        "source": "p02",
+        "target": "vlad",
+        "type": "mentorship",
+        "description": "Боголюбов — научный руководитель кандидатской диссертации Владимирова, защищённой в 1953 году.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 129–130",
+        "directed": true
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e007",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e007",
+        "source": "vlad",
+        "target": "p07",
+        "type": "mentorship",
+        "description": "Владимиров называет Зеленова своим учеником.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 173",
+        "directed": true
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e011",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e011",
+        "source": "vlad",
+        "target": "p11",
+        "type": "mentorship",
+        "description": "Владимиров называет Н. У. Енгибаряна своим учеником; полное имя требует проверки.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 173",
+        "directed": true
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e012",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e012",
+        "source": "vlad",
+        "target": "p12",
+        "type": "mentorship",
+        "description": "Владимиров называет Мирзо Ширинбекова своим учеником; идентификация требует проверки.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 173",
+        "directed": true
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e028",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e028",
+        "source": "dept",
+        "target": "p30",
+        "type": "institution",
+        "description": "Входил в первоначальный состав созданного Владимировым отдела математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e029",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e029",
+        "source": "dept",
+        "target": "p31",
+        "type": "institution",
+        "description": "Входил в первоначальный состав созданного Владимировым отдела математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e030",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e030",
+        "source": "dept",
+        "target": "p32",
+        "type": "institution",
+        "description": "Входил в первоначальный состав отдела математической физики как совместитель.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e031",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e031",
+        "source": "dept",
+        "target": "p33",
+        "type": "institution",
+        "description": "Работал в отделе дифференциальных уравнений, присоединённом к отделу математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e032",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e032",
+        "source": "dept",
+        "target": "p34",
+        "type": "institution",
+        "description": "Упомянут в составе отдела математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e033",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e033",
+        "source": "dept",
+        "target": "p35",
+        "type": "institution",
+        "description": "Работала в отделе дифференциальных уравнений, присоединённом к отделу математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e034",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e034",
+        "source": "dept",
+        "target": "p36",
+        "type": "institution",
+        "description": "Упомянут в составе отдела дифференциальных уравнений, присоединённого к отделу математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e035",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e035",
+        "source": "dept",
+        "target": "p37",
+        "type": "institution",
+        "description": "Упомянут в составе отдела математической физики; первоначально — аспирант присоединённого отдела.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e036",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e036",
+        "source": "dept",
+        "target": "p38",
+        "type": "institution",
+        "description": "Владимиров описывает работу Богоявленского в отделе математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e037",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e037",
+        "source": "dept",
+        "target": "p39",
+        "type": "institution",
+        "description": "Владимиров указывает Меунаргия среди пополнивших отдел математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e038",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e038",
+        "source": "dept",
+        "target": "p40",
+        "type": "institution",
+        "description": "Назван среди сотрудников отдела математической физики.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e039",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e039",
+        "source": "dept",
+        "target": "p41",
+        "type": "institution",
+        "description": "Назван среди сотрудников отдела математической физики; это не утверждение о его родстве с Г. И. Марчуком.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e062",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e062",
+        "source": "vlad",
+        "target": "dept",
+        "type": "institution",
+        "description": "Владимиров создал отдел математической физики МИАН в 1969 году.",
+        "source_url": "https://djvu.online/file/IhYsgActo7jx4",
+        "locator": "с. 170",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e064",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e064",
+        "source": "vlad",
+        "target": "p06",
+        "type": "coauthor",
+        "description": "Соавторы статьи о спектральной теории p-адической квантовой механики, 1990.",
+        "source_url": "https://www.mathnet.ru/links/ea2c48f153c04c9125e87688d8677ca6/im1094.pdf",
+        "locator": "Изв. АН СССР, 1990, т. 54, № 2, с. 275–302",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e065",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e065",
+        "source": "vlad",
+        "target": "p07",
+        "type": "coauthor",
+        "description": "Соавторы статьи о спектральной теории p-адической квантовой механики, 1990.",
+        "source_url": "https://www.mathnet.ru/links/ea2c48f153c04c9125e87688d8677ca6/im1094.pdf",
+        "locator": "Изв. АН СССР, 1990, т. 54, № 2, с. 275–302",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e069",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e069",
+        "source": "p06",
+        "target": "p07",
+        "type": "coauthor",
+        "description": "Соавторы с Владимировым статьи по p-адической квантовой механике, 1990.",
+        "source_url": "https://www.mathnet.ru/links/ea2c48f153c04c9125e87688d8677ca6/im1094.pdf",
+        "locator": "Изв. АН СССР, 1990, т. 54, № 2, с. 275–302",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:e070",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "e070",
+        "source": "p08",
+        "target": "p09",
+        "type": "coauthor",
+        "description": "Совместная статья по тауберовым теоремам, 2002.",
+        "source_url": "https://www.mathnet.ru/php/archive.phtml?jrnid=im&option_lang=rus&paperid=395&wshow=paper",
+        "locator": "Изв. РАН, 2002, т. 66, № 4, с. 47–118",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    },
+    {
+      "key": "vladimirov:release-marchuk-coauthor",
+      "school": "vladimirov",
+      "legacy_edge": {
+        "id": "release-marchuk-coauthor",
+        "source": "vlad",
+        "target": "p04",
+        "type": "coauthor",
+        "description": "Соавторство статьи «Об определении сопряжённого оператора для нелинейных задач», 2000.",
+        "source_url": "https://www.inm.ras.ru/publications2000/",
+        "locator": "ДАН, 2000, т. 372, № 2, с. 165–168",
+        "directed": false
+      },
+      "evidence_gate": "INHERITED_PILOT_NOT_REVERIFIED",
+      "warning": "URL and citation retained; not promoted to a newly verified relation"
+    }
+  ]
+}

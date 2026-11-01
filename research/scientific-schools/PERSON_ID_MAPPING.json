@@ -1,0 +1,1119 @@
+{
+  "schema_version": 3,
+  "master_write": false,
+  "master_export_sha256": "f88d6d1cb0817e79eacd7494a1c245fa26e3fafda7af3ef3bc9f9f6316c87552",
+  "identity_does_not_verify_relations": true,
+  "entries": [
+    {
+      "school": "luzin",
+      "historical_id": "B001",
+      "name": "Николай Николаевич Лузин",
+      "canonical_id": "B001",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "B002",
+      "name": "Вячеслав Васильевич Степанов",
+      "canonical_id": "B002",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "B003",
+      "name": "Павел Сергеевич Александров",
+      "canonical_id": "B003",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "B013",
+      "name": "Лазарь Аронович Люстерник",
+      "canonical_id": "B013",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "B036",
+      "name": "Михаил Алексеевич Лаврентьев",
+      "canonical_id": "B036",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "P002",
+      "name": "Александр Яковлевич Хинчин",
+      "canonical_id": "P002",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "P003",
+      "name": "Андрей Николаевич Колмогоров",
+      "canonical_id": "P003",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "luzin",
+      "historical_id": "P004",
+      "name": "Алексей Андреевич Ляпунов",
+      "canonical_id": "P004",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lavrentyev",
+      "historical_id": "B001",
+      "name": "Николай Николаевич Лузин",
+      "canonical_id": "B001",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lavrentyev",
+      "historical_id": "B008",
+      "name": "Сергей Львович Соболев",
+      "canonical_id": "B008",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lavrentyev",
+      "historical_id": "B019",
+      "name": "Илья Афанасьевич Кибель",
+      "canonical_id": "B019",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lavrentyev",
+      "historical_id": "B036",
+      "name": "Михаил Алексеевич Лаврентьев",
+      "canonical_id": "B036",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lavrentyev",
+      "historical_id": "P017",
+      "name": "Гурий Иванович Марчук",
+      "canonical_id": "P017",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "B001",
+      "name": "Николай Николаевич Лузин",
+      "canonical_id": "B001",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "B008",
+      "name": "Сергей Львович Соболев",
+      "canonical_id": "B008",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "B036",
+      "name": "Михаил Алексеевич Лаврентьев",
+      "canonical_id": "B036",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "B050",
+      "name": "Аксель Иванович Берг",
+      "canonical_id": "B050",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "P003",
+      "name": "Андрей Николаевич Колмогоров",
+      "canonical_id": "P003",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "P004",
+      "name": "Алексей Андреевич Ляпунов",
+      "canonical_id": "P004",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "P006",
+      "name": "Андрей Петрович Ершов",
+      "canonical_id": "P006",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "lyapunov",
+      "historical_id": "P015",
+      "name": "Юрий Иванович Журавлёв",
+      "canonical_id": "P015",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "kantorovich",
+      "historical_id": "B012",
+      "name": "Марк Константинович Гавурин",
+      "canonical_id": "B012",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "kantorovich",
+      "historical_id": "B013",
+      "name": "Лазарь Аронович Люстерник",
+      "canonical_id": "B013",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "kantorovich",
+      "historical_id": "P003",
+      "name": "Андрей Николаевич Колмогоров",
+      "canonical_id": "P003",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "kantorovich",
+      "historical_id": "P009",
+      "name": "Леонид Витальевич Канторович",
+      "canonical_id": "P009",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "glushkov",
+      "historical_id": "B034",
+      "name": "Лев Наумович Дашевский",
+      "canonical_id": "B034",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "glushkov",
+      "historical_id": "B039",
+      "name": "Анатолий Александрович Стогний",
+      "canonical_id": "B039",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "glushkov",
+      "historical_id": "B052",
+      "name": "Екатерина Логвиновна Ющенко",
+      "canonical_id": "B052",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "glushkov",
+      "historical_id": "P008",
+      "name": "Виктор Михайлович Глушков",
+      "canonical_id": "P008",
+      "status": "MATCHED",
+      "basis": "Exact canonical ID and name in read-only PEOPLE_REGISTRY export",
+      "evidence": "evidence/input-manifest.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "luzin",
+      "name": "Николай Николаевич Лузин",
+      "canonical_id": "B001",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "khinchin",
+      "name": "Александр Яковлевич Хинчин",
+      "canonical_id": "P002",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "alexandrov",
+      "name": "Павел Сергеевич Александров",
+      "canonical_id": "B003",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "kolmogorov",
+      "name": "Андрей Николаевич Колмогоров",
+      "canonical_id": "P003",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "VERIFIED",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "nikolsky",
+      "name": "Сергей Михайлович Никольский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "dynkin",
+      "name": "Евгений Борисович Дынкин",
+      "canonical_id": "P018",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "uspensky",
+      "name": "Владимир Андреевич Успенский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "arnold",
+      "name": "Владимир Игоревич Арнольд",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "sinai",
+      "name": "Яков Григорьевич Синай",
+      "canonical_id": "P016",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "shiryaev",
+      "name": "Альберт Николаевич Ширяев",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "gelfand",
+      "name": "Израиль Моисеевич Гельфанд",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "prokhorov",
+      "name": "Юрий Васильевич Прохоров",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "dobrushin",
+      "name": "Роланд Львович Добрушин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "tikhomirov",
+      "name": "Владимир Михайлович Тихомиров",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "gnedenko",
+      "name": "Борис Владимирович Гнеденко",
+      "canonical_id": "B032",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "fomin",
+      "name": "Сергей Васильевич Фомин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "obukhov",
+      "name": "Александр Михайлович Обухов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "chentsov",
+      "name": "Николай Николаевич Ченцов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "kolmogorov",
+      "historical_id": "smirnov",
+      "name": "Николай Васильевич Смирнов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CANDIDATE",
+      "evidence": "research/pilots/kolmogorov/registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "vlad",
+      "name": "Василий Сергеевич Владимиров",
+      "canonical_id": "VH_PERSON_VLADIMIROV",
+      "status": "MATCHED",
+      "basis": "Exact full name in canonical export or existing historical overlay",
+      "original_status": "VERIFIED",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p01",
+      "name": "Л. В. Канторович",
+      "canonical_id": "P009",
+      "status": "MATCHED",
+      "basis": "Existing historical overlay identifies full name, role and same book/publication context; assets/russian-intellect/vladimirov-extension.js",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p02",
+      "name": "Н. Н. Боголюбов",
+      "canonical_id": "VH_PERSON_BOGOLYUBOV",
+      "status": "MATCHED",
+      "basis": "Existing historical overlay identifies full name, role and same book/publication context; assets/russian-intellect/vladimirov-extension.js",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p03",
+      "name": "М. А. Лаврентьев",
+      "canonical_id": "B036",
+      "status": "MATCHED",
+      "basis": "Existing historical overlay identifies full name, role and same book/publication context; assets/russian-intellect/vladimirov-extension.js",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p04",
+      "name": "Г. И. Марчук",
+      "canonical_id": "P017",
+      "status": "MATCHED",
+      "basis": "Existing historical overlay identifies full name, role and same book/publication context; assets/russian-intellect/vladimirov-extension.js",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p05",
+      "name": "И. М. Соболь",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p06",
+      "name": "И. В. Волович",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p07",
+      "name": "Е. И. Зеленов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p08",
+      "name": "Ю. Н. Дрожжинов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p09",
+      "name": "Б. И. Завьялов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p10",
+      "name": "В. В. Жаринов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p11",
+      "name": "Н. У. Енгибарян",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p12",
+      "name": "Мирзо Ширинбеков",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p13",
+      "name": "А. А. Логунов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p14",
+      "name": "Д. В. Ширков",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p15",
+      "name": "А. Ю. Хренников",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p16",
+      "name": "А. Г. Сергеев",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p17",
+      "name": "В. Ф. Никитин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p18",
+      "name": "М. В. Масленников",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p19",
+      "name": "Т. А. Гермогенова",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p20",
+      "name": "И. Н. Векуа",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p21",
+      "name": "В. Н. Кублановская",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p22",
+      "name": "И. И. Маркуш",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p23",
+      "name": "С. В. Тябликов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p24",
+      "name": "Ю. Г. Евтушенко",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p25",
+      "name": "И. М. Виноградов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p26",
+      "name": "А. Н. Колмогоров",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p27",
+      "name": "М. В. Келдыш",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p28",
+      "name": "С. В. Козырев",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p29",
+      "name": "А. Х. Бикулов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p30",
+      "name": "Б. М. Степанов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p31",
+      "name": "С. С. Хоружий",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p32",
+      "name": "В. М. Миллионщиков",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p33",
+      "name": "А. А. Дезин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p34",
+      "name": "В. П. Михайлов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p35",
+      "name": "В. Н. Масленникова",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p36",
+      "name": "В. С. Виноградов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p37",
+      "name": "А. Н. Гущин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p38",
+      "name": "О. И. Богоявленский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p39",
+      "name": "М. В. Меунаргия",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p40",
+      "name": "М. О. Катанаев",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p41",
+      "name": "Н. Г. Марчук",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p42",
+      "name": "Е. С. Кузнецов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p43",
+      "name": "А. А. Самарский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p44",
+      "name": "В. А. Чуянов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p45",
+      "name": "Т. А. Сушкевич",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p46",
+      "name": "С. П. Курдюмов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p47",
+      "name": "В. Я. Гольдин",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p48",
+      "name": "Б. Л. Рождественский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p49",
+      "name": "В. Б. Уваров",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p50",
+      "name": "А. Ф. Никифоров",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "REVIEW",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p51",
+      "name": "Н. Н. Ченцов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p52",
+      "name": "О. В. Локуциевский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p53",
+      "name": "В. С. Рябенький",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p54",
+      "name": "К. В. Брушлинский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p55",
+      "name": "Р. П. Федоренко",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p56",
+      "name": "С. К. Годунов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p57",
+      "name": "С. В. Яблонский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p58",
+      "name": "О. Б. Лупанов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p59",
+      "name": "Н. Н. Яненко",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p60",
+      "name": "К. И. Бабенко",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p61",
+      "name": "Д. Е. Охоцимский",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p62",
+      "name": "Т. М. Энеев",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "p63",
+      "name": "В. В. Русанов",
+      "canonical_id": null,
+      "status": "HOLD",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "WORKING",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "dept",
+      "name": "Отдел математической физики МИАН",
+      "canonical_id": null,
+      "status": "CONTEXT",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CONTEXT",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    },
+    {
+      "school": "vladimirov",
+      "historical_id": "opm",
+      "name": "Отделение прикладной математики МИАН",
+      "canonical_id": null,
+      "status": "CONTEXT",
+      "basis": "No independently established full-name identity; initials are insufficient",
+      "original_status": "CONTEXT",
+      "evidence": "research/pilots/vladimirov/research-registry.json"
+    }
+  ]
+}

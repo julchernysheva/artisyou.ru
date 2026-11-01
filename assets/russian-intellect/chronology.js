@@ -11,8 +11,9 @@
   const master=JSON.parse(win.document.getElementById('p0-master').textContent);
   const notes=new Map(master.people.map(p=>[p.person_id,p.date_note]));
   const people=rt.historical.people.map(p=>{const note=notes.get(p.person_id)||'';const dates=note.match(/\b(\d{4})(?:[–-](\d{4}))?/);return {...p,listBirth:p.birth_year||dates?.[1],listDeath:p.death_year||dates?.[2]}}).sort((a,b)=>(Number(a.listBirth)||Infinity)-(Number(b.listBirth)||Infinity)||a.canonical_name.localeCompare(b.canonical_name,'ru'));
+  const schoolLinks={"B001":"luzin.html","B036":"lavrentyev.html","P004":"lyapunov.html","P009":"kantorovich.html","P008":"glushkov.html","P003":"kolmogorov.html","VH_PERSON_VLADIMIROV":"vladimirov-map.html"};
   people.filter(person=>person.person_id!=='B058').forEach(person=>{
-   const item=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.personId=person.person_id;
+   const item=document.createElement('li'),school=schoolLinks[person.person_id],button=document.createElement(school?'a':'button');if(school){button.href='/research/scientific-schools/'+school;button.className='ri-people__school-link'}else button.type='button';button.dataset.personId=person.person_id;
    const name=document.createElement('span');name.textContent=person.canonical_name;
    const years=document.createElement('span');years.className='ri-people__years';years.textContent=person.listBirth?`${person.listBirth}${person.listDeath?'–'+person.listDeath:''}`:'ГОД НЕ УКАЗАН В ДАННЫХ';
    button.append(name,years);
@@ -23,7 +24,7 @@
    button.addEventListener('pointerleave',leave);
    button.addEventListener('focus',enter);
    button.addEventListener('blur',leave);
-   button.addEventListener('click',()=>node()?.dispatchEvent(new win.MouseEvent('click',{bubbles:true})));
+   if(!school)button.addEventListener('click',()=>node()?.dispatchEvent(new win.MouseEvent('click',{bubbles:true})));
    item.append(button);list.append(item);
   });
   const style=win.document.createElement('style');style.textContent='.hist-node.people-index-focus{opacity:1!important}.hist-node.people-index-focus .dot{stroke:#064cff!important;stroke-width:4!important}.hist-node.people-index-focus .label-plate{stroke:#064cff!important;stroke-width:2!important}';win.document.head.append(style);
