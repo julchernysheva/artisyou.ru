@@ -10,3 +10,5 @@
 @media(max-width:1023px){.ri-people ol{columns:2}}
 @media(max-width:720px){.ri-people{margin:32px 16px}.ri-people ol{columns:1}}
 .ri-people .ri-people__school-link{text-decoration:none}
+
+.ri-people .ri-people__school-link>span:first-child{color:#064cff;font-weight:600;text-decoration:underline;text-underline-offset:.2em}
