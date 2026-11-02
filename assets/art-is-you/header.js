@@ -24,7 +24,8 @@
     { key: 'reverse', index: '02', title: 'Обратный промпт', menuLabel: 'Обратный промпт', type: 'MACHINE READING', href: '/research/reverse-prompt/' },
     { key: 'field', index: '03', title: 'Полевые исследования', menuLabel: 'Полевые исследования', type: 'FIELD METHODS', href: '/research/lab/' },
     { key: 'protoarchive', index: '04', title: 'Преархив', menuLabel: 'Преархив', type: 'MEMORY & EVIDENCE', href: '/protoarchive/' },
-    { key: 'bioart', index: '05', title: 'Живое как медиум', menuLabel: 'Живое как медиум', type: 'LIVING SYSTEMS', href: '/research/russian-bioart-history/' }
+    { key: 'bioart', index: '05', title: 'Живое как медиум', menuLabel: 'Живое как медиум', type: 'LIVING SYSTEMS', href: '/research/russian-bioart-history/' },
+    { key: 'artakt-language', index: '06', title: 'Язык АртАкта', menuLabel: 'Язык АртАкта', type: 'LANGUAGE ATLAS', href: '/research/artakt-language/' }
   ]);
   window.ART_IS_YOU_RESEARCH_NAVIGATION = researchNavigation;
   const researchDetailPaths = researchNavigation.slice(1).map((item) => item.href);
