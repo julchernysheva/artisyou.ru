@@ -148,9 +148,27 @@ svg{width:100%;height:auto;display:block;overflow:visible}
 .site-nav{max-width:1440px;margin:0 auto;padding:24px 32px;display:flex;justify-content:space-between;border-bottom:1px solid var(--rule);font:13px/18px "PT Mono",monospace}.site-nav nav{display:flex;gap:28px}a{color:inherit;text-underline-offset:4px}.site-nav a{text-decoration:none}.site-nav>a{font-family:"Source Sans 3",sans-serif;font-size:22px;font-weight:600}.page{padding:32px 32px 48px}.hero{grid-template-columns:7fr 5fr;gap:64px;margin:54px 0 24px;align-items:end}h1{font-size:64px;line-height:.98;font-weight:400;letter-spacing:-2.88px;max-width:18ch}.hero p{font-size:18px;line-height:26px}.research-intro{font-size:16px;line-height:24px;max-width:680px;margin:24px 0 28px;color:var(--muted)}.section-nav{display:flex;gap:24px;flex-wrap:wrap;font:12px/18px "PT Mono",monospace;margin:28px 0 36px}.research-method{border-top:1px solid var(--rule);margin-top:64px;padding-top:20px}.micro{font:11px/16px "PT Mono",monospace;color:var(--muted)}.research-method h2{font-size:32px;line-height:36px;font-weight:400;margin:20px 0 36px;letter-spacing:-.32px}.method-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px;padding:24px 0;border-top:1px solid var(--rule);max-width:1100px}.method-grid h3{font-size:18px;line-height:24px;font-weight:400;margin:0}.method-grid p{font-size:16px;line-height:24px;margin:0 0 16px;max-width:70ch}.related{padding-top:28px;margin-top:48px;border-top:1px solid var(--rule)}.related>div{display:grid;grid-template-columns:1fr 1fr;gap:32px}.related a{font-size:24px;line-height:30px;text-decoration:none}.related a span{display:block;font-size:14px;line-height:22px;color:var(--muted);margin-top:10px}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:24px}.site-nav{flex-wrap:wrap;gap:16px}.site-nav nav{gap:16px}.method-grid{gap:24px;grid-template-columns:1fr 2fr}}
 @media(max-width:520px){.page{padding:24px 16px}.site-nav{padding:20px 16px}.site-nav nav{font-size:11px;gap:18px}.hero{margin-top:36px}h1{font-size:44px;line-height:44px;letter-spacing:-2.2px}.hero p{font-size:16px;line-height:24px}.method-grid{grid-template-columns:1fr;gap:14px;padding:24px 0}.research-method h2{font-size:28px;line-height:32px}.related>div{grid-template-columns:1fr;gap:32px}.section-nav{gap:16px}}
+
+/* Editorial layout follows the research pages while keeping the atlas interactive. */
+html{scroll-padding-top:24px}
+.topline{border-top:0;padding-top:0}
+.hero{align-items:start;border-top:1px solid var(--ink);padding-top:26px;margin-top:24px}
+.hero h1{max-width:15ch}
+.hero p{color:var(--ink);font-size:20px;line-height:28px;max-width:37ch}
+.research-intro{max-width:73ch}
+.section-nav{padding:18px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:36px 0 0}
+.section-nav a{text-decoration:none}.section-nav a:hover{text-decoration:underline}
+.research-method{border-top:0;margin-top:0;padding-top:44px;scroll-margin-top:24px}
+.method-grid{max-width:none;grid-template-columns:minmax(150px,1fr) minmax(0,2fr);padding:24px 0;scroll-margin-top:24px}
+.method-grid h3{font:12px/18px "PT Mono",monospace;text-transform:uppercase}
+.method-grid p{max-width:66ch;font-size:18px;line-height:27px}
+.atlas-heading{margin:64px 0 28px;padding-top:20px;border-top:1px solid var(--ink)}
+.atlas-heading h2{font-size:36px;font-weight:400;line-height:1.1;letter-spacing:-.5px;margin:18px 0 10px}
+.atlas-heading>p:last-child{font-size:16px;line-height:24px;color:var(--muted);margin:0}
+@media(max-width:520px){.hero p{font-size:18px;line-height:26px}.method-grid{grid-template-columns:1fr;gap:12px}.method-grid p{font-size:16px;line-height:24px}.atlas-heading{margin-top:48px}.atlas-heading h2{font-size:30px}.site-nav nav{flex-wrap:wrap;gap:10px 16px}}
 </style>
 </head>
-<body><header class="site-nav"><a href="https://artisyou.ru/">ART.IS.YOU</a><nav aria-label="Разделы"><a href="https://artisyou.ru/research/">Исследования</a><a href="https://artisyou.ru/projects/">Проекты</a><a href="https://artisyou.ru/publications/">Публикации</a></nav></header>
+<body><header class="site-nav"><a href="https://artisyou.ru/">ART.IS.YOU</a><nav aria-label="Разделы"><a href="https://artisyou.ru/research/">Исследования</a><a href="https://artisyou.ru/projects/">Проекты</a><a href="https://artisyou.ru/publications/">Публикации</a><a href="https://artisyou.ru/about/">Обо мне</a></nav></header>
 <main class="page" id="graph02">
   <div class="topline">
     <div class="kicker">ИССЛЕДОВАНИЯ / ЯЗЫК АРТАКТА</div>
@@ -163,7 +181,15 @@ svg{width:100%;height:auto;display:block;overflow:visible}
   </section>
 
   <p class="research-intro">Одни и те же пять вопросов возвращаются к разным людям. В их ответах слова повторяются, расходятся и переходят из одного понятия в другое. Атлас позволяет рассмотреть этот коллективный словарь — в границах выбранных текстов.</p>
-  <nav class="section-nav" aria-label="По странице"><a href="#network">Атлас</a><a href="#method">Метод</a><a href="#sample">Выборка</a><a href="#limits">Ограничения</a></nav>
+  <nav class="section-nav" aria-label="Разделы исследования"><a href="#network">Атлас ↓</a><a href="#method">Метод ↓</a><a href="#sample">Выборка ↓</a><a href="#limits">Ограничения ↓</a></nav>
+  <section class="research-method" id="method" aria-labelledby="method-title">
+    <p class="micro">ОБ ИССЛЕДОВАНИИ</p><h2 id="method-title">Как устроено исследование</h2>
+    <div class="method-grid" id="sample"><h3>Выборка</h3><div><p>«АртАкт» задаёт художникам пять вопросов: о любви, ненависти, жизни, смерти и мечте. В основе ранней версии атласа — выборка, обозначенная как 385 ответов 77 художников. Она отличается от полного, продолжающего расти корпуса проекта.</p></div></div>
+    <div class="method-grid"><h3>Метод</h3><div><p>Атлас сопоставляет слова, встречающиеся в ответах на каждый из пяти вопросов. Для слова в исходном графе сохранены число употреблений, число художников и распределение по понятиям. Одно слово может быть связано с несколькими понятиями.</p><p>Это визуализация ранее подготовленных частот, а не новый подсчёт расширенного корпуса. Точный состав ранней выборки и исходные правила отбора и обработки слов ещё уточняются, поэтому воспроизвести эти частоты по опубликованному описанию пока нельзя.</p></div></div>
+    <div class="method-grid"><h3>Как читать атлас</h3><div><p>Площадь круга показывает общее число употреблений слова; линия связывает его с понятием, а её толщина отражает частоту в ответах на этот вопрос. Цвет круга соответствует понятию; серым обозначены слова, встречающиеся в нескольких понятиях. Нажмите на слово, чтобы увидеть числа.</p></div></div>
+    <div class="method-grid" id="limits"><h3>Ограничения</h3><div><p>Частота показывает повторение слов в конкретной выборке, но не доказывает общие ценности или взгляды всех художников. Разные значения одного слова и контекст высказывания требуют отдельного прочтения.</p></div></div>
+  </section>
+  <div class="atlas-heading"><p class="micro">АТЛАС / ПЯТЬ ПОНЯТИЙ</p><h2>Слова и их связи</h2><p>Выберите понятие или слово, чтобы рассмотреть карту ближе.</p></div>
   <nav class="controls" aria-label="Фокус по понятию">
     <button type="button" data-filter="ALL" aria-pressed="true">Все</button>
     <button type="button" data-filter="LOVE" aria-pressed="false">Любовь</button>
@@ -193,7 +219,7 @@ svg{width:100%;height:auto;display:block;overflow:visible}
   </details>
 
   <section class="legend"><p>Слова соединяются с теми понятиями, рядом с которыми они появляются. Чем чаще звучит слово, тем больше его круг.</p><p>Выберите слово, чтобы увидеть его связи.</p></section>
-<section class="research-method" id="method" aria-labelledby="method-title"><p class="micro">ОБ ИССЛЕДОВАНИИ</p><h2 id="method-title">Словарь ответов на пять вопросов</h2><div class="method-grid" id="sample"><h3>Откуда слова</h3><div><p>«АртАкт» приглашает художников представить любовь, ненависть, жизнь, смерть и мечту — словами и образами. Атлас обращается к ранней выборке проекта: 385 ответам 77 художников.</p><p>Проект продолжает расти: его художественный корпус включает более 500 произведений. Приведённые в атласе частоты относятся к ранней версии исследования и уточняются по исходным материалам.</p></div></div><div class="method-grid" id="limits"><h3>Как читать карту</h3><div><p>Здесь встречаются разные голоса. Одни слова принадлежат одному понятию, другие проходят через несколько. Повторение помогает увидеть общие нити, но само по себе не говорит о ценностях или взглядах всех художников.</p></div></div></section><section class="related" aria-label="Связанные материалы"><p class="micro">КОРПУС / ПРОДОЛЖЕНИЕ ИССЛЕДОВАНИЯ</p><div><a href="https://artisyou.ru/projects/artact/">АртАкт <span>Художественный корпус и публичные проекты ↗</span></a><a href="https://artisyou.ru/research/reverse-prompt/">Обратный промпт <span>Как машинное описание меняет образ ↗</span></a></div></section>
+<section class="related" aria-label="Связанные материалы"><p class="micro">КОРПУС / ПРОДОЛЖЕНИЕ ИССЛЕДОВАНИЯ</p><div><a href="https://artisyou.ru/projects/artact/">АртАкт <span>Художественный корпус и публичные проекты ↗</span></a><a href="https://artisyou.ru/research/reverse-prompt/">Обратный промпт <span>Как машинное описание меняет образ ↗</span></a></div></section>
   <footer class="footer"><span>АРТАКТ</span><span>ЯЗЫК ИСКУССТВА</span><span>ART.IS.YOU</span></footer>
 </main>
 
