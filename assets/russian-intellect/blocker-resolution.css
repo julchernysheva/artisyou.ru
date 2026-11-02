@@ -1,0 +1,18 @@
+/* V2.2 presentation adapter: source geometry and source data are immutable. */
+#map .hist-node .surname{font-size:var(--br-name,20px)!important;fill:var(--ink)!important;font-weight:500!important}
+#map .hist-node:is(.tier-primary,.tier-modern-primary) .surname{opacity:1!important}
+#map .hist-node .years{font-size:var(--br-date,15px)!important;fill:var(--muted)!important}
+#map .hist-node:is(.tier-primary,.tier-modern-primary) .years{opacity:1!important}
+#map .modern-node.company .mname{font-size:var(--br-company,22px)!important}
+#map .modern-node:not(.company):not(.compact-node) .mname{font-size:var(--br-modern,19px)!important}
+#map .hist-node:is(.selected,.hover-focus,:focus-visible) .surname{font-size:var(--br-active,24px)!important;fill:var(--blue)!important;opacity:1!important}
+#map .hist-node:is(.selected,.hover-focus,:focus-visible) .years{fill:var(--blue)!important;opacity:1!important}
+#map .modern-node:not(.compact-node):is(.selected,.hover-route,:focus-visible) .mname{font-size:var(--br-active,24px)!important}
+#map .modern-node.company.selected .mname{fill:var(--paper)!important}
+#map .br-name-hidden :is(.surname,.years,.mname,.mtype,.mstats){visibility:hidden!important}
+#map .br-date-hidden .years{visibility:hidden!important}
+#map.br-overview .modern-node.company :is(.mtype,.mstats){visibility:hidden!important}
+#map .modern-edge[data-presentation-evidence="UNVERIFIED_INTERPRETIVE"]{stroke-dasharray:6 5!important}
+.br-evidence-notice{border-left:2px solid var(--blue);padding:10px 12px;margin:0 0 16px;font:14px/1.5 var(--sans);color:var(--ink);overflow-wrap:anywhere}
+.br-evidence-notice strong{display:block;font:11px/1.5 var(--mono);margin-bottom:6px}
+.br-evidence-notice a{color:var(--blue)}
