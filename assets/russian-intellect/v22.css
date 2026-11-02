@@ -1,0 +1,39 @@
+#app>.footer>span:first-child{font-size:9px}
+#route-reading{border-bottom:1px solid var(--rule);margin:0 0 20px;padding:0 0 20px;font:15px/1.5 var(--sans,'Source Sans 3',sans-serif);overflow-wrap:anywhere}
+#route-reading h3{font:12px/1.5 var(--mono);font-weight:400;letter-spacing:.03em;margin:0 0 12px}
+#route-reading ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+#route-reading li{border-left:2px solid var(--blue);padding-left:12px}
+#route-reading li span,.reading-kind{display:block;font:10px/1.5 var(--mono);color:var(--muted)}
+#route-reading p{margin:8px 0}#route-reading .reading-sources a{display:block;padding:8px 0;min-height:44px;font-size:13px;color:var(--blue)}
+#route-reading details{margin-top:12px}#route-reading summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font:11px var(--mono)}
+#route-reading [data-reading-category]{min-height:44px;border:1px solid var(--rule);background:var(--surface);color:var(--blue);font:12px var(--mono);padding:8px;text-align:left;cursor:pointer}
+#route-reading button:focus-visible,#route-reading summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+#navigation-tools{display:contents}#navigation-tools>summary{display:none}.navigation-popover{display:contents}
+@media(min-width:1000px){#drawer.open{min-width:340px!important}#drawer .card-scroll{font-size:15px!important;line-height:1.5!important}#drawer .card-head h2{font-size:24px!important;line-height:1.2!important}}
+@media(max-width:600px){
+ #viewport-tools{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:6px!important;position:relative;padding:6px 10px!important}
+ #viewport-tools .view-jumps{grid-column:1/-1;display:flex;width:100%;gap:6px}
+ #viewport-tools .view-jumps button{min-height:44px!important;flex:1}
+ #mapZoomControls{grid-column:1;grid-row:2;justify-self:start}#mapZoomControls button{min-height:44px!important;height:44px!important;min-width:44px!important}
+ #navigation-tools{display:block;grid-column:2;grid-row:2;position:relative}
+ #navigation-tools>summary{display:flex;align-items:center;min-height:44px;border:1px solid var(--rule);padding:8px;font:11px var(--mono);cursor:pointer;list-style:revert;white-space:nowrap}
+ #navigation-tools[open] .navigation-popover{display:flex;flex-wrap:wrap;gap:10px;position:absolute;right:0;bottom:calc(100% + 8px);width:250px;background:var(--surface);border:1px solid var(--rule);padding:12px;box-sizing:border-box;z-index:50}
+ #navigation-tools:not([open]) .navigation-popover{display:none}
+ #navigation-tools .pan-buttons button{min-width:44px!important;min-height:44px!important}
+ #navigation-tools #viewport-help{margin:0!important;order:3!important}
+ #navigation-tools>summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+ #route-reading{font-size:15px}
+}
+
+/* Publication view: lower navigation and pan arrows only. */
+#school-links-v21,#app>.footer,#mapZoomControls,#viewport-position,#viewport-help{display:none!important}
+#app{grid-template-rows:auto minmax(220px,1fr) auto!important}
+#viewport-tools{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:8px 16px!important}
+#viewport-tools .view-jumps{display:flex!important;gap:4px!important;flex:0 1 auto!important;width:auto!important}
+#navigation-tools,.navigation-popover{display:contents!important}
+#navigation-tools>summary{display:none!important}
+#viewport-tools .pan-buttons{display:flex!important;gap:4px!important}
+
+/* Approved final cleanup: pan arrows only below the graph. */
+#viewport-tools .view-jumps{display:none!important}
+#viewport-tools{justify-content:flex-end!important}

@@ -56,10 +56,10 @@
       </section>
     </section>
     <div class="ri-object-toolbar">
-      <a class="ri-identity__fullscreen" href="/assets/russian-intellect/RUSSIAN_INTELLECT_V18_1_RC1_INTEGRATION.html?v=research-graphic-calibration-1" target="_blank" rel="noopener">ОТКРЫТЬ НА ВЕСЬ ЭКРАН ↗</a>
+      <a class="ri-identity__fullscreen" href="/assets/russian-intellect/RUSSIAN_INTELLECT_V18_1_RC1_INTEGRATION.html?v=v22-arrows-20261102" target="_blank" rel="noopener">ОТКРЫТЬ НА ВЕСЬ ЭКРАН ↗</a>
     </div>
     <div class="ri-archive-lower-region">
-    <section class="ri-application" aria-label="Интерактивная карта «Русский интеллект»" data-app-src="/assets/russian-intellect/RUSSIAN_INTELLECT_V18_1_RC1_INTEGRATION.html?v=research-graphic-calibration-1"></section>
+    <section class="ri-application" aria-label="Интерактивная карта «Русский интеллект»" data-app-src="/assets/russian-intellect/RUSSIAN_INTELLECT_V18_1_RC1_INTEGRATION.html?v=v22-arrows-20261102"></section>
     <section class="ri-mobile-entry" aria-labelledby="ri-mobile-title">
       <p class="ri-mobile-entry__eyebrow">РУССКИЙ ИНТЕЛЛЕКТ</p>
       <h2 id="ri-mobile-title">Интерактивная карта рассчитана на большой экран.</h2>
@@ -112,10 +112,26 @@
           output.setAttribute('aria-busy', 'false');
           return;
         }
+        let technologyCount;
+        try {
+          const masterNode = frame.contentDocument?.getElementById('p0-master');
+          const technologies = JSON.parse(masterNode?.textContent || 'null')?.technologies;
+          if (!Array.isArray(technologies)) throw new Error('Technology registry unavailable');
+          const ids = technologies.map(entity => entity?.entity_id);
+          if (ids.some(id => typeof id !== 'string' || !id.trim())) throw new Error('Invalid technology ID');
+          const uniqueIds = new Set(ids);
+          if (uniqueIds.size !== ids.length) throw new Error('Duplicate technology ID');
+          technologyCount = uniqueIds.size;
+        } catch {
+          output.textContent = 'Данные корпуса требуют проверки.';
+          output.dataset.status = 'unavailable';
+          output.setAttribute('aria-busy', 'false');
+          return;
+        }
         const entities = Object.values(rt.entityById);
         const figures = [
           [entities.filter(entity => entity.entity_type === 'BASE_PERSON').length, 'ЧЕЛОВЕК'],
-          [entities.filter(entity => entity.entity_type === 'TECHNOLOGY').length, 'ТЕХНОЛОГИЙ'],
+          [technologyCount, 'ТЕХНОЛОГИЙ'],
           [entities.filter(entity => entity.entity_type === 'COMPANY').length, 'КОМПАНИЙ'],
           [Object.keys(rt.routeMeta).length, 'СОВРЕМЕННЫХ МАРШРУТОВ'],
           [rt.historical.edges.length, 'ИСТОРИЧЕСКИЕ СВЯЗИ']
