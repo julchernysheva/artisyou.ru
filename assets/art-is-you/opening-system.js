@@ -1,7 +1,7 @@
 (() => {
   const q = selector => document.querySelector(selector);
   const route = location.pathname.replace(/\/$/, '') || '/';
-  if (!new Set(["/","/projects","/research","/publications","/artist-statement","/about","/about/press","/research/essays/error-as-territory-of-freedom","/research/essays/russia-as-dataset","/projects/godbot","/projects/likes-pond","/projects/artact","/projects/talking-city","/projects/programmer","/projects/nowords","/dark","/projects/special-projects","/nikola-lenivets","/science-quarter","/pavlov-dogs","/research/russian-intellect","/research/reverse-prompt","/research/lab","/research/interview","/projects/post_human","/projects/archive","/projects/musicvideo","/projects/fashion","/protoarchive","/research/russian-bioart-history"]).has(route)) return;
+  if (!new Set(["/","/projects","/research","/publications","/artist-statement","/about","/about/press","/research/essays/error-as-territory-of-freedom","/research/essays/russia-as-dataset","/projects/godbot","/projects/likes-pond","/projects/artact","/projects/talking-city","/projects/programmer","/projects/nowords","/dark","/projects/special-projects","/nikola-lenivets","/science-quarter","/pavlov-dogs","/research/russian-intellect","/research/reverse-prompt","/research/artakt-language","/research/lab","/research/interview","/projects/post_human","/projects/archive","/projects/musicvideo","/projects/fashion","/protoarchive","/research/russian-bioart-history"]).has(route)) return;
   const configurations = [
     ['.ay-approved-hero', '.ay-approved-hero__meta', '.ay-approved-hero__title', '.ay-approved-hero__lead', null, 'project'],
     ['.h3b-home > .hero', '.hero-label', 'h1', '.hero-position', null, 'home'],

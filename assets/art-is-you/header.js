@@ -3,7 +3,7 @@
   // Public opening geometry is independent of navigation content.
   if (!document.querySelector('script[data-opening-system-loader]')) {
     const opening = document.createElement('script');
-    opening.src = '/assets/art-is-you/opening-system.js?v=godbot-release-20260926';
+    opening.src = '/assets/art-is-you/opening-system.js?v=artakt-20261102';
     opening.dataset.openingSystemLoader = '';
     document.head.append(opening);
   }
