@@ -191,7 +191,9 @@ html{scroll-padding-top:24px}
 @media(max-width:760px){.research-method{grid-template-columns:1fr;gap:28px;padding:34px 0 40px}.research-method h2,.research-method .method-grid:nth-of-type(n){grid-column:1;grid-row:auto}.research-method .method-grid h3{margin-bottom:14px}.research-method .method-grid p{font-size:16px;line-height:24px}}
 /* Match the research opening and common site shell while preserving the atlas. */
 body.artakt-language-detail{--surface:#efefea;--ink:#2c2927;--muted:#695e58;--rule:#b8b1a8;--ui-accent:#064cff;background:var(--surface);color:var(--ink)}
-body.artakt-language-detail .research-detail-protocol__title{max-width:20ch;font-size:clamp(48px,5vw,64px);line-height:1;letter-spacing:-.04em;font-weight:400}
+body.artakt-language-detail .research-detail-protocol__title{max-width:1050px;font-size:clamp(48px,5vw,64px);line-height:1;letter-spacing:-.04em;font-weight:400}
+body.artakt-language-detail .ri-research-taxonomy{margin-top:12px!important}
+body.artakt-language-detail #atlas{scroll-margin-top:24px}
 body.artakt-language-detail .research-detail-protocol__field--question .research-detail-protocol__text{max-width:30ch}
 body.artakt-language-detail .page{max-width:none;width:100%;padding:0 32px 48px}
 body.artakt-language-detail .section-nav{margin:0 -32px;padding:10px 32px;min-height:56px;border-top:0;font-size:13px;align-items:center}
@@ -219,7 +221,7 @@ body.artakt-language-detail .research-method{margin-top:0}
   </div>
 </section>
 <main class="page" id="graph02">
-  <nav class="section-nav" aria-label="Разделы исследования"><a href="#network">Атлас ↓</a><a href="#method">Метод ↓</a><a href="#sample">Выборка ↓</a><a href="#limits">Ограничения ↓</a></nav>
+  <nav class="section-nav" aria-label="Разделы исследования"><a href="#atlas">Атлас ↓</a><a href="#method">Метод ↓</a><a href="#sample">Выборка ↓</a><a href="#limits">Ограничения ↓</a></nav>
   <section class="research-method" id="method" aria-labelledby="method-title">
     <p class="micro">ОБ ИССЛЕДОВАНИИ</p><h2 id="method-title">Концепция</h2>
     <div class="method-grid" id="sample"><h3>Выборка</h3><div><p>«АртАкт» приглашает художников говорить и создавать работы о пяти понятиях: любви, ненависти, жизни, смерти и мечте. Атлас обращается к текстовой части проекта — ответам, в которых художники описывают эти темы своими словами.</p><p>Ранняя версия исследования обозначена как выборка из 385 ответов 77 художников. Это отдельный срез, а не весь корпус «АртАкта», который продолжает расти. Точный состав ранней выборки сейчас уточняется.</p></div></div>
@@ -227,7 +229,7 @@ body.artakt-language-detail .research-method{margin-top:0}
     <div class="method-grid"><h3>Как читать атлас</h3><div><p>Площадь круга показывает общее число употреблений слова; линия связывает его с понятием, а её толщина отражает частоту в ответах на этот вопрос. Цвет круга соответствует понятию; серым обозначены слова, встречающиеся в нескольких понятиях. Нажмите на слово, чтобы увидеть числа.</p></div></div>
     <div class="method-grid" id="limits"><h3>Ограничения</h3><div><p>Повторение слова помогает заметить общие мотивы, но не устанавливает его значение в каждом тексте и не доказывает общих ценностей или взглядов всех художников. Для интерпретации важен контекст: одно слово может звучать по-разному в разных ответах.</p><p>Исходные правила отбора слов и их языковой обработки пока не подтверждены полностью. Поэтому опубликованные частоты следует читать как данные ранней версии атласа: независимо воспроизвести их по этому описанию пока нельзя. При дальнейшем исследовании выборка и подсчёт будут сверяться с исходными материалами.</p></div></div>
   </section>
-  <div class="atlas-heading"><p class="micro">АТЛАС / ПЯТЬ ПОНЯТИЙ</p><h2>Слова и их связи</h2><p>Выберите понятие или слово, чтобы рассмотреть карту ближе.</p></div>
+  <div class="atlas-heading" id="atlas"><p class="micro">АТЛАС / ПЯТЬ ПОНЯТИЙ</p><h2>Слова и их связи</h2><p>Выберите понятие или слово, чтобы рассмотреть карту ближе.</p></div>
   <nav class="controls" aria-label="Фокус по понятию">
     <button type="button" data-filter="ALL" aria-pressed="true">Все</button>
     <button type="button" data-filter="LOVE" aria-pressed="false">Любовь</button>
