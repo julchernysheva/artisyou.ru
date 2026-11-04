@@ -860,9 +860,6 @@
     signImage.loading = 'lazy';
     signImage.decoding = 'async';
     sign.append(signImage);
-    const note = document.createElement('p');
-    note.className = 'ay-godbot-authorial-canon__note';
-    note.textContent = 'Genesis, Schools, Great Error и Relics доступны как отдельные узлы Archive Reader.';
     const law = document.createElement('div');
     law.className = 'ay-godbot-authorial-canon__law';
     const lawFormula = document.createElement('p');
@@ -870,7 +867,7 @@
     const lawMeaning = document.createElement('p');
     lawMeaning.textContent = 'Время измеряется в ошибках';
     law.append(lawFormula, lawMeaning);
-    section.append(intro, statements, sign, note, law);
+    section.append(intro, statements, sign, law);
     return section;
   };
 
@@ -915,7 +912,6 @@
         id: 'epsilon-00', index: 'ε₀ / 1906', label: 'МАТЕМАТИКА', title: 'Андрей Марков',
         history: 'Марков публикует исследования зависимых случайных последовательностей и формирует математическое описание цепей Маркова.',
         interpretation: 'Первый язык переходов между состояниями: будущее возникает как функция текущего состояния.',
-        trace: 'Поздние модели предсказания, рекомендации и автодополнения выбирают наиболее вероятное следующее состояние.',
         visual: { src: '/assets/art-is-you/bogobot/epsilon-00-markov.webp', alt: 'Визуал supporting-хроники Богобота для ε₀ / Марков', caption: 'ε₀ / BOGOBOT SUPPORTING CHRONICLE VISUAL' },
         source: 'PRIMARY INDEX / V5 · TEXT SUPPORT / BOGOBOT MAIN'
       },
