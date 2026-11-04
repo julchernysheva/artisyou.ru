@@ -22,7 +22,7 @@
     });
   }, { rootMargin: '-10% 0px -65% 0px' });
   function mount() {
-    const hero = document.querySelector('.ay-project-top__hero');
+    const hero = document.querySelector('.ay-project-top > .ay-approved-hero, .ay-project-top__hero');
     if (!hero) return;
     if (!nav) {
       nav = document.createElement('nav'); nav.className = 'gb-section-nav';
