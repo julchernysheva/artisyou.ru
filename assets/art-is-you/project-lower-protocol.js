@@ -617,6 +617,7 @@
       const captionText = document.createElement('span');
       captionText.textContent = file.caption;
       const originalLink = document.createElement('a');
+      originalLink.className = 'ay-document-source';
       originalLink.href = file.src;
       originalLink.target = '_blank';
       originalLink.rel = 'noopener';
