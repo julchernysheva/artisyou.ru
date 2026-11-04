@@ -56,6 +56,24 @@
         for (const [, orderId] of sections) { const item = nav.querySelector('[href="#' + orderId + '"]'); if (item) nav.append(item); }
       }
     }
+    // Section numbers match the index; subordinate headings are not separate chapters.
+    const labels = [
+      ['#project-concept-title', '01 / О проекте'],
+      ['#project-research-title', 'Исследовательская система'],
+      ['#project-method-title', 'Метод'],
+      ['#most-entry .most-kicker', '02 / Интерактивный маршрут'],
+      ['#project-network .godbot-research__eyebrow > span:first-child', '03 / 153-узловой мир'],
+      ['.ay-godbot-quantum-threshold .ay-project-lower__bar > span:first-child', '06.1 / Великая ошибка']
+    ];
+    for (const [selector, text] of labels) {
+      const element = document.querySelector(selector);
+      if (element && element.textContent !== text) element.textContent = text;
+    }
+    const bridge = document.querySelector('#seven-module .seven-bridge');
+    if (bridge && !bridge.querySelector('.gb-territory-number')) {
+      const label = document.createElement('p'); label.className = 'gb-territory-number';
+      label.textContent = '04 / Семь территорий'; bridge.prepend(label);
+    }
     updateCurrent();
     const evidence = document.querySelector('#project-materials');
     if (evidence && !evidence.querySelector('.gb-materials-link')) {

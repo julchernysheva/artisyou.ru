@@ -1209,7 +1209,7 @@
     timeline?.remove();
 
     project?.classList.add('ay-project-lower', 'ay-project-lower--godbot', 'ay-project-data');
-    project?.querySelector('.godbot-research__label')?.replaceChildren('09 / Данные о проекте');
+    project?.querySelector('.godbot-research__label')?.replaceChildren('Данные о проекте');
     const enter = document.createElement('div');
     enter.className = 'ay-project-lower ay-project-lower--godbot ay-godbot-enter';
     const enterGrid = document.createElement('div');
