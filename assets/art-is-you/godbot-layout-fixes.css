@@ -68,3 +68,10 @@ html body .ay-project-top #project-materials :is(.godbot-research__cta,.gb-mater
 @layer ay-typography-v1{html body .ay-project-top #project-materials :is(.godbot-research__cta,.gb-materials-link){font-family:'Source Sans 3',sans-serif!important;font-size:12px!important;line-height:16px!important;--ay-type-size:12px;--ay-type-leading:16px}}
 @media(max-width:900px){html body .ay-project-top #project-materials .ay-godbot-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:600px){html body .ay-project-top #project-materials,html body .ay-project-top #project-materials .ay-godbot-documentation-group{display:block!important}html body .ay-project-top #project-materials .ay-godbot-evidence-grid{display:grid!important;grid-template-columns:1fr!important}html body .ay-project-top #project-materials>.ay-project-lower__bar{display:block!important}html body .ay-project-top #project-materials :is(.ay-godbot-documentation-group__intro,.ay-godbot-documentation-group,.ay-godbot-documentation-group__label){margin:0 0 16px!important}}
+
+/* One compact reading instruction: label left, instruction in the content column. */
+html body .ay-project-top #seven-module .seven-bridge{display:block!important;padding:20px 0!important}
+html body .ay-project-top #seven-module .seven-reading{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin:0!important;align-items:baseline}
+html body .ay-project-top #seven-module .seven-reading>p:first-child{grid-column:1/4;margin:0!important}
+html body .ay-project-top #seven-module .seven-reading>p+p{grid-column:4/-1;margin:0!important}
+@media(max-width:600px){html body .ay-project-top #seven-module .seven-reading{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:16px}html body .ay-project-top #seven-module .seven-reading>p:first-child{grid-column:1}html body .ay-project-top #seven-module .seven-reading>p+p{grid-column:2}}

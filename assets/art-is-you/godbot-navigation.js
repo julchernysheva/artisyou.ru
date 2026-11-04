@@ -72,11 +72,6 @@
       const element = document.querySelector(selector);
       if (element && element.textContent !== text) element.textContent = text;
     }
-    const bridge = document.querySelector('#seven-module .seven-bridge');
-    if (bridge && !bridge.querySelector('.gb-territory-number')) {
-      const label = document.createElement('p'); label.className = 'gb-territory-number';
-      label.textContent = '04 / Архив несбывшегося будущего'; bridge.prepend(label);
-    }
     // GitHub is not a reader destination on the project pages.
     document.querySelectorAll('a[href*="github.com"],a[href*="github.io"]').forEach(link => link.remove());
     updateCurrent();
