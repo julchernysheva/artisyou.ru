@@ -53,7 +53,7 @@
   }
   const observer = new MutationObserver(() => {
     if (queued) return; queued = true;
-    requestAnimationFrame(() => { queued = false; mount(); });
+    queueMicrotask(() => { queued = false; mount(); });
   });
   observer.observe(document.documentElement, {childList: true, subtree: true});
   mount();

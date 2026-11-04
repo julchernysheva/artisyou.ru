@@ -1281,7 +1281,7 @@
       const observer = new MutationObserver(() => {
         if (queued) return;
         queued = true;
-        requestAnimationFrame(() => {
+        queueMicrotask(() => {
           queued = false;
           if (document.body.dataset.projectLowerFinalized === key || finalize()) observer.disconnect();
         });
