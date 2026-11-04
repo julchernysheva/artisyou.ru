@@ -15,7 +15,7 @@ if (location.pathname.replace(/\/$/, '') === '/projects/godbot' && !new URLSearc
       observer.observe(document.body, { attributes: true, attributeFilter: ['data-project-lower-finalized'] });
     });
     const style = document.createElement('link');
-    style.rel = 'stylesheet'; style.href = source + 'godbot-seven-selector.css?v=canon-type-parity2-20260927';
+    style.rel = 'stylesheet'; style.href = source + 'godbot-seven-selector.css?v=content-height-20261104';
     await new Promise((resolve, reject) => { style.onload = resolve; style.onerror = () => reject(new Error('Canonical module stylesheet unavailable')); document.head.append(style); });
     const primary = document.querySelector('.ay-project-primary--godbot');
     const productionModule = document.importNode(frozenModule, true);

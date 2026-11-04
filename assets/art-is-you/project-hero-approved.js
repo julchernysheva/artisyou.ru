@@ -92,7 +92,7 @@
           'letter-spacing': element === title ? '-.025em' : '0'
         };
         for (const [property, value] of Object.entries(declarations)) {
-          if (hero.hasAttribute('data-opening-shell') && ['position', 'left', 'top', 'width'].includes(property)) continue;
+          if (((route === 'godbot' && innerWidth > 800) || hero.hasAttribute('data-opening-shell')) && ['position', 'left', 'top', 'width'].includes(property)) continue;
           element.style.setProperty(property, value, 'important');
         }
       }
@@ -108,7 +108,7 @@
           'white-space': 'nowrap', 'text-align': 'right'
         };
         for (const [property, value] of Object.entries(dateDeclarations)) {
-          if (hero.hasAttribute('data-opening-shell') && ['position', 'left', 'right', 'top', 'width', 'white-space'].includes(property)) continue;
+          if (((route === 'godbot' && innerWidth > 800) || hero.hasAttribute('data-opening-shell')) && ['position', 'left', 'right', 'top', 'width', 'white-space'].includes(property)) continue;
           godbotDate.style.setProperty(property, value, 'important');
         }
       }

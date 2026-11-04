@@ -1,0 +1,21 @@
+/* Keep the opening in normal flow before and after the shared layout mounts. */
+@media(min-width:801px){
+body .ay-project-top > .ay-approved-hero--godbot{height:auto!important;min-height:0!important}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]){display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;padding:32px!important}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > :is(.ay-approved-hero__meta,.ay-approved-hero__title,.ay-approved-hero__lead,.ay-approved-hero__date,.ay-approved-hero__media){position:static!important;inset:auto!important;width:auto!important;max-width:100%!important;margin:0!important;transform:none!important}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > .ay-approved-hero__meta{grid-column:1/-1}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > .ay-approved-hero__title{grid-column:1;grid-row:2}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > .ay-approved-hero__lead{grid-column:2;grid-row:2}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > .ay-approved-hero__date{grid-column:2;white-space:normal!important}
+body .ay-project-top > .ay-approved-hero--godbot:not([data-opening-shell]) > .ay-approved-hero__media{grid-column:1/-1;justify-self:end;width:62%!important}
+body .ay-project-top > .ay-approved-hero--godbot [data-opening-row]{height:auto!important;min-height:min-content;align-items:start}
+body .ay-project-top > .ay-approved-hero--godbot [data-opening-lead-column]{min-width:0;height:auto!important}
+body .ay-project-top > .ay-approved-hero--godbot [data-opening-native]{position:relative!important;top:auto!important;bottom:auto!important;transform:none!important;margin-top:48px!important;clear:both}
+}
+
+/* Reading measure for history, canon and archive; media retains its grid. */
+html body .ay-project-top :is(.ay-godbot-history-network__intro,.ay-godbot-history-network__layers,.ay-godbot-history-network__layers dd,.ay-godbot-authorial-canon__intro,.ay-godbot-authorial-canon__note,.ay-godbot-archive-reader__intro,.ay-godbot-archive-reader__copy,.ay-godbot-archive-reader__secondary p){box-sizing:border-box;min-width:0!important;max-width:54ch!important;white-space:normal!important;overflow-wrap:break-word;line-height:1.55!important}
+html body .ay-project-top .ay-godbot-history-network__layers dt{margin-bottom:8px!important}
+html body .ay-project-top .ay-godbot-history-network__layers dd{margin:0 0 24px!important}
+html body .ay-project-top :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law){min-width:0!important;max-width:100%!important}
+html body .ay-project-top :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law) p{max-width:28ch!important;white-space:normal!important;overflow-wrap:break-word}

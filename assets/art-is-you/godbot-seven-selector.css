@@ -30,9 +30,9 @@
 #seven-module .seven-tab:not([aria-selected=true]):is(:hover,:focus-visible) > span { color:var(--seven-blue); }
 #seven-module :is(button,a):focus-visible { outline:2px solid var(--seven-blue); outline-offset:4px; }
 #seven-module .seven-tab:focus-visible { outline:2px solid var(--seven-blue); outline-offset:2px; box-shadow:inset 0 0 0 2px #fff; }
-#seven-module .seven-previews { grid-column:4/-1; display:grid; min-width:0; min-height:650px; }
-#seven-module .seven-panel { grid-area:1/1; min-width:0; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-content:start; opacity:0; visibility:hidden; pointer-events:none; }
-#seven-module .seven-panel.is-active { opacity:1; visibility:visible; pointer-events:auto; }
+#seven-module .seven-previews { grid-column:4/-1; display:grid; min-width:0; min-height:0; }
+#seven-module .seven-panel { grid-area:1/1; min-width:0; display:none; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-content:start; opacity:0; visibility:hidden; pointer-events:none; }
+#seven-module .seven-panel.is-active { display:grid; opacity:1; visibility:visible; pointer-events:auto; }
 #seven-module .seven-panel { transition:opacity 160ms ease; }
 #seven-module .seven-panel.is-leaving { opacity:0; visibility:visible; }
 #seven-module .seven-copy { min-width:0; display:flex; flex-direction:column; align-items:start; }
