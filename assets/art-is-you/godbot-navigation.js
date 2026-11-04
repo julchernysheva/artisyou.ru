@@ -11,16 +11,27 @@
     ['.ay-godbot-public-evidence', 'project-materials', 'Материалы']
   ];
   let nav, queued = false, restoredHash = false;
-  const observed = new WeakSet();
-  const visible = new Map();
-  const intersection = new IntersectionObserver(entries => {
-    entries.forEach(entry => visible.set(entry.target.id, entry.isIntersecting));
-    const active = sections.find(([, id]) => visible.get(id));
-    if (nav) nav.querySelectorAll('a').forEach(link => {
-      if (active && link.hash === '#' + active[1]) link.setAttribute('aria-current', 'location');
+  let scrollQueued = false;
+  function updateCurrent() {
+    if (!nav) return;
+    const targets = sections.map(([,id]) => document.getElementById(id)).filter(Boolean);
+    const threshold = Math.min(180, innerHeight * .25);
+    let current = targets[0];
+    for (const target of targets) {
+      if (target.getBoundingClientRect().top <= threshold) current = target;
+    }
+    nav.querySelectorAll('a').forEach(link => {
+      if (current && link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
-  }, { rootMargin: '-10% 0px -65% 0px' });
+  }
+  addEventListener('scroll', () => {
+    if (scrollQueued) return;
+    scrollQueued = true;
+    requestAnimationFrame(() => { scrollQueued = false; updateCurrent(); });
+  }, {passive:true});
+  addEventListener('resize', updateCurrent);
+  addEventListener('hashchange', updateCurrent);
   function mount() {
     const hero = document.querySelector('.ay-project-top > .ay-approved-hero, .ay-project-top__hero');
     if (!hero) return;
@@ -33,14 +44,19 @@
       const section = document.querySelector(selector);
       if (!section) continue;
       section.id = id; section.classList.add('gb-anchor');
-      if (!observed.has(section)) { intersection.observe(section); observed.add(section); }
       if (!nav.querySelector('[href="#' + id + '"]')) {
-        const link = document.createElement('a'); link.href = '#' + id; link.textContent = label;
+        const link = document.createElement('a'); link.href = '#' + id;
+        const number = document.createElement('span'); number.className = 'gb-nav-number';
+        number.textContent = String(sections.findIndex(item => item[1] === id) + 1).padStart(2, '0');
+        number.setAttribute('aria-hidden', 'true');
+        const title = document.createElement('span'); title.className = 'gb-nav-label'; title.textContent = label;
+        link.append(number, title);
         nav.append(link);
         // Keep asynchronous sections in their intended reading order.
         for (const [, orderId] of sections) { const item = nav.querySelector('[href="#' + orderId + '"]'); if (item) nav.append(item); }
       }
     }
+    updateCurrent();
     const evidence = document.querySelector('#project-materials');
     if (evidence && !evidence.querySelector('.gb-materials-link')) {
       const link = document.createElement('a'); link.className = 'gb-materials-link';
