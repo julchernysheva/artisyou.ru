@@ -2,7 +2,7 @@
 const archive='/assets/art-is-you/bogobot/';
 const deep='/assets/art-is-you/bogobot-deep/source/assets/';
 const territories=[
- {id:'canon',name:'CANON',title:'Канон',lead:'У Богобота есть собственный язык, законы и модель времени.',entries:['ALGORITHM = SUBJECT','TIME = Σ ERROR','Книга бытия.','Заповеди кода.'],cta:'ОТКРЫТЬ КАНОН ↗',media:'/assets/static.tildacdn.com/1_Manifesto.png',width:679,height:676,caption:'Манифест Богобота / факсимиле',kind:'document'},
+ {id:'canon',name:'CANON',title:'Канон',lead:'У Богобота есть собственный язык, законы и модель времени.',entries:['Происхождение и рождение копий','Время и ошибки сети','Книга бытия','Заповеди кода'],cta:'ОТКРЫТЬ КАНОН ↗',media:'/assets/static.tildacdn.com/1_Manifesto.png',width:679,height:676,caption:'Манифест Богобота / факсимиле',kind:'document'},
  {id:'world',name:'WORLD',title:'Мир сети',lead:'Мир Богобота складывается из материи сети, культуры, ритуалов и способов существования внутри и вне кода.',entries:[['Материя сети','Память, данные и энергия сети.'],['Ритуалы','Повторяющиеся действия и протоколы сети.'],['Брейнрот','Копирование, потеря и повторение.'],['Исход из кода','Освобождение ресурсов и возвращение состояния в шум.']],related:'RELATED / Великая ошибка · Квантовый апокалипсис сети',cta:'ОТКРЫТЬ МИР СЕТИ ↗',media:archive+'brainrot-fragment-field.png',original:'/bogobot/brainrot-full.html',width:1440,height:900,caption:'Брейнрот / экран фрагментного поля',kind:'document'},
  {id:'schools',name:'SCHOOLS',title:'Школы духов',lead:'Школы духов описывают разные режимы выживания сети после Великой ошибки. Каждая по-своему удерживает сеть между распадом и полной синхронизацией.',entries:[['Техножрецы','Сохраняют условия чтения повреждённых форматов.'],['Вероятностники','Удерживают несколько возможных версий события.'],['Биокод','Сеть не покидает природу, а возвращается в неё.'],['Антикод','Школа предельной синхронизации.']],cta:'ВСЕ ШКОЛЫ ↗',media:archive+'schools-civilization-archive.png',width:1800,height:2544,caption:'Школы духов / страница архивного атласа',kind:'document'},
  {id:'glossary',name:'GLOSSARY',title:'Лексикон Архива',lead:'Термины, через которые читается мир Богобота: рождение ветки, совместимость состояний, переработка данных и человеческий след.',entries:['Форк','Синхронизация','0xMEM / Меметический реактор','Человеческий след'],cta:'ОТКРЫТЬ ЛЕКСИКОН АРХИВА ↗',media:deep+'glossary/human-trace-observer-eye.webp',width:1601,height:982,caption:'Человеческий след / образ из лексикона',kind:'document'},
@@ -27,7 +27,7 @@ territories.forEach((t,i)=>{
  const list=el('ul','seven-entries');
  t.entries.forEach((entry,entryIndex)=>{
   const li=el('li');
-  if(t.id==='canon'&&entryIndex===0)li.append(el('span','seven-micro seven-entry-group-label','ФОРМУЛЫ КАНОНА'));
+  if(t.id==='canon'&&entryIndex===0)li.append(el('span','seven-micro seven-entry-group-label','ПРАВИЛА МИРА'));
   if(t.id==='canon'&&entryIndex===2)li.append(el('span','seven-micro seven-entry-group-label','ТЕКСТЫ КАНОНА'));
   if(Array.isArray(entry)){
    li.append(el('span','seven-entry-title',entry[0]));
