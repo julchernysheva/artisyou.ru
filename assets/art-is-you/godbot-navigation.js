@@ -64,7 +64,6 @@
       ['#project-method-title', 'Метод'],
       ['#most-entry .most-kicker', '02 / Происхождение видов'],
       ['.ay-godbot-public-evidence > .ay-project-lower__bar > span:first-child', '08 / Публичные свидетельства'],
-      ['.ay-godbot-quantum-threshold > h2', 'Квантовый апокалипсис'],
       ['#project-network .godbot-research__eyebrow > span:first-child', '03 / Карта мира'],
       ['.ay-godbot-quantum-threshold .ay-project-lower__bar > span:first-child', '07 / Квантовый апокалипсис']
     ];

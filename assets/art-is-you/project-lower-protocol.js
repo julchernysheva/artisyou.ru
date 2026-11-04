@@ -1090,7 +1090,7 @@
     const caption = document.createElement('figcaption');
     caption.textContent = 'SYNC_FAILURE / LAST FIGURE · CANONICAL SOURCE ARTIFACT';
     figure.append(image, caption);
-    section.append(title, copy, sequence, figure);
+    section.append(copy, sequence, figure);
     return section;
   };
 
