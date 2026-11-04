@@ -10,10 +10,9 @@ if (location.pathname.replace(/\/$/, '') === '/projects/godbot' && !new URLSearc
     await new Promise((resolve, reject) => {
       if (document.body.dataset.projectLowerFinalized === 'godbot') return resolve();
       const observer = new MutationObserver(() => {
-        if (document.body.dataset.projectLowerFinalized === 'godbot') { observer.disconnect(); clearTimeout(timer); resolve(); }
+        if (document.body.dataset.projectLowerFinalized === 'godbot') { observer.disconnect(); resolve(); }
       });
       observer.observe(document.body, { attributes: true, attributeFilter: ['data-project-lower-finalized'] });
-      const timer = setTimeout(() => { observer.disconnect(); reject(new Error('Production root did not initialize')); }, 10000);
     });
     const style = document.createElement('link');
     style.rel = 'stylesheet'; style.href = source + 'godbot-seven-selector.css?v=canon-type-parity2-20260927';
@@ -21,11 +20,9 @@ if (location.pathname.replace(/\/$/, '') === '/projects/godbot' && !new URLSearc
     const primary = document.querySelector('.ay-project-primary--godbot');
     const productionModule = document.importNode(frozenModule, true);
     primary.insertAdjacentElement('afterend', productionModule);
-    await import('/assets/art-is-you/godbot-seven-selector.js?v=canon-group-20260927');
+    await import('/assets/art-is-you/godbot-seven-selector.js?v=navigation-20261104');
     if (productionModule.dataset.ready !== 'true' || productionModule.querySelectorAll('.seven-cta[href]').length !== 7) throw new Error('Canonical module failed its mounting contract');
-    // Remove only mounted root roles after successful installation. Deep URLs keep their Reader.
-    const root = primary.closest('.ay-project-top');
-    root.querySelectorAll('.ay-godbot-history-network,.ay-godbot-authorial-canon,.ay-godbot-quantum-threshold,.ay-godbot-reading-protocol,.ay-godbot-archive-reader,.ay-godbot-enter').forEach(section => section.remove());
+    // Keep the complete history, canon and archive available below the overview.
     document.body.dataset.godbotSevenProduction = 'ready';
   } catch (error) {
     // Retain the recoverable original long scroll if canonical module loading fails.

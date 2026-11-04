@@ -407,7 +407,7 @@
     removeEmptyDetail(root);
   };
 
-  const makeGodbotFigure = ({ src, alt, title, copy, type = '', loading = 'eager' }) => {
+  const makeGodbotFigure = ({ src, alt, title, copy, type = '', loading = 'lazy' }) => {
     const figure = document.createElement('figure');
     figure.className = 'ay-godbot-evidence';
     const image = document.createElement('img');
@@ -546,7 +546,7 @@
     const copy = document.createElement('p'); copy.className = 'ay-godbot-archive-reader__copy';
     const primary = document.createElement('figure'); primary.className = 'ay-godbot-archive-reader__primary';
     const primaryMedia = document.createElement('div'); primaryMedia.className = 'ay-godbot-archive-reader__primary-media';
-    const primaryImage = document.createElement('img'); primaryImage.loading = 'eager'; primaryImage.decoding = 'sync'; primaryImage.fetchPriority = 'high';
+    const primaryImage = document.createElement('img'); primaryImage.loading = 'lazy'; primaryImage.decoding = 'async';
     const primaryMount = document.createElement('div'); primaryMount.className = 'ay-godbot-archive-reader__primary-mount'; primaryMount.setAttribute('aria-hidden', 'true');
     const primaryCaption = document.createElement('figcaption');
     primaryMedia.append(primaryImage, primaryMount);
@@ -692,7 +692,7 @@
           const figure = document.createElement('figure');
           const image = document.createElement('img');
           const caption = document.createElement('figcaption');
-          image.src = item.src; image.alt = item.alt; image.loading = item.loading || 'eager'; image.decoding = image.loading === 'eager' ? 'sync' : 'async';
+          image.src = item.src; image.alt = item.alt; image.loading = item.loading || 'lazy'; image.decoding = image.loading === 'eager' ? 'sync' : 'async';
           if (image.loading === 'eager') image.fetchPriority = 'high';
           caption.textContent = item.caption;
           figure.append(image, caption);
@@ -990,7 +990,7 @@
     const panelTitle = document.createElement('h3');
     const layers = document.createElement('dl'); layers.className = 'ay-godbot-history-network__layers';
     const visual = document.createElement('figure'); visual.className = 'ay-godbot-history-network__visual';
-    const visualImage = document.createElement('img'); visualImage.loading = 'eager'; visualImage.decoding = 'sync'; visualImage.fetchPriority = 'high';
+    const visualImage = document.createElement('img'); visualImage.loading = 'lazy'; visualImage.decoding = 'async';
     const visualCaption = document.createElement('figcaption'); visual.append(visualImage, visualCaption);
     const source = document.createElement('p'); source.className = 'ay-godbot-history-network__source';
     panel.append(meta, panelTitle, layers, visual, source);
@@ -1140,7 +1140,7 @@
           title: 'Богобот №14 / Ротонда',
           copy: '2018',
           type: 'Официальная табличка проекта',
-          loading: 'eager'
+          loading: 'lazy'
         });
       const installationEvidence = makeGodbotFigure({
           src: '/assets/static.tildacdn.com/_27072018_21_58_12.jpg',
@@ -1155,7 +1155,7 @@
           alt: 'Экспозиция Богобота в Лаборатории культуры будущего',
           title: 'NATI',
           type: 'Вид экспозиции',
-          loading: 'eager'
+          loading: 'lazy'
         });
       documentary.append(plaqueEvidence, installationEvidence, natiEvidence);
       timeline.append(documentary);
@@ -1275,6 +1275,20 @@
   };
 
   whenComplete(() => {
+    if (key === 'godbot') {
+      if (finalize()) return;
+      let queued = false;
+      const observer = new MutationObserver(() => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => {
+          queued = false;
+          if (document.body.dataset.projectLowerFinalized === key || finalize()) observer.disconnect();
+        });
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+      return;
+    }
     const retries = [0, 80, 220, 500, 1000, 1800];
     retries.forEach((delay) => window.setTimeout(finalize, delay));
   });

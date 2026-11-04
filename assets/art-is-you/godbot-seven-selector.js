@@ -43,12 +43,14 @@ territories.forEach((t,i)=>{
  if(t.related)copy.append(el('p','seven-related',t.related));
  const cta=el('a','seven-cta',t.cta);cta.href=t.id==='topography'?'/bogobot/topography-full.html':'/projects/godbot/?territory='+t.id;copy.append(cta);panel.append(copy);
  if(t.id==='topography'){const figure=el('figure','seven-media');const frame=el('iframe');frame.dataset.src='/bogobot/topography-full.html';frame.title='BOGOBOT — интерактивная топография';frame.loading='lazy';frame.setAttribute('allowfullscreen','');const caption=el('figcaption');const link=el('a',null,'Открыть топографию ↗');link.href='/bogobot/topography-full.html';link.target='_blank';link.rel='noopener';caption.append(link);figure.append(frame,caption);panel.append(figure);}
- else if(t.media){const figure=el('figure','seven-media');const a=el('a');a.href=t.original||t.media;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Открыть оригинал: '+t.caption);const img=el('img');img.src=t.media;img.alt=t.caption;img.width=t.width;img.height=t.height;img.decoding='async';a.append(img);const caption=el('figcaption');caption.append(el('span','seven-micro',t.caption));const original=el('a',null,'Открыть оригинал ↗');original.href=t.original||t.media;original.target='_blank';original.rel='noopener';caption.append(original);figure.append(a,caption);panel.append(figure);}
+ else if(t.media){const figure=el('figure','seven-media');const a=el('a');a.href=t.original||t.media;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Открыть оригинал: '+t.caption);const img=el('img');img.dataset.src=t.media;img.loading='lazy';img.alt=t.caption;img.width=t.width;img.height=t.height;img.decoding='async';a.append(img);const caption=el('figcaption');caption.append(el('span','seven-micro',t.caption));const original=el('a',null,'Открыть оригинал ↗');original.href=t.original||t.media;original.target='_blank';original.rel='noopener';caption.append(original);figure.append(a,caption);panel.append(figure);}
  previews.append(panel);
 });
 const buttons=[...tabs.querySelectorAll('button')],panels=[...previews.children];
 let selected=0;
 function show(index){
+ panels[index].querySelectorAll('img[data-src]').forEach(img=>{if(!img.hasAttribute('src'))img.src=img.dataset.src;});
+ panels.forEach((p,i)=>{if(i!==index)p.querySelectorAll('iframe[src]').forEach(frame=>frame.removeAttribute('src'));});
  const frame=panels[index].querySelector('iframe[data-src]');if(frame&&!frame.hasAttribute('src'))frame.src=frame.dataset.src;
  panels.forEach((p,i)=>{const active=i===index;p.classList.toggle('is-active',active);p.inert=!active;p.setAttribute('aria-hidden',String(!active));});
 }
@@ -63,7 +65,5 @@ buttons.forEach((b,i)=>{
 });
 tabs.setAttribute('aria-orientation','vertical');
 const initialTerritory=territories.findIndex(t=>t.id===previewParams.get('territory'));
-if(initialTerritory>0)select(initialTerritory);
-await document.fonts.ready;
-await Promise.all([...root.querySelectorAll('img')].map(img=>img.decode().catch(()=>{})));
+select(initialTerritory>=0?initialTerritory:0);
 root.dataset.ready='true';
