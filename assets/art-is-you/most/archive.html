@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru"><head><script id="curve-geometry">window.mostOrthogonalPoints=(x,y,tx,ty)=>{const mid=(y+ty)/2;return [[x,y],[x,mid],[tx,mid],[tx,ty]];};window.mostCurve=(x,y,tx,ty)=>window.mostOrthogonalPoints(x,y,tx,ty).map((p,i)=>`${i?'L':'M'} ${p[0]} ${p[1]}`).join(' ');</script><script id="first-choice-gate">
+(()=>{
+ let appReady=false,mediaReady=false,hostReady=false,pending=null,consumed=false;
+ function flush(){
+  if(consumed||pending===null||!appReady||!mediaReady||!hostReady)return;
+  const choice=pending;pending=null;consumed=true;window.mostArchiveStart(choice,window.mostStartOrigin||'human');
+ }
+ function choose(e){
+  if(consumed)return;
+  if(e.type==='keydown'&&!['Enter',' '].includes(e.key))return;
+  const tile=e.target.closest?.('.archive-node');if(!tile)return;
+  const choice=Number(tile.dataset.node);if(!Number.isInteger(choice)||choice<0||choice>4)return;
+  e.preventDefault();e.stopImmediatePropagation();
+  if(pending===null)pending=choice;
+  flush();
+ }
+ // Installed before the large embedded images, so the first choice is never discarded.
+ document.addEventListener('click',choose,true);document.addEventListener('keydown',choose,true);
+ addEventListener('most-archive-initialized',()=>{appReady=true;flush()});
+ addEventListener('message',e=>{if(e.source!==parent)return;if(e.data?.type==='ARCHIVE_ARM'){hostReady=true;flush()}if(e.data?.type==='ARCHIVE_AUTO_START'&&!consumed){window.mostStartOrigin='system';pending=0;flush()}});
+ addEventListener('load',()=>{requestAnimationFrame(()=>requestAnimationFrame(()=>{mediaReady=true;parent.postMessage({type:'ARCHIVE_READY'},'*');flush();}));});
+ window.mostFirstChoice=()=>({appReady,mediaReady,hostReady,pending,consumed});
+})();
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Архив перехода</title>
+<style>
+/* Original Archive Transition CSS, copied into this independent prototype. */
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#000080;color:#000;font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;font-size:12px}body{background:radial-gradient(circle at 14px 14px,#003cff 0 3px,transparent 4px),radial-gradient(circle at 40px 42px,#6b5e57 0 3px,transparent 4px),linear-gradient(180deg,#000080 0%,#2b0066 100%);background-size:64px 64px,64px 64px,100% 100%}a{color:#0000ee}.wrapper{max-width:1200px;margin:0 auto;padding:12px}.shell{background:#c0c0c0;border:3px ridge #fff;box-shadow:6px 6px 0 #000}.topbar{height:24px;background:linear-gradient(90deg,#000080,#7f007f,#003cff);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:4px 6px;font-weight:bold}.topbar .btns b{display:inline-grid;place-items:center;width:18px;height:16px;margin-left:2px;background:#c0c0c0;color:#000;border:2px solid;border-color:#fff #000 #000 #fff}.menubar{padding:4px 8px;border-bottom:2px groove #fff;background:#c0c0c0}.menubar a{margin-right:14px;text-decoration:underline}.marquee{overflow:hidden;white-space:nowrap;background:#000;color:#6b5e57;border:2px inset #fff;padding:5px;font-family:'Courier New',monospace;font-weight:bold}.marquee span{display:inline-block;padding-left:100%;animation:scroll 21s linear infinite}.marquee.alt{margin-top:4px;color:#efefea;background:#330033}.marquee.alt2{margin-top:4px;color:#6b5e57;background:#330000}@keyframes scroll{to{transform:translateX(-100%)}}.hero{position:relative;overflow:hidden;background:#000;border:3px ridge #efefea;padding:14px 12px 18px;margin:8px;min-height:205px}.hero:before,.hero:after{content:'★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';position:absolute;left:0;right:0;color:#efefea;letter-spacing:10px;text-align:center;font-size:14px;animation:flash 1s steps(2) infinite}.hero:before{top:4px}.hero:after{bottom:4px}@keyframes flash{50%{color:#6b5e57;transform:translateX(4px)}}.logo{text-align:center;margin-top:22px;line-height:.82}.logo .ru{display:block;font-family:Impact,'Arial Black',sans-serif;font-size:clamp(58px,8vw,116px);letter-spacing:3px;color:#003cff;text-shadow:4px 0 #6b5e57,-4px 0 #efefea,0 5px #00ff00,8px 8px #ff3300;transform:skew(-4deg) rotate(-1deg);animation:acid 1.5s steps(2) infinite}.logo .en{display:inline-block;margin-top:12px;padding:5px 12px;font-family:'Courier New',monospace;font-size:clamp(16px,2.2vw,28px);letter-spacing:6px;color:#000;background:#efefea;border:3px outset #fff;box-shadow:6px 6px 0 #003cff;animation:acid2 1.15s steps(2) infinite}@keyframes acid{50%{color:#6b5e57;text-shadow:4px 0 #003cff,-4px 0 #00ff00,0 5px #efefea,8px 8px #6600ff}}@keyframes acid2{50%{background:#00ff00;box-shadow:-6px 6px 0 #6b5e57}}.copy{max-width:980px;margin:16px auto 0;color:#fff;text-align:center;font-family:'Courier New',monospace;font-size:12px;line-height:1.35}.copy .noise{display:block;margin-top:8px;color:#ff9dff}.copy .noise2{display:block;color:#6b5e57}.copy .noise3{display:block;color:#efefea}.content{padding:0 8px 10px}.fieldwrap{position:relative;background:#ecece4;border:3px inset #fff;margin:0 0 8px;padding:10px;overflow:hidden}.fieldtitle{font-family:'Courier New',monospace;font-weight:bold;margin-bottom:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.field{position:relative;width:1000px;height:1760px;margin:0 auto;border:2px inset #fff;overflow:hidden;background:repeating-linear-gradient(0deg,transparent 0 23px,rgba(0,0,0,.04) 23px 24px),repeating-linear-gradient(90deg,transparent 0 23px,rgba(0,0,0,.04) 23px 24px),#efefea}.tile{position:absolute;padding:3px;background:#c0c0c0;border:2px solid;border-color:#fff #000 #000 #fff;box-shadow:3px 3px 0 var(--outline);transform:rotate(var(--rot))}.tilebar{height:15px;background:var(--bar);display:flex;justify-content:space-between;align-items:center;padding:1px 3px;font-size:8px;font-weight:bold}.thumb{background:#fff;border:1px solid #000;margin:3px auto;overflow:hidden}.thumb img{display:block;width:100%;height:100%;object-fit:cover}.tag{background:#f5f5f5;border:1px inset #fff;padding:2px;font-family:'Courier New',monospace;font-size:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.win95{position:absolute;background:#c0c0c0;border:2px solid;border-color:#fff #000 #000 #fff;box-shadow:5px 5px 0 #000;z-index:12}.titlebar{height:20px;background:#000080;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:3px 5px;font-weight:bold;cursor:move}.buttons b{display:inline-grid;place-items:center;width:14px;height:12px;margin-left:2px;background:#c0c0c0;color:#000;border:1px solid;border-color:#fff #000 #000 #fff;font-size:10px}.popupbody{margin:4px;background:#fff;border:2px inset #fff;padding:8px;font-family:'Courier New',monospace;font-size:11px;line-height:1.35}.doodad{position:absolute;padding:2px 6px;border:2px dotted #000;font-family:'Courier New',monospace;font-size:10px;font-weight:bold;z-index:9;box-shadow:2px 2px 0 #000}.footer{display:flex;justify-content:space-between;gap:8px;padding:4px 7px;border-top:2px groove #fff;background:#c0c0c0;font-size:10px;flex-wrap:wrap}.bannerrow{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:0 8px 8px}.banner{padding:4px 10px;border:2px outset #fff;font-family:'Courier New',monospace;font-weight:bold;box-shadow:2px 2px 0 #000}.banner.one{background:#efefea}.banner.two{background:#6b5e57}.banner.three{background:#003cff;color:#fff}.banner.four{background:#00ff00}@media(max-width:1100px){.field{width:100%;height:auto;min-height:1760px}}
+/* TRANSITION ARCHIVE PATCH */
+.marquee:nth-of-type(1) span{animation-duration:28s}.marquee.alt span{animation-duration:34s}.marquee.alt2 span{animation-duration:41s}
+.hero:before,.hero:after{animation-duration:5s}
+.logo .ru{font-size:clamp(42px,7.5vw,102px);line-height:.88;animation-duration:6s}
+.logo .en{animation-duration:7s;letter-spacing:4px}
+.tile{transition:transform .16s steps(2),filter .16s linear,box-shadow .16s linear;transform-origin:center;cursor:crosshair}
+.tile:hover{transform:rotate(0deg) scale(1.08)!important;filter:contrast(1.16) saturate(1.08);box-shadow:7px 7px 0 var(--outline);z-index:120!important}
+.field{isolation:isolate}
+.field::after{content:'';position:absolute;z-index:110;pointer-events:none;left:0;right:0;top:-8%;height:8%;background:linear-gradient(180deg,transparent,rgba(0,255,255,.08),rgba(255,255,0,.65),rgba(0,255,255,.10),transparent);mix-blend-mode:multiply;opacity:0;animation:archiveScan 7.5s linear 1 1.1s forwards}
+.field.scanning::after{animation:none;opacity:0}.field.scanning.scan-go::after{animation:archiveScan 3.8s linear 1 forwards}
+@keyframes archiveScan{0%{transform:translateY(0);opacity:0}7%{opacity:.9}92%{opacity:.9}100%{transform:translateY(1900px);opacity:0}}
+.tile[data-relic]::after{content:attr(data-relic);display:none;position:absolute;left:2px;right:2px;bottom:-18px;background:#000;color:#6b5e57;border:1px solid #fff;padding:2px 3px;font:7px 'Courier New',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile[data-relic]:hover::after{display:block}
+#reading-console{z-index:130}.popupbody strong{color:#000080}.reading-flash{animation:readingFlash .45s steps(2) 2}@keyframes readingFlash{50%{filter:invert(1)}}
+@media(max-width:700px){.logo .ru{font-size:clamp(34px,11vw,62px)}.copy{font-size:10px}.wrapper{padding:4px}.hero{margin:4px}.field{transform-origin:top left}}
+
+/* LARGE FIELD + 108 READINGS PATCH */
+.wrapper{max-width:1660px}
+.fieldwrap{overflow:auto}
+.field{width:1500px;height:3290px}
+.tile{padding:5px;box-shadow:5px 5px 0 var(--outline)}
+.tilebar{height:22px;padding:2px 5px;font-size:10px}
+.thumb{margin:5px auto}
+.tag{padding:3px 4px;font-size:9px}
+.tile:hover{transform:rotate(0deg) scale(1.035)!important;box-shadow:9px 9px 0 var(--outline)}
+.tile[data-relic]::after{bottom:-24px;font-size:9px;padding:3px 5px}
+.alt-reading .tilebar{outline:1px dotted rgba(0,0,0,.7)}
+.win95.window-blink{animation:windowArchiveBlink .18s steps(2,end) 2}
+@keyframes windowArchiveBlink{
+  0%,100%{filter:none;transform:translate(0,0)}
+  50%{filter:invert(1) contrast(1.35);transform:translate(2px,-1px)}
+}
+@keyframes archiveScan{0%{transform:translateY(0);opacity:0}7%{opacity:.9}92%{opacity:.9}100%{transform:translateY(3450px);opacity:0}}
+@media(max-width:1660px){.wrapper{max-width:100%;padding:6px}.fieldwrap{overflow:auto}.field{width:1500px;height:3290px}}
+
+/* COMPACT 108 / restored scale */
+.fieldwrap{overflow:auto}
+.field{width:1000px!important;height:2400px!important}
+.tile{padding:3px!important;box-shadow:3px 3px 0 var(--outline)!important}
+.tilebar{height:15px!important;padding:1px 3px!important;font-size:8px!important}
+.tile:hover{transform:rotate(0deg) scale(1.07)!important;box-shadow:7px 7px 0 var(--outline)!important}
+.tile[data-relic]::after{bottom:-18px!important;font-size:7px!important;padding:2px 3px!important}
+.archive-object{position:absolute;z-index:140;pointer-events:none;image-rendering:pixelated;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.82))}
+.archive-object.button-object{filter:drop-shadow(2px 2px 0 #000)}
+.archive-object.blink-soft{animation:objectBlink 4.7s steps(2,end) infinite}
+.archive-object.drift{animation:objectDrift 6.5s steps(4,end) infinite}
+@keyframes objectBlink{0%,92%,100%{opacity:1}94%,96%{opacity:.15}98%{opacity:1}}
+@keyframes objectDrift{0%,100%{transform:translate(0,0)}50%{transform:translate(2px,-1px)}}
+@media(max-width:1100px){.field{width:1000px!important;height:2400px!important}}
+
+/* INTERACTIVE FILTER STATES */
+.banner{cursor:pointer;user-select:none;transition:filter .14s linear,transform .14s linear,opacity .14s linear}
+.banner:hover{filter:brightness(1.12)}
+.banner.filter-active{transform:translate(2px,2px);box-shadow:none!important;filter:contrast(1.12) saturate(1.15)}
+.tile{transition:opacity .2s linear,filter .2s linear,transform .16s linear,box-shadow .16s linear}
+.tile.filter-dimmed{opacity:.12!important;filter:grayscale(1) contrast(.75)!important;pointer-events:none}
+.tile.filter-match{opacity:1!important;filter:none!important}
+.archive-object.filter-dimmed-object{opacity:.18!important;filter:grayscale(1) contrast(.7)!important}
+.filter-status{margin:0 8px 8px;padding:5px 8px;background:#000;color:#6b5e57;border:2px inset #fff;font-family:'Courier New',monospace;font-size:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.filter-status button{font:inherit;background:#c0c0c0;border:2px outset #fff;padding:2px 7px;cursor:pointer}
+.filter-status button:active{border-style:inset}
+
+.tile.record-enabled{cursor:pointer}.tile.record-enabled::before{content:'OPEN RECORD';position:absolute;right:3px;bottom:3px;z-index:20;padding:2px 4px;background:#efefea;color:#000;border:1px solid #000;font-family:'Courier New',monospace;font-size:7px;opacity:0}.tile.record-enabled:hover::before{opacity:1}
+.record-backdrop{position:fixed;inset:0;z-index:9998;display:none;background:rgba(0,0,0,.52)}.record-backdrop.open{display:block}
+.record-window{position:fixed;z-index:9999;display:none;width:min(680px,calc(100vw - 28px));left:50%;top:50%;transform:translate(-50%,-50%);background:#c0c0c0;border:3px solid;border-color:#fff #000 #000 #fff;box-shadow:8px 8px 0 #000;color:#000;font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;font-size:12px}.record-window.open{display:block}
+.record-titlebar{height:25px;display:flex;align-items:center;justify-content:space-between;padding:3px 4px 3px 7px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:bold}.record-titlebar button{width:18px;height:17px;padding:0;line-height:12px;background:#c0c0c0;color:#000;border:2px solid;border-color:#fff #000 #000 #fff;font-weight:bold;cursor:pointer}.record-menubar{padding:4px 8px;border-bottom:2px groove #fff}.record-body{margin:8px;background:#efefea;border:2px inset #fff;padding:10px;max-height:70vh;overflow:auto}.record-head,.record-full-grid{display:grid;grid-template-columns:148px 1fr;gap:4px 8px;font-family:'Courier New',monospace}.record-key{color:#000080;font-weight:bold;text-transform:uppercase}.record-value{min-width:0;overflow-wrap:anywhere}.record-separator{height:2px;margin:10px 0;border-top:1px solid #808080;border-bottom:1px solid #fff}.record-full{display:none;font-family:'Courier New',monospace;line-height:1.45}.record-full.open{display:block}.record-actions{display:flex;justify-content:flex-end;gap:7px;margin-top:10px}.record-actions button{min-width:128px;padding:4px 9px;background:#c0c0c0;border:2px solid;border-color:#fff #000 #000 #fff;font:11px 'MS Sans Serif',Tahoma,Arial,sans-serif;cursor:pointer}.record-actions button:active{border-color:#000 #fff #fff #000}.nota{margin-top:12px;padding:8px;color:#6b5e57;background:#000;border:2px inset #fff;font-family:'Courier New',monospace;line-height:1.4}.nota b{color:#efefea;font-weight:normal}.record-statusbar{display:flex;justify-content:space-between;gap:8px;padding:3px 7px;border-top:2px groove #fff;font-size:10px}@media(max-width:560px){.record-head,.record-full-grid{grid-template-columns:1fr}.record-key{margin-top:5px}}
+
+.tile.record-enabled{outline:2px dashed #efefea;outline-offset:3px;animation:recordHint 2.8s steps(2,end) infinite}
+.tile.record-enabled::before{opacity:1!important;content:'OPEN RECORD'!important}
+@keyframes recordHint{0%,90%,100%{outline-color:#efefea}94%{outline-color:#6b5e57}}
+
+.archive-afterword{
+  margin:10px 8px 12px;
+  padding:12px 14px;
+  background:#efefea;
+  color:#000;
+  border:3px inset #fff;
+  font-family:'Courier New',monospace;
+  font-size:11px;
+  line-height:1.5;
+}
+.archive-afterword h2{
+  margin:0 0 5px;
+  font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;
+  font-size:14px;
+}
+.archive-afterword .taxonomy{
+  margin:0 0 10px;
+  color:#000080;
+  font-weight:bold;
+}
+.archive-afterword p{
+  max-width:900px;
+  margin:7px 0;
+}
+.archive-afterword .nota-bottom{
+  margin-top:10px;
+  padding-top:8px;
+  border-top:1px solid #808080;
+}
+
+/* TECHNOPRIEST SERVICE NOTES */
+.priest-note{
+  position:absolute;
+  z-index:220;
+  width:320px;
+  background:#c0c0c0;
+  border:3px solid;
+  border-color:#fff #000 #000 #fff;
+  box-shadow:6px 6px 0 #000;
+  font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;
+  font-size:11px;
+  color:#000;
+}
+.priest-note.note-a{left:34px;top:28px}
+.priest-note.note-b{right:34px;top:118px;width:292px;display:none}
+.priest-note.note-b.open{display:block}
+.priest-titlebar{
+  height:22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:3px 4px 3px 6px;
+  background:#000080;
+  color:#fff;
+  font-weight:bold;
+}
+.priest-titlebar button{
+  width:17px;
+  height:16px;
+  padding:0;
+  line-height:11px;
+  background:#c0c0c0;
+  color:#000;
+  border:2px solid;
+  border-color:#fff #000 #000 #fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+.priest-body{
+  margin:5px;
+  padding:8px;
+  background:#efefea;
+  border:2px inset #fff;
+  font-family:'Courier New',monospace;
+  line-height:1.42;
+}
+.priest-body p{margin:0 0 8px}
+.priest-body p:last-child{margin-bottom:0}
+.priest-actions{
+  display:flex;
+  justify-content:flex-end;
+  padding:0 5px 6px;
+}
+.priest-actions button{
+  min-width:112px;
+  padding:3px 8px;
+  background:#c0c0c0;
+  border:2px solid;
+  border-color:#fff #000 #000 #fff;
+  font:11px 'MS Sans Serif',Tahoma,Arial,sans-serif;
+  cursor:pointer;
+}
+.priest-actions button:active{border-color:#000 #fff #fff #000}
+@media(max-width:760px){
+  .priest-note.note-a,.priest-note.note-b{
+    position:relative;
+    left:auto;
+    right:auto;
+    top:auto;
+    width:calc(100% - 20px);
+    margin:10px;
+  }
+}
+
+/* AFTERWORD INSIDE LOWER FREE FIELD */
+.archive-afterword{
+  position:absolute!important;
+  left:42px!important;
+  right:42px!important;
+  bottom:34px!important;
+  margin:0!important;
+  z-index:170!important;
+  width:auto!important;
+  max-width:none!important;
+  background:#efefea!important;
+  border:3px inset #fff!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+.archive-afterword::before{
+  content:'ARCHIVE NOTE / LOWER FIELD';
+  display:block;
+  margin:-12px -14px 10px;
+  padding:4px 7px;
+  background:#000080;
+  color:#fff;
+  font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;
+  font-size:11px;
+  font-weight:bold;
+}
+@media(max-width:760px){
+  .archive-afterword{
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    margin:12px!important;
+  }
+}
+
+/* V6: AFTERWORD FIXED BELOW READING FIELD */
+.archive-afterword{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  width:auto!important;
+  max-width:none!important;
+  margin:12px 0 0!important;
+  z-index:auto!important;
+  display:block!important;
+  background:#efefea!important;
+  color:#000!important;
+  border:3px inset #fff!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+.archive-afterword::before{
+  content:'ARCHIVE NOTE / LOWER FIELD';
+  display:block;
+  margin:-12px -14px 10px;
+  padding:4px 7px;
+  background:#000080;
+  color:#fff;
+  font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;
+  font-size:11px;
+  font-weight:bold;
+}
+.fieldwrap{overflow:visible!important}
+
+/* V7: TRUE LOWER-FIELD PLACEMENT */
+.field{
+  width:1000px!important;
+  height:3040px!important;
+  overflow:hidden!important;
+}
+.archive-afterword{
+  position:absolute!important;
+  left:42px!important;
+  right:42px!important;
+  top:2735px!important;
+  bottom:auto!important;
+  width:auto!important;
+  max-width:none!important;
+  margin:0!important;
+  z-index:175!important;
+  display:block!important;
+  background:#efefea!important;
+  color:#000!important;
+  border:3px inset #fff!important;
+  box-shadow:5px 5px 0 #000!important;
+}
+.archive-afterword::before{
+  content:'ARCHIVE NOTE / LOWER FIELD';
+  display:block;
+  margin:-12px -14px 10px;
+  padding:4px 7px;
+  background:#000080;
+  color:#fff;
+  font-family:'MS Sans Serif',Tahoma,Arial,sans-serif;
+  font-size:11px;
+  font-weight:bold;
+}
+@media(max-width:1100px){
+  .field{
+    width:1000px!important;
+    height:3040px!important;
+  }
+}
+
+/* V8: MOVE TECHNOPRIEST NOTES TO LOWER FREE FIELD */
+.field{
+  width:1000px!important;
+  height:3480px!important;
+  overflow:hidden!important;
+}
+.priest-note{
+  width:420px!important;
+}
+.priest-note.note-a{
+  left:42px!important;
+  right:auto!important;
+  top:2670px!important;
+}
+.priest-note.note-b{
+  left:auto!important;
+  right:42px!important;
+  top:2670px!important;
+}
+.archive-afterword{
+  left:42px!important;
+  right:42px!important;
+  top:3075px!important;
+}
+@media(max-width:1100px){
+  .field{
+    width:1000px!important;
+    height:3480px!important;
+  }
+}
+
+
+/* BOGOBOT MUSEUM MATTE — outer presentation layer only */
+:root{
+  --museum-paper:#EFEFEA;
+  --museum-grid:rgba(107,94,87,.18);
+  --museum-text:#6B5E57;
+  --museum-blue:#003CFF;
+  --museum-black:#050505;
+  --museum-matte-x:42px;
+  --museum-title-h:64px;
+}
+html{background:var(--museum-paper)}
+body{
+  min-height:100vh;
+  padding:0 var(--museum-matte-x) 28px;
+  background-color:var(--museum-paper)!important;
+  background-image:
+    linear-gradient(to right,transparent calc(25% - .5px),var(--museum-grid) 25%,transparent calc(25% + .5px)),
+    linear-gradient(to bottom,transparent calc(25% - .5px),var(--museum-grid) 25%,transparent calc(25% + .5px))!important;
+  background-size:192px 192px!important;
+  background-attachment:fixed!important;
+}
+.museum-title{
+  width:100%;
+  max-width:1200px;
+  height:var(--museum-title-h);
+  margin:0 auto;
+  padding:22px 12px 0;
+  color:var(--museum-text);
+  font-family:"IBM Plex Mono","SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size:15px;
+  font-weight:600;
+  line-height:1;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+  pointer-events:none;
+}
+.museum-back{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:18px 12px 0;
+  font-family:"IBM Plex Mono","SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size:11px;
+  line-height:1.35;
+  letter-spacing:.035em;
+}
+.museum-back a{color:var(--museum-text);text-decoration:none}
+.museum-back a:hover,.museum-back a:focus-visible{color:var(--museum-blue);outline:none}
+.wrapper{
+  margin:0 auto;
+  padding:0 12px 12px;
+}
+@media(max-width:640px){
+  :root{--museum-matte-x:14px;--museum-title-h:46px}
+  body{padding-bottom:14px}
+  .museum-back{padding:12px 0 0}
+  .museum-title{padding:14px 0 0;font-size:13px}
+  .wrapper{padding:0}
+}
+
+/* V0.2: five source objects, two visible readings. */
+html,body{min-width:0;overflow-x:hidden}body{min-height:100vh}
+.wrapper{max-width:1440px;padding:10px}.shell{overflow:hidden}.topbar{height:auto;min-height:28px;gap:12px}.topbar span{overflow-wrap:anywhere}
+.hero{min-height:0;margin:8px;padding:22px 15px 18px;border-color:#6b5e57}.hero:before,.hero:after{display:none}.logo{margin:0}.logo .ru{font-size:clamp(30px,5.5vw,70px);line-height:1.04;animation:none;transform:none;letter-spacing:1px}.logo .en{font-size:clamp(13px,1.8vw,22px);animation:none;letter-spacing:2px;margin-top:12px}.copy{margin-top:14px}
+.v02-title{color:#fff;font:700 clamp(13px,2vw,22px) 'Courier New',monospace;letter-spacing:.1em;margin:12px 8px 2px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.v02-title span:last-child{color:#6b5e57}
+.controls{margin:6px 8px 12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#6b5e57;font:700 12px 'Courier New',monospace}.controls button,.record-close{background:#c0c0c0;color:#000;border:2px solid;border-color:#fff #000 #000 #fff;padding:5px 11px;font:700 12px 'MS Sans Serif',Tahoma,Arial,sans-serif;cursor:pointer}.controls button:focus-visible,.archive-node:focus-visible,.record-close:focus-visible{outline:3px solid #efefea;outline-offset:3px}.controls .status{margin-left:auto;min-width:190px;text-align:right}
+.content{padding:0 8px 8px}.fieldwrap{margin:0;padding:8px;overflow:visible}.fieldtitle{font-size:11px}.field{width:100%!important;height:530px!important;min-height:0!important;max-width:1120px;border-color:#fff;overflow:hidden;isolation:isolate}.field::after{display:none}.routes{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}.routes path{fill:none;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}.routes path.route-a{stroke:#050607;filter:drop-shadow(1px 1px 0 #050607)}.routes path.route-b{stroke:#050607;stroke-dasharray:9 7;filter:drop-shadow(1px 1px 0 #050607)}
+.archive-node{z-index:2!important;width:142px!important;padding:5px!important;transform:rotate(0deg)!important;cursor:pointer;outline:0!important;transition:none!important;box-shadow:5px 5px 0 var(--outline)!important}.archive-node .tilebar{height:20px!important;font-size:9px!important}.archive-node .thumb{width:128px!important;height:87px!important;margin:5px auto!important}.archive-node .thumb img{object-fit:cover}.archive-node .tag{font-size:9px!important}.archive-node::after{content:attr(data-relic)!important;display:block!important;position:static!important;margin-top:4px;padding:3px;background:#000;color:#6b5e57;border:1px solid #fff;white-space:normal;line-height:1.15;font:700 9px 'Courier New',monospace;min-height:28px}.archive-node:hover{transform:rotate(0deg)!important;filter:none!important}.archive-node.active{z-index:8!important;outline:3px solid #efefea!important;outline-offset:3px!important}.archive-node.route-a-seen{box-shadow:6px 6px 0 #050607!important}.archive-node.route-b-seen{box-shadow:6px 6px 0 #050607!important}.archive-node.central-a{border-top:5px solid #050607!important}.archive-node.central-b{border-top:5px dashed #050607!important}.archive-node[data-node="0"]{left:6%;top:54px}.archive-node[data-node="1"]{left:34%;top:190px}.archive-node[data-node="2"]{left:72%;top:46px}.archive-node[data-node="3"]{left:12%;top:337px}.archive-node[data-node="4"]{left:70%;top:328px}
+.route-key{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:8px 3px 0;font:700 11px 'Courier New',monospace}.route-key span::before{content:'';display:inline-block;width:26px;border-top:3px solid;margin-right:7px;vertical-align:middle}.route-key .key-a::before{border-color:#050607}.route-key .key-b::before{border-color:#050607;border-top-style:dashed}
+.window-lane{position:relative;min-height:120px;margin:8px 0 0;display:grid;place-items:center}.window-lane .popup{position:relative;left:auto!important;top:auto!important;width:min(100%,380px)!important;box-shadow:6px 6px 0 #000}.window-lane .popup[hidden]{display:none}.window-lane .titlebar{cursor:default}.window-lane .popupbody{font-size:12px;min-height:70px}
+.record-window{position:relative;z-index:2;left:auto;top:auto;transform:none;width:min(100%,780px);margin:8px auto 16px;box-shadow:8px 8px 0 #000}.record-window:not([hidden]){display:block}.record-window[hidden],.record-card[hidden]{display:none}.record-titlebar{height:28px}.record-body{max-height:none;overflow:visible}.record-head{grid-template-columns:150px 1fr}.record-art{margin:12px auto;max-width:420px}.record-art img{display:block;width:100%;height:auto;max-height:340px;object-fit:contain;background:#fff;border:2px inset #fff}.record-source-tag{font:700 12px 'Courier New',monospace}.record-card .nota{max-width:100%}.record-card .record-full{display:block}.record-card .record-full-grid{display:grid}
+.footer{font-size:10px}.paused .archive-node,.paused .logo .ru,.paused .logo .en{animation-play-state:paused!important;transition:none!important}
+@media(max-width:700px){.wrapper{padding:4px}.hero{padding:16px 8px}.logo .ru{font-size:clamp(30px,8.7vw,54px)}.v02-title{font-size:12px}.controls .status{margin-left:0;width:100%;text-align:left}.fieldwrap{padding:5px}.fieldtitle{font-size:9px}.field{height:710px!important}.archive-node{width:116px!important;padding:3px!important}.archive-node .tilebar{height:17px!important;font-size:7px!important}.archive-node .thumb{width:105px!important;height:70px!important;margin:3px auto!important}.archive-node .tag{font-size:7px!important}.archive-node::after{font-size:8px;min-height:27px}.archive-node[data-node="0"]{left:4%;top:18px}.archive-node[data-node="1"]{left:58%;top:136px}.archive-node[data-node="2"]{left:4%;top:254px}.archive-node[data-node="3"]{left:58%;top:372px}.archive-node[data-node="4"]{left:29%;top:535px}.window-lane{min-height:130px}.record-head,.record-full-grid{grid-template-columns:1fr}.record-key{margin-top:7px}.record-body{padding:7px;margin:5px}.record-art img{max-height:230px}}
+@media(prefers-reduced-motion:reduce){.archive-node,.logo .ru,.logo .en{animation:none!important;transition:none!important}}
+</style><style id="most-integration-layout">
+html,body{background:#efefea!important;background-image:none!important;overflow-x:hidden!important;padding:0!important}
+.wrapper{padding:0!important;max-width:none!important;width:100%!important}
+.shell{background:#efefea;border:0;box-shadow:none;overflow:visible}
+.topbar,.hero,.footer{display:none!important}
+.v02-title{margin:0 0 5px;color:#6b5e57;font:700 12px/1.4 monospace}
+.v02-title span:last-child{color:#003cff}
+.controls{margin:0 0 8px;color:#6b5e57;font:11px monospace}
+.content{padding:0}.fieldwrap{border:0;padding:0!important;background:transparent!important;overflow:visible}
+.fieldtitle{margin:4px 0 6px;color:#6b5e57;font:10px monospace}
+.field{max-width:none;width:100%!important;background-color:#efefea;border:1px solid #b3ada6;}
+.window-lane{margin-top:5px;min-height:0}.window-lane:not(:has(.popup:not([hidden]))){display:none}
+.route-key{margin-top:8px}.record-window{margin:10px auto 16px}
+.archive-node::after{line-height:1.22}
+@media(max-width:700px){.field{height:710px!important}.v02-title{font-size:10px}.controls{gap:5px}}
+</style><style>
+html,body{min-height:0!important;height:auto!important;overflow:hidden!important}
+.window-lane{min-height:130px!important;display:grid!important;align-items:start!important;padding-top:6px}
+.window-lane .popup{max-width:calc(100% - 16px)!important}
+.record-window{width:min(calc(100% - 16px),780px)!important}
+.record-window .record-art img{max-height:240px}
+body[data-phase="handoff"] .window-lane{min-height:0!important;margin:12px 0 8px}
+body[data-phase="handoff"] .popup{border-color:#003cff}
+.archive-node:focus-visible{outline:3px solid #003cff!important;outline-offset:3px}
+@media(max-width:700px){.archive-node[data-node="1"],.archive-node[data-node="3"]{left:calc(100% - 124px)!important}.record-window .record-art img{max-height:200px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style><style>
+.record-window[hidden]{display:block!important;visibility:hidden}
+.record-window{width:min(calc(100% - 16px),700px)!important}
+.record-window .record-art img{max-height:180px!important}
+.field{height:430px!important}
+.archive-node[data-node="0"]{left:6%!important;top:24px!important}
+.archive-node[data-node="1"]{left:37%!important;top:126px!important}
+.archive-node[data-node="2"]{left:74%!important;top:24px!important}
+.archive-node[data-node="3"]{left:14%!important;top:240px!important}
+.archive-node[data-node="4"]{left:68%!important;top:240px!important}
+.window-lane{min-height:110px!important}
+@media(max-width:700px){.field{height:430px!important}.archive-node[data-node="1"]{left:37%!important}.archive-node[data-node="3"]{left:14%!important}}
+</style><style id="two-readings-reference">
+.record-window{width:100%!important;max-width:none!important;background:transparent!important;border:0!important;box-shadow:none!important;margin:12px 0 0!important;color:#6b5e57;font-family:monospace}
+.record-titlebar{background:transparent!important;color:#6b5e57!important;padding:8px 0!important;height:auto!important;min-height:32px;border-bottom:1px solid #b3ada6;font:14px/1.4 monospace!important}
+.record-close{background:transparent!important;border:1px solid #b3ada6!important;color:#6b5e57!important;box-shadow:none!important}
+.reading-caption{font:14px/1.4 monospace;color:#003cff;padding:12px 0}
+.record-body{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin:0!important;padding:0!important;border:0!important;background:transparent!important;max-height:none!important;overflow:visible!important}
+.record-card,.record-card[hidden]{display:flex!important;flex-direction:column;min-width:0;padding:14px 12px;background:#efefea;border:1px solid #b3ada6;border-top:3px solid #b3ada6}
+.record-card.reading-current{border-top-color:#003cff}
+.reading-image{display:block;width:100%;height:120px;object-fit:contain;background:#e6e5df}
+.record-card h3{font:20px/1.15 monospace;font-weight:400;margin:16px 0 12px;min-height:70px;overflow-wrap:anywhere}
+.reading-meta{font:12px/1.5 monospace;min-height:40px;margin:0 0 16px}
+.reading-row{padding:12px 0;border-top:1px solid #b3ada6;font:15px/1.4 Arial,sans-serif;min-height:108px}
+.reading-row b{display:block;font:12px/1.5 monospace;margin-bottom:8px}
+.reading-row.human{color:#003cff}.reading-row.pending{color:#938d86}
+.reading-source{font:12px/1.4 monospace;margin-top:auto;padding-top:10px;border-top:1px solid #b3ada6}
+.reading-source summary{cursor:pointer}.reading-source .record-art{margin:10px 0;max-width:100%}.reading-source .record-head,.reading-source .record-full-grid{display:block!important}.reading-source .record-key{margin-top:10px}.reading-source .record-full{display:block!important}
+@media(max-width:700px){.record-body{gap:9px}.record-card,.record-card[hidden]{padding:10px 7px}.reading-image{height:90px}.record-card h3{font-size:16px;min-height:70px}.reading-row{font-size:13px;min-height:125px}.reading-meta,.reading-row b{font-size:10px}}
+</style><style id="reading-review-only">
+.window-lane,.reading-caption,.fieldtitle,.v02-title>span:last-child{display:none!important}
+.record-titlebar{border-bottom:0!important;padding:3px 0 8px!important}
+.record-card.reading-review-current{border-color:#003cff!important;border-top-color:#003cff!important}
+.record-card{transition:border-color 180ms ease}
+.controls .status{position:absolute!important;width:1px!important;min-width:0!important;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.record-card{transition:none}}
+</style><style>.await-human .archive-node{outline:1px solid #003cff;outline-offset:4px}.await-human .archive-node:focus-visible{outline-width:3px}</style><style id="bogobot-palette-contract">
+:root{--paper:#efefea;--ink:#6b5e57;--blue:#003cff;--line:rgba(107,94,87,.32)}
+html,body,.wrapper,.shell,.fieldwrap,.field{background:var(--paper)!important;color:var(--ink)!important}
+.shell,.fieldwrap,.field{box-shadow:none!important;border-color:var(--line)!important;border-width:1px!important}
+.topbar,.menubar,.tile,.win95,.footer,.record-window{background:var(--paper)!important;color:var(--ink)!important;box-shadow:none!important;border-color:var(--line)!important}
+.tilebar,.titlebar,.record-titlebar{background:var(--paper)!important;color:var(--ink)!important;border-bottom:1px solid var(--line)!important}
+.popupbody,.tag,.thumb{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.tile{--outline:rgba(107,94,87,.32)!important;box-shadow:none!important}
+.tile.active,.tile:hover{border-color:var(--blue)!important;box-shadow:none!important}
+.record-card{border-color:var(--line)!important;background:var(--paper)!important}
+.reading-image,.thumb img{filter:grayscale(1)}
+.record-card:hover .reading-image,.tile:hover .thumb img{filter:none}
+.reading-image{background:rgba(107,94,87,.06)!important}
+.controls button,.record-close{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+.controls button:hover,.controls button:focus-visible{color:var(--blue)!important;border-color:var(--blue)!important}
+.reading-row.pending{color:rgba(107,94,87,.65)!important}
+.await-human .controls .status{position:static!important;width:auto!important;height:auto!important;clip-path:none!important;color:var(--blue)!important}
+</style><style>.route-a,.route-b{fill:none!important;stroke-linecap:round!important;stroke-linejoin:round!important;stroke-width:1.4px!important}.route-a{stroke:#003cff!important}.route-b{stroke:#6b5e57!important;opacity:.42}</style><style>
+.route-a,.route-b{stroke:#6b5e57!important}.reading-row.human,.reading-caption,.controls button{color:#6b5e57!important}
+.tile{border-color:rgba(107,94,87,.32)!important}.tile.active{border-color:#003cff!important}
+.record-card{border-color:rgba(107,94,87,.32)!important}.record-card.reading-review-current,.record-card.reading-current{border-top-color:#003cff!important}
+.await-human .archive-node{outline-color:#6b5e57!important}.await-human .archive-node:focus-visible{outline-color:#003cff!important}
+</style><style id="no-straight-dividers">.shell,.fieldwrap,.field,.record-card,.reading-row,.reading-source,.record-titlebar,.tilebar,.titlebar,.controls,.footer{border:0!important}.record-card.reading-current,.record-card.reading-review-current{outline:0;background:rgba(107,94,87,.06)!important}.await-human .archive-node:focus-visible{outline:2px solid #003cff!important}</style><style id="archive-without-panel">
+.wrapper,.shell,.content,.fieldwrap,.field,.record-window,.record-body,.record-card,.record-card.reading-current,.record-card.reading-review-current{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;background-image:none!important}
+.field:before,.field:after{border:0!important;box-shadow:none!important;background:none!important}
+.record-card.reading-current h3,.record-card.reading-review-current h3{color:#003cff}
+</style><style id="manual-tree-frame">
+.record-card:first-child{border:1px solid rgba(107,94,87,.42)!important;outline:0!important}
+.record-card:first-child .reading-row,.record-card:first-child .reading-source{border-top:1px solid rgba(107,94,87,.32)!important}
+.archive-node[data-node="0"]{border:1px solid rgba(107,94,87,.42)!important}
+.record-card:first-child.reading-current,.record-card:first-child.reading-review-current{border-top:2px solid #003cff!important}
+</style><style>.route-a,.route-b{stroke-width:var(--route-width,1px)!important;vector-effect:none}</style></head><body>
+<div class="wrapper"><div class="shell"><div class="topbar"><span>BOGOBOT.ARCHIVE — TRANSITION LAYER / READING NODE 02</span><span>V0.2 / PROPOSED</span></div>
+<div class="hero"><div class="logo"><span class="ru">II. АРХИВ ПЕРЕХОДА</span><span class="en">RELICS / READING CONDITIONS</span></div><div class="copy">повреждённые форматы / реликвии перехода / условия чтения / повторное распознавание / остаточные интерфейсы</div></div>
+<div class="v02-title"><span>ПЯТЬ ОБЪЕКТОВ / ДВА ПРОЧТЕНИЯ</span></div>
+<div class="controls"><button id="stop" type="button">Остановить</button><button id="restart" type="button">Начать заново</button><span class="status" id="status" aria-live="polite">Выберите архивный объект</span></div>
+<div class="content"><div class="fieldwrap"><div class="fieldtitle"><span>READING FIELD / POPUP MODE</span><span>НАЖМИТЕ НА ОДИН ОБЪЕКТ</span></div>
+<div class="field" id="field"><svg class="routes" id="routes" aria-hidden="true"></svg><div class="tile archive-node trace" data-class="TRACE" data-condition="READABLE / MANUAL INDEX" data-filters="node02" data-relic="Древо Ручной Классификации" data-node="0" tabindex="0" role="button" aria-label="Древо Ручной Классификации"><div class="tilebar"><span>MANUAL_TREE</span><span>T</span></div><div class="thumb" style="width:82px;height:55px;"><img alt="Древо Ручной Классификации" src="images/1fb721727467ec766746.png"/></div><div class="tag">READABLE / MANUAL INDEX</div></div><div class="tile archive-node trace" data-class="TRACE" data-condition="READABLE / ADDRESS MARK" data-filters="netscape node02" data-relic=".RU — Метка Именования" data-node="1" tabindex="0" role="button" aria-label=".RU — Метка Именования"><div class="tilebar"><span>DOT_RU_MARK</span><span>T</span></div><div class="thumb" style="width:72px;height:48px;"><img alt=".RU — Метка Именования" src="images/f7e7e0e8b514cad1c38b.png"/></div><div class="tag">READABLE / ADDRESS MARK</div></div><div class="tile archive-node trace" data-class="TRACE" data-condition="CONDITION / ACCESS REQUIRED" data-filters="netscape node02" data-relic="Пароль От Архива" data-node="2" tabindex="0" role="button" aria-label="Пароль От Архива"><div class="tilebar"><span>ARCHIVE_PASSWORD</span><span>T</span></div><div class="thumb" style="width:74px;height:49px;"><img alt="Пароль От Архива" src="images/02618d16ef8bfba189d1.png"/></div><div class="tag">CONDITION / ACCESS REQUIRED</div></div><div class="tile archive-node trace" data-class="TRACE" data-condition="ENCODING MISMATCH" data-filters="lost" data-relic="Битая Кириллица" data-node="3" tabindex="0" role="button" aria-label="Битая Кириллица"><div class="tilebar"><span>BROKEN_CYRILLIC</span><span>T</span></div><div class="thumb" style="width:72px;height:48px;"><img alt="Битая Кириллица" src="images/f63fc13127cddc657155.png"/></div><div class="tag">ENCODING MISMATCH</div></div><div class="tile archive-node archive record-enabled" data-class="SIGNAL" data-condition="CARRIER / READABLE" data-filters="netscape node02" data-record-id="archive-against-archive" data-relic="Архив Против Архива" data-node="4" tabindex="0" role="button" aria-label="Архив Против Архива"><div class="tilebar"><span>MANUAL_ARCHIVE_03</span><span>R</span></div><div class="thumb" style="width:76px;height:54px;"><img alt="MANUAL_ARCHIVE_03" src="images/e999d31649da22e1f436.png" style="object-position:center;transform:none;"/></div><div class="tag">MANUAL CLASSIFICATION</div></div></div>
+
+<div class="window-lane" id="windowLane"><div class="popup win95" data-window="0" hidden><div class="titlebar"><span>READING STATUS</span><div class="buttons"><b>_</b><b>□</b><b>×</b></div></div><div class="popupbody">RELICS: 53<br>FRAGMENTS: 108<br>CARRIER: 36<br>SIGNAL: 22<br>TRACE: 14<br>TECHNOPRIEST FUNCTION: ACTIVE</div></div><div class="popup win95" data-window="1" hidden><div class="titlebar"><span>READING WARNING</span><div class="buttons"><b>_</b><b>□</b><b>×</b></div></div><div class="popupbody">full reconstruction unavailable<br>original context not required<br>reading conditions detected<br>source identity unstable</div></div><div class="popup win95" data-window="2" hidden><div class="titlebar"><span>READING.LOG</span><div class="buttons"><b>_</b><b>□</b><b>×</b></div></div><div class="popupbody">carrier: damaged<br>format: conditional<br>encoding: variable<br>reading threshold: 47%<br>mode: repeated recognition</div></div><div class="popup win95" data-window="3" hidden><div class="titlebar"><span>LOCAL ROUTES</span><div class="buttons"><b>_</b><b>□</b><b>×</b></div></div><div class="popupbody">carriers/<br>signals/<br>protocols/<br>failed_readings/</div></div><div class="popup win95" data-window="4" hidden><div class="titlebar"><span>SOURCE LOST</span><div class="buttons"><b>_</b><b>□</b><b>×</b></div></div><div class="popupbody">no whole image<br>no stable origin<br>conditions remain readable</div></div></div></div>
+<section class="record-window" id="recordWindow" aria-label="Толкователь — два прочтения архива" hidden><div class="record-titlebar"><span id="recordTitle"></span><button class="record-close" id="recordClose" type="button" aria-label="Закрыть прочтения">×</button></div><div class="reading-caption" id="readingCaption">Ч / ВАШИ ВЫБОРЫ · 0 / 5</div><div class="record-body"><article class="record-card" data-record="0"><img class="reading-image" src="images/1fb721727467ec766746.png" alt="Древо Ручной Классификации"><h3>Древо Ручной Классификации</h3><p class="reading-meta">READABLE / MANUAL INDEX</p><div class="reading-row human pending" data-reading="human"><b>Ч / ЧЕЛОВЕК</b><span>—</span></div><div class="reading-row system pending" data-reading="system"><b>С / СИСТЕМА</b><span>—</span></div><details class="reading-source"><summary>Сведения о носителе</summary>
+          <div class="record-head"><div class="record-key">MANUAL_TREE</div><div class="record-value">Древо Ручной Классификации</div>
+          <div class="record-key">TRACE</div><div class="record-value">READABLE / MANUAL INDEX</div></div>
+          <div class="record-art"><img src="images/1fb721727467ec766746.png" alt="MANUAL_TREE"></div>
+          <div class="record-source-tag">READABLE / MANUAL INDEX</div></details></article><article class="record-card" data-record="1"><img class="reading-image" src="images/f7e7e0e8b514cad1c38b.png" alt=".RU — Метка Именования"><h3>.RU — Метка Именования</h3><p class="reading-meta">READABLE / ADDRESS MARK</p><div class="reading-row human pending" data-reading="human"><b>Ч / ЧЕЛОВЕК</b><span>—</span></div><div class="reading-row system pending" data-reading="system"><b>С / СИСТЕМА</b><span>—</span></div><details class="reading-source"><summary>Сведения о носителе</summary>
+          <div class="record-head"><div class="record-key">DOT_RU_MARK</div><div class="record-value">.RU — Метка Именования</div>
+          <div class="record-key">TRACE</div><div class="record-value">READABLE / ADDRESS MARK</div></div>
+          <div class="record-art"><img src="images/f7e7e0e8b514cad1c38b.png" alt="DOT_RU_MARK"></div>
+          <div class="record-source-tag">READABLE / ADDRESS MARK</div></details></article><article class="record-card" data-record="2"><img class="reading-image" src="images/02618d16ef8bfba189d1.png" alt="Пароль От Архива"><h3>Пароль От Архива</h3><p class="reading-meta">CONDITION / ACCESS REQUIRED</p><div class="reading-row human pending" data-reading="human"><b>Ч / ЧЕЛОВЕК</b><span>—</span></div><div class="reading-row system pending" data-reading="system"><b>С / СИСТЕМА</b><span>—</span></div><details class="reading-source"><summary>Сведения о носителе</summary>
+          <div class="record-head"><div class="record-key">ARCHIVE_PASSWORD</div><div class="record-value">Пароль От Архива</div>
+          <div class="record-key">TRACE</div><div class="record-value">CONDITION / ACCESS REQUIRED</div></div>
+          <div class="record-art"><img src="images/02618d16ef8bfba189d1.png" alt="ARCHIVE_PASSWORD"></div>
+          <div class="record-source-tag">CONDITION / ACCESS REQUIRED</div></details></article><article class="record-card" data-record="3"><img class="reading-image" src="images/f63fc13127cddc657155.png" alt="Битая Кириллица"><h3>Битая Кириллица</h3><p class="reading-meta">ENCODING MISMATCH</p><div class="reading-row human pending" data-reading="human"><b>Ч / ЧЕЛОВЕК</b><span>—</span></div><div class="reading-row system pending" data-reading="system"><b>С / СИСТЕМА</b><span>—</span></div><details class="reading-source"><summary>Сведения о носителе</summary>
+          <div class="record-head"><div class="record-key">BROKEN_CYRILLIC</div><div class="record-value">Битая Кириллица</div>
+          <div class="record-key">TRACE</div><div class="record-value">ENCODING MISMATCH</div></div>
+          <div class="record-art"><img src="images/f63fc13127cddc657155.png" alt="BROKEN_CYRILLIC"></div>
+          <div class="record-source-tag">ENCODING MISMATCH</div></details></article><article class="record-card" data-record="4"><img class="reading-image" src="images/e999d31649da22e1f436.png" alt="Архив Против Архива"><h3>Архив Против Архива</h3><p class="reading-meta">CARRIER / META-ARCHIVE</p><div class="reading-row human pending" data-reading="human"><b>Ч / ЧЕЛОВЕК</b><span>—</span></div><div class="reading-row system pending" data-reading="system"><b>С / СИСТЕМА</b><span>—</span></div><details class="reading-source"><summary>Сведения о носителе</summary><div class="record-head"><div class="record-key">Сигнатура</div><div class="record-value">II-ARC-03 / ARCHIVE_AGAINST_ARCHIVE</div><div class="record-key">Носитель</div><div class="record-value">Снимок архивной страницы / ручная веб-классификация / HTML-структура</div><div class="record-key">Сохранность</div><div class="record-value">73% / PARTIAL BUT STABLE</div><div class="record-key">Повреждение</div><div class="record-value">Контекст извлечения утрачен; внешние ссылки частично неразрешимы; временная последовательность фрагментирована.</div><div class="record-key">Вероятное чтение</div><div class="record-value">Архив, сохраняющий следы другого архива и тем самым удваивающий дистанцию между формой и её источником.</div></div><div class="record-separator"></div><div class="record-full" id="recordFull"><div class="record-full-grid"><div class="record-key">Класс</div><div class="record-value">CARRIER / META-ARCHIVE</div><div class="record-key">Период</div><div class="record-value">Переход от ручной классификации к машинному индексированию</div><div class="record-key">Условие чтения</div><div class="record-value">Необходимо сохранить исходную иерархию ссылок, языковые переключатели и следы отсутствующих страниц.</div><div class="record-key">Запрет восстановления</div><div class="record-value">Не объединять фрагменты в единую реконструированную страницу. Несовпадение версий является частью носителя.</div><div class="record-key">Связанные формы</div><div class="record-value">Древо Ручной Классификации / Скрытый Источник / Книга Надзора</div><div class="record-key">Последнее чтение</div><div class="record-value">NODE 02 / ATTEMPT 0072 / CONDITION FIXED</div></div><div class="nota"><b>Nota archivarii:</b><br/>Источник не исчез. Он был сохранён слишком много раз. Каждое сохранение добавило новый слой, и теперь читается не страница, а последовательность попыток удержать её.</div></div></details></article></div></section>
+<div class="footer"><span>BOGOBOT NETWORK / READING NODE 02</span><span>FIVE SOURCE OBJECTS / TWO ARTISTIC ROUTES</span><span>V0.2 / VISUAL TEST</span></div></div></div>
+<script>
+(()=>{'use strict';
+ const field=document.getElementById('field'), svg=document.getElementById('routes'), tiles=[...document.querySelectorAll('.archive-node')], windows=[...document.querySelectorAll('[data-window]')], cards=[...document.querySelectorAll('[data-record]')], record=document.getElementById('recordWindow'), status=document.getElementById('status');
+
+ const readingText=[{"human": "Сохранить ручной порядок связей.", "system": "Построить индекс по рубрикам и ссылкам."}, {"human": "Узнать имя и место в сети.", "system": "Прочесть домен как адресный признак."}, {"human": "Получить доступ к сохранённому.", "system": "Проверить условие доступа к записи."}, {"human": "Столкнуться с утратой читаемого голоса.", "system": "Сначала обнаружить несовпадение кодировки."}, {"human": "Удержать следы прежней структуры.", "system": "Различить слои повторного сохранения."}],humanChoices=[];
+ function markHuman(i){document.body.classList.remove('await-human');let note=document.getElementById('choiceConfirmation');if(!note){note=document.createElement('div');note.id='choiceConfirmation';note.setAttribute('role','status');record.prepend(note);}note.textContent='Ваш выбор сохранён: '+cards[i].querySelector('h3').textContent;if(!humanChoices.includes(i))humanChoices.push(i);const r=cards[i].querySelector('[data-reading="human"]');r.classList.remove('pending');r.querySelector('b').textContent='Ч / ЧЕЛОВЕК · '+(humanChoices.indexOf(i)+1);r.querySelector('span').textContent=readingText[i].human;document.getElementById('readingCaption').textContent='Ч / ВАШИ ВЫБОРЫ · '+humanChoices.length+' / 5';}
+ function markSystem(i,route,step){const r=cards[i].querySelector('[data-reading="system"]');r.classList.remove('pending');r.querySelector('b').textContent='С / СИСТЕМА · '+(step+1)+' / 5 · '+(route==='A'?'01':'02');r.querySelector('span').textContent=readingText[i].system;}
+ function clearReadings(){document.getElementById('choiceConfirmation')?.remove();humanChoices.length=0;cards.forEach(c=>{c.classList.remove('reading-current');for(const type of ['human','system']){const r=c.querySelector('[data-reading="'+type+'"]');r.classList.add('pending');r.querySelector('b').textContent=type==='human'?'Ч / ЧЕЛОВЕК':'С / СИСТЕМА';r.querySelector('span').textContent=type==='human'?'—':'—';}});document.getElementById('readingCaption').textContent='Ч / ВАШИ ВЫБОРЫ · 0 / 5';}
+ const baseA=[0,4,1,2,3],baseB=[0,3,1,4,2];let epoch=0,pending=new Set(),animations=new Set(),started=false,starter=0,stopped=false,depth=0;
+ function wait(ms,token){return new Promise(resolve=>{const p={id:0,resolve};p.id=setTimeout(()=>{pending.delete(p);resolve(token===epoch)},ms/2);pending.add(p)})}
+ function clearPending(){for(const p of pending){clearTimeout(p.id);p.resolve(false)}pending.clear()}
+ function freezeAnimations(){for(const a of animations){try{a.pause()}catch{}}}
+ function cancelAnimations(){for(const a of animations){try{a.cancel()}catch{}}animations.clear()}
+ function animate(el,frames,duration=520){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return {pause(){},cancel(){},finished:Promise.resolve()};const a=el.animate(frames,{duration:duration/2,easing:'cubic-bezier(.22,.7,.2,1)',fill:'none'});animations.add(a);a.finished.then(()=>animations.delete(a)).catch(()=>animations.delete(a));return a}
+ function center(i){const a=tiles[i].getBoundingClientRect(),b=field.getBoundingClientRect();return {x:a.left-b.left+a.width/2,y:a.top-b.top+a.height/2}}
+ const routeEdges=[];function link(from,to,route,rebuild=false){if(!rebuild)routeEdges.push([from,to,route]);const p=center(from),q=center(to),path=document.createElementNS('http://www.w3.org/2000/svg','path');svg.querySelectorAll('.signal-active').forEach(p=>p.classList.remove('signal-active'));path.classList.add('signal-active',route==='A'?'route-a':'route-b');const mid=(p.y+q.y)/2;const d=window.mostCurve(p.x,p.y,q.x,q.y);path.setAttribute('d',d);svg.append(path);const len=path.getTotalLength();path.style.strokeDasharray=`${len}`;animate(path,[{strokeDashoffset:len},{strokeDashoffset:0}],650)}
+ function rotate(arr,start){const i=arr.indexOf(start);return [...arr.slice(i),...arr.slice(0,i)]}
+ function closeCard(){cards.forEach(c=>c.hidden=false)}
+ function show(i,route,step){markSystem(i,route,step);field.appendChild(tiles[i]);tiles[i].style.setProperty('z-index',String(20+(++depth)),'important');windows.forEach((w,n)=>w.hidden=n!==i);cards.forEach((c,n)=>{c.hidden=false;c.classList.toggle('reading-current',n===i)});record.hidden=false;document.getElementById('recordTitle').textContent='';tiles.forEach((t,n)=>t.classList.toggle('active',n===i));tiles[i].classList.add(route==='A'?'route-a-seen':'route-b-seen');animate(tiles[i].querySelector('.tilebar'),[{transform:'translateX(-8px) scale(1.03)'},{transform:'translateX(0) scale(1)'}],580);animate(windows[i],[{transform:'translateY(18px) scale(.94)',opacity:.35},{transform:'translateY(0) scale(1)',opacity:1}],650);animate(document.querySelector('.logo .ru'),[{transform:'translateX(-9px)'},{transform:'translateX(0)'}],620);status.textContent=`Маршрут ${route==='A'?'01':'02'} / ${step+1} из 5`;document.body.dataset.route=route;document.body.dataset.step=String(step+1);document.body.dataset.lastNode=String(i);window.dispatchEvent(new Event('most-step'))}
+
+ async function reviewReadings(token){
+  record.hidden=false;record.classList.add('reading-review');document.body.dataset.phase='review';
+  window.parent.postMessage({type:'ARCHIVE_FOCUS',rect:(()=>{const r=record.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}})()},'*');
+  for(let i=0;i<cards.length;i++){
+   if(token!==epoch)return false;
+   cards.forEach((c,n)=>{c.hidden=false;c.classList.toggle('reading-current',n===i);c.classList.toggle('reading-review-current',n===i)});
+   document.body.dataset.reviewStep=String(i+1);document.body.dataset.lastNode=String(i);
+   animate(cards[i],[{transform:'translateY(0)'},{transform:'translateY(-7px)'},{transform:'translateY(0)'}],700);
+   if(!await wait(1100,token))return false;
+  }
+  record.classList.remove('reading-review');cards.forEach(c=>c.classList.remove('reading-review-current'));document.body.dataset.reviewStep='complete';
+  return token===epoch;
+ }
+ async function sequence(start,token){for(const [route,order] of [['A',rotate(baseA,start)],['B',rotate(baseB,start)]]){for(let j=0;j<order.length;j++){if(token!==epoch)return;if(j>0)link(order[j-1],order[j],route);show(order[j],route,j);if(!await wait(1450,token))return;if(!(route==='B'&&j===order.length-1))closeCard();if(!await wait(220,token))return}if(route==='A'){tiles[0].classList.add('central-a');tiles[4].classList.add('central-a');status.textContent='Первый маршрут сохранён';if(!await wait(700,token))return}else{tiles[1].classList.add('central-b');tiles[3].classList.add('central-b')}}if(token===epoch){if(!await reviewReadings(token))return;document.body.dataset.phase='handoff';tiles.forEach(t=>t.classList.remove('active'));status.textContent='Два маршрута завершены';document.body.dataset.route='complete';document.body.dataset.step='5';window.parent.postMessage({type:'MOST_ARCHIVE_COMPLETE',lastNode:Number(document.body.dataset.lastNode)},'*')}}
+ function reset(){record.classList.remove('reading-review');cards.forEach(c=>c.classList.remove('reading-review-current'));document.body.dataset.reviewStep='0';clearReadings();document.body.dataset.phase='archive';epoch++;clearPending();cancelAnimations();svg.replaceChildren();routeEdges.length=0;depth=0;tiles.forEach(t=>{field.appendChild(t);t.style.removeProperty('z-index');t.classList.remove('active','route-a-seen','route-b-seen','central-a','central-b')});windows.forEach(w=>w.hidden=true);closeCard();document.body.classList.remove('paused');document.body.dataset.route='idle';document.body.dataset.step='0';stopped=false}
+ function start(i,origin='human'){reset();document.body.classList.remove('await-human');if(origin==='human')markHuman(i);window.parent.postMessage({type:'MOST_ARCHIVE_START'},'*');starter=i;started=true;const token=epoch;sequence(i,token)}
+ document.getElementById('stop').addEventListener('click',()=>{if(!started||stopped)return;epoch++;clearPending();freezeAnimations();stopped=true;document.body.classList.add('paused');document.body.dataset.route='stopped';window.parent.postMessage({type:'MOST_ARCHIVE_STOP'},'*');status.textContent='Остановлено'});
+ document.getElementById('restart').addEventListener('click',()=>start(starter,'system'));
+ document.getElementById('recordClose').addEventListener('click',closeCard);
+ tiles.forEach((tile,i)=>{tile.addEventListener('click',()=>{if(started)markHuman(i);if(!started)start(i);else{cards.forEach((c,n)=>{c.hidden=false;c.classList.toggle('reading-current',n===i)});record.hidden=false;document.getElementById('recordTitle').textContent=''}});tile.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tile.click()}})});
+ window.addEventListener('resize',()=>{svg.replaceChildren();routeEdges.forEach(([a,b,r])=>link(a,b,r,true));window.dispatchEvent(new Event('most-resize'))});
+ document.body.dataset.route='idle';document.body.dataset.step='0';window.mostArchiveStart=start;window.mostHumanChoices=()=>humanChoices.slice();addEventListener('message',e=>{if(e.source!==parent||e.data?.type!=='ARCHIVE_RETURN_HUMAN')return;document.body.classList.add('await-human');status.textContent='Теперь ваш выбор';document.getElementById('readingCaption').textContent='Ч / ВАШ ВЫБОР';tiles[0].focus({preventScroll:true});});window.dispatchEvent(new Event('most-archive-initialized'));
+})();
+</script><script>
+(()=>{
+ const root=document.querySelector('.wrapper'),record=document.querySelector('#recordWindow');
+ const send=(type,data={})=>parent.postMessage({type,...data},'*');
+ function rect(el){if(!el||el.hidden)return null;const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};}
+ function report(){const h=Math.ceil(root.getBoundingClientRect().bottom+4);send('ARCHIVE_LAYOUT',{height:h,entry:rect(document.querySelector('.archive-node[data-node="0"]')),anchor:rect(document.body.dataset.phase==='handoff'?(document.querySelector('.reading-current')||record):document.querySelector('.popup:not([hidden])'))});}
+ function focus(){report();const el=document.body.dataset.phase==='handoff'?document.querySelector('.popup:not([hidden])'):record;send('ARCHIVE_FOCUS',{rect:rect(el)});}
+ // Measure the tallest original card once per width; keep its space during routes.
+ let lastWidth=0;
+ function reserve(){if(innerWidth===lastWidth)return;lastWidth=innerWidth;const hidden=record.hidden;record.hidden=false;record.style.minHeight='0px';record.style.minHeight=Math.ceil(record.getBoundingClientRect().height)+'px';record.hidden=hidden;report();}
+ new ResizeObserver(report).observe(root);
+ addEventListener('most-step',()=>requestAnimationFrame(focus));
+ addEventListener('most-resize',()=>{reserve();report()});
+ addEventListener('wheel',()=>send('MANUAL_SCROLL'),{passive:true});addEventListener('touchmove',()=>send('MANUAL_SCROLL'),{passive:true});
+ addEventListener('message',e=>{if(e.source!==parent)return;if(e.data?.type==='ARCHIVE_REPORT')report();});
+ addEventListener('load',()=>{reserve();report()});
+})();
+</script><script>addEventListener('message',e=>{if(e.source===parent&&e.data?.type==='ARCHIVE_LINE_SCALE'){const n=Number(e.data.scale);if(n>0&&Number.isFinite(n))document.documentElement.style.setProperty('--route-width',(1/n)+'px');}});</script></body></html><style id="three-size-type-system">
+:root{--type-small:12px;--type-body:16px;--type-title:24px;--image-small:64px;--image-medium:112px;--image-large:160px}
+html,body,body *,body *:before,body *:after{font-family:Arial,sans-serif!important;font-size:var(--type-small)!important}
+h1,h2{font-size:var(--type-title)!important;font-weight:400!important}
+h3,.spirit-node span,#bioNetwork span,.agent,.cloud-relic span{font-size:var(--type-body)!important;font-weight:400!important}
+small,.agent small,.agent i,.cloud-name,.cloud-name:not(.cloud-relic),.reading-meta,.reading-row b,.reading-source{font-size:var(--type-small)!important}
+.reading-row{font-size:var(--type-body)!important}
+img{height:var(--image-medium)!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+.cloud-relic img,.spirit-node img,.thumb img{height:var(--image-small)!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+.thumb{height:var(--image-small)!important}
+.reading-image,.record-art{height:var(--image-medium)!important;width:100%!important;object-fit:contain!important}
+#bogobotLogo{height:var(--image-large)!important;width:var(--image-large)!important;max-width:100%!important}
+</style><style>.record-body{gap:10px!important}.record-card{padding:10px 8px!important}.record-card h3{margin:10px 0 8px!important}.reading-row{padding:8px 0!important}.reading-meta{margin-bottom:10px!important}</style><style id="restore-five-cards">
+.record-body .record-card,.record-body .record-card:first-child,.record-body .record-card.reading-current,.record-body .record-card.reading-review-current{border:1px solid rgba(107,94,87,.42)!important;outline:0!important;background:#efefea!important;box-shadow:none!important}
+.record-body .record-card .reading-row,.record-body .record-card .reading-source{border-top:1px solid rgba(107,94,87,.32)!important}
+.record-body .record-card h3{color:#6b5e57!important}
+.record-body .record-card.reading-current h3,.record-body .record-card.reading-review-current h3{color:#003cff!important}
+</style><style id="compact-card-vertical-rhythm">
+.record-window{min-height:0!important}
+.record-body{align-items:stretch!important}
+.record-body .record-card{gap:0!important;padding:10px!important}
+.record-body .record-card h3{min-height:0!important;height:auto!important;margin:10px 0 8px!important;line-height:1.25!important}
+.record-body .record-card .reading-meta{min-height:0!important;height:auto!important;margin:0 0 10px!important;line-height:1.4!important}
+.record-body .record-card .reading-row{min-height:0!important;height:auto!important;padding:10px 0!important;line-height:1.4!important}
+.record-body .record-card .reading-row b{margin:0 0 5px!important;line-height:1.3!important}
+.record-body .record-card .reading-source{margin-top:8px!important;padding-top:10px!important}
+</style><style>.route-a,.route-b{stroke-linecap:butt!important;stroke-linejoin:miter!important}</style><style id="archive-reading-junction-style">.wrapper{position:relative}.record-window{position:relative;z-index:2}#archiveReadingJunction{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}#archiveReadingJunction path{fill:none;stroke:#6b5e57;stroke-width:var(--route-width,1px);stroke-linecap:butt;stroke-linejoin:miter}</style>
+<script id="archive-reading-junction">
+(()=>{const root=document.querySelector('.wrapper'),record=document.getElementById('recordWindow'),ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),path=document.createElementNS(ns,'path');svg.id='archiveReadingJunction';svg.setAttribute('aria-hidden','true');svg.appendChild(path);root.appendChild(svg);
+ function draw(){if(!document.hidden&&!record.hidden){const card=record.querySelector('.reading-review-current')||record.querySelector('.reading-current');const index=card?.dataset.record;const tile=index===undefined?null:document.querySelector('.archive-node[data-node="'+index+'"]');if(card&&tile){const r=root.getBoundingClientRect(),a=tile.getBoundingClientRect(),b=card.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${r.width} ${r.height}`);path.setAttribute('d',window.mostCurve(a.left-r.left+a.width/2,a.bottom-r.top,b.left-r.left+b.width/2,b.top-r.top));}else path.setAttribute('d','');}else path.setAttribute('d','');requestAnimationFrame(draw);}requestAnimationFrame(draw);
+})();
+</script><style id="image-scale-124">
+:root{--image-small:64px;--image-medium:128px;--image-large:256px}
+body img{height:128px!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+body .cloud-relic img,body .spirit-node img,body .thumb img{height:64px!important;width:auto!important;max-width:100%!important;object-fit:contain!important}
+body .thumb{height:64px!important}
+body .reading-image,body .record-art{height:128px!important;width:100%!important;object-fit:contain!important}
+body #bogobotLogo{height:256px!important;width:256px!important;max-width:100%!important;object-fit:contain!important}
+#bogobotScreen{min-height:624px!important}
+@media(max-width:600px){#bogobotScreen{min-height:724px!important}}
+</style><style id="black-archive-connections">
+.routes path,.routes path.route-a,.routes path.route-b,#archiveReadingJunction path{stroke:#050607!important;stroke-opacity:1!important;opacity:1!important;filter:none!important}
+.archive-node.route-a-seen,.archive-node.route-b-seen{box-shadow:none!important}
+.archive-node.central-a,.archive-node.central-b{border-top:1px solid #050607!important}
+.legend i,.legend b,.legend span:before{border-color:#050607!important}
+</style>
+<style id="hide-human-card-rows">[data-reading="human"]{display:none!important}</style>
+<style id="five-small-archive-screens">
+body #field{height:570px!important;overflow:hidden!important}
+#archiveMiniScreens{position:absolute;top:448px;left:2%;right:2%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;z-index:3}
+#archiveMiniScreens .archive-mini{margin:0;padding:6px;background:#efefea;border:1px solid #b3ada6;min-width:0;align-self:start}
+#archiveMiniScreens .archive-mini img{display:block!important;width:100%!important;height:64px!important;object-fit:contain!important;filter:grayscale(1)}
+#archiveMiniScreens figcaption{font:12px/1.15 Arial,sans-serif!important;color:#6b5e57;margin-top:5px}
+#archiveMiniScreens .is-active{outline:1px solid #003cff;outline-offset:2px}
+#archiveMiniLinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+#archiveMiniLinks path{fill:none;stroke:#050607;stroke-width:var(--route-width,1px);vector-effect:non-scaling-stroke}
+</style><script id="five-small-archive-screens-script">(()=>{const field=document.getElementById('field');field.insertAdjacentHTML('beforeend',"<div id=\"archiveMiniScreens\"><figure class=\"archive-mini\"><img src=\"images/964726c5b197945e145b.png\" alt=\"Номер Души\"><figcaption>Номер Души</figcaption></figure><figure class=\"archive-mini\"><img src=\"images/bee3e9b721ecd539206e.png\" alt=\"Анкетный Сад\"><figcaption>Анкетный Сад</figcaption></figure><figure class=\"archive-mini\"><img src=\"images/ae1aefac7a5677fc9b18.png\" alt=\"Глаз Посещаемости\"><figcaption>Глаз Посещаемости</figcaption></figure><figure class=\"archive-mini\"><img src=\"images/6dc0b3ed16336d85d3ca.png\" alt=\"Журнал Длинного Голоса\"><figcaption>Журнал Длинного Голоса</figcaption></figure><figure class=\"archive-mini\"><img src=\"images/6682108c23b8b530966c.png\" alt=\"Музыкальный След Адресата\"><figcaption>Музыкальный След Адресата</figcaption></figure></div>");const minis=[...document.querySelectorAll('#archiveMiniScreens .archive-mini')],nodes=[...document.querySelectorAll('.archive-node')];const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.id='archiveMiniLinks';svg.setAttribute('aria-hidden','true');field.prepend(svg);const paths=minis.map(()=>{const p=document.createElementNS(ns,'path');svg.append(p);return p;});function draw(){const r=field.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${field.clientWidth} ${field.clientHeight}`);const sx=field.clientWidth/r.width,sy=field.clientHeight/r.height;minis.forEach((mini,i)=>{const node=nodes[i];if(!node)return;const a=node.getBoundingClientRect(),b=mini.getBoundingClientRect(),x=(a.left+a.width/2-r.left)*sx,y=(a.bottom-r.top)*sy,tx=(b.left+b.width/2-r.left)*sx,ty=(b.top-r.top)*sy,mid=ty-12-i*3;paths[i].setAttribute('d',`M ${x} ${y} V ${mid} H ${tx} V ${ty}`);mini.classList.toggle('is-active',node.classList.contains('active'));});}new ResizeObserver(draw).observe(field);nodes.forEach(node=>new MutationObserver(draw).observe(node,{attributes:true,attributeFilter:['class']}));draw();window.dispatchEvent(new Event('most-resize'));})();</script><style id="archive-route-states">#routes path:not(.signal-active),#archiveMiniLinks path{stroke-dasharray:4 6!important;stroke:#050607!important}#archiveReadingJunction path{stroke-dasharray:none!important;stroke:#050607!important}</style>
