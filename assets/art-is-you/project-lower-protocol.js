@@ -1101,7 +1101,7 @@
     const graph = root.querySelector('.godbot-research__graph-section');
     if (graph) {
       const graphEyebrow = graph.querySelector('.godbot-research__eyebrow');
-      if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 153-УЗЛОВОЙ МИР</span><span>БОГОБОТ / СЕТЬ</span>';
+      if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 153-УЗЛОВОЙ МИР</span>';
       primary.append(graph);
     }
 
