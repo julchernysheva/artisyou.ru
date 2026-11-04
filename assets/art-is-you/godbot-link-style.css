@@ -1,0 +1,8 @@
+/* Project content actions share one treatment; navigation retains its active state. */
+html body .ay-project-top :is(a:not(.gb-section-nav a):not(.v2-nav a),[data-most-open],[data-gb-graph-start]){color:#064cff!important;text-decoration-line:underline!important;text-decoration-thickness:1px!important;text-underline-offset:4px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;text-transform:none!important;letter-spacing:0!important}
+html body .ay-project-top :is([data-most-open],[data-gb-graph-start]){min-height:44px;padding:10px 0!important;cursor:pointer;justify-content:flex-start}
+html body .ay-project-top :is(a:not(.gb-section-nav a):not(.v2-nav a),[data-most-open],[data-gb-graph-start]):hover{text-decoration-thickness:2px!important}
+html body .ay-project-top :is(a,[data-most-open],[data-gb-graph-start]):focus-visible{outline:2px solid #064cff!important;outline-offset:4px}
+@layer ay-typography-v1{
+html body.ay-godbot-type-recovery[data-project-top="godbot"] .ay-project-top :is(a:not(.gb-section-nav a),[data-most-open],[data-gb-graph-start]),html body .ay-project-top :is(a:not(.gb-section-nav a):not(.v2-nav a),[data-most-open],[data-gb-graph-start]){font-family:'Source Sans 3',sans-serif!important;font-size:12px!important;line-height:16px!important;font-weight:400!important;--ay-type-size:12px;--ay-type-leading:16px;text-transform:none!important}
+}
