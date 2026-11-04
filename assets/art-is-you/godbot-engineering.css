@@ -56,3 +56,20 @@ html body .ay-project-top .gb-engineering :is(.ay-godbot-history-network__select
 html body .ay-project-top .gb-engineering .ay-godbot-authorial-canon__sign{width:max-content!important;max-width:100%!important}
 html body .ay-project-top .gb-engineering.ay-godbot-quantum-threshold{display:block!important}
 }
+
+/* Small type and media contract, including legacy typography tokens. */
+html body .ay-project-top .gb-engineering{--gb-small:120px;--gb-medium:180px;--gb-large:240px}
+html body .ay-project-top .gb-engineering figcaption{display:flex!important;flex-wrap:wrap;gap:4px 12px!important;align-items:baseline}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__primary{grid-row:1/6!important}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__primary-media{max-width:320px!important;margin:0 auto!important}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__files{grid-column:1!important;grid-row:4!important;align-self:start}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__sequence{grid-column:1!important;grid-row:5!important;align-self:start;flex-wrap:wrap}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__sequence button{flex:1 1 140px;min-width:0;max-width:100%}
+html body .ay-project-top .gb-engineering .ay-godbot-archive-reader__primary-media iframe{width:100%!important;height:100%!important;min-height:0!important}
+@layer ay-typography-v1 {
+html body .ay-project-top .gb-engineering,html body .ay-project-top .gb-engineering *{font-family:'Source Sans 3',sans-serif!important;--ay-type-size:16px;--ay-type-leading:24px}
+html body .ay-project-top .gb-engineering :is(h2,h3){--ay-type-size:24px!important;--ay-type-leading:28px!important;font-size:24px!important;line-height:28px!important;font-weight:400!important}
+html body .ay-project-top .gb-engineering p,html body .ay-project-top .gb-engineering dd{font-size:16px!important;line-height:24px!important}
+html body .ay-project-top .gb-engineering :is(.ay-project-lower__bar,.ay-project-lower__bar *,button,select,output,dt,figcaption,figcaption *,.ay-godbot-history-network__meta,.ay-godbot-history-network__source,.ay-godbot-history-network__selector-title,.ay-godbot-archive-reader__category,.ay-godbot-archive-reader__selector-title,.ay-godbot-archive-reader__group h3){--ay-type-size:12px!important;--ay-type-leading:16px!important;font-size:12px!important;line-height:16px!important}
+html body .ay-project-top .gb-engineering :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law) p{--ay-type-size:16px!important;--ay-type-leading:24px!important;font-size:16px!important;line-height:24px!important}
+}
