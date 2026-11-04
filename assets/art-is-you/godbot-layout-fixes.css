@@ -19,3 +19,7 @@ html body .ay-project-top .ay-godbot-history-network__layers dt{margin-bottom:8p
 html body .ay-project-top .ay-godbot-history-network__layers dd{margin:0 0 24px!important}
 html body .ay-project-top :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law){min-width:0!important;max-width:100%!important}
 html body .ay-project-top :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law) p{max-width:28ch!important;white-space:normal!important;overflow-wrap:break-word}
+
+.gb-graph-poster{position:relative;justify-content:flex-end!important;padding:28px!important;isolation:isolate}
+.gb-graph-poster>img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:contain;z-index:-1}
+.gb-graph-poster>button{position:relative;background:#efefea!important}
