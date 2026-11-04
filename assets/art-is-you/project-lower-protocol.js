@@ -607,8 +607,12 @@
       const changed = primaryImage.hasAttribute('src') && primaryImage.getAttribute('src') !== file.src;
       fileTransition?.cancel();
       resetPrimaryExperience();
+      primaryImage.style.visibility = 'hidden';
+      primaryImage.onload = () => { primaryImage.style.visibility = 'visible'; };
+      primaryImage.onerror = () => { primaryImage.style.visibility = 'visible'; };
       primaryImage.loading = 'eager';
       primaryImage.src = file.src;
+      if (primaryImage.complete && primaryImage.naturalWidth) primaryImage.style.visibility = 'visible';
       primaryImage.alt = file.alt;
       const captionText = document.createElement('span');
       captionText.textContent = file.caption;
