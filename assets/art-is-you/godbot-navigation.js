@@ -1,14 +1,15 @@
 (() => {
   if (location.pathname.replace(/\/$/, '') !== '/projects/godbot' || new URLSearchParams(location.search).has('territory')) return;
+  if (location.hash === '#project-archive') { location.replace('/projects/godbot/materials/#archive-documents'); return; }
   const sections = [
     ['.ay-project-top__concept', 'project-about', 'О проекте'],
     ['#most-entry', 'most-entry', 'Происхождение видов'],
-    ['.ay-project-primary--godbot', 'project-network', 'Граф'],
-    ['#seven-module', 'seven-module', 'Семь территорий'],
-    ['.ay-godbot-history-network', 'project-history', 'История'],
-    ['.ay-godbot-authorial-canon', 'project-canon', 'Канон'],
-    ['.ay-godbot-archive-reader', 'project-archive', 'Архив'],
-    ['.ay-godbot-public-evidence', 'project-materials', 'Материалы']
+    ['.ay-project-primary--godbot', 'project-network', 'Карта мира'],
+    ['#seven-module', 'seven-module', 'Архив несбывшегося будущего'],
+    ['.ay-godbot-history-network', 'project-history', 'История сети'],
+    ['.ay-godbot-authorial-canon', 'project-canon', 'Авторский канон'],
+    ['.ay-godbot-quantum-threshold', 'project-quantum', 'Квантовый апокалипсис'],
+    ['.ay-godbot-public-evidence', 'project-materials', 'Публичные свидетельства']
   ];
   let nav, queued = false, restoredHash = false;
   let scrollQueued = false;
@@ -61,9 +62,11 @@
       ['#project-concept-title', '01 / О проекте'],
       ['#project-research-title', 'Исследовательская система'],
       ['#project-method-title', 'Метод'],
-      ['#most-entry .most-kicker', '02 / Интерактивный маршрут'],
-      ['#project-network .godbot-research__eyebrow > span:first-child', '03 / 153-узловой мир'],
-      ['.ay-godbot-quantum-threshold .ay-project-lower__bar > span:first-child', '06.1 / Великая ошибка']
+      ['#most-entry .most-kicker', '02 / Происхождение видов'],
+      ['.ay-godbot-public-evidence > .ay-project-lower__bar > span:first-child', '08 / Публичные свидетельства'],
+      ['.ay-godbot-quantum-threshold > h2', 'Квантовый апокалипсис'],
+      ['#project-network .godbot-research__eyebrow > span:first-child', '03 / Карта мира'],
+      ['.ay-godbot-quantum-threshold .ay-project-lower__bar > span:first-child', '07 / Квантовый апокалипсис']
     ];
     for (const [selector, text] of labels) {
       const element = document.querySelector(selector);
@@ -72,7 +75,7 @@
     const bridge = document.querySelector('#seven-module .seven-bridge');
     if (bridge && !bridge.querySelector('.gb-territory-number')) {
       const label = document.createElement('p'); label.className = 'gb-territory-number';
-      label.textContent = '04 / Семь территорий'; bridge.prepend(label);
+      label.textContent = '04 / Архив несбывшегося будущего'; bridge.prepend(label);
     }
     // GitHub is not a reader destination on the project pages.
     document.querySelectorAll('a[href*="github.com"],a[href*="github.io"]').forEach(link => link.remove());

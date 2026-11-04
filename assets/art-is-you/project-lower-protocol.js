@@ -2,7 +2,8 @@
   'use strict';
 
   const route = location.pathname.replace(/\/$/, '').split('/').pop();
-  const key = route === 'likes-pond' ? 'likes' : route;
+  const materialsPage = location.pathname.replace(/\/$/, '') === '/projects/godbot/materials';
+  const key = materialsPage ? 'godbot' : route === 'likes-pond' ? 'likes' : route;
   if (!['godbot', 'likes', 'oracul', 'programmer', 'nowords'].includes(key)) return;
 
   const whenComplete = (callback) => {
@@ -1152,7 +1153,6 @@
     const authorialCanon = makeGodbotAuthorialCanon();
     const quantumThreshold = makeGodbotQuantumThreshold();
     const readingProtocol = makeGodbotReadingProtocol();
-    const archive = makeGodbotArchiveReader();
     cycle?.remove();
 
     const documentation = makeGodbotSection('08', 'Публичные свидетельства / 2018—2026', 'История проекта / публичный след', 'ay-godbot-public-evidence');
@@ -1225,7 +1225,7 @@
     enterGrid.append(enterCell);
     enter.append(enterGrid);
 
-    insertAfter(primary, [historyOfNetwork, authorialCanon, quantumThreshold, readingProtocol, archive, documentation, project, enter]);
+    insertAfter(primary, [historyOfNetwork, authorialCanon, quantumThreshold, readingProtocol, documentation, project, enter]);
     root.remove();
   };
 
@@ -1245,6 +1245,18 @@
       history: makeGodbotHistoryOfNetwork,
       reader: makeGodbotArchiveReader
     });
+  }
+
+  if (materialsPage) {
+    whenComplete(() => {
+      const host = document.getElementById('archive-documents');
+      if (!host) return;
+      const reader = makeGodbotArchiveReader();
+      reader.querySelector('.ay-project-lower__bar span').textContent = '14 / Архив документов';
+      host.replaceChildren(reader);
+      if (location.hash === '#archive-documents') host.scrollIntoView();
+    });
+    return;
   }
 
   const finalize = () => {
