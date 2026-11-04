@@ -812,20 +812,20 @@ const S=(p,style={})=>k.solidSvg(p,style),L=(d,style={})=>k.lineSvg(d,style),D=(
 const initial=-101,boundary=-128;
 const armNode=document.querySelector('[data-part="arm"]'),stage=document.querySelector('.iso-stage'),status=document.querySelector('.status'),readout=document.querySelector('[data-readout]'),read=document.querySelector('#read'),reset=document.querySelector('#reset');
 const still=matchMedia('(prefers-reduced-motion: reduce)');
-let angle=initial,target=initial,frame=0,last=0,visible=true,mode='idle';
+let angle=initial,target=initial,frame=0,last=0,visible=true,mode='idle',cycle=false,paused=false;
 function draw(){armNode.innerHTML=armArt(angle);}
 function labels(){if(mode==='reading'){status.textContent='Чтение остановлено на повреждённом следе';status.dataset.active='';readout.textContent='ПОЛНОЕ ЧТЕНИЕ ЗАПРЕЩЕНО';}else{status.textContent='Носитель сохранён';delete status.dataset.active;readout.textContent='УСЛОВИЯ ЧТЕНИЯ УТРАЧЕНЫ';}}
-function tick(now){const dt=last?Math.min((now-last)/1000,.05):.016;last=now;angle=still.matches?target:angle+(target-angle)*(1-Math.exp(-dt/.4));if(Math.abs(target-angle)<.015)angle=target;draw();if(angle===target){labels();frame=0;}else if(visible&&!document.hidden){frame=requestAnimationFrame(tick);}else frame=0;}
+function tick(now){const dt=last?Math.min((now-last)/1000,.05):.016;last=now;angle=still.matches?target:angle+(target-angle)*(1-Math.exp(-dt/.4));if(Math.abs(target-angle)<.015)angle=target;draw();if(angle===target){labels();if(cycle&&!still.matches){target=target===boundary?initial:boundary;}}if(angle!==target&&visible&&!document.hidden&&!paused){frame=requestAnimationFrame(tick);}else frame=0;}
 function run(){if(!frame&&visible&&!document.hidden){last=0;frame=requestAnimationFrame(tick);}}
-function attempt(){mode='reading';target=boundary;read.disabled=true;reset.disabled=false;stage.dataset.reading='';status.textContent='Головка приближается к повреждённому следу';status.dataset.active='';readout.textContent='ПОПЫТКА ЧТЕНИЯ';if(still.matches){angle=target;draw();labels();}else run();}
-function restore(){mode='idle';target=initial;read.disabled=false;reset.disabled=true;delete stage.dataset.reading;status.textContent='Головка возвращается';delete status.dataset.active;if(still.matches){angle=target;draw();labels();}else run();}
+function attempt(){paused=false;cycle=!still.matches;document.querySelector('#pause').setAttribute('aria-pressed','false');mode='reading';target=boundary;read.disabled=true;reset.disabled=false;stage.dataset.reading='';status.textContent='Головка приближается к повреждённому следу';status.dataset.active='';readout.textContent='ПОПЫТКА ЧТЕНИЯ';if(still.matches){angle=target;draw();labels();}else run();}
+function restore(){paused=false;cycle=false;document.querySelector('#pause').setAttribute('aria-pressed','false');mode='idle';target=initial;read.disabled=false;reset.disabled=true;delete stage.dataset.reading;status.textContent='Головка возвращается';delete status.dataset.active;if(still.matches){angle=target;draw();labels();}else run();}
 read.addEventListener('click',attempt);reset.addEventListener('click',restore);
 stage.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();attempt();}if(e.key==='Escape'){e.preventDefault();restore();}});
-new IntersectionObserver(es=>{visible=es.at(-1).isIntersecting;if(visible&&angle!==target)run();else if(!visible&&frame){cancelAnimationFrame(frame);frame=0;}}).observe(stage);
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&frame){cancelAnimationFrame(frame);frame=0;}else if(angle!==target)run();});
-still.addEventListener('change',()=>{if(still.matches){if(frame)cancelAnimationFrame(frame);frame=0;angle=target;draw();labels();}});
+new IntersectionObserver(es=>{visible=es.at(-1).isIntersecting;if(visible&&!paused&&angle!==target)run();else if(!visible&&frame){cancelAnimationFrame(frame);frame=0;}}).observe(stage);
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&frame){cancelAnimationFrame(frame);frame=0;}else if(!paused&&angle!==target)run();});
+still.addEventListener('change',()=>{if(still.matches){cycle=false;if(frame)cancelAnimationFrame(frame);frame=0;angle=target;draw();labels();}});
 
-document.querySelector('#pause').addEventListener('click',()=>{if(frame){cancelAnimationFrame(frame);frame=0;document.querySelector('#pause').setAttribute('aria-pressed','true');}else if(angle!==target){run();document.querySelector('#pause').setAttribute('aria-pressed','false');}});
-draw();labels();
+document.querySelector('#pause').addEventListener('click',()=>{if(!paused&&(frame||cycle)){paused=true;if(frame)cancelAnimationFrame(frame);frame=0;document.querySelector('#pause').setAttribute('aria-pressed','true');}else if(paused){paused=false;if(angle!==target)run();document.querySelector('#pause').setAttribute('aria-pressed','false');}});
+draw();labels();if(!still.matches)attempt();
 window.__relic=Object.freeze({state:()=>({mode,angle,target,frame,reduced:still.matches}),attempt,restore});
 </script></body></html>
