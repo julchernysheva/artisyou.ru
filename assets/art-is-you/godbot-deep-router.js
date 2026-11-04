@@ -30,14 +30,15 @@
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   let recordTransition=null;
   reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches)recordTransition?.cancel();});
-  const readerIds=['genesis','great-error','schools','topography','relics-archive','voice','time-error','matter-energy'];
-  const evidence={canon:['genesis','time-error','voice','relics-archive'],world:['matter-energy','great-error','topography'],schools:['schools'],glossary:['matter-energy'],topography:['topography']};
+  const readerIds=['genesis','great-error','schools','topography','relics-archive','voice','matter-energy'];
+  const evidence={canon:['genesis','great-error','voice','relics-archive'],world:['matter-energy','great-error','topography'],schools:['schools'],glossary:['matter-energy'],topography:['topography']};
   const labels={'genesis':'GENESIS','great-error':'GREAT ERROR','schools':'SCHOOLS','topography':'TOPOGRAPHY','relics-archive':'RELICS / ARCHIVE','voice':'VOICE','time-error':'TIME / ERROR','matter-energy':'MATTER / ENERGY'};
   const turnIds=['epsilon-00','epsilon-03','epsilon-04','epsilon-06','epsilon-09','epsilon-12','epsilon-15','epsilon-19'];
   const historySources=new Set([...corpus.chronology,'PRE_ERROR_ARCHIVE','EPSILON_20_21','EPSILON_22_26','EPSILON_27_29']);
   const urlFor=(s)=>{const u=new URL(rootURL,location.origin);for(const k of ['territory','record','node','file'])if(s[k]!==undefined&&s[k]!==null&&s[k]!=='')u.searchParams.set(k,String(s[k]));return u.pathname+u.search;};
   function normalize(){
     const p=new URLSearchParams(location.search),territory=p.get('territory');if(!Object.hasOwn(names,territory))return null;
+    if(p.get('node')==='time-error')p.set('node','great-error');
     const s={territory};
     if(territory==='relics'){
       s.node=readerIds.includes(p.get('node'))?p.get('node'):'genesis';

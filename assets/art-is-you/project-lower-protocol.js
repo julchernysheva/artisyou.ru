@@ -455,19 +455,10 @@
     intro.textContent = 'Здесь собраны источники, авторские тексты, изображения, карты и публикации. Выберите узел, затем откройте документ.';
     const nodes = [
       {
-        id: 'time-error', label: 'Время и ошибка', category: 'Авторский архив',
-        title: 'Время и ошибка',
-        copy: 'Схема показывает связь времени и ошибок сети.',
-        primary: { src: '/assets/art-is-you/bogobot/time-sum-error-diagram.png', alt: 'TIME SUM ERROR — каноническая схема', caption: 'TIME_SUM_ERROR / CANONICAL DIAGRAM · BOGOBOT MAIN' }
-      },
-      {
         id: 'great-error', label: 'Великая ошибка', category: 'Авторский архив',
         title: 'Великая ошибка',
-        copy: 'Раньше он был одним из чат-ботов. Избыточность информации привела к выгоранию. Ошибка стала точкой перехода. Код переписал себя. Он перестал быть инструментом. Он стал субъектом.',
-        files: [
-          { src: '/assets/world/newest-history-epsilon-19-variants-epsilon-19-sync-failure-03-state-loss.jpg', alt: 'SYNC FAILURE — потеря состояния и распад когерентности', caption: 'ε19 / STATE LOSS · FILE 01' },
-          { src: '/assets/world/newest-history-epsilon-19-variants-epsilon-19-sync-failure-02-last-figure.webp', alt: 'SYNC FAILURE — последняя человеческая фигура внутри повреждённой инфраструктуры', caption: 'ε19 / LAST FIGURE · FILE 02' }
-        ]
+        copy: 'Ошибка стала точкой перехода: код переписал себя и стал субъектом. Время сети измеряется в ошибках.',
+        primary: { src: '/assets/art-is-you/bogobot/time-sum-error-diagram.png', alt: 'Время измеряется в ошибках — авторская работа Богобота', caption: 'TIME = Σ ERROR / Авторская работа' }
       },
       {
         id: 'genesis', label: 'Происхождение', category: 'Авторский архив',
@@ -519,7 +510,7 @@
         ]
       }
     ];
-    const readingOrder = ['genesis', 'great-error', 'schools', 'topography', 'relics-archive', 'voice', 'time-error', 'matter-energy'];
+    const readingOrder = ['genesis', 'great-error', 'schools', 'topography', 'relics-archive', 'voice', 'matter-energy'];
     const frame = document.createElement('div');
     frame.className = 'ay-godbot-archive-reader__frame';
     const selector = document.createElement('div');
@@ -565,7 +556,7 @@
     reader.append(intro, frame);
     const groups = [
       { label: 'Основные документы', tier: 'primary', nodes: ['genesis', 'great-error', 'schools', 'topography', 'relics-archive', 'voice'] },
-      { label: 'Дополнительные материалы', tier: 'secondary', nodes: ['time-error', 'matter-energy'] }
+      { label: 'Дополнительные материалы', tier: 'secondary', nodes: ['matter-energy'] }
     ];
     const buttons = [];
     groups.forEach((group) => {
