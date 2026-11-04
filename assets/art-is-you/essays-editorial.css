@@ -1,0 +1,43 @@
+.ay-essay-page{color:var(--ink,#2c2927);background:var(--surface,#efefea)}
+.ay-essay-page *{box-sizing:border-box}
+.ay-essay-page a{color:inherit}
+.ay-essay-page a:focus-visible,.ay-essay-index a:focus-visible{outline:2px solid var(--ui-accent,#064cff);outline-offset:4px}
+.ay-essay{max-width:1440px;margin:0 auto;border-left:1px solid var(--rule,#b8b1a8);border-right:1px solid var(--rule,#b8b1a8)}
+.ay-essay__header{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px;padding:76px 40px 84px;border-bottom:1px solid var(--rule,#b8b1a8)}
+.ay-essay__register,.ay-essay__byline,.ay-essay__flow,.ay-essay__questions span,.ay-essay-index__eyebrow{font-family:'PT Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.045em;text-transform:uppercase}
+.ay-essay__register{grid-column:1/-1;margin:0 0 60px;color:var(--muted,#695e58)}
+.ay-essay__header h1{grid-column:1/9;margin:0;font-size:clamp(42px,5.4vw,78px);line-height:.99;font-weight:400;letter-spacing:-.055em;max-width:12ch}
+.ay-essay__lead{grid-column:9/-1;align-self:end;margin:0;color:var(--muted,#695e58);font-size:clamp(18px,1.5vw,22px);line-height:1.34;letter-spacing:-.02em}
+.ay-essay__byline{grid-column:1/-1;margin:65px 0 0;color:var(--muted,#695e58)}
+.ay-essay__byline span{padding:0 10px}
+.ay-essay__body{max-width:790px;margin:0 auto;padding:72px 32px 100px;font-size:19px;line-height:1.56;letter-spacing:-.012em}
+.ay-essay__body p{margin:0 0 24px}
+.ay-essay__body h2{margin:70px 0 24px;font-size:clamp(30px,3vw,42px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
+.ay-essay__body h2:first-child{margin-top:0}
+.ay-essay__body a{text-decoration:underline;text-decoration-color:var(--rule,#b8b1a8);text-underline-offset:3px}
+.ay-essay__body a:hover{color:var(--ui-accent,#064cff);text-decoration-color:currentColor}
+.ay-essay__flow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0 25px;margin:0 0 72px;border-top:1px solid var(--rule,#b8b1a8);border-bottom:1px solid var(--rule,#b8b1a8);color:var(--muted,#695e58)}
+.ay-essay__flow b{font-family:'Source Sans 3',sans-serif;font-size:22px;font-weight:400;color:var(--ui-accent,#064cff)}
+.ay-essay__questions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:38px 0 42px;border-top:1px solid var(--rule,#b8b1a8);border-bottom:1px solid var(--rule,#b8b1a8)}
+.ay-essay__questions div{padding:18px 16px 20px 0}
+.ay-essay__questions div+div{padding-left:16px;border-left:1px solid var(--rule,#b8b1a8)}
+.ay-essay__questions span{display:block;margin-bottom:28px;color:var(--ui-accent,#064cff)}
+.ay-essay__questions p{font-size:16px;line-height:1.35;margin:0}
+.ay-essay__sources{margin-top:78px;padding-top:18px;border-top:1px solid var(--rule,#b8b1a8)}
+.ay-essay__sources h2{font-family:'PT Mono',monospace;font-size:12px;line-height:1.4;letter-spacing:.04em;text-transform:uppercase;margin:0 0 20px}
+.ay-essay__sources ul{margin:0;padding:0;list-style:none}
+.ay-essay__sources li{padding:11px 0;border-top:1px solid var(--rule,#b8b1a8);font-size:15px;line-height:1.35}
+.ay-essay__related{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule,#b8b1a8);border-left:1px solid var(--rule,#b8b1a8)}
+.ay-essay__related a{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:110px;padding:24px 40px;border-right:1px solid var(--rule,#b8b1a8);text-decoration:none;font-size:20px;line-height:1.15;letter-spacing:-.025em}
+.ay-essay__related a:hover{color:var(--ui-accent,#064cff)}
+.ay-essay-index{max-width:1440px;margin:0 auto;padding:52px 40px 60px;border-top:1px solid var(--rule,#b8b1a8);color:var(--ink,#2c2927)}
+.ay-essay-index__eyebrow{margin:0 0 20px;color:var(--muted,#695e58)}
+.ay-essay-index h2{margin:0 0 28px;font-size:clamp(30px,3vw,42px);font-weight:400;line-height:1.1;letter-spacing:-.04em}
+.ay-essay-index__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule,#b8b1a8);border-left:1px solid var(--rule,#b8b1a8)}
+.ay-essay-index__grid a{display:flex;flex-direction:column;min-height:210px;padding:20px;border-right:1px solid var(--rule,#b8b1a8);border-bottom:1px solid var(--rule,#b8b1a8);text-decoration:none}
+.ay-essay-index__grid a:hover{color:var(--ui-accent,#064cff)}
+.ay-essay-index__grid small{font-family:'PT Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted,#695e58)}
+.ay-essay-index__grid strong{display:block;margin:20px 0 16px;font-size:clamp(22px,2vw,30px);line-height:1.1;font-weight:400;letter-spacing:-.035em}
+.ay-essay-index__grid span{margin-top:auto;font-size:14px;line-height:1.35;color:var(--muted,#695e58)}
+@media(max-width:900px){.ay-essay__header{padding:48px 24px 54px;gap:0}.ay-essay__register{margin-bottom:38px}.ay-essay__header h1{grid-column:1/-1;max-width:14ch}.ay-essay__lead{grid-column:1/-1;max-width:44ch;margin-top:34px}.ay-essay__byline{margin-top:45px}.ay-essay__body{padding:48px 24px 75px}.ay-essay-index{padding:42px 24px 50px}.ay-essay-index__grid{grid-template-columns:1fr}.ay-essay-index__grid a{min-height:150px}}
+@media(max-width:620px){.ay-essay__header h1{font-size:44px}.ay-essay__body{font-size:17px;line-height:1.55}.ay-essay__body h2{margin-top:54px}.ay-essay__flow{flex-wrap:wrap;justify-content:flex-start;gap:9px;margin-bottom:50px}.ay-essay__questions{grid-template-columns:1fr}.ay-essay__questions div,.ay-essay__questions div+div{padding:18px 0;border-left:0}.ay-essay__questions div+div{border-top:1px solid var(--rule,#b8b1a8)}.ay-essay__questions span{margin-bottom:10px}.ay-essay__related{grid-template-columns:1fr}.ay-essay__related a{min-height:90px;padding:20px 24px;border-bottom:1px solid var(--rule,#b8b1a8)}}
