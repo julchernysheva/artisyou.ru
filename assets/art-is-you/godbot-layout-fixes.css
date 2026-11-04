@@ -52,3 +52,19 @@ html body .ay-project-top .ay-godbot-authorial-canon__sign img{width:100%!import
 html body .ay-project-top :is(.ay-godbot-history-network__frame,.ay-godbot-archive-reader__frame){gap:24px!important}
 html body .ay-project-top :is(.ay-godbot-history-network,.ay-godbot-authorial-canon,.ay-godbot-archive-reader){row-gap:20px!important}
 }
+
+/* Evidence follows the same left-aligned frame as the reading sections. */
+html body .ay-project-top #project-materials{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:16px 24px!important;margin:24px 0 0!important;padding:20px 0 24px!important}
+html body .ay-project-top #project-materials>.ay-project-lower__bar{grid-column:1/-1!important;display:flex!important;justify-content:space-between!important;margin:0!important;padding:0!important;border:0!important;gap:24px!important}
+html body .ay-project-top #project-materials>.ay-godbot-documentation-group__intro{grid-column:4/-1!important;margin:0!important;max-width:54ch!important}
+html body .ay-project-top #project-materials .ay-godbot-documentation-group{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:16px 24px!important;margin:8px 0 0!important;padding:0!important;border:0!important}
+html body .ay-project-top #project-materials .ay-godbot-documentation-group__label{grid-column:1/4!important;margin:0!important;padding:0!important;border:0!important}
+html body .ay-project-top #project-materials .ay-godbot-evidence-grid{grid-column:4/-1!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;margin:0!important;padding:0!important}
+html body .ay-project-top #project-materials .ay-godbot-evidence{grid-column:auto!important;grid-row:auto!important;order:0!important;margin:0!important;padding:0!important;border:0!important;min-width:0!important}
+html body .ay-project-top #project-materials .ay-godbot-evidence img{width:100%!important;height:180px!important;min-height:0!important;max-height:180px!important;object-fit:contain!important;object-position:left center!important;margin:0!important}
+html body .ay-project-top #project-materials figcaption{display:block!important;margin:8px 0 0!important;padding:0!important;text-align:left!important}
+html body .ay-project-top #project-materials figcaption :is(h3,p){margin:6px 0 0!important}
+html body .ay-project-top #project-materials :is(.godbot-research__cta,.gb-materials-link){grid-column:4/-1!important;display:block!important;justify-self:start!important;max-width:100%!important;width:auto!important;min-height:32px!important;height:auto!important;margin:0!important;padding:8px 0!important;border:0!important;text-align:left!important}
+@layer ay-typography-v1{html body .ay-project-top #project-materials :is(.godbot-research__cta,.gb-materials-link){font-family:'Source Sans 3',sans-serif!important;font-size:12px!important;line-height:16px!important;--ay-type-size:12px;--ay-type-leading:16px}}
+@media(max-width:900px){html body .ay-project-top #project-materials .ay-godbot-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){html body .ay-project-top #project-materials,html body .ay-project-top #project-materials .ay-godbot-documentation-group{display:block!important}html body .ay-project-top #project-materials .ay-godbot-evidence-grid{display:grid!important;grid-template-columns:1fr!important}html body .ay-project-top #project-materials>.ay-project-lower__bar{display:block!important}html body .ay-project-top #project-materials :is(.ay-godbot-documentation-group__intro,.ay-godbot-documentation-group,.ay-godbot-documentation-group__label){margin:0 0 16px!important}}

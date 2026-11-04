@@ -74,6 +74,8 @@
       const label = document.createElement('p'); label.className = 'gb-territory-number';
       label.textContent = '04 / Семь территорий'; bridge.prepend(label);
     }
+    // GitHub is not a reader destination on the project pages.
+    document.querySelectorAll('a[href*="github.com"],a[href*="github.io"]').forEach(link => link.remove());
     updateCurrent();
     const evidence = document.querySelector('#project-materials');
     if (evidence && !evidence.querySelector('.gb-materials-link')) {
