@@ -81,3 +81,6 @@ html body .ay-project-top :is(#most-entry [data-most-open],[data-gb-graph-start]
 html body .ay-project-top .godbot-research__graph-foot{justify-content:flex-start!important}
 html body .ay-project-top :is(#most-entry [data-most-open],[data-gb-graph-start]):focus-visible{outline:2px solid #064cff;outline-offset:3px}
 @layer ay-typography-v1{html body .ay-project-top :is(#most-entry [data-most-open],[data-gb-graph-start]){font-family:'Source Sans 3',sans-serif!important;font-size:16px!important;line-height:20px!important;font-weight:400!important;--ay-type-size:16px;--ay-type-leading:20px}}
+
+html body .ay-project-top #seven-module .seven-section-label{margin:0 0 20px!important;padding:0!important}
+@layer ay-typography-v1{html body .ay-project-top #seven-module .seven-section-label{font-family:'Source Sans 3',sans-serif!important;font-size:12px!important;line-height:16px!important;--ay-type-size:12px;--ay-type-leading:16px}}

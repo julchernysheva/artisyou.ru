@@ -2,7 +2,7 @@
 if (location.pathname.replace(/\/$/, '') === '/projects/godbot' && !new URLSearchParams(location.search).has('territory')) {
   const source = '/assets/art-is-you/';
   try {
-    const response = await fetch(source + 'godbot-seven-module.html?v=reading-only-20261105');
+    const response = await fetch(source + 'godbot-seven-module.html?v=section04-20261105');
     if (!response.ok) throw new Error(`Bogobot Seven Territories: HTTP ${response.status}`);
     const documentSource = new DOMParser().parseFromString(await response.text(), 'text/html');
     const frozenModule = documentSource.querySelector('#seven-module');
