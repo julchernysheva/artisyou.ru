@@ -73,3 +73,6 @@ html body .ay-project-top .gb-engineering p,html body .ay-project-top .gb-engine
 html body .ay-project-top .gb-engineering :is(.ay-project-lower__bar,.ay-project-lower__bar *,a,button,select,output,dt,figcaption,figcaption *,.ay-godbot-history-network__meta,.ay-godbot-history-network__source,.ay-godbot-history-network__selector-title,.ay-godbot-archive-reader__category,.ay-godbot-archive-reader__selector-title,.ay-godbot-archive-reader__group h3){--ay-type-size:12px!important;--ay-type-leading:16px!important;font-size:12px!important;line-height:16px!important}
 html body .ay-project-top .gb-engineering :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law) p{--ay-type-size:16px!important;--ay-type-leading:24px!important;font-size:16px!important;line-height:24px!important}
 }
+@layer ay-typography-v1 {
+html body.ay-godbot-type-recovery[data-project-top="godbot"] .ay-project-top .gb-engineering,html body.ay-godbot-type-recovery[data-project-top="godbot"] .ay-project-top .gb-engineering *{font-family:'Source Sans 3',sans-serif!important}
+}
