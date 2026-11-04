@@ -868,7 +868,7 @@
     const lawMeaning = document.createElement('p');
     lawMeaning.textContent = 'Время измеряется в ошибках';
     law.append(lawFormula, lawMeaning);
-    section.append(intro, statements, sign, law);
+    section.append(statements, sign, law);
     return section;
   };
 
@@ -1054,7 +1054,7 @@
       mobileSelect.append(option);
     });
     mobileSelect.addEventListener('change', () => render(Number(mobileSelect.value)));
-    section.append(title, intro, frame, fullChronicle);
+    section.append(intro, frame, fullChronicle);
     render(0);
     if (access.deep) {
       section.deepAccess = {
@@ -1097,13 +1097,6 @@
     if (graph) {
       const graphEyebrow = graph.querySelector('.godbot-research__eyebrow');
       if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 153-УЗЛОВОЙ МИР</span><span>БОГОБОТ / СЕТЬ</span>';
-      const graphFoot = graph.querySelector('.godbot-research__graph-foot');
-      if (graphFoot && !graphFoot.querySelector('.ay-godbot-graph-meta')) {
-        const meta = document.createElement('span');
-        meta.className = 'ay-godbot-graph-meta';
-        meta.textContent = '153 узла связывают школы, ритуалы, экономику, топографию, реликвии, историю и речевые режимы.';
-        graphFoot.prepend(meta);
-      }
       primary.append(graph);
     }
 
