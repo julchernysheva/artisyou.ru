@@ -3,7 +3,7 @@
   if (!main) return;
   main.className = 'godbot-research';
   main.innerHTML = `
-    <section class="godbot-research__section godbot-research__graph-section"><div class="godbot-research__eyebrow"><span>02 / ИНТЕРАКТИВНЫЙ ГРАФ</span><span>БОГОБОТ / СЕТЬ</span></div><div class="godbot-research__graph"><div class="gb-graph-poster"><img src="/assets/art-is-you/bogobot-graph-real-still.jpg" alt="Превью сети Богобота" loading="lazy" decoding="async"><button type="button" data-gb-graph-start>Открыть интерактивный граф</button></div><button type="button" data-gb-graph-stop hidden>Закрыть граф</button></div><div class="godbot-research__graph-foot"><a href="/bogobot/" target="_blank" rel="noopener noreferrer">ИССЛЕДОВАТЬ СЕТЬ ↗</a></div></section>
+    <section class="godbot-research__section godbot-research__graph-section"><div class="godbot-research__eyebrow"><span>02 / ИНТЕРАКТИВНЫЙ ГРАФ</span><span>БОГОБОТ / СЕТЬ</span></div><div class="godbot-research__graph"><div class="gb-graph-poster"><img src="/assets/art-is-you/bogobot-graph-real-still.jpg" alt="Превью сети Богобота" loading="lazy" decoding="async"></div><button type="button" data-gb-graph-stop hidden>Закрыть граф</button></div><div class="godbot-research__graph-foot"><button type="button" data-gb-graph-start>Открыть интерактивный граф</button><a href="/bogobot/" target="_blank" rel="noopener noreferrer">ИССЛЕДОВАТЬ СЕТЬ ↗</a></div></section>
     <section class="godbot-research__section"><div class="godbot-research__section-grid"><div class="godbot-research__label">03 / RESEARCH QUESTION</div><div class="godbot-research__body"><h2>Как исследовать технологическое будущее, если оно существует не как единый прогноз, а как множество несовпадающих версий?</h2></div></div></section>
         <section class="godbot-research__section"><div class="godbot-research__section-grid"><div class="godbot-research__label">КУЛЬТУРНЫЙ СДВИГ</div><div class="godbot-research__body"><p>Технологическое будущее распалось на множество несовпадающих сценариев — со своими мифами, языком и памятью.</p></div></div></section>
     <section class="godbot-research__section"><div class="godbot-research__section-grid"><div class="godbot-research__label">ГИПОТЕЗА</div><div class="godbot-research__body"><p>Будущее можно читать как культурную систему, если связи и противоречия между сценариями важнее единой хронологии.</p></div></div></section>
@@ -15,7 +15,7 @@
     <section class="godbot-research__section"><div class="godbot-research__section-grid"><div class="godbot-research__label">09 / Данные о проекте</div><div class="godbot-research__credit"><dl><div><dt>ПРОЕКТ</dt><dd>Богобот</dd></div><div><dt>ПЕРИОД</dt><dd>2018—2026</dd></div><div><dt>ТИП</dt><dd>Интерактивный архив спекулятивного мира</dd></div><div><dt>РОЛЬ</dt><dd>Исследование, создание мира, дизайн системы</dd></div><div><dt>АВТОР</dt><dd>Юлия Чернышева</dd></div><div><dt>ИСХОДНАЯ ВЕРСИЯ</dt><dd>2018</dd></div><div><dt>КОНЦЕПЦИЯ</dt><dd>Юлия Чернышева</dd></div><div class="godbot-research__credit-authors"><dt>СОАВТОРЫ</dt><dd>Александра Орлова, Юрий Свердлов, Наташа Федорова, Елена Никоноле, Пётр Левич</dd></div></dl><a class="godbot-research__cta" href="/bogobot/" target="_blank" rel="noopener noreferrer">ОТКРЫТЬ БОГОБОТА ↗</a></div></div></section>`;
   const graph = main.querySelector('.godbot-research__graph');
   const poster = graph.querySelector('.gb-graph-poster');
-  const start = graph.querySelector('[data-gb-graph-start]');
+  const start = main.querySelector('[data-gb-graph-start]');
   const stop = graph.querySelector('[data-gb-graph-stop]');
   start.addEventListener('click', () => {
     if (graph.querySelector('iframe')) return;
@@ -23,11 +23,11 @@
     frame.title = 'BOGOBOT — интерактивная сеть 153 узлов';
     frame.src = '/bogobot/?map=1';
     frame.allowFullscreen = true;
-    poster.hidden = true; stop.hidden = false;
+    poster.hidden = true; stop.hidden = false; start.hidden = true;
     graph.append(frame); stop.focus();
   });
   stop.addEventListener('click', () => {
     graph.querySelector('iframe')?.remove();
-    poster.hidden = false; stop.hidden = true; start.focus();
+    poster.hidden = false; stop.hidden = true; start.hidden = false; start.focus();
   });
 })();
