@@ -607,9 +607,17 @@
       const changed = primaryImage.hasAttribute('src') && primaryImage.getAttribute('src') !== file.src;
       fileTransition?.cancel();
       resetPrimaryExperience();
+      primaryImage.loading = 'eager';
       primaryImage.src = file.src;
       primaryImage.alt = file.alt;
-      primaryCaption.textContent = file.caption;
+      const captionText = document.createElement('span');
+      captionText.textContent = file.caption;
+      const originalLink = document.createElement('a');
+      originalLink.href = file.src;
+      originalLink.target = '_blank';
+      originalLink.rel = 'noopener';
+      originalLink.textContent = 'Открыть оригинал ↗';
+      primaryCaption.replaceChildren(captionText, originalLink);
       if (changed && !reducedMotion.matches) fileTransition = primary.animate([{opacity:.6},{opacity:1}], {duration:160,easing:'ease-out'});
       if (file.liveSrc) {
         activeLiveSource = file.liveSrc;
