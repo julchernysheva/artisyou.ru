@@ -66,3 +66,4 @@ html body[data-project-top="godbot"] .ay-approved-hero--godbot>.gb-opening-logo 
 }
 }
 html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon:not(:has(.ay-godbot-authorial-canon__sign)){grid-template-columns:1fr!important}
+html body[data-project-top="godbot"] .ay-project-top #project-canon :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law){border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;padding:0!important}
