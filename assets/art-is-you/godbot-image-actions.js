@@ -15,7 +15,7 @@
       const src=img.currentSrc||img.getAttribute('src')||img.dataset.src;
       if(!src||src.startsWith('data:'))return;
       const url=new URL(src,location.href);if(!['http:','https:'].includes(url.protocol))return;
-      const holder=img.closest('figure')||img.parentElement;
+      const holder=img.closest('figure')||(img.parentElement?.tagName==='A'?img.parentElement.parentElement:img.parentElement);
       if(!holder)return;
       // Keep live experiences and their launch controls separate from image inspection.
       if(img.closest('[role="button"],.is-live,.is-loading'))return;
