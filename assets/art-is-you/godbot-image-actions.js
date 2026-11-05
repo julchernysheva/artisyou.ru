@@ -8,10 +8,20 @@
   dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
   dialog.addEventListener('close',()=>{full.removeAttribute('src');opener?.focus({preventScroll:true});});
   const actions=new WeakMap();
+  function openImage(img,event){
+    event.preventDefault();event.stopImmediatePropagation();opener=actions.get(img);
+    full.src=img.getAttribute('src')||img.dataset.src;full.alt=img.alt;caption.textContent=img.alt;
+    if(!dialog.open)dialog.showModal();close.focus({preventScroll:true});
+  }
+  // Capture prevents old anchor/lightbox handlers from opening a second viewer.
+  document.addEventListener('click',event=>{
+    const img=event.target.closest?.('img.gb-image-zoomable');
+    if(img&&actions.has(img))openImage(img,event);
+  },true);
   function sync(){
     queued=false;
     document.querySelectorAll('.ay-project-top img').forEach(img=>{
-      if(img.closest('#most-entry,.ay-project-primary--godbot,nav,button'))return;
+      if(img.closest('nav,button,.is-live,.is-loading'))return;
       const src=img.currentSrc||img.getAttribute('src')||img.dataset.src;
       if(!src||src.startsWith('data:'))return;
       const url=new URL(src,location.href);if(!['http:','https:'].includes(url.protocol))return;
@@ -22,18 +32,18 @@
       holder.querySelectorAll('a').forEach(a=>{
         if(a.contains(img)){
           if(a.href===url.href){a.replaceWith(...a.childNodes);}
-        }else if(/открыть.*(оригинал|полностью)/i.test(a.textContent)&&a.href===url.href){a.remove();}
+        }else if((/открыть.*(оригинал|полностью)/i.test(a.textContent)||a.classList.contains('ay-document-source'))&&a.href===url.href){
+          // Retain legacy source nodes so their observer cannot recreate competing controls.
+          a.hidden=true;a.classList.add('gb-image-source-replaced');
+        }
       });
       let action=actions.get(img);
       if(!action||!action.isConnected){
         action=document.createElement('button');action.type='button';action.className='gb-image-expand';action.textContent='⤢';
         action.setAttribute('aria-label','Открыть изображение');action.title='Открыть изображение';holder.append(action);actions.set(img,action);
-        action.addEventListener('click',e=>{
-          e.preventDefault();e.stopPropagation();opener=action;
-          full.src=img.currentSrc||img.src;full.alt=img.alt;caption.textContent=img.alt;
-          dialog.showModal();close.focus({preventScroll:true});
-        });
+        action.addEventListener('click',e=>openImage(img,e));
       }
+      img.classList.add('gb-image-zoomable');
     });
   }
   function schedule(){if(!queued){queued=true;requestAnimationFrame(sync);}}
