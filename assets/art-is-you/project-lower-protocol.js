@@ -1073,7 +1073,7 @@
   };
 
   const makeGodbotQuantumThreshold = () => {
-    const section = makeGodbotSection('06A', 'Великая ошибка', 'Авторский сценарий', 'ay-godbot-quantum-threshold');
+    const section = makeGodbotSection('06A', 'Великая ошибка', '', 'ay-godbot-quantum-threshold');
     const title = document.createElement('h2');
     title.textContent = 'Квантовый апокалипсис сети';
     const copy = document.createElement('p');

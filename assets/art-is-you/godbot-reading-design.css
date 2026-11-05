@@ -36,3 +36,6 @@ html body[data-project-top="godbot"] .ay-project-top .ay-project-top__register{p
  body[data-project-top="godbot"] .ay-project-top [data-text-grid-column] p+p{margin-top:16px!important}
  @media(max-width:600px){body[data-project-top="godbot"] .ay-project-top .ay-project-top__method [data-text-grid-columns]{grid-template-columns:1fr!important}}
 }
+
+html body[data-project-top="godbot"] .ay-project-top #project-canon .ay-godbot-authorial-canon__sign{border:0!important;outline:0!important;box-shadow:none!important}
+html body[data-project-top="godbot"] .ay-project-top .ay-godbot-authorial-canon__sign{border:0!important;outline:0!important;box-shadow:none!important}
