@@ -70,3 +70,15 @@ html body[data-project-top="godbot"] .ay-project-top #project-canon :is(.ay-godb
 
 html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.gb-canon-time-artifact{grid-column:1/-1!important;grid-row:4!important;margin:0!important;padding:0!important;align-self:start!important}
 html body[data-project-top="godbot"] .ay-project-top #project-canon .gb-canon-time-artifact img{width:auto!important;max-width:100%!important;height:180px!important;max-height:180px!important;object-fit:contain!important;object-position:left top!important}
+/* Desktop: each of the two sections has prose left and its artifact right. */
+@media(min-width:1024px){
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon:not(:has(.ay-godbot-authorial-canon__sign)),html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:24px!important;align-content:start!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-project-lower__bar,html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>.ay-project-lower__bar{grid-column:1/-1!important;grid-row:1!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-godbot-authorial-canon__statements{grid-column:1!important;grid-row:2!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-godbot-authorial-canon__law{grid-column:1!important;grid-row:3!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.gb-canon-time-artifact{grid-column:2!important;grid-row:2/4!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>p{grid-column:1!important;grid-row:2!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>figure{grid-column:2!important;grid-row:2!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair :is(#project-canon,#project-quantum)>figure{min-width:0!important;align-self:start!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair :is(#project-canon,#project-quantum)>figure img{width:100%!important;height:180px!important;max-height:180px!important;object-fit:contain!important;object-position:left top!important}
+}
