@@ -876,7 +876,6 @@
     const timeArtifact = makeGodbotFigure({
       src: '/assets/art-is-you/bogobot/31689159_1955097101230446_4062935196821880832_n.jpg',
       alt: 'Физический текстовый артефакт «Время измеряется в ошибках»',
-      title: '«Время измеряется в ошибках»',
       type: 'Авторский физический артефакт'
     });
     timeArtifact.classList.add('gb-canon-time-artifact');
