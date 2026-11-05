@@ -1155,7 +1155,7 @@
     const readingProtocol = makeGodbotReadingProtocol();
     cycle?.remove();
 
-    const documentation = makeGodbotSection('08', 'Публичные свидетельства / 2018—2026', 'История проекта / публичный след', 'ay-godbot-public-evidence');
+    const documentation = makeGodbotSection('08', 'Публичные свидетельства / 2018—2026', '', 'ay-godbot-public-evidence');
     const documentationIntro = document.createElement('p');
     documentationIntro.className = 'ay-godbot-documentation-group__intro';
     documentationIntro.textContent = 'Богобот существует не только как цифровой мир. С 2018 года проект оставляет физический, выставочный и медийный след.';
@@ -1163,14 +1163,12 @@
     if (projectHistoryGrid) {
       const projectHistory = document.createElement('div');
       projectHistory.className = 'ay-godbot-documentation-group';
-      projectHistory.insertAdjacentHTML('afterbegin', '<p class="ay-godbot-documentation-group__label">История проекта</p>');
       projectHistory.append(projectHistoryGrid);
       documentation.append(projectHistory);
     }
 
     const publicTrace = document.createElement('div');
     publicTrace.className = 'ay-godbot-documentation-group ay-godbot-documentation-group--public-trace';
-    publicTrace.insertAdjacentHTML('afterbegin', '<p class="ay-godbot-documentation-group__label">Публичный след</p>');
     const documentationGrid = document.createElement('div');
     documentationGrid.className = 'ay-godbot-evidence-grid ay-godbot-evidence-grid--four';
     documentationGrid.append(
