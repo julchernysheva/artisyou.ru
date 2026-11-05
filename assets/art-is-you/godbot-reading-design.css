@@ -39,3 +39,18 @@ html body[data-project-top="godbot"] .ay-project-top .ay-project-top__register{p
 
 html body[data-project-top="godbot"] .ay-project-top #project-canon .ay-godbot-authorial-canon__sign{border:0!important;outline:0!important;box-shadow:none!important}
 html body[data-project-top="godbot"] .ay-project-top .ay-godbot-authorial-canon__sign{border:0!important;outline:0!important;box-shadow:none!important}
+
+/* Related sections share one desktop row; narrow layouts retain reading order. */
+@media(min-width:1024px){
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;width:100%;grid-column:1/-1}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon{display:grid!important;grid-template-columns:minmax(0,1fr) 120px!important;gap:16px 24px!important;min-width:0!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-project-lower__bar{grid-column:1/-1!important;grid-row:1!important;margin-bottom:8px!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-godbot-authorial-canon__statements{grid-column:1!important;grid-row:2!important;min-width:0!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-godbot-authorial-canon__law{grid-column:1!important;grid-row:3!important;min-width:0!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.ay-godbot-authorial-canon__sign{grid-column:2!important;grid-row:2/4!important;padding:0!important;margin:0!important;align-self:start}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum{display:grid!important;grid-template-columns:1fr!important;gap:16px!important;min-width:0!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>*{grid-column:1!important;grid-row:auto!important;min-width:0!important;margin:0!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>.ay-project-lower__bar{margin-bottom:8px!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>p{max-width:62ch!important}
+ html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-quantum>figure img{height:180px!important;max-height:180px!important;object-position:left top!important}
+}

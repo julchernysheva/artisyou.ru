@@ -1211,7 +1211,10 @@
     project?.querySelector('.godbot-research__label')?.replaceChildren('Данные о проекте');
     project?.querySelector('.godbot-research__cta')?.remove();
 
-    insertAfter(primary, [historyOfNetwork, authorialCanon, quantumThreshold, readingProtocol, documentation, project]);
+    const canonPair = document.createElement('div');
+    canonPair.className = 'gb-canon-pair';
+    canonPair.append(authorialCanon, quantumThreshold);
+    insertAfter(primary, [historyOfNetwork, canonPair, readingProtocol, documentation, project]);
     root.remove();
   };
 
