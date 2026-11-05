@@ -1,0 +1,42 @@
+/* Internal project pages: shared 12-column grammar; original artworks stay intact. */
+body.godbot-materials{font-family:'Source Sans 3',sans-serif}
+body.godbot-materials>nav,body.godbot-materials main,html body #godbot-deep{box-sizing:border-box;width:100%;max-width:1440px;margin:0 auto;padding:24px 32px}
+html body #godbot-deep{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;min-height:70vh}
+#godbot-deep>.godbot-deep-back{grid-column:1/4;margin:0}
+#godbot-deep>.godbot-deep-materials{grid-column:4/-1;align-self:center}
+#godbot-deep>.godbot-deep-heading{grid-column:1/4;margin:0}
+#godbot-deep>.godbot-deep-content{grid-column:4/-1;min-width:0}
+#godbot-deep .godbot-deep-territory>*{margin-top:0;margin-bottom:24px}
+#godbot-deep .godbot-deep-corpus{padding:0;border:0}
+#godbot-deep .godbot-deep-record{max-width:64ch}
+#godbot-deep .godbot-deep-select{margin:8px 0 24px;max-width:64ch}
+#godbot-deep .godbot-deep-record :is(p,ul,ol,pre,blockquote){max-width:64ch;margin:0 0 16px}
+#godbot-deep .godbot-deep-record :is(h2,h3,h4){margin:24px 0 16px}
+#godbot-deep img{max-width:100%;width:auto;height:240px;object-fit:contain;object-position:left center}
+#godbot-deep :is(a,button){color:#064cff!important;background:none;border:0;box-shadow:none;text-underline-offset:4px}
+#godbot-deep a:focus-visible{outline:none;text-decoration:underline 3px}
+body.godbot-materials header{grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-bottom:24px}
+body.godbot-materials header h1{grid-column:1/4}
+body.godbot-materials header p{grid-column:4/-1}
+body.godbot-materials .v2-sectionbar{margin-top:24px;padding:16px 0 0}
+body.godbot-materials .v2-nav{margin-bottom:24px}
+body.godbot-materials .materials-reference{grid-column:1/4;margin:0}
+body.godbot-materials #temple+section .materials-reference{grid-column:4/-1}
+body.godbot-materials #additional>.materials-reference{grid-column:1/4}
+body.godbot-materials #additional>figure{grid-column:4/-1}
+body.godbot-materials .v2-carousel:has(.v2-carousel__viewport:empty){display:none}
+body.godbot-materials .v2-testimony-grid>blockquote{border:0;padding:0}
+@layer ay-typography-v1{
+html body.godbot-materials :is(main,nav) *,html body #godbot-deep *{font-family:'Source Sans 3',sans-serif!important;letter-spacing:0!important}
+html body #godbot-deep :is(p,li,pre,td,th,select,blockquote){font-size:16px!important;line-height:24px!important}
+html body #godbot-deep :is(h1,h2,h3,h4),html body.godbot-materials main :is(h1,h2,h3){font-size:24px!important;line-height:28px!important;font-weight:400!important}
+html body #godbot-deep :is(a,button,label,.ay-project-lower__bar,figcaption),html body.godbot-materials :is(figcaption,.v2-sectionbar,.materials-back){font-size:12px!important;line-height:16px!important}
+}
+@media(max-width:760px){
+body.godbot-materials>nav,body.godbot-materials main,html body #godbot-deep{padding:16px}
+html body #godbot-deep{grid-template-columns:1fr;gap:16px}
+#godbot-deep>*{grid-column:1!important}
+body.godbot-materials header{grid-template-columns:1fr;gap:16px}
+body.godbot-materials header>*{grid-column:1!important}
+body.godbot-materials section>*{grid-column:1/-1!important}
+}

@@ -25,7 +25,8 @@
   const deep=el('main','v2-page ay-project-top');deep.id='godbot-deep';
   const back=el('a','godbot-deep-back','ВЕРНУТЬСЯ К АРХИВУ');back.href=rootURL;
   const heading=el('h1','godbot-deep-heading');heading.id='godbot-deep-title';heading.tabIndex=-1;
-  const content=el('div','godbot-deep-content');deep.append(back,heading,content);originalSlot.after(deep);
+  const materials=el('a','godbot-deep-materials','Материалы проекта');materials.href=rootURL+'materials/';
+  const content=el('div','godbot-deep-content');deep.append(back,materials,heading,content);originalSlot.after(deep);
   const entries=new Map();let applying=false,current=null,active=null;
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   let recordTransition=null;
@@ -66,12 +67,9 @@
   function build(territory){
     const host=el('div','godbot-deep-territory');host.dataset.territory=territory;
     const view={host,recordId:null};
-    if(territory==='canon')host.append(factories.canon());
-    if(territory==='history'){
-      view.history=factories.history({deep:true,onStateChange:s=>{if(!applying)navigate({...current,record:s.record,node:s.record.toUpperCase().replaceAll('-','_')});}});
-      // This component's source link remains intact; the complete chronology is below it.
-      host.append(view.history);
-    }
+    const overview=el('a','godbot-deep-overview',territory==='history'?'Восемь поворотных точек — на странице проекта ↗':'Краткое изложение — на странице проекта ↗');
+    overview.href=rootURL+(territory==='history'?'#project-history':territory==='canon'?'#project-canon':'#seven-module');
+    host.append(overview);
     if(territory!=='relics'){
       const section=el('section','ay-project-lower ay-project-lower--godbot godbot-deep-corpus');
       const bar=el('div','ay-project-lower__bar');bar.append(el('span',null,territory.toUpperCase()),el('span',null,territory==='history'?'CHRONOLOGY / 21 + 8':'CORPUS / SOURCE RECORDS'));section.append(bar);
@@ -79,7 +77,7 @@
       const select=el('select','godbot-deep-select');select.id=label.htmlFor;
       const ids=corpus.territories[territory];ids.forEach(id=>{const option=el('option',null,records.get(id).title);option.value=id;select.append(option);});
       const sequence=el('nav','ay-godbot-archive-reader__sequence');sequence.setAttribute('aria-label','Навигация по записям корпуса');
-      for(const [delta,text] of [[-1,'← PREVIOUS RECORD'],[1,'NEXT RECORD →']]){const b=el('button',null,text);b.type='button';b.addEventListener('click',()=>choose(ids[(ids.indexOf(select.value)+delta+ids.length)%ids.length]));sequence.append(b);}
+      for(const [delta,text] of [[-1,'← Предыдущая запись'],[1,'Следующая запись →']]){const b=el('button',null,text);b.type='button';b.addEventListener('click',()=>choose(ids[(ids.indexOf(select.value)+delta+ids.length)%ids.length]));sequence.append(b);}
       const choose=id=>navigate({...current,[territory==='history'?'node':'record']:id,...(territory==='history'?{}:{node:null,file:null})});
       select.addEventListener('change',()=>choose(select.value));
       // Native select preserves platform keyboard/touch behaviour; explicit Enter commits too.
@@ -106,8 +104,8 @@
     recordTransition?.cancel();
     const record=records.get(id);view.panel.replaceChildren();view.panel.dataset.record=id;
     if(!view.ids.includes(id)&&![...view.select.options].some(o=>o.value===id)){const option=el('option',null,record.title);option.value=id;view.select.append(option);}
-    if(id==='QUANTUM_THRESHOLD')view.panel.append(factories.quantum());
-    else view.panel.append(el('h2',null,record.title));
+    view.panel.append(el('h2',null,record.title));
+    if(id==='QUANTUM_THRESHOLD'){const summary=el('a',null,'Краткий сценарий — на странице проекта ↗');summary.href=rootURL+'#project-quantum';view.panel.append(summary);}
     if(id!=='QUANTUM_THRESHOLD'&&record.formula)view.panel.append(el('p','godbot-deep-formula',record.formula));
     if(record.html){const text=el('div','godbot-deep-source');text.innerHTML=record.html;view.panel.append(text);}
     else for(const paragraph of record.fullBody||record.body||[]){const p=el('p');p.innerHTML=paragraph;view.panel.append(p);}
