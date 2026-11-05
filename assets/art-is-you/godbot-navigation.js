@@ -15,7 +15,7 @@
   let scrollQueued = false;
   function normalizeActions(){
     document.querySelectorAll('.ay-project-top a').forEach(a=>{
-      if(a.children.length)return;
+      if(a.children.length || a.closest("figcaption"))return;
       const text=a.textContent.trim();
       if(/^(ОТКРЫТЬ|ПРОЙТИ|ВЕРНУТЬСЯ|ВСЕ МАТЕРИАЛЫ)/.test(text))a.textContent=text[0]+text.slice(1).toLowerCase();
     });
@@ -58,7 +58,7 @@
         const number = document.createElement('span'); number.className = 'gb-nav-number';
         number.textContent = String(sections.findIndex(item => item[1] === id) + 1).padStart(2, '0');
         number.setAttribute('aria-hidden', 'true');
-        const title = document.createElement('span'); title.className = 'gb-nav-label'; title.textContent = label;
+        const title = document.createElement('span'); title.className = 'gb-nav-label'; title.textContent = label.toLocaleUpperCase("ru-RU");
         link.append(number, title);
         nav.append(link);
         // Keep asynchronous sections in their intended reading order.
@@ -68,6 +68,9 @@
     // Section numbers match the index; subordinate headings are not separate chapters.
     const labels = [
       ['#project-concept-title', '01 / О проекте'],
+      ['#seven-module .seven-section-label', '04 / Архив несбывшегося будущего'],
+      ['.ay-godbot-history-network > .ay-project-lower__bar > span:first-child', '05 / История сети'],
+      ['.ay-godbot-authorial-canon > .ay-project-lower__bar > span:first-child', '06 / Авторский канон'],
       ['#project-research-title', 'Исследовательская система'],
       ['#project-method-title', 'Метод'],
       ['#most-entry .most-kicker', '02 / Происхождение видов'],
@@ -77,7 +80,8 @@
     ];
     for (const [selector, text] of labels) {
       const element = document.querySelector(selector);
-      if (element && element.textContent !== text) element.textContent = text;
+      const rubric = /^\d{2} \//.test(text) ? text.toLocaleUpperCase("ru-RU") : text;
+      if (element && element.textContent !== rubric) element.textContent = rubric;
     }
     // GitHub is not a reader destination on the project pages.
     document.querySelectorAll('a[href*="github.com"],a[href*="github.io"]').forEach(link => link.remove());

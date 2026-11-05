@@ -20,8 +20,8 @@ if (location.pathname.replace(/\/$/, '') === '/projects/godbot' && !new URLSearc
     const primary = document.querySelector('.ay-project-primary--godbot');
     const productionModule = document.importNode(frozenModule, true);
     primary.insertAdjacentElement('afterend', productionModule);
-    await import('/assets/art-is-you/godbot-seven-selector.js?v=canon-groups-20261105');
-    if (productionModule.dataset.ready !== 'true' || productionModule.querySelectorAll('.seven-cta[href]').length !== 7) throw new Error('Canonical module failed its mounting contract');
+    await import('/assets/art-is-you/godbot-seven-selector.js?v=media-icons-21');
+    if (productionModule.dataset.ready !== 'true' || productionModule.querySelectorAll('.seven-cta[href], #panel-topography .gb-media-open[href]').length !== 7) throw new Error('Canonical module failed its mounting contract');
     // Keep the complete history, canon and archive available below the overview.
     // The overview now contains the single reading instruction.
     document.querySelector('.ay-godbot-reading-protocol')?.remove();

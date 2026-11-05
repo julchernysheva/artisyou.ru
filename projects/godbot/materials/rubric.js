@@ -1,0 +1,1 @@
+(()=>{const links=[...document.querySelectorAll('.text-toc a')];function sync(){links.forEach(a=>{if(a.hash===location.hash)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}addEventListener('hashchange',sync);sync();})();

@@ -45,10 +45,22 @@
       let action=actions.get(img);
       if(!action||!action.isConnected){
         action=document.createElement('button');action.type='button';action.className='gb-image-expand';action.textContent='⤢';
-        action.setAttribute('aria-label','Открыть изображение');action.title='Открыть изображение';holder.append(action);actions.set(img,action);
+        action.setAttribute('aria-label','Открыть изображение');action.title='Открыть изображение';holder.insertBefore(action,holder.querySelector('figcaption'));actions.set(img,action);
         action.addEventListener('click',e=>openImage(img,e));
       }
+      if(!new URLSearchParams(location.search).has('territory')){
+        let overlay=img.closest('.gb-image-overlay');
+        if(!overlay){overlay=document.createElement('span');overlay.className='gb-image-overlay';img.before(overlay);overlay.append(img);}
+        if(action.parentElement!==overlay)overlay.append(action);
+      }
       img.classList.add('gb-image-zoomable');
+    });
+    document.querySelectorAll('.ay-project-top a').forEach(a=>{
+      if(a.hidden||a.querySelector('img'))return;
+      if(/^открыть\s+(?:интерактивный\s+)?оригинал\s*[↗→]?$/i.test(a.textContent.trim())){
+        const label=a.textContent.trim().replace(/[↗→]/g,'').trim();
+        a.setAttribute('aria-label',label);a.title=label;a.classList.add('gb-media-open');a.textContent='↗';
+      }
     });
   }
   function schedule(){if(!queued){queued=true;requestAnimationFrame(sync);}}

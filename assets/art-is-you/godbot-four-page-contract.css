@@ -1,0 +1,215 @@
+/* ART.IS.YOU: shared shell / 12 columns / semantic roles.
+Source: Google Drive PROJECT DETAIL VISUAL CANON, 2026-09-20.
+User overrides: one existing font; block uppercase menu; uppercase Russian captions. */
+:root{--gb-ink:#2c2927;--gb-muted:#695e58;--gb-paper:#efefea;--gb-blue:#064cff;--gb-rule:#b8b1a8;--gb-gutter:24px;--gb-edge:32px;--gb-columns:repeat(12,minmax(0,1fr));--gb-font:"Source Sans 3",Source,sans-serif}
+html body[data-gb-contract][data-gb-contract][data-gb-contract]{background:var(--gb-paper)!important;color:var(--gb-ink)!important;font-family:var(--gb-font)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head,.gallery,.text-grid,.video-grid,.text-toc,.reading-section){grid-template-columns:var(--gb-columns);column-gap:var(--gb-gutter)}
+body[data-gb-contract="materials"] main{width:100%;max-width:1440px;padding-inline:var(--gb-edge);margin-inline:auto;box-sizing:border-box}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head h1,.ay-approved-hero__title){font-family:var(--gb-font)!important;font-size:64px!important;line-height:62.72px!important;font-weight:400!important;letter-spacing:-2.88px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-lead,.reading-body){font-family:var(--gb-font)!important;font-size:16px!important;line-height:24px!important;letter-spacing:-.16px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc){display:grid!important;grid-template-columns:var(--gb-columns)!important;gap:12px!important;border:0!important;padding:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a{grid-column:span 4;display:flex!important;align-items:flex-start!important;gap:12px!important;min-width:0!important;min-height:56px!important;box-sizing:border-box!important;margin:0!important;padding:16px!important;border:1px solid var(--gb-ink)!important;border-radius:0!important;background:transparent!important;color:var(--gb-ink)!important;box-shadow:none!important;text-decoration:none!important;text-transform:uppercase!important;font:400 13px/18px var(--gb-font)!important;letter-spacing:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-section-nav>a{grid-column:span 3}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a :is(span,.gb-nav-number,.gb-nav-label){color:inherit!important;font:inherit!important;text-transform:inherit!important;text-decoration:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a:is(:hover,:focus-visible,[aria-current]){color:var(--gb-blue)!important;border-color:var(--gb-blue)!important;background:transparent!important;text-decoration:none!important;box-shadow:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a:focus-visible{outline:2px solid var(--gb-blue)!important;outline-offset:3px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption,html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,span,h2,h3,a){font-family:var(--gb-font)!important;font-size:11px!important;line-height:14px!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important;color:var(--gb-muted)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption{margin-top:8px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;text-align:left!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,h2,h3){margin:0 0 6px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption a{color:var(--gb-blue)!important;text-underline-offset:3px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-image-expand,.expand,.close,.gb-image-close){color:var(--gb-blue)!important;font-family:var(--gb-font)!important}
+@media(max-width:800px){:root{--gb-edge:16px;--gb-gutter:16px}html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head h1,.ay-approved-hero__title){font-size:44px!important;line-height:44px!important;letter-spacing:-1px!important}html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-section-nav>a,html body[data-gb-contract][data-gb-contract][data-gb-contract] .text-toc>a{grid-column:span 6}html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a{padding:12px!important}}
+@media(prefers-reduced-motion:reduce){html body[data-gb-contract][data-gb-contract][data-gb-contract]{scroll-behavior:auto}}
+
+@layer shared-second-screen{
+/* ART.IS.YOU: shared shell / 12 columns / semantic roles.
+Source: Google Drive PROJECT DETAIL VISUAL CANON, 2026-09-20.
+User overrides: one existing font; block uppercase menu; uppercase Russian captions. */
+:root{--gb-ink:#2c2927;--gb-muted:#695e58;--gb-paper:#efefea;--gb-blue:#064cff;--gb-rule:#b8b1a8;--gb-gutter:24px;--gb-edge:32px;--gb-columns:repeat(12,minmax(0,1fr));--gb-font:"Source Sans 3",Source,sans-serif}
+html body[data-gb-contract][data-gb-contract][data-gb-contract]{background:var(--gb-paper)!important;color:var(--gb-ink)!important;font-family:var(--gb-font)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head,.gallery,.text-grid,.video-grid,.text-toc,.reading-section){grid-template-columns:var(--gb-columns);column-gap:var(--gb-gutter)}
+body[data-gb-contract="materials"] main{width:100%;max-width:1440px;padding-inline:var(--gb-edge);margin-inline:auto;box-sizing:border-box}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head h1,.ay-approved-hero__title){font-family:var(--gb-font)!important;font-size:64px!important;line-height:62.72px!important;font-weight:400!important;letter-spacing:-2.88px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-lead,.reading-body){font-family:var(--gb-font)!important;font-size:16px!important;line-height:24px!important;letter-spacing:-.16px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc){display:grid!important;grid-template-columns:var(--gb-columns)!important;gap:12px!important;border:0!important;padding:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a{grid-column:span 4;display:flex!important;align-items:flex-start!important;gap:12px!important;min-width:0!important;min-height:56px!important;box-sizing:border-box!important;margin:0!important;padding:16px!important;border:1px solid var(--gb-ink)!important;border-radius:0!important;background:transparent!important;color:var(--gb-ink)!important;box-shadow:none!important;text-decoration:none!important;text-transform:uppercase!important;font:400 13px/18px var(--gb-font)!important;letter-spacing:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-section-nav>a{grid-column:span 3}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a :is(span,.gb-nav-number,.gb-nav-label){color:inherit!important;font:inherit!important;text-transform:inherit!important;text-decoration:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a:is(:hover,:focus-visible,[aria-current]){color:var(--gb-blue)!important;border-color:var(--gb-blue)!important;background:transparent!important;text-decoration:none!important;box-shadow:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a:focus-visible{outline:2px solid var(--gb-blue)!important;outline-offset:3px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption,html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,span,h2,h3,a){font-family:var(--gb-font)!important;font-size:11px!important;line-height:14px!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important;color:var(--gb-muted)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption{margin-top:8px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;text-align:left!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,h2,h3){margin:0 0 6px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption a{color:var(--gb-blue)!important;text-underline-offset:3px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-image-expand,.expand,.close,.gb-image-close){color:var(--gb-blue)!important;font-family:var(--gb-font)!important}
+@media(max-width:800px){:root{--gb-edge:16px;--gb-gutter:16px}html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-head h1,.ay-approved-hero__title){font-size:44px!important;line-height:44px!important;letter-spacing:-1px!important}html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-section-nav>a,html body[data-gb-contract][data-gb-contract][data-gb-contract] .text-toc>a{grid-column:span 6}html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.page-tabs,.gb-section-nav,.text-toc)>a{padding:12px!important}}
+@media(prefers-reduced-motion:reduce){html body[data-gb-contract][data-gb-contract][data-gb-contract]{scroll-behavior:auto}}
+
+}
+
+html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,span,h2,h3,a){max-width:none!important;overflow-wrap:anywhere!important}
+@layer shared-second-screen{html body[data-gb-contract][data-gb-contract][data-gb-contract] figcaption :is(p,span,h2,h3,a){max-width:none!important;overflow-wrap:anywhere!important}
+}
+
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.ay-project-lower__bar,.seven-section-label,.most-kicker,.godbot-research__eyebrow,.seven-rubric,#project-concept-title,.reading-section>h2){text-transform:uppercase!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-entry-group-label{display:block!important;margin-bottom:8px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-record-link{display:block!important;color:var(--gb-ink)!important;text-decoration:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-record-link:is(:hover,:focus-visible){color:var(--gb-blue)!important;text-decoration:underline!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is([data-most-open],[data-gb-graph-start],.seven-cta,.gb-materials-link){display:table!important;width:fit-content!important;max-width:100%!important;margin-left:auto!important;margin-right:0!important;justify-self:end!important;text-align:right!important}
+
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.ay-project-lower__bar,.seven-section-label,.most-kicker,.godbot-research__eyebrow,.seven-rubric,#project-concept-title,.reading-section>h2){text-transform:uppercase!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-entry-group-label{display:block!important;margin-bottom:8px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-record-link{display:block!important;color:var(--gb-ink)!important;text-decoration:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-record-link:is(:hover,:focus-visible){color:var(--gb-blue)!important;text-decoration:underline!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is([data-most-open],[data-gb-graph-start],.seven-cta,.gb-materials-link){display:table!important;width:fit-content!important;max-width:100%!important;margin-left:auto!important;margin-right:0!important;justify-self:end!important;text-align:right!important}
+}
+
+/* Shared responsive release shell. */
+body[data-gb-contract="materials"] main{padding-top:32px}
+body[data-gb-contract="materials"] .reading-body{overflow-wrap:anywhere}
+@layer shared-second-screen{
+@media(max-width:560px){html body[data-gb-contract][data-gb-contract][data-gb-contract] .page-tabs>a{grid-column:span 12!important;min-height:44px!important}}
+}
+
+/* Unified project navigation and contextual actions, November 5. */
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;width:100%!important;margin:0 0 24px!important;padding:0!important;border:0!important;order:0}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages a{display:flex!important;align-items:center!important;min-height:44px!important;padding:12px!important;border:1px solid var(--gb-ink)!important;background:transparent!important;color:var(--gb-ink)!important;text-decoration:none!important;font:400 13px/18px var(--gb-font)!important;box-sizing:border-box!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages a:is(:hover,:focus-visible,[aria-current]){color:var(--gb-blue)!important;border-color:var(--gb-blue)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(main,.ay-project-top) a:not(nav a):not(.image-link):not(:has(img)),
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-material-page,.seven-cta,[data-most-open],[data-gb-graph-start]){color:var(--gb-blue)!important;text-transform:uppercase!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important;text-decoration:underline!important;text-underline-offset:4px!important;font:400 13px/18px var(--gb-font)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-material-page,.seven-cta,.context-link,[data-most-open],[data-gb-graph-start]){display:table!important;width:fit-content!important;max-width:100%!important;margin:24px 0 0 auto!important;padding:0!important;text-align:right!important;justify-self:end!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract] a:focus-visible{outline:2px solid var(--gb-blue)!important;outline-offset:4px!important}
+@media(max-width:800px){html body[data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+}
+
+/* Navigation hierarchy: page tabs / numbered contents. */
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages{gap:0 24px!important;border-bottom:1px solid var(--gb-rule)!important;margin-bottom:24px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages a{border:0!important;border-bottom:2px solid transparent!important;padding:14px 0!important;font:400 16px/22px var(--gb-font)!important;min-height:52px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages a[aria-current]{border-bottom-color:var(--gb-blue)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-section-nav,.text-toc){gap:0 24px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-section-nav,.text-toc)>a{border:0!important;border-top:1px solid var(--gb-rule)!important;padding:12px 0!important;min-height:48px!important;font:400 13px/18px var(--gb-font)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-section-nav .gb-nav-number{font-size:11px!important;color:var(--gb-muted)!important;min-width:24px!important}
+@media(max-width:800px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-project-pages,.gb-section-nav,.text-toc){column-gap:16px!important}}
+}
+
+/* Code-like reading hierarchy: line gutter, labels, one indent. */
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-entries{counter-reset:canon-line!important;border:0!important;margin:24px 0 24px 32px!important;width:calc(100% - 32px)!important;padding:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-entries li{padding:0!important;border:0!important;margin:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel :is(.seven-entry-group-label,.seven-record-link){position:relative!important;display:block!important;counter-increment:canon-line;line-height:24px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-entry-group-label{margin:16px 0 4px!important;text-transform:uppercase!important;font-size:11px!important;letter-spacing:.04em!important;color:var(--gb-muted)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-record-link{padding:4px 0 4px 24px!important;font-size:13px!important;color:var(--gb-blue)!important;text-decoration:none!important;overflow-wrap:anywhere}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel :is(.seven-entry-group-label,.seven-record-link)::before{content:counter(canon-line,decimal-leading-zero);position:absolute;left:-32px;top:0;color:var(--gb-muted);opacity:.55;font-size:11px;font-variant-numeric:tabular-nums;line-height:32px}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected dl{counter-reset:history-line;margin-left:32px!important;border:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected dl>div{border:0!important;margin:0 0 20px!important;padding:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected :is(dt,dd){position:relative!important;counter-increment:history-line}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected dt{font-size:11px!important;line-height:20px!important;color:var(--gb-muted)!important;text-transform:uppercase!important;margin:0 0 4px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected dd{font-size:16px!important;line-height:24px!important;margin:0 0 16px 24px!important;max-width:60ch!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected :is(dt,dd)::before{content:counter(history-line,decimal-leading-zero);position:absolute;left:-32px;top:0;color:var(--gb-muted);opacity:.55;font-size:11px;font-variant-numeric:tabular-nums}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-history-selected dd::before{left:-56px}
+}
+
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel :is(.seven-entry-title,.seven-entry-detail){position:relative!important;display:block!important;counter-increment:canon-line;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-entry-title{padding:4px 0!important;margin:0!important;font-size:13px!important;line-height:24px!important;font-weight:400!important;text-transform:uppercase!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-entry-detail{padding:0 0 12px 24px!important;margin:0!important;font-size:16px!important;line-height:24px!important;max-width:60ch!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel :is(.seven-entry-title,.seven-entry-detail)::before{content:counter(canon-line,decimal-leading-zero);position:absolute;left:-32px;top:0;color:var(--gb-muted);opacity:.55;font-size:11px;line-height:32px;font-variant-numeric:tabular-nums}
+}
+
+/* Fixed visible image-to-caption spacing on the four project pages. */
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] figure:has(figcaption){row-gap:0!important;align-content:start!important;justify-content:flex-start!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] figure:has(figcaption) :is(img,iframe,video){display:block!important;margin-bottom:0!important;object-position:left bottom!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] figcaption{margin-top:8px!important;padding-top:0!important;padding-bottom:0!important;align-self:start!important;row-gap:4px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] figcaption>:first-child{margin-top:0!important;padding-top:0!important}
+}
+
+/* Align actions to their column; keep territory media in the first row. */
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-material-page,.seven-cta,.context-link,.video-original){display:block!important;width:fit-content!important;max-width:100%!important;margin-left:auto!important;margin-right:0!important;justify-self:end!important;align-self:end!important;text-align:right!important;grid-column:1/-1!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-image-expand{position:static!important;display:block!important;width:32px!important;height:32px!important;margin:8px 0 0 auto!important;padding:0!important;justify-self:end!important;align-self:end!important;float:none!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-workspace{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;column-gap:24px!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-selector{grid-column:1/4!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-previews{grid-column:4/-1!important;min-width:0!important}
+@media(min-width:1025px){
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel{grid-template-columns:repeat(9,minmax(0,1fr))!important;column-gap:24px!important;align-items:start!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-copy{grid-column:1/5!important;grid-row:1!important;min-width:0!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-panel .seven-media{grid-column:5/-1!important;grid-row:1!important;align-self:start!important;min-width:0!important;margin-top:0!important}
+}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module #panel-topography iframe{height:360px!important;max-width:100%!important}
+@media(min-width:641px) and (max-width:1024px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module #panel-topography .seven-media{grid-column:2!important;grid-row:1!important}}
+@media(max-width:640px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #seven-module .seven-workspace{display:block!important}}
+}
+
+@layer shared-second-screen{html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] figcaption a{display:block!important;width:fit-content!important;margin-left:auto!important;margin-right:0!important;text-align:right!important;justify-self:end!important}}
+
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-body :is(.reading-code,.canonical-formula){position:relative;margin:16px 0 24px!important;padding:8px 0 8px 32px!important;border:0!important;border-left:1px solid var(--gb-rule)!important;background:transparent!important;font:400 16px/24px var(--gb-font)!important;white-space:pre-wrap!important;overflow-wrap:anywhere!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-code--lines{counter-reset:document-line;padding-left:32px!important}
+.reading-code-line{display:block;position:relative;counter-increment:document-line;min-height:24px;white-space:pre-wrap;overflow-wrap:anywhere}
+.reading-code-line::before{content:counter(document-line,decimal-leading-zero);position:absolute;left:-28px;top:0;font-size:11px;line-height:24px;color:var(--gb-muted);opacity:.6;font-variant-numeric:tabular-nums}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-rule-title{margin:24px 0 4px!important;font-size:13px!important;text-transform:uppercase}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-rule-code{margin:0 0 24px 24px!important;padding-left:12px!important;border-left:1px solid var(--gb-rule);overflow-wrap:anywhere}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-rule-code code{display:block;font:400 13px/20px var(--gb-font)!important;color:var(--gb-muted)}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #project-network .gb-graph-poster{width:100%!important;aspect-ratio:2.4/1!important;overflow:hidden!important;max-height:none!important;height:auto!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #project-network .gb-graph-poster img{display:block!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center 64%!important}
+@media(max-width:640px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #project-network .gb-graph-poster{aspect-ratio:1.5/1!important}}
+}
+
+@layer shared-second-screen{
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation{margin:32px 0!important;padding:0!important;border:0!important;scroll-margin-top:88px}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation h3{margin:0 0 12px!important;color:var(--gb-muted)!important;font:400 13px/20px var(--gb-font)!important;text-transform:uppercase!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation__body{border-left:1px solid var(--gb-rule);padding-left:24px;max-width:62ch}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation__body p{margin:0 0 12px!important;font:400 16px/24px var(--gb-font)!important}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation__body p:last-child{margin-bottom:0!important}
+@media(max-width:640px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .reading-annotation__body{padding-left:16px}}
+}
+
+/* Legacy source links are replaced by the single image expansion control. */
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] a.gb-image-source-replaced[hidden] { display:none!important; }
+}
+
+@layer shared-second-screen {
+
+}
+
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] :is(.gb-image-expand,.gb-media-open,.image-link .expand){font-size:28px!important;line-height:36px!important;width:40px!important;height:40px!important;min-width:40px!important;color:var(--gb-blue)!important;text-align:center!important;text-decoration:none!important;border:0!important;background:transparent!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-image-expand{margin:2px 0 0 auto!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-media-open{margin-top:0!important;margin-bottom:0!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #panel-topography figcaption{margin-top:2px!important;}
+}
+
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep{max-width:1440px!important;margin:0 auto!important;padding:32px var(--gb-edge) 64px!important;font-family:var(--gb-font)!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-heading{font:400 32px/40px var(--gb-font)!important;margin:32px 0!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-corpus{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:16px 24px!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-corpus>.ay-project-lower__bar{grid-column:1/-1!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep :is(.godbot-deep-record-label,.godbot-deep-select){grid-column:1/4!important;margin:0!important;align-self:start!important;font:400 13px/20px var(--gb-font)!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-record{grid-column:4/-1!important;grid-row:2/5!important;font:400 16px/24px var(--gb-font)!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .ay-godbot-archive-reader__sequence{grid-column:4/-1!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep :is(.godbot-deep-materials,.godbot-deep-back){display:none!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep a:not(.gb-project-pages a){color:var(--gb-blue)!important;font:400 13px/20px var(--gb-font)!important;text-transform:uppercase!important;}
+@media(max-width:767px){
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-corpus>*{grid-column:1/-1!important;grid-row:auto!important;}
+}
+}
+
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-corpus{margin:24px 0!important;padding:0!important;min-height:0!important;border:0!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-record :is(h2,h3){font:400 20px/28px var(--gb-font)!important;margin:24px 0 8px!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] #godbot-deep .godbot-deep-source :is(p,li){font:400 16px/24px var(--gb-font)!important;}
+}
+
+@layer shared-second-screen {
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-image-overlay{display:block!important;position:relative!important;width:fit-content!important;max-width:100%!important;line-height:0!important;}
+html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-image-overlay>.gb-image-expand{position:absolute!important;right:4px!important;bottom:4px!important;margin:0!important;z-index:2!important;background:transparent!important;opacity:1;box-shadow:none!important;cursor:zoom-in!important;}
+}
+
+@layer shared-second-screen {@media(min-width:801px){html body[data-gb-contract][data-gb-contract][data-gb-contract][data-gb-contract] .gb-project-pages{grid-template-columns:repeat(5,minmax(0,1fr))!important;}}}

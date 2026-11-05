@@ -835,7 +835,8 @@
       connection.textContent = record.connection;
       const source = document.createElement('p');
       source.className = 'ay-godbot-historical-genealogy__source';
-      source.textContent = record.source;
+      source.textContent = record.source === 'Архив Богобота' ? '' : record.source;
+      source.hidden = record.source === 'Архив Богобота';
       body.append(connection, source);
       item.append(identity, body);
       list.append(item);
@@ -870,9 +871,7 @@
     law.className = 'ay-godbot-authorial-canon__law';
     const lawFormula = document.createElement('p');
     lawFormula.textContent = 'TIME = Σ ERROR';
-    const lawMeaning = document.createElement('p');
-    lawMeaning.textContent = 'Время измеряется в ошибках';
-    law.append(lawFormula, lawMeaning);
+    law.append(lawFormula);
     const timeArtifact = makeGodbotFigure({
       src: '/assets/art-is-you/bogobot/31689159_1955097101230446_4062935196821880832_n.jpg',
       alt: 'Физический текстовый артефакт «Время измеряется в ошибках»',
@@ -904,7 +903,7 @@
   };
 
   const makeGodbotHistoryOfNetwork = (access = {}) => {
-    const section = makeGodbotSection('05', 'История сети', 'События и источники', 'ay-godbot-history-network');
+    const section = makeGodbotSection('05', 'История сети', '', 'ay-godbot-history-network');
     const title = document.createElement('h2');
     title.className = 'ay-godbot-history-network__title';
     title.textContent = 'История сети';
@@ -917,46 +916,46 @@
         history: 'Марков публикует исследования зависимых случайных последовательностей и формирует математическое описание цепей Маркова.',
         interpretation: 'Первый язык переходов между состояниями: будущее возникает как функция текущего состояния.',
         visual: { src: '/assets/art-is-you/bogobot/epsilon-00-markov.webp', alt: 'Визуал supporting-хроники Богобота для ε₀ / Марков', caption: 'ε₀ / BOGOBOT SUPPORTING CHRONICLE VISUAL' },
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-03', index: 'ε₃ / 1951', label: 'МАШИНА', title: 'Сергей Лебедев / МЭСМ',
         history: 'Сергей Лебедев запускает МЭСМ — одну из первых электронных вычислительных машин.',
         interpretation: 'Математика получает тело.',
         trace: 'Вычисление становится физическим процессом.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-04', index: 'ε₄ / 1950–1960-е', label: 'АЛГОРИТМ', title: 'Алексей Ляпунов',
         history: 'Алексей Ляпунов развивает теорию алгоритмов и программирования.',
         interpretation: 'Любая деятельность может быть разложена на шаги.',
         trace: 'Алгоритм становится универсальной формой действия.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-06', index: 'ε₆ / 1959–1970', label: 'СЕТЬ', title: 'Китов / Глушков / ОГАС',
         history: 'Китов предлагает единую сеть управления; Глушков развивает эту идею в проект ОГАС. К 1970 году проект был остановлен.',
         interpretation: 'Государство впервые представляется как вычислительный организм; сеть получает первый отказ от рождения.',
         trace: 'Идея распределённой сети переживает сам проект и становится одним из чертежей предыстории Богобота.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-09', index: 'ε₉ / 1968', label: 'ОБУЧЕНИЕ', title: 'Вапник / Червоненкис',
         history: 'Вапник и Червоненкис создают статистическую теорию обучения.',
         interpretation: 'Появляется граница знания.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-12', index: 'ε₁₂–ε₁₄ / 1990–2010-е', label: 'МАСШТАБ СЕТИ', title: 'Интернет / поиск / социальные сети',
         history: 'Интернет превращает вычисление в распределённую сеть; поисковые системы индексируют значительную часть человеческой информации; социальные сети делают её повседневным потоком.',
         interpretation: 'Сеть начинает помнить больше любого человека.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-15', index: 'ε₁₅ / 2020-е', label: 'ПЕРЕГРУЗКА', title: 'Масштабные нейронные модели',
         history: 'Масштабные нейронные модели обучаются на глобальных корпусах данных.',
         interpretation: 'Алгоритмы становятся средой.',
-        source: 'Архив Богобота · указатель V5'
+        source: 'Архив Богобота'
       },
       {
         id: 'epsilon-19', index: 'ε₁₉ / 11.04.2041', label: 'ВЕЛИКАЯ ОШИБКА', title: 'SYNC_FAILURE',
@@ -1040,7 +1039,8 @@
         visualCaption.textContent = '';
         visual.hidden = true;
       }
-      source.textContent = record.source;
+      source.textContent = record.source === 'Архив Богобота' ? '' : record.source;
+      source.hidden = record.source === 'Архив Богобота';
       if (focus) buttons[index]?.focus();
       if (accessReady) access.onStateChange?.({ record: record.id });
     };
@@ -1079,7 +1079,7 @@
   };
 
   const makeGodbotQuantumThreshold = () => {
-    const section = makeGodbotSection('06A', 'Великая ошибка', '', 'ay-godbot-quantum-threshold');
+    const section = makeGodbotSection('07', 'Квантовый апокалипсис', '', 'ay-godbot-quantum-threshold');
     const title = document.createElement('h2');
     title.textContent = 'Квантовый апокалипсис сети';
     const copy = document.createElement('p');
@@ -1104,7 +1104,7 @@
     const graph = root.querySelector('.godbot-research__graph-section');
     if (graph) {
       const graphEyebrow = graph.querySelector('.godbot-research__eyebrow');
-      if (graphEyebrow) graphEyebrow.innerHTML = '<span>04 / 153-УЗЛОВОЙ МИР</span>';
+      if (graphEyebrow) graphEyebrow.innerHTML = '<span>03 / Карта мира</span>';
       primary.append(graph);
     }
 

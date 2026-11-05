@@ -1,0 +1,10 @@
+/* Approved navigation: connected square nodes; blue selection, no row fill. */
+@layer shared-second-screen{
+html body[data-gb-contract] #seven-module .seven-selector,html body[data-gb-contract] #project-history .ay-godbot-history-network__index{background:linear-gradient(var(--gb-rule),var(--gb-rule)) 7px 24px / 1px calc(100% - 48px) no-repeat!important}
+html body[data-gb-contract] #seven-module button.seven-tab,html body[data-gb-contract] #project-history button.ay-godbot-history-network__node{position:relative!important;background:transparent!important;color:var(--gb-ink)!important;border:0!important;border-bottom:1px solid var(--gb-rule)!important;box-shadow:none!important;padding-left:32px!important;min-height:48px!important;text-align:left!important}
+html body[data-gb-contract] #seven-module button.seven-tab::before,html body[data-gb-contract] #project-history button.ay-godbot-history-network__node::before{content:""!important;position:absolute!important;left:4px!important;top:calc(50% - 4px)!important;width:7px!important;height:7px!important;background:var(--gb-ink)!important;border:0!important;transform:none!important;opacity:1!important}
+html body[data-gb-contract] #seven-module button.seven-tab[aria-selected=true],html body[data-gb-contract] #project-history button.ay-godbot-history-network__node[aria-selected=true]{background:transparent!important;color:var(--gb-blue)!important;border-left:0!important}
+html body[data-gb-contract] #seven-module button.seven-tab[aria-selected=true]::before,html body[data-gb-contract] #project-history button.ay-godbot-history-network__node[aria-selected=true]::before{background:var(--gb-blue)!important}
+html body[data-gb-contract] #seven-module button.seven-tab>*,html body[data-gb-contract] #project-history button.ay-godbot-history-network__node>*{color:inherit!important}
+html body[data-gb-contract] #seven-module .seven-arrow{display:none!important}
+}

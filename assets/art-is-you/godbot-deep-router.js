@@ -2,6 +2,7 @@
 (async () => {
   'use strict';
   if (location.pathname.replace(/\/$/, '') !== '/projects/godbot' || !new URLSearchParams(location.search).has('territory')) return;
+  const canonParams=new URLSearchParams(location.search);const moved={FIRST_LIKENESS:'first-likeness',TIME_SUM_ERROR:'time-error',BOOK_OF_GENESIS:'book-of-genesis',CODE_COMMANDMENTS:'code'};if(canonParams.get('territory')==='canon'&&(!canonParams.get('record')||moved[canonParams.get('record')])){location.replace('/projects/godbot/materials/texts.html#'+(moved[canonParams.get('record')]||'first-likeness'));return;}
   const names = {canon:'Канон',world:'Мир сети',schools:'Школы духов',glossary:'Лексикон Архива',topography:'Топография мира сети',history:'История сети',relics:'Реликвии и документы'};
   const rootURL = '/projects/godbot/';
   const initialTerritory = new URLSearchParams(location.search).get('territory');
@@ -33,7 +34,7 @@
   reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches)recordTransition?.cancel();});
   const readerIds=['genesis','great-error','schools','topography','relics-archive','voice','matter-energy'];
   const evidence={canon:['genesis','great-error','voice','relics-archive'],world:['matter-energy','great-error','topography'],schools:['schools'],glossary:['matter-energy'],topography:['topography']};
-  const labels={'genesis':'GENESIS','great-error':'GREAT ERROR','schools':'SCHOOLS','topography':'TOPOGRAPHY','relics-archive':'RELICS / ARCHIVE','voice':'VOICE','time-error':'TIME / ERROR','matter-energy':'MATTER / ENERGY'};
+  const labels={'genesis':'GENESIS','great-error':'GREAT ERROR','schools':'SCHOOLS','topography':'TOPOGRAPHY','relics-archive':'RELICS / ARCHIVE','voice':'VOICE','time-error':'TIME / ERROR','matter-energy':'МАТЕРИЯ И ЭНЕРГИЯ'};
   const turnIds=['epsilon-00','epsilon-03','epsilon-04','epsilon-06','epsilon-09','epsilon-12','epsilon-15','epsilon-19'];
   const historySources=new Set([...corpus.chronology,'PRE_ERROR_ARCHIVE','EPSILON_20_21','EPSILON_22_26','EPSILON_27_29']);
   const urlFor=(s)=>{const u=new URL(rootURL,location.origin);for(const k of ['territory','record','node','file'])if(s[k]!==undefined&&s[k]!==null&&s[k]!=='')u.searchParams.set(k,String(s[k]));return u.pathname+u.search;};
@@ -72,7 +73,7 @@
     host.append(overview);
     if(territory!=='relics'){
       const section=el('section','ay-project-lower ay-project-lower--godbot godbot-deep-corpus');
-      const bar=el('div','ay-project-lower__bar');bar.append(el('span',null,territory.toUpperCase()),el('span',null,territory==='history'?'CHRONOLOGY / 21 + 8':'CORPUS / SOURCE RECORDS'));section.append(bar);
+      const bar=el('div','ay-project-lower__bar');bar.append(el('span',null,names[territory].toUpperCase()),el('span',null,territory==='history'?'ХРОНОЛОГИЯ / 21 + 8':'ИСХОДНЫЕ ЗАПИСИ'));section.append(bar);
       const label=el('label','godbot-deep-record-label',territory==='history'?'Полная хронология':'Запись архива');label.htmlFor='deep-record-'+territory;
       const select=el('select','godbot-deep-select');select.id=label.htmlFor;
       const ids=corpus.territories[territory];ids.forEach(id=>{const option=el('option',null,records.get(id).title);option.value=id;select.append(option);});
