@@ -28,3 +28,11 @@ html body[data-project-top="godbot"] .ay-project-top .ay-project-top__register--
 html body[data-project-top="godbot"] .ay-project-top .ay-project-top__registers{gap:24px!important}
 html body[data-project-top="godbot"] .ay-project-top .ay-project-top__register{padding-top:16px!important;padding-bottom:0!important}
 }
+/* The shared grid adapter rebuilds these fields after responsive changes. */
+@layer shared-second-screen {
+ body[data-project-top="godbot"] .ay-project-top .ay-project-top__method [data-text-grid-columns]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important}
+ body[data-project-top="godbot"] .ay-project-top .ay-project-top__research [data-text-grid-field] p{max-width:62ch!important;margin-bottom:16px!important}
+ body[data-project-top="godbot"] .ay-project-top [data-text-grid-column] :is(h2,dt){margin-bottom:12px!important}
+ body[data-project-top="godbot"] .ay-project-top [data-text-grid-column] p+p{margin-top:16px!important}
+ @media(max-width:600px){body[data-project-top="godbot"] .ay-project-top .ay-project-top__method [data-text-grid-columns]{grid-template-columns:1fr!important}}
+}
