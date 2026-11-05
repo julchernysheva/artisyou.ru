@@ -1,5 +1,5 @@
 /* Godbot editorial hierarchy. No copy, media assets or interaction changes. */
-@layer godbot-reading {
+@layer shared-second-screen {
   body[data-project-top="godbot"] .ay-project-top :is(h1,h2,h3,h4,p,li,dt,dd,figcaption,a,button,span,label,select,pre){font-family:'Source Sans 3',sans-serif!important;letter-spacing:0!important}
   body[data-project-top="godbot"] .ay-project-top :is(p,li,dd,pre){font-size:16px!important;line-height:24px!important;font-weight:400!important}
   body[data-project-top="godbot"] .ay-project-top :is(h2,h3,h4){font-size:24px!important;line-height:28px!important;font-weight:400!important}
