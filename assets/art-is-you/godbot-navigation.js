@@ -13,7 +13,15 @@
   ];
   let nav, queued = false, restoredHash = false;
   let scrollQueued = false;
+  function normalizeActions(){
+    document.querySelectorAll('.ay-project-top a').forEach(a=>{
+      if(a.children.length)return;
+      const text=a.textContent.trim();
+      if(/^(ОТКРЫТЬ|ПРОЙТИ|ВЕРНУТЬСЯ|ВСЕ МАТЕРИАЛЫ)/.test(text))a.textContent=text[0]+text.slice(1).toLowerCase();
+    });
+  }
   function updateCurrent() {
+    normalizeActions();
     if (!nav) return;
     const targets = sections.map(([,id]) => document.getElementById(id)).filter(Boolean);
     const threshold = Math.min(180, innerHeight * .25);
