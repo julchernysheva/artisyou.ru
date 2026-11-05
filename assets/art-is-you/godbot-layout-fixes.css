@@ -84,3 +84,6 @@ html body .ay-project-top :is(#most-entry [data-most-open],[data-gb-graph-start]
 
 html body .ay-project-top #seven-module .seven-section-label{margin:0 0 20px!important;padding:0!important}
 @layer ay-typography-v1{html body .ay-project-top #seven-module .seven-section-label{font-family:'Source Sans 3',sans-serif!important;font-size:12px!important;line-height:16px!important;--ay-type-size:12px;--ay-type-leading:16px}}
+
+html body .ay-project-top #seven-module .seven-reading>p:only-child{grid-column:4/-1;margin:0!important}
+@media(max-width:600px){html body .ay-project-top #seven-module .seven-reading>p:only-child{grid-column:1/-1}}
