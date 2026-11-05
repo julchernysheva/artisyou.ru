@@ -87,3 +87,9 @@ html body .ay-project-top #seven-module .seven-section-label{margin:0 0 20px!imp
 
 html body .ay-project-top #seven-module .seven-reading>p:only-child{grid-column:4/-1;margin:0!important}
 @media(max-width:600px){html body .ay-project-top #seven-module .seven-reading>p:only-child{grid-column:1/-1}}
+
+/* Keep section boundaries; avoid stacked dividers within the same block. */
+html body .ay-project-top #most-entry{border-bottom:0!important}
+html body .ay-project-top #seven-module :is(.seven-selector,.seven-entries,.seven-entries li,.seven-copy h2){border-top:0!important;border-bottom:0!important}
+html body .ay-project-top .gb-engineering :is(.ay-godbot-history-network__layers dt,.ay-godbot-quantum-threshold__sequence){border-top:0!important}
+html body .ay-project-top .godbot-research__graph{border:0!important}

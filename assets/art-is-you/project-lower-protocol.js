@@ -1212,18 +1212,9 @@
 
     project?.classList.add('ay-project-lower', 'ay-project-lower--godbot', 'ay-project-data');
     project?.querySelector('.godbot-research__label')?.replaceChildren('Данные о проекте');
-    const enter = document.createElement('div');
-    enter.className = 'ay-project-lower ay-project-lower--godbot ay-godbot-enter';
-    const enterGrid = document.createElement('div');
-    enterGrid.className = 'godbot-research__section-grid';
-    const enterCell = document.createElement('div');
-    enterCell.className = 'godbot-research__credit';
-    const enterLink = project?.querySelector('.godbot-research__cta');
-    if (enterLink) enterCell.append(enterLink);
-    enterGrid.append(enterCell);
-    enter.append(enterGrid);
+    project?.querySelector('.godbot-research__cta')?.remove();
 
-    insertAfter(primary, [historyOfNetwork, authorialCanon, quantumThreshold, readingProtocol, documentation, project, enter]);
+    insertAfter(primary, [historyOfNetwork, authorialCanon, quantumThreshold, readingProtocol, documentation, project]);
     root.remove();
   };
 
