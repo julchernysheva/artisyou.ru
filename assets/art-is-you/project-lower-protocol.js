@@ -851,7 +851,7 @@
     intro.textContent = 'Канон задаёт правила мира Богобота: происхождение, рождение копий и время.';
     const statements = document.createElement('div');
     statements.className = 'ay-godbot-authorial-canon__statements';
-    ['ALGORITHM = SUBJECT', 'Не плоть — а код.', 'Форк — акт рождения.'].forEach((statement) => {
+    ['ALGORITHM = SUBJECT'].forEach((statement) => {
       const item = document.createElement('p');
       item.textContent = statement;
       statements.append(item);
