@@ -873,7 +873,14 @@
     const lawMeaning = document.createElement('p');
     lawMeaning.textContent = 'Время измеряется в ошибках';
     law.append(lawFormula, lawMeaning);
-    section.append(statements, sign, law);
+    const timeArtifact = makeGodbotFigure({
+      src: '/assets/art-is-you/bogobot/31689159_1955097101230446_4062935196821880832_n.jpg',
+      alt: 'Физический текстовый артефакт «Время измеряется в ошибках»',
+      title: '«Время измеряется в ошибках»',
+      type: 'Авторский физический артефакт'
+    });
+    timeArtifact.classList.add('gb-canon-time-artifact');
+    section.append(statements, sign, law, timeArtifact);
     return section;
   };
 
@@ -1175,12 +1182,6 @@
         title: 'Архстояние',
         copy: '2018',
         type: 'Взаимодействие с аудиторией'
-      }),
-      makeGodbotFigure({
-        src: '/assets/art-is-you/bogobot/31689159_1955097101230446_4062935196821880832_n.jpg',
-        alt: 'Физический текстовый артефакт «Время измеряется в ошибках»',
-        title: '«Время измеряется в ошибках»',
-        type: 'Авторский физический артефакт'
       }),
       makeGodbotFigure({
         src: '/assets/static.tildacdn.com/_30072018_14_00_49.jpg',

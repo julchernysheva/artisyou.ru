@@ -67,3 +67,6 @@ html body[data-project-top="godbot"] .ay-approved-hero--godbot>.gb-opening-logo 
 }
 html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon:not(:has(.ay-godbot-authorial-canon__sign)){grid-template-columns:1fr!important}
 html body[data-project-top="godbot"] .ay-project-top #project-canon :is(.ay-godbot-authorial-canon__statements,.ay-godbot-authorial-canon__law){border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;padding:0!important}
+
+html body[data-project-top="godbot"] .ay-project-top .gb-canon-pair>#project-canon>.gb-canon-time-artifact{grid-column:1/-1!important;grid-row:4!important;margin:0!important;padding:0!important;align-self:start!important}
+html body[data-project-top="godbot"] .ay-project-top #project-canon .gb-canon-time-artifact img{width:auto!important;max-width:100%!important;height:180px!important;max-height:180px!important;object-fit:contain!important;object-position:left top!important}
