@@ -25,3 +25,6 @@ html body .ay-project-top img.gb-image-zoomable{cursor:zoom-in}
 @layer shared-second-screen{
 html body .ay-project-top :is(figure,img,.ay-project-top__context-media,.ay-project-top__hero-media,.ay-godbot-authorial-canon__sign,.ay-godbot-history-network__visual,.ay-godbot-archive-reader__primary-media,.seven-media,.v2-carousel__media){border:0!important;outline:0!important;box-shadow:none!important}
 }
+@layer shared-second-screen{
+html body .ay-project-top :is(figure,img,.ay-project-top__context-media,.ay-project-top__hero-media,.ay-godbot-authorial-canon__sign,.ay-godbot-history-network__visual,.ay-godbot-archive-reader__primary-media,.seven-media,.v2-carousel__media,.gb-graph-poster){background:transparent!important;background-image:none!important}
+}
