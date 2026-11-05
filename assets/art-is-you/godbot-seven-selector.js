@@ -27,8 +27,8 @@ territories.forEach((t,i)=>{
  const list=el('ul','seven-entries');
  t.entries.forEach((entry,entryIndex)=>{
   const li=el('li');
-  if(t.id==='canon'&&entryIndex===0)li.append(el('span','seven-micro seven-entry-group-label','ПРАВИЛА МИРА'));
-  if(t.id==='canon'&&entryIndex===2)li.append(el('span','seven-micro seven-entry-group-label','ТЕКСТЫ КАНОНА'));
+  if(t.id==='canon'&&entryIndex===0)li.append(el('span','seven-micro seven-entry-group-label','Правила мира'));
+  if(t.id==='canon'&&entryIndex===2)li.append(el('span','seven-micro seven-entry-group-label','Тексты канона'));
   if(Array.isArray(entry)){
    li.append(el('span','seven-entry-title',entry[0]));
    if(entry[1])li.append(el('p',null,entry[1]));
@@ -39,7 +39,8 @@ territories.forEach((t,i)=>{
   }
   list.append(li);
  });
- copy.append(el('p','seven-micro seven-list-label','В РАЗДЕЛЕ'),list);
+ if(t.id!=='canon')copy.append(el('p','seven-micro seven-list-label','В РАЗДЕЛЕ'));
+ copy.append(list);
  if(t.related)copy.append(el('p','seven-related',t.related));
  const cta=el('a','seven-cta',t.cta);cta.href=t.id==='topography'?'/bogobot/topography-full.html':'/projects/godbot/?territory='+t.id;copy.append(cta);panel.append(copy);
  if(t.id==='topography'){const figure=el('figure','seven-media');const frame=el('iframe');frame.dataset.src='/bogobot/topography-full.html';frame.title='BOGOBOT — интерактивная топография';frame.loading='lazy';frame.setAttribute('allowfullscreen','');const caption=el('figcaption');const link=el('a',null,'Открыть топографию ↗');link.href='/bogobot/topography-full.html';link.target='_blank';link.rel='noopener';caption.append(link);figure.append(frame,caption);panel.append(figure);}
