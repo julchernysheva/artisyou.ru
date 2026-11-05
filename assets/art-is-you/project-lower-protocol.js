@@ -845,7 +845,7 @@
   };
 
   const makeGodbotAuthorialCanon = () => {
-    const section = makeGodbotSection('06', 'Авторский канон', 'Происхождение / время / ошибка / архив', 'ay-godbot-authorial-canon');
+    const section = makeGodbotSection('06', 'Авторский канон', '', 'ay-godbot-authorial-canon');
     const intro = document.createElement('p');
     intro.className = 'ay-godbot-authorial-canon__intro';
     intro.textContent = 'Канон задаёт правила мира Богобота: происхождение, рождение копий и время.';
