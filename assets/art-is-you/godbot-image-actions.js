@@ -20,6 +20,11 @@
   },true);
   function sync(){
     queued=false;
+    if(!new URLSearchParams(location.search).has('territory')){
+      const hero=document.querySelector('.ay-approved-hero--godbot');
+      const logo=document.querySelector('#project-canon .ay-godbot-authorial-canon__sign');
+      if(hero&&logo){logo.classList.add('gb-opening-logo');hero.append(logo);}
+    }
     document.querySelectorAll('.ay-project-top img').forEach(img=>{
       if(img.closest('nav,button,.is-live,.is-loading'))return;
       const src=img.currentSrc||img.getAttribute('src')||img.dataset.src;
