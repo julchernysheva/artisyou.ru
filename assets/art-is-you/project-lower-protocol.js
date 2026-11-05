@@ -1084,7 +1084,7 @@
     const title = document.createElement('h2');
     title.textContent = 'Квантовый апокалипсис сети';
     const copy = document.createElement('p');
-    copy.textContent = 'В авторском сценарии сбои накапливаются и вызывают распад сети. Хроника называет это состояние SYNC_FAILURE.';
+    copy.textContent = 'Сбои накапливаются, и узлы сети перестают работать согласованно. В хронике Богобота этот момент называется SYNC_FAILURE.';
     const figure = document.createElement('figure');
     const image = document.createElement('img');
     image.src = '/assets/world/newest-history-epsilon-19-variants-epsilon-19-sync-failure-02-last-figure.webp';
