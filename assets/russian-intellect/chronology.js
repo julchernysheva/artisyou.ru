@@ -11,7 +11,7 @@
   const master=JSON.parse(win.document.getElementById('p0-master').textContent);
   const notes=new Map(master.people.map(p=>[p.person_id,p.date_note]));
   const people=rt.historical.people.map(p=>{const note=notes.get(p.person_id)||'';const dates=note.match(/\b(\d{4})(?:[–-](\d{4}))?/);return {...p,listBirth:p.birth_year||dates?.[1],listDeath:p.death_year||dates?.[2]}}).sort((a,b)=>(Number(a.listBirth)||Infinity)-(Number(b.listBirth)||Infinity)||a.canonical_name.localeCompare(b.canonical_name,'ru'));
-  const schoolLinks={"B001":"luzin.html","B036":"lavrentyev.html","P004":"lyapunov.html","P009":"kantorovich.html","P008":"glushkov.html","P003":"kolmogorov.html","VH_PERSON_VLADIMIROV":"vladimirov-map.html"};
+  const schoolLinks={B031:"pospelov.html","B001":"luzin.html","B036":"lavrentyev.html","P004":"lyapunov.html","P009":"kantorovich.html","P008":"glushkov.html","P003":"kolmogorov.html","VH_PERSON_VLADIMIROV":"vladimirov-map.html"};
   people.filter(person=>person.person_id!=='B058').forEach(person=>{
    const item=document.createElement('li'),school=schoolLinks[person.person_id],button=document.createElement(school?'a':'button');if(school){button.href='/research/scientific-schools/'+school;button.className='ri-people__school-link'}else button.type='button';button.dataset.personId=person.person_id;
    const name=document.createElement('span');name.textContent=person.canonical_name;

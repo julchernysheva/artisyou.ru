@@ -17,7 +17,7 @@
   grid-row: 2 / 7;
   z-index: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(239,239,234,.85), rgba(239,239,234,.85)), url("archive/8_540.gif");
+  background-image: linear-gradient(rgba(239,239,234,.85), rgba(239,239,234,.85));
   background-position: center, right 6% center;
   background-size: auto, cover;
   background-repeat: no-repeat;

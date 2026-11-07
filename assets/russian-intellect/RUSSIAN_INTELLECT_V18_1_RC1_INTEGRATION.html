@@ -13104,7 +13104,7 @@ function bindCompanyDirectHover(rt,group,id){
  group.addEventListener('mouseleave',()=>scheduleCompanyDirectHoverClear(rt,id));
 }
 
-const PERSON_AVATARS={"P003":"kolmogorov_avatar_dots.png","P001":"markov_avatar_dots.png","P013":"chervonenkis_avatar_dots.png","P012":"nesterov_avatar_dots.png","B031":"pospelov_avatar_dots.png"};
+const PERSON_AVATARS={};
 function addHistorical(rt){
  const contextStyle=document.createElement('style');
  contextStyle.textContent=`.vlad-context-line,.vlad-context-label{display:none;pointer-events:none}.stage:has(.hist-node[data-id="VH_PERSON_VLADIMIROV"].selected) .vlad-context-line,.stage:has(.hist-node[data-id="B033"].selected) .vlad-context-line,.stage:has(.hist-node[data-id="VH_PERSON_VLADIMIROV"].selected) .vlad-context-label,.stage:has(.hist-node[data-id="B033"].selected) .vlad-context-label{display:block}.vlad-context-line{fill:none;stroke:#695e58;stroke-width:1;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}.vlad-context-label{font:9px sans-serif;fill:#695e58}`;
