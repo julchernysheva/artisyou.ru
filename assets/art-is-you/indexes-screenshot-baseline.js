@@ -50,6 +50,12 @@
       description: 'Когда для состояния не находится слов, изображение становится другим способом его зафиксировать.',
       logic: 'Состояние → граница языка → изображение.',
       route: '/projects/nowords/', visual: '/assets/static.tildacdn.com/IMAGE_2022-03-22_133.jpg', alt: 'Без слов, изображение 01 из серии'
+    },
+    {
+      id: '07', title: 'Post Human / Apocalypse', type: 'ВИДЕОДИЗАЙН', year: '2018',
+      description: 'Видеодизайн для модного показа LocoOne.',
+      logic: 'Видео → графика → пространство показа.',
+      route: '/projects/post_human/', visual: '/projects/post_human/experience/assets/room.jpg', alt: 'Post Human / Apocalypse — коридор с берёзами и фигурами'
     }
   ];
 
@@ -166,3 +172,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply, { once: true });
   else apply();
 })();
+

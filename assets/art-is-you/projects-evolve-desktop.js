@@ -29,7 +29,8 @@
         { route: '/projects/artact/', format: 'Art corpus', role: '', width: 0, height: 0 },
         { route: '/projects/talking-city/', title: 'Говорящий город 2.0', format: 'Интерактивный арт-объект', role: 'RENDER / Оракул', width: 1680, height: 945 },
         { route: '/projects/programmer/', format: 'Перформанс', date: '2018', role: 'PERFORMANCE / Документация', width: 960, height: 640 },
-        { route: '/projects/nowords/', title: 'Без слов', format: 'AI-арт · Серия из трёх изображений', date: '2022', role: 'ARTWORK / Изображение 01 из 03', width: 1024, height: 1024 }
+        { route: '/projects/nowords/', title: 'Без слов', format: 'AI-арт · Серия из трёх изображений', date: '2022', role: 'ARTWORK / Изображение 01 из 03', width: 1024, height: 1024 },
+        { route: '/projects/post_human/', title: 'Post Human / Apocalypse', format: 'Видеодизайн · LocoOne', date: '2018', role: 'Post Human / Apocalypse', width: 1440, height: 764 }
       ];
       const projects = identities.map((identity, i) => ({ ...records.find(p => p.route === identity.route), ...identity, number: String(i + 1).padStart(2, '0') }));
       const el = (tag, cls, text) => { const e = document.createElement(tag); e.className = cls; if (text) e.textContent = text; return e; };
@@ -127,3 +128,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, { once: true });
   else mount();
 })();
+

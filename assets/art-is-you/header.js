@@ -41,6 +41,7 @@
     ['/projects/programmer/', 'Медитирующий программист'],
     ['/projects/nowords/', 'Без слов']
   ];
+  const projectMenuItems = [...currentProjects, ['/projects/post_human/', 'Post Human / Apocalypse']];
   // Deep links remain available without receiving top-level Projects weight.
   const supportingProjectRuntimePaths = [
     '/projects/talking-city/',
@@ -107,7 +108,7 @@
               </div>
               <ul class="ay-desktop-header__submenu ay-menu-panel ay-menu-panel--projects">
                 <li>${link('/projects/', 'Все проекты')}</li>
-                ${currentProjects.map(([href, title]) => `<li>${link(href, title)}</li>`).join('')}
+                ${projectMenuItems.map(([href, title]) => `<li>${link(href, title)}</li>`).join('')}
               </ul>
             </li>
             <li class="ay-desktop-header__item ay-menu-group${publicationsCurrent ? ' is-current' : ''}">
@@ -308,3 +309,4 @@
 
   if (!customElements.get('art-is-you-header')) customElements.define('art-is-you-header', ArtIsYouHeader);
 })();
+

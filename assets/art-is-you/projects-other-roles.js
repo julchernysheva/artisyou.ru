@@ -6,11 +6,11 @@
     if (!block || block.dataset.roles === 'ready') return;
     const roles = {
       '/research/russian-intellect/': 'Research',
-      '/projects/post_human/': 'Project',
       '/projects/archive/': 'Archive'
     };
+    block.querySelector('a[href="/projects/post_human/"]')?.remove();
     const links = [...block.querySelectorAll('a')];
-    if (links.length !== 3 || links.some(a => !roles[a.getAttribute('href')])) return;
+    if (links.length !== 2 || links.some(a => !roles[a.getAttribute('href')])) return;
     block.dataset.roles = 'ready';
     links.forEach(link => {
       const name = document.createElement('span');
@@ -25,3 +25,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, {once:true});
   else mount();
 })();
+

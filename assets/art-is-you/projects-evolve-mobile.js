@@ -7,7 +7,7 @@
     const media = matchMedia('(max-width: 768px)');
     let originalChildren, list, projects;
     const saved = history.state?.projectsIndexMobile;
-    let selected = Number.isInteger(saved) && saved >= -1 && saved < 6 ? saved : 0;
+    let selected = Number.isInteger(saved) && saved >= -1 && saved < 7 ? saved : 0;
     const el = (tag, cls, text) => {
       const node = document.createElement(tag); node.className = cls;
       if (text) node.textContent = text;
@@ -33,7 +33,8 @@
         {route:'/projects/artact/',title:'АртАкт',meta:'Art corpus',role:'',width:0,height:0},
         {route:'/projects/talking-city/',title:'Говорящий город 2.0',meta:'Интерактивный арт-объект',role:'RENDER / Оракул',width:1680,height:945},
         {route:'/projects/programmer/',title:'Медитирующий программист',meta:'Перформанс · 2018',role:'PERFORMANCE / Документация',width:960,height:640},
-        {route:'/projects/nowords/',title:'Без слов',meta:'AI-art · Серия из трёх изображений · 2022',role:'ARTWORK / Изображение 01 из 03',width:1024,height:1024}
+        {route:'/projects/nowords/',title:'Без слов',meta:'AI-art · Серия из трёх изображений · 2022',role:'ARTWORK / Изображение 01 из 03',width:1024,height:1024},
+        {route:'/projects/post_human/',title:'Post Human / Apocalypse',meta:'Видеодизайн · LocoOne · 2018',role:'Post Human / Apocalypse',width:1440,height:764}
       ];
       projects = identities.map(identity => ({...records.find(p => p.route === identity.route), ...identity}));
       list = el('div', 'projects-mobile__list');
@@ -104,3 +105,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, {once:true});
   else mount();
 })();
+
