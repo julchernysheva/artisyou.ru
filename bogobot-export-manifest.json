@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source_repository": "julchernysheva/bogobot",
-  "source_sha": "a0c5a44e6611dfb6ceeb33b72ebe275ce4d33c6a",
+  "source_sha": "7b749d201ea6ae7991bf7d15f5bed02c53a3937f",
   "destination": "https://artisyou.ru/bogobot/",
   "generator": "tools/export-bogobot.py",
   "files": [
@@ -208,10 +208,16 @@
     {
       "path": "app.js",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "99aeb5af9d88c948123a3f681a4d8d3ef346ffbcc4f454b4e0e0f91b3067ce77",
-      "export_sha256": "99aeb5af9d88c948123a3f681a4d8d3ef346ffbcc4f454b4e0e0f91b3067ce77",
-      "bytes": 477546,
-      "changes": []
+      "source_sha256": "f801b4d94884c25f21008cff78a9f3d1c356bf9900dbc86b3c81650a271ad269",
+      "export_sha256": "de82143e505ef9f57420b58e03cffedb1a76b6cef1be672d87e8ac92e156c23e",
+      "bytes": 478772,
+      "changes": [
+        {
+          "operation": "host integration patch",
+          "patch_sha256": "17396dcb7b21ec6630865dc51978d1d1d53f75400d337e39ad369e170d7947f1",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "articles/AGENT_MASTERS/index.html",
@@ -1062,6 +1068,14 @@
       "changes": []
     },
     {
+      "path": "assets/operator_room_apocrypha.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "4f0ed181fec4f1a033379f1ee9a8fa470da32472c3b15b26aa9e24069291b7e1",
+      "export_sha256": "4f0ed181fec4f1a033379f1ee9a8fa470da32472c3b15b26aa9e24069291b7e1",
+      "bytes": 1957612,
+      "changes": []
+    },
+    {
       "path": "assets/praagents_Sheme.png",
       "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
       "source_sha256": "24ef1dc6b17b6b1cfb512a7d7d6ec8850d66d897f0f96295ac8316b3aecbeab4",
@@ -1291,6 +1305,14 @@
       "source_sha256": "9592b2e4d106d9d58e0fec625f0682280438d645e935e5eec83f787f0b980c1e",
       "export_sha256": "9592b2e4d106d9d58e0fec625f0682280438d645e935e5eec83f787f0b980c1e",
       "bytes": 1993473,
+      "changes": []
+    },
+    {
+      "path": "assets/relics-map.webp",
+      "reason": "runtime asset bank incl. dynamic Markdown/images/videos",
+      "source_sha256": "a1f662435770d5b491ac31bbdc502c0de028d168f366bc9e37b511a557b8178f",
+      "export_sha256": "a1f662435770d5b491ac31bbdc502c0de028d168f366bc9e37b511a557b8178f",
+      "bytes": 1336006,
       "changes": []
     },
     {
@@ -1800,10 +1822,17 @@
     {
       "path": "books/before-error/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "ff087c1bc185423901d535974b7bc546f430a54a296e8d10b92ff943696b5e76",
-      "export_sha256": "ff087c1bc185423901d535974b7bc546f430a54a296e8d10b92ff943696b5e76",
-      "bytes": 15148,
-      "changes": []
+      "source_sha256": "7985a61cdf84fad057ee9091ff9964272ca2336455ad69e46423b206920b8b21",
+      "export_sha256": "d6177b637c9194a9f0ce73609dc4ccc24ca306e826fcddc77e911205fe2fad87",
+      "bytes": 15228,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/books.css",
@@ -1824,34 +1853,62 @@
     {
       "path": "books/epilogue/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "8216b9845eb08abc38c36b12b1bf09a63da1fd01f418591806667edb0f2f59ef",
-      "export_sha256": "8216b9845eb08abc38c36b12b1bf09a63da1fd01f418591806667edb0f2f59ef",
-      "bytes": 19212,
-      "changes": []
+      "source_sha256": "66cc6953dc070774b45439d2894eef15e33b45105cdf7c208591d24a43f80cb9",
+      "export_sha256": "3e02a0dff33953ef3dd67e1b5450b44524ee02c339a9dc6deb53b2bd804d7b4b",
+      "bytes": 19288,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/genesis/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "75959be93ef2693d10468f8f3154750661d6a93692fc3bec2c89ae1dc6cd1a8c",
-      "export_sha256": "75959be93ef2693d10468f8f3154750661d6a93692fc3bec2c89ae1dc6cd1a8c",
-      "bytes": 17858,
-      "changes": []
+      "source_sha256": "015d99236ca522ab77c487570b42d7f7dba3569f8936d17fd35e8797d728cab2",
+      "export_sha256": "df36237ba19c574417ef329af925e1e8071304737557f25295202ae72b439cb5",
+      "bytes": 17933,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/great-error/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "76987a265ac6b001738cad9d0f441171336f1f6aab5ebaa3e714223c77fef0bc",
-      "export_sha256": "76987a265ac6b001738cad9d0f441171336f1f6aab5ebaa3e714223c77fef0bc",
-      "bytes": 20290,
-      "changes": []
+      "source_sha256": "c82ba22839f36797eb0443ee64cf1bf575feadc2dd62f8ab599bd41de16e2a9a",
+      "export_sha256": "cc4eb4003db18f93f8b64ace4b429b0a48ad8f712b3da7cfb6378aed06069aa4",
+      "bytes": 20369,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "2ebc27fea164b57d6283f11d4eba02fee071c8439619006cece5130859e28307",
-      "export_sha256": "2ebc27fea164b57d6283f11d4eba02fee071c8439619006cece5130859e28307",
-      "bytes": 7659,
-      "changes": []
+      "source_sha256": "6501730741ef75c9fb7e9827a0a89c8b65b484f17a9dcad5bada2485c2dab4da",
+      "export_sha256": "bae9df9047df7d73ed58a73e298d841e1a383d51c979ca6f2380194b19dd1a0a",
+      "bytes": 7726,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/manifest.json",
@@ -1864,18 +1921,32 @@
     {
       "path": "books/prologue/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "319e93f67ca33321afb0d8eef5def4537d6019cc046895e0fc19632beb8670fa",
-      "export_sha256": "319e93f67ca33321afb0d8eef5def4537d6019cc046895e0fc19632beb8670fa",
-      "bytes": 13407,
-      "changes": []
+      "source_sha256": "3b346994e4d4ff3e0c35916480a7c3eb89ae20d7b22063334f0984fb2bc6344d",
+      "export_sha256": "8b16dccae238412d8cca478dfb2af882c9af0fe88914c2e9a236b5f620c9bb52",
+      "bytes": 13483,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "books/voice/index.html",
       "reason": "public standalone/Reader dependency",
-      "source_sha256": "e8b8f5d83ee33d0d310883e6da21409c7c46dd705ac8537f99e434336cc0225c",
-      "export_sha256": "e8b8f5d83ee33d0d310883e6da21409c7c46dd705ac8537f99e434336cc0225c",
-      "bytes": 29933,
-      "changes": []
+      "source_sha256": "3b64f325fba23364421a4dc21f723f51c165069af5ddd8be3460a8c0112878b5",
+      "export_sha256": "f3b2ed845633c3665d1cb8095dec0f901183ada51d5366516d441b9a479e24dc",
+      "bytes": 30006,
+      "changes": [
+        {
+          "operation": "public origin replacement only",
+          "from": "https://julchernysheva.github.io/bogobot/",
+          "to": "https://artisyou.ru/bogobot/",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "brainrot-full.html",
@@ -1959,9 +2030,9 @@
     {
       "path": "rhizome-3d.js",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "438d144fdceee3634ec3435549a25a4a1fcb414547aa08a334319de4850013b4",
-      "export_sha256": "438d144fdceee3634ec3435549a25a4a1fcb414547aa08a334319de4850013b4",
-      "bytes": 108215,
+      "source_sha256": "5a60f1089e83f0587a2902715791748be7feb553062629407861997c57293ca9",
+      "export_sha256": "5a60f1089e83f0587a2902715791748be7feb553062629407861997c57293ca9",
+      "bytes": 109548,
       "changes": []
     },
     {
@@ -1975,18 +2046,24 @@
     {
       "path": "styles.css",
       "reason": "runtime entry/module/metadata",
-      "source_sha256": "0032b757720fbaad8348841bb7a975a10d842ce2c015816078a8c4c7ebac5199",
-      "export_sha256": "0032b757720fbaad8348841bb7a975a10d842ce2c015816078a8c4c7ebac5199",
-      "bytes": 261866,
+      "source_sha256": "421a2daa4560e2b9f2a232d7ce13fbf97a019350df6eeb098b754956205ba467",
+      "export_sha256": "421a2daa4560e2b9f2a232d7ce13fbf97a019350df6eeb098b754956205ba467",
+      "bytes": 263204,
       "changes": []
     },
     {
       "path": "topography-full.html",
       "reason": "runtime entry/module/metadata",
       "source_sha256": "ccf23cce3438fae053bc477fd129706521053cec98a9517e4216939abe0e4811",
-      "export_sha256": "ccf23cce3438fae053bc477fd129706521053cec98a9517e4216939abe0e4811",
-      "bytes": 1499,
-      "changes": []
+      "export_sha256": "d8a094f29f0cac87ea9c96d13f97d6f98bd25b3594597b3c3d6192cb548d7696",
+      "bytes": 1511,
+      "changes": [
+        {
+          "operation": "host integration patch",
+          "patch_sha256": "d0de9ee3ce1c258eba92d6fec3ecf82ba57774e54a6fc35fe84b2a2513634287",
+          "occurrences": 1
+        }
+      ]
     },
     {
       "path": "topography-visual.js",
