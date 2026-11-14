@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "previous_source_sha": "a0c5a44e6611dfb6ceeb33b72ebe275ce4d33c6a",
+  "source_sha": "7b749d201ea6ae7991bf7d15f5bed02c53a3937f",
+  "reviewed_host_commit": "d9bdd6fb83ac26aa61c7f55ed5ea58be439a4858",
+  "description": "One-time migration of the four audited published runtime files. New source plus exact host adapter must reproduce each observed file byte for byte; no arbitrary drift is accepted.",
+  "files": {
+    "app.js": {
+      "previous_export_sha256": "99aeb5af9d88c948123a3f681a4d8d3ef346ffbcc4f454b4e0e0f91b3067ce77",
+      "observed_host_sha256": "de82143e505ef9f57420b58e03cffedb1a76b6cef1be672d87e8ac92e156c23e"
+    },
+    "rhizome-3d.js": {
+      "previous_export_sha256": "438d144fdceee3634ec3435549a25a4a1fcb414547aa08a334319de4850013b4",
+      "observed_host_sha256": "5a60f1089e83f0587a2902715791748be7feb553062629407861997c57293ca9"
+    },
+    "styles.css": {
+      "previous_export_sha256": "0032b757720fbaad8348841bb7a975a10d842ce2c015816078a8c4c7ebac5199",
+      "observed_host_sha256": "421a2daa4560e2b9f2a232d7ce13fbf97a019350df6eeb098b754956205ba467"
+    },
+    "topography-full.html": {
+      "previous_export_sha256": "ccf23cce3438fae053bc477fd129706521053cec98a9517e4216939abe0e4811",
+      "observed_host_sha256": "d8a094f29f0cac87ea9c96d13f97d6f98bd25b3594597b3c3d6192cb548d7696"
+    }
+  }
+}

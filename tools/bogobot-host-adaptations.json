@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "description": "Host-only integration; generic runtime and image variants belong to julchernysheva/bogobot. Exact-count replacements fail closed on source changes.",
+  "patches": [
+    {
+      "path": "app.js",
+      "find": "  renderExperienceAction(n,contentEnd)\n",
+      "replace": "  renderExperienceAction(n,contentEnd)\n  $(\"#backupMemoryExperiment\")?.remove()\n  if(n.id===\"BACKUP_MEMORY\"){\n    const experiment=document.createElement(\"section\")\n    experiment.id=\"backupMemoryExperiment\"\n    experiment.className=\"support-links\"\n    const link=document.createElement(\"a\")\n    link.className=\"support-link\"\n    link.href=\"/projects/godbot/spatial-study.html\"\n    link.target=\"_blank\"\n    link.rel=\"noopener\"\n    link.textContent=\"Пространственный эксперимент V8\"\n    experiment.append(link)\n    contentEnd.after(experiment)\n  }\n",
+      "expected_occurrences": 1
+    },
+    {
+      "path": "topography-full.html",
+      "find": "<a class=\"topography-visual-open full-view-return\" href=\"./?node=TOPOGRAPHY\">← BACK TO ARCHIVE</a>",
+      "replace": "<a class=\"topography-visual-open full-view-return\" href=\"/projects/godbot/#seven-module\">← К АРХИВУ</a>",
+      "expected_occurrences": 1
+    }
+  ]
+}
